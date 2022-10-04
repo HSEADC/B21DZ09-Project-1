@@ -5,8 +5,8 @@
 Clone the repository, install packages, start
 
 ```
-git clone https://github.com/ZakharDay/static-site-boilerplate.git
-cd static-site-boilerplate
+git clone https://github.com/HSEADC/B21DZ09-Project-1.git
+cd B21DZ09-Project-1
 yarn
 yarn start
 ```
