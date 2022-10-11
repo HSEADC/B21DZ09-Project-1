@@ -1,0 +1,12 @@
+body.about_style,
+body.influencer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > div,
+  & > a {
+    margin: 10px 0;
+  }
+}
