@@ -129,7 +129,7 @@ module.exports = {
       chunks: ['index']
     }),
 
-    //influencers
+    //graveyard
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
