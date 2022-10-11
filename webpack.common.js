@@ -93,6 +93,51 @@ module.exports = {
       chunks: ['index']
     }),
 
+    //library
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/library.html',
+      filename: './library.html',
+      chunks: ['index']
+    }),
+
+    //library article
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/library/name.html',
+      filename: './library/name.html',
+      chunks: ['index']
+    }),
+
+    //influencers
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers.html',
+      filename: './influencers.html',
+      chunks: ['index']
+    }),
+
+    //influencers article
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/name.html',
+      filename: './influencers/name.html',
+      chunks: ['index']
+    }),
+
+    //influencers
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/graveyard.html',
+      filename: './graveyard.html',
+      chunks: ['index']
+    }),
+
     // Internal pages
     new HtmlWebpackPlugin({
       hash: true,
