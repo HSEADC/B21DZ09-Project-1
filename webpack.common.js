@@ -106,8 +106,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/library/name.html',
-      filename: './library/name.html',
+      template: './src/styles_library/name.html',
+      filename: './styles_library/name.html',
       chunks: ['index']
     }),
 
@@ -136,15 +136,6 @@ module.exports = {
       template: './src/graveyard.html',
       filename: './graveyard.html',
       chunks: ['index']
-    }),
-
-    // Internal pages
-    new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/pages/page.html',
-      filename: './pages/page.html',
-      chunks: ['page']
     }),
 
     // Partials
