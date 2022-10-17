@@ -1,11 +1,156 @@
 body.index {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-style: normal;
+    color: #000000;
+    display: flex;
+    // align-items: center;
+  }
+  h1 {
+    font-weight: 900;
+    font-size: 162px;
+    // line-height: 198px;
+    display: flex;
+    // text-align: center;
+  }
+  h2 {
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  h4 {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .background {
+    background-image: url('./images/фон1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+  }
+  .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 5;
+    padding: 53px 0 0 0;
+    h3 {
+      z-index: 5;
+      margin-left: 50px;
+    }
+  }
+  .networks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+    z-index: 5;
+  }
+  .icon {
+    display: flex;
+    margin-left: 24px;
+  }
+  .name {
+    width: max-content;
+    position: relative;
+    left: calc(50% - 386px);
+    top: 310px;
+    z-index: 5;
 
-  & > div,
-  & > a {
-    margin: 10px 0;
+    .button {
+      display: flex;
+      height: 178px;
+      width: 178px;
+      border-radius: 50%;
+      border: 1px solid black;
+      position: absolute;
+      right: -145px;
+      bottom: 120px;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .about {
+        display: flex;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        font-size: 13px;
+        width: 7em;
+        line-height: 16px;
+      }
+      .arrow {
+        padding: 12px 0 0 0;
+      }
+      .button:hover {
+        background: white;
+      }
+    }
+    .subscribe {
+      position: relative;
+      top: 78px;
+      h4 {
+        margin-bottom: 13px;
+      }
+      form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: flex-start;
+      }
+      input {
+        width: 560px;
+        height: 48px;
+        background: transparent;
+        border-radius: 10px;
+        border: 1px solid black;
+        padding: 0 15px;
+      }
+      button {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        width: 165px;
+        height: 48px;
+        border-radius: 10px;
+        border: 1px solid black;
+        background: black;
+        margin-left: 15px;
+        color: white;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+
+        .send {
+          display: none;
+        }
+      }
+
+      .send {
+        padding-left: 10px;
+      }
+    }
   }
 }
