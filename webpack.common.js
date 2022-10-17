@@ -8,8 +8,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    page: './src/page.jsx'
+    index: './src/index.js'
   },
   output: {
     filename: '[name].js',
@@ -106,8 +105,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/library/name.html',
-      filename: './library/name.html',
+      template: './src/styles_library/name.html',
+      filename: './styles_library/name.html',
       chunks: ['index']
     }),
 
@@ -129,22 +128,13 @@ module.exports = {
       chunks: ['index']
     }),
 
-    //influencers
+    //graveyard
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
       template: './src/graveyard.html',
       filename: './graveyard.html',
       chunks: ['index']
-    }),
-
-    // Internal pages
-    new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/pages/page.html',
-      filename: './pages/page.html',
-      chunks: ['page']
     }),
 
     // Partials

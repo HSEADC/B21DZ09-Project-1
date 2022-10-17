@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <title>Библиотека стилей в одежде</title>
@@ -7,18 +7,86 @@
   </head>
 
   <body class="index">
-    <!-- modify this form HTML and place wherever you want your form -->
-    <form action="https://formspree.io/f/xeqdzqbb" method="POST">
-      <label>
-        Your email:
-        <input type="email" name="email" />
-      </label>
-      <!-- your other form fields go here -->
-      <button type="submit">Send</button>
-    </form>
-    <a href="about.html"> Подробнее о проекте</a>
+    <!-- <a href="about.html"> Подробнее о проекте</a>
     <a href="influencers.html"> Инфлюенсеры </a>
     <a href="library.html"> Библиотека</a>
-    <a href="graveyard.html"> Кладбище</a>
+    <a href="graveyard.html"> Кладбище</a> -->
+    <div class="background"></div>
+    <div class="heading">
+      <h3>coming soon</h3>
+      <div class="networks">
+        <a href="" class="icon">
+          <img src="images/telegram.svg" alt="telegram" />
+        </a>
+        <a href="" class="icon">
+          <img src="images/instagram.svg" alt="instagram" />
+        </a>
+        <a href="" class="icon">
+          <img src="images/vk.svg" alt="vk" />
+        </a>
+        <a href="" class="icon">
+          <img src="images/dzen.svg" alt="dzen" />
+        </a>
+      </div>
+    </div>
+    <div class="name">
+      <h3>Увлекательный гид по модным стилям</h3>
+      <h1>FANCY U</h1>
+      <div class="button">
+        <a href="about.html" class="about">Подробнее о&nbsp;проекте</a>
+        <image class="arrow" src="images/arrow.svg" />
+      </div>
+      <div class="subscribe">
+        <h4>Уведомите меня о запуске</h4>
+
+        <form action="https://formspree.io/f/xeqdzqbb" method="POST">
+          <label>
+            <input type="email" name="email" placeholder="example@gmail.com" />
+          </label>
+          <button type="submit">
+            отправить <image class="send" src="images/send.svg" />
+          </button>
+        </form>
+
+        <script>
+          var form = document.getElementById('my-form')
+
+          async function handleSubmit(event) {
+            event.preventDefault()
+            var status = document.getElementById('my-form-status')
+            var data = new FormData(event.target)
+            fetch(event.target.action, {
+              method: form.method,
+              body: data,
+              headers: {
+                Accept: 'application/json'
+              }
+            })
+              .then((response) => {
+                if (response.ok) {
+                  status.innerHTML = 'Thanks for your submission!'
+                  form.reset()
+                } else {
+                  response.json().then((data) => {
+                    if (Object.hasOwn(data, 'errors')) {
+                      status.innerHTML = data['errors']
+                        .map((error) => error['message'])
+                        .join(', ')
+                    } else {
+                      status.innerHTML =
+                        'Oops! There was a problem submitting your form'
+                    }
+                  })
+                }
+              })
+              .catch((error) => {
+                status.innerHTML =
+                  'Oops! There was a problem submitting your form'
+              })
+          }
+          form.addEventListener('submit', handleSubmit)
+        </script>
+      </div>
+    </div>
   </body>
 </html>
