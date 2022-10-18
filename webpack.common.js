@@ -96,8 +96,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/library.html',
-      filename: './library.html',
+      template: './src/styles-library.html',
+      filename: './styles-library.html',
       chunks: ['index']
     }),
 
@@ -105,8 +105,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/styles_library/name.html',
-      filename: './styles_library/name.html',
+      template: './src/styles-library/name.html',
+      filename: './styles-library/name.html',
       chunks: ['index']
     }),
 
