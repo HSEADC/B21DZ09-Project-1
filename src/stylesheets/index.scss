@@ -6,7 +6,6 @@ body.index {
     font-style: normal;
     color: #000000;
     display: flex;
-    // align-items: center;
   }
   h1 {
     font-weight: 800;
@@ -14,9 +13,6 @@ body.index {
     line-height: 110px;
     width: 710px;
     display: flex;
-    // text-align: center;
-  }
-  h2 {
   }
   h3 {
     font-weight: 500;
@@ -165,8 +161,8 @@ body.index {
         align-content: center;
         align-items: center;
         justify-content: center;
-        width: 210px;
-        height: 55px;
+        width: 13.1em;
+        height: 3.5em;
         border-radius: 12px;
         border: 2px solid black;
         background: black;

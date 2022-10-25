@@ -1,14 +1,130 @@
-body.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  & > div,
-  & > a {
-    margin: 10px 0;
+// Responsive
+@media only screen and (min-width: 1365px) and (max-width: 1450px) {
+  p {
+    font-size: 16px;
   }
-  .paragraph1 {
-    width: 500px;
+  .row1,
+  .row2 {
+    font-size: 13px;
+    left: 44vw;
+  }
+  .row1 {
+    top: 6.3vh;
+  }
+
+  .image {
+    width: 36vw;
+  }
+}
+// Content
+body.about {
+  h2 {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 41px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    color: black;
+  }
+  b {
+    font-weight: 600;
+  }
+  .image {
+    width: 40vw;
+    height: 100vh;
+    background-image: url('images/фон2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  button {
+    font-size: 16px;
+    font-weight: 500;
+    width: 14.5em;
+    height: 3.75em;
+    padding-left: 27px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 2px solid black;
+    background: black;
+    color: white;
+    transition: 0.3s;
+    position: relative;
+    top: 5em;
+
+    .send {
+      padding-left: 10px;
+    }
+  }
+  button:hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+
+    .send {
+      animation: fade 1s ease 0s 1 normal forwards;
+    }
+    @keyframes fade {
+      0% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+    }
+  }
+  .p01,
+  .p02,
+  .p03 {
+    font-size: 16px;
+    width: 23.6em;
+    height: 21.4em;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .row1,
+  .row2 {
+    width: max-content;
+    position: relative;
+    left: 48vw;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .row1 {
+    top: 16.3vh;
+
+    .p02 {
+      margin-left: 63px;
+    }
+  }
+  .row2 {
+    top: 23vh;
   }
 }
