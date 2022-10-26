@@ -1,17 +1,35 @@
-// @media only screen and (min-width: 1365px) and (max-width: 1450px) {
-//   p {
-//     font-size: 16px;
-//   }
-//   .row1,
-//   .row2 {
-//     font-size: 13px;
-//     left: 44vw;
-//   }
-//   .row1 {
-//     top: 6.3vh;
-//   }
-//
-//   .image {
-//     width: 36vw;
-//   }
-// }
+@media only screen and (min-width: 1365px) and (max-width: 1450px) {
+  // Laptop
+  body.about {
+    p {
+      font-size: 16px;
+    }
+    .row1,
+    .row2 {
+      font-size: 13px;
+      left: 44vw;
+    }
+    .row1 {
+      top: 6.3vh;
+    }
+    .row2 {
+      top: 16vh;
+    }
+    .image {
+      width: 36vw;
+    }
+    .p01,
+    .p02,
+    .p03 {
+      font-size: 14px;
+    }
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 500px) {
+  body.about {
+    .image {
+      width: 100%;
+      height: 40vh;
+    }
+  }
+}

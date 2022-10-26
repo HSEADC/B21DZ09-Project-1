@@ -128,12 +128,12 @@ module.exports = {
       chunks: ['index']
     }),
 
-    //graveyard
+    //antitrends
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/graveyard.html',
-      filename: './graveyard.html',
+      template: './src/antitrends.html',
+      filename: './antitrends.html',
       chunks: ['index']
     }),
 
@@ -142,6 +142,24 @@ module.exports = {
       {
         path: path.join(__dirname, './src/partials/analytics.html'),
         location: 'analytics',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/menu.html'),
+        location: 'menu',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/footer.html'),
+        location: 'footer',
         template_filename: '*',
         priority: 'replace'
       }

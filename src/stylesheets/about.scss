@@ -1,22 +1,6 @@
-// Responsive
-@media only screen and (min-width: 1365px) and (max-width: 1450px) {
-  p {
-    font-size: 16px;
-  }
-  .row1,
-  .row2 {
-    font-size: 13px;
-    left: 44vw;
-  }
-  .row1 {
-    top: 6.3vh;
-  }
-
-  .image {
-    width: 36vw;
-  }
+menu.about {
+  @import 'basics.scss';
 }
-// Content
 body.about {
   h2 {
     font-weight: 400;
@@ -42,7 +26,7 @@ body.about {
   }
   .image {
     width: 40vw;
-    height: 100vh;
+    height: 100%;
     background-image: url('images/фон2.jpg');
     background-position: center;
     background-size: cover;
@@ -99,7 +83,7 @@ body.about {
   .p03 {
     font-size: 16px;
     width: 23.6em;
-    height: 21.4em;
+    // height: 21.4em;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
