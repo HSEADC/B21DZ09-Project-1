@@ -1,12 +1,43 @@
-body.about_style,
+body.style,
 body.influencer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+body.article {
+  h1 {
+    font-size: 160px;
+    line-height: 172px;
+    font-weight: 400;
+    text-align: center;
+  }
+  h2 {
+    font-size: 56px;
+    line-height: 72px;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 35px;
+    line-height: 48px;
+    font-weight: 500;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
 
-  & > div,
-  & > a {
-    margin: 10px 0;
+body.style.article {
+  h1 {
+    font-size: 332px;
+    line-height: 347px;
+    font-weight: 500;
   }
 }

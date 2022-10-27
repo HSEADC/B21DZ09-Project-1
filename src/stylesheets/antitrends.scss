@@ -1,11 +1,18 @@
 body.antitrends {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  & > div,
-  & > a {
-    margin: 10px 0;
+  h1 {
+    font-size: 110px;
+    line-height: 110px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  p.describtion {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 600;
   }
 }

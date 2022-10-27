@@ -119,12 +119,21 @@ module.exports = {
       chunks: ['index']
     }),
 
-    //influencers article
+    //personal article
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/influencers/name.html',
-      filename: './influencers/name.html',
+      template: './src/influencers/personalities/name.html',
+      filename: './influencers/personalities/name.html',
+      chunks: ['index']
+    }),
+
+    //movie article
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/movies/name.html',
+      filename: './influencers/movies/name.html',
       chunks: ['index']
     }),
 
@@ -149,8 +158,8 @@ module.exports = {
 
     new HtmlWebpackPartialsPlugin([
       {
-        path: path.join(__dirname, './src/partials/menu.html'),
-        location: 'menu',
+        path: path.join(__dirname, './src/partials/header.html'),
+        location: 'header',
         template_filename: '*',
         priority: 'replace'
       }
