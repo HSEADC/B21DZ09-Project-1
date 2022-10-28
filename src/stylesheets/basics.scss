@@ -11,7 +11,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
-menu {
+//Header
+header {
   .row {
     display: flex;
     flex-direction: row;
@@ -19,8 +20,9 @@ menu {
     align-items: flex-start;
     justify-content: flex-start;
     position: fixed;
-    top: 50px;
+    top: 0;
     left: 0;
+    margin-top: 50px;
     z-index: 20;
     width: 100vw;
 
@@ -32,8 +34,7 @@ menu {
     .influencers,
     .antitrends,
     button {
-      margin-left: 70px;
-      margin-right: 50px;
+      margin-left: 80px;
     }
     button {
       width: 24px;
@@ -42,6 +43,9 @@ menu {
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
+      background-color: transparent;
+      border: 0;
+      padding: 0;
     }
     .right {
       display: flex;
@@ -51,12 +55,16 @@ menu {
       justify-content: flex-start;
       position: absolute;
       right: 0;
+      margin-right: 50px;
+    }
+    a {
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+      line-height: 22px;
+      text-decoration: none;
+      color: black;
     }
   }
-  a {
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 22px;
-  }
 }
+//

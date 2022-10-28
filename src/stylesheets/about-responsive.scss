@@ -25,7 +25,137 @@
   }
 }
 
-@media only screen and (min-width: 350px) and (max-width: 500px) {
+@media only screen and (min-width: 500px) and (max-width: 1024px) and (orientation: landscape) {
+  //Ipad landscape
+  body.about {
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    h4 {
+      font-size: 14px;
+      line-height: 14px;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 28px;
+    }
+    .image {
+      width: 100%;
+      height: 30vh;
+    }
+    .block {
+      left: 8vw;
+      top: 35vh;
+      padding-bottom: 10vh;
+      .row1 {
+        .p01,
+        .p02 {
+          font-size: 16px;
+          width: 20em;
+        }
+
+        .p02 {
+          margin-left: 10vw;
+          margin-top: 0;
+          .btn2 {
+            display: block;
+            font-size: 30px;
+
+            button {
+              font-size: 12px;
+              padding-left: 35px;
+              margin-top: 2em;
+            }
+
+            .send {
+              width: 35px;
+              height: 35px;
+            }
+          }
+        }
+      }
+    }
+    .row2 {
+      .p03 {
+        font-size: 16px;
+        width: 20em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1180px) and (orientation: portrait) {
+  //Ipad portrait
+  body.about {
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    h4 {
+      font-size: 14px;
+      line-height: 14px;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 28px;
+    }
+    .image {
+      width: 100%;
+      height: 35vh;
+    }
+    .block {
+      left: 8vw;
+      top: 40vh;
+      padding-bottom: 10vh;
+      .row1 {
+        flex-direction: column;
+
+        .p01,
+        .p02 {
+          font-size: 16px;
+          width: 20em;
+        }
+        .p01 {
+          .btn1 {
+            display: block;
+            font-size: 30px;
+
+            button {
+              font-size: 12px;
+              padding-left: 35px;
+              margin-top: 2em;
+            }
+
+            .send {
+              width: 35px;
+              height: 35px;
+            }
+          }
+        }
+        .p02 {
+          margin-left: 0;
+          margin-top: 5vh;
+          .btn2 {
+            display: none;
+          }
+        }
+      }
+      .row2 {
+        .p03 {
+          font-size: 16px;
+          width: 20em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 500px) {
   //Mobile
   body.about {
     p {
@@ -54,8 +184,7 @@
         flex-direction: column;
 
         .p01,
-        .p02,
-        .p03 {
+        .p02 {
           font-size: 16px;
           width: 20em;
         }
@@ -82,6 +211,12 @@
           .btn2 {
             display: none;
           }
+        }
+      }
+      .row2 {
+        .p03 {
+          font-size: 16px;
+          width: 20em;
         }
       }
     }
