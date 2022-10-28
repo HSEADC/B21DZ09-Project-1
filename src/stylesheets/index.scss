@@ -85,7 +85,7 @@ body.index {
     width: max-content;
     position: relative;
     left: 15vw;
-    top: 12vh;
+    top: 10vh;
     z-index: 5;
 
     h3 {
@@ -149,13 +149,6 @@ body.index {
         border-radius: 12px;
         border: 2px solid black;
         padding: 0 25px;
-
-        input::-webkit-input-placeholder {
-          color: black;
-          font-family: 'Montserrat';
-          font-size: 16px;
-          font-weight: 400;
-        }
       }
       button {
         padding-left: 27px;
@@ -199,7 +192,7 @@ body.index {
 
           100% {
             opacity: 0;
-            transform: translateX(100px);
+            transform: translateX(70px);
           }
         }
       }
