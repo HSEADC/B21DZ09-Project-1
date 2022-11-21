@@ -1,204 +1,452 @@
 body.index {
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-style: normal;
-    color: #000000;
+  background: var(--lightgray);
+  height: 100%;
+  .content {
+    width: calc(100% - 100px);
     display: flex;
-  }
-  h1 {
-    font-weight: 800;
-    font-size: 110px;
-    line-height: 110px;
-    width: 710px;
-    display: flex;
-  }
-  h3 {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 26px;
-  }
-  h4 {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 20px;
-  }
-  .background {
-    background-image: url('./images/фон1.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100%;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-  }
-  .heading {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    z-index: 5;
-    padding: 3vh 0 0 0;
-    h3 {
-      font-weight: 800;
-      z-index: 5;
-      margin-left: 50px;
-    }
-  }
-  .networks {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    position: absolute;
-    right: 0;
+    flex-direction: column;
+    margin-left: 50px;
     margin-right: 50px;
-    z-index: 5;
-  }
-  .icon {
-    display: flex;
-    margin-left: 30px;
-    width: 30px;
-    height: 30px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .telegram {
-    background-image: url('images/telegram.svg');
-  }
-  .instagram {
-    background-image: url('images/insta.svg');
-  }
-  .vk {
-    width: 49px;
-    background-image: url('images/vk.svg');
-  }
-  .dzen {
-    background-image: url('images/dzen.svg');
-  }
-
-  .name {
-    width: max-content;
-    position: relative;
-    left: 15vw;
-    top: 10vh;
-    z-index: 5;
-
-    h3 {
-      margin-bottom: 20px;
+    p {
+      font-size: 18px;
+      font-weight: 400;
     }
-    .column {
+    .number {
+      font-family: 'DRUZHOK';
+      font-weight: 400;
+      font-size: 350px;
+    }
+    .normal {
+      font-family: 'Druk Text Cyr';
+      font-weight: 800;
+      font-size: 48px;
+      text-transform: uppercase;
+    }
+    .wide {
+      font-family: 'Druk Text Wide Cyr';
+      font-weight: 800;
+      font-size: 48px;
+      text-transform: uppercase;
+      text-decoration-line: underline;
+      text-decoration-thickness: 18px;
+      text-decoration-color: var(--green);
+    }
+    .header {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
-    }
+      justify-content: space-between;
+      width: 100%;
+      height: 80px;
+      background: transparent;
+      backdrop-filter: blur(10px);
+      align-items: center;
+      position: sticky;
+      z-index: 10;
+      top: 0vh;
 
-    .more {
-      display: flex;
-      z-index: 5;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      position: relative;
-      left: 15vw;
-
-      .about {
-        display: flex;
-        text-align: center;
-        text-decoration: none;
-        color: black;
-        font-weight: 600;
-        font-size: 20px;
-        width: 13em;
-        height: 2.5em;
-        line-height: 20px;
-        background-image: url('images/arrow.svg');
-        background-position: right bottom;
+      .logo {
+        width: 240px;
+        height: 52px;
+        background-image: url('images/logo.svg');
+        background-position: left;
         background-repeat: no-repeat;
-        background-size: 50%;
+        z-index: 2;
       }
-      .arrow {
-        padding: 12px 0 0 0;
+      .networks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
       }
-      .button:hover {
-        background: white;
+      .icon {
+        display: flex;
+        margin-left: 30px;
+        width: 30px;
+        height: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+      }
+      .telegram {
+        background-image: url('images/telegram.svg');
+      }
+      .instagram {
+        background-image: url('images/insta.svg');
+      }
+      .vk {
+        width: 49px;
+        background-image: url('images/vk.svg');
+      }
+      .dzen {
+        background-image: url('images/dzen.svg');
       }
     }
-    .subscribe {
-      position: relative;
-      top: 115px;
+    section {
+      height: 100vh;
+      overflow: hidden;
       display: flex;
-      h4 {
+      flex-direction: column;
+    }
+    .cover {
+      align-items: center;
+      .rectangle {
+        width: 33vw;
+        height: 100vh;
+        background: var(--green);
         position: absolute;
-        bottom: 80px;
+        left: 0;
+        top: 0;
+        z-index: 1;
       }
-      form {
+
+      .image {
+        position: absolute;
+        width: 205px;
+        height: 220px;
+        background-image: url('images/photo1.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 30vh;
+        z-index: 3;
+      }
+      .title {
+        position: relative;
+        z-index: 2;
+        top: 10vh;
         display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        align-content: flex-start;
-      }
-      input {
-        width: 460px;
-        height: 55px;
-        background: white;
-        border-radius: 12px;
-        border: 2px solid black;
-        padding: 0 25px;
-      }
-      button {
-        padding-left: 27px;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        width: 13.1em;
-        height: 55px;
-        border-radius: 12px;
-        border: 2px solid black;
-        background: black;
-        margin-left: 20px;
-        color: white;
-        transition: 0.3s;
+        color: var(--black);
 
-        h4 {
-          font-size: 16px;
-          font-weight: 500;
-          position: unset;
-          color: white;
+        .Druzhok {
+          font-family: 'DRUZHOK';
+          font-weight: 400;
+          font-size: 220px;
+          position: absolute;
+        }
+        .secondline {
+          display: flex;
+          flex-direction: row;
+          position: relative;
+          margin-top: 140px;
+
+          // .om {
+          //   font-family: 'Druk Text Wide Cyr';
+          //   font-weight: 800;
+          //   font-size: 390px;
+          //   letter-spacing: -70px;
+          // }
+          // .o {
+          //   font-family: 'Druk Condensed Cyr Super';
+          //   font-weight: 800;
+          //   font-size: 390px;
+          //   margin-left: 40px;
+          // }
+          // .d {
+          //   font-family: 'Druk Text Cyr';
+          //   font-weight: 800;
+          //   font-size: 390px;
+          //   letter-spacing: -35px;
+          // }
+          // .e {
+          //   font-family: 'Druk Text Wide Cyr';
+          //   font-weight: 800;
+          //   font-size: 400px;
+          // }
+          .change {
+            background-image: url('images/moda.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 90vw;
+            height: 322px;
+          }
+        }
+        .bigunderline {
+          width: 100%;
+          height: 35px;
+          background: var(--black);
+          position: relative;
+          margin-top: 0px;
+        }
+        .text {
+          width: 22em;
+          position: relative;
+          left: 28vw;
+          margin-top: 40px;
         }
       }
+    }
 
-      button:hover {
-        background: white;
-        color: black;
-        cursor: pointer;
-        h4 {
-          color: black;
-        }
-        .send {
-          animation: fade 1s ease 0s 1 normal forwards;
-        }
-        @keyframes fade {
-          0% {
-            opacity: 1;
-            transform: translateX(0);
-          }
-
-          100% {
-            opacity: 0;
-            transform: translateX(70px);
-          }
+    .n5 {
+      flex-direction: row;
+      .left {
+        width: 40vw;
+        .number {
+          margin-left: 5px;
         }
       }
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        position: relative;
 
-      .send {
-        padding-left: 10px;
+        .normal {
+          margin-left: 350px;
+        }
+        .wide {
+          line-height: 150%;
+          margin-bottom: 20px;
+        }
+        .text {
+          width: 16em;
+          margin-left: 350px;
+          margin-top: 30px;
+        }
+        .image2 {
+          width: 225px;
+          height: 337px;
+          background-image: url('images/photo2.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 180px;
+        }
+        .image3 {
+          width: 320px;
+          height: 462px;
+          background-image: url('images/photo3.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 300px;
+          left: 225px;
+        }
+        .image4 {
+          width: 204px;
+          height: 305px;
+          background-image: url('images/photo4.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 220px;
+          left: 50vw;
+        }
+      }
+    }
+    .n4 {
+      flex-direction: row;
+      overflow: visible;
+      .left {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .image5 {
+          width: 50vw;
+          height: 100vh;
+          background-image: url('images/photo5.jpg');
+          background-position: right;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: absolute;
+          left: -55px;
+        }
+        .rectangle {
+          height: 200px;
+          width: 50vw;
+          position: absolute;
+          left: -55px;
+          background: var(--green);
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        position: relative;
+        .number {
+          margin-top: 100px;
+          height: 270px;
+        }
+        .normal {
+          margin-right: 290px;
+        }
+        .inline {
+          display: inline-block;
+          margin-top: 13px;
+          .normal {
+            display: inline-block;
+            margin-right: 0;
+          }
+          .wide {
+            display: inline-block;
+          }
+        }
+        .text {
+          width: 300px;
+          margin-right: 230px;
+          margin-top: 75px;
+        }
+      }
+    }
+    .n3 {
+      display: flex;
+      flex-direction: row;
+      height: 90vh;
+      .number {
+        margin-top: 240px;
+      }
+      .heading {
+        margin-top: 240px;
+        margin-left: 130px;
+        .wide {
+          margin-left: 60px;
+          line-height: 170%;
+        }
+        .text {
+          width: 325px;
+          margin-top: 80px;
+        }
+      }
+      .image6 {
+        background-image: url('images/photo6.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 500px;
+        height: 590px;
+        position: absolute;
+        left: 64vw;
+        margin-top: -50px;
+      }
+    }
+    .n2 {
+      display: flex;
+      flex-direction: row;
+      overflow: visible;
+      .left {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        height: 70vh;
+
+        .influencer {
+          width: 70vw;
+          font-family: 'Druk Text Cyr';
+          font-weight: 800;
+          font-size: 48px;
+          text-transform: uppercase;
+          line-height: 230%;
+        }
+        .style {
+          position: absolute;
+          left: 40vw;
+          z-index: -1;
+          display: none;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        .container-lil {
+          width: 325px;
+          height: 325px;
+          background-image: url('images/lil.jpg');
+          background-size: contain;
+        }
+        .container-fred {
+          width: 325px;
+          height: 450px;
+          left: 55vw;
+          margin-top: -200px;
+          background-image: url('images/fred.jpg');
+          background-size: cover;
+        }
+        .container-doja {
+          width: 450px;
+          height: 250px;
+          left: 35vw;
+          margin-top: -200px;
+          background-image: url('images/doja.jpg');
+          background-size: cover;
+        }
+        .container-niki {
+          width: 360px;
+          height: 500px;
+          left: 45vw;
+          margin-top: -400px;
+          background-image: url('images/niki.jpg');
+          background-size: cover;
+        }
+        .container-billie {
+          width: 436px;
+          height: 346px;
+          left: 45vw;
+          margin-top: -400px;
+          background-image: url('images/billie.jpg');
+          background-size: cover;
+          background-position: center top;
+        }
+
+        .influencer:hover {
+          font-family: 'Druk Text Wide Cyr';
+          font-weight: 800;
+          font-size: 48px;
+          text-transform: uppercase;
+          text-decoration-line: underline;
+          text-decoration-thickness: 18px;
+          text-decoration-color: var(--green);
+        }
+        .lil:hover .container-lil {
+          display: block;
+        }
+        .fred:hover .container-fred {
+          display: block;
+        }
+        .doja:hover .container-doja {
+          display: block;
+        }
+        .niki:hover .container-niki {
+          display: block;
+        }
+        .billie:hover .container-billie {
+          display: block;
+        }
+      }
+      .right {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        width: 100%;
+
+        .number {
+          margin-top: 50px;
+        }
+        .rectangle {
+          height: 90vh;
+          width: 150px;
+          left: calc(100% - 100px);
+          background: var(--green);
+          position: absolute;
+          z-index: -1;
+        }
+      }
+    }
+    .n1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .text {
+        margin-bottom: 100px;
+      }
+      a {
+        color: var(--black);
+        text-decoration-color: var(--green);
       }
     }
   }

@@ -83,6 +83,24 @@ module.exports = {
       chunks: ['index']
     }),
 
+    // Early Splash screen
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/early-splash-screen.html',
+      filename: './early-splash-screen.html',
+      chunks: ['index']
+    }),
+
+    //Early About
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/early-about.html',
+      filename: './early-about.html',
+      chunks: ['index']
+    }),
+
     //About
     new HtmlWebpackPlugin({
       hash: true,
