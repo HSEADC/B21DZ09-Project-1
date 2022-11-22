@@ -4,8 +4,13 @@
 @import 'stylesheets/basics.scss';
 @import 'stylesheets/index.scss';
 
+@import 'stylesheets/early-splash-screen.scss';
+@import 'stylesheets/early-about.scss';
 @import 'stylesheets/about.scss';
-@import 'stylesheets/styles_library.scss';
+@import 'stylesheets/styles-library.scss';
 @import 'stylesheets/name.scss';
 @import 'stylesheets/influencers.scss';
-@import 'stylesheets/graveyard.scss';
+@import 'stylesheets/antitrends.scss';
+
+@import 'stylesheets/about-responsive.scss';
+@import 'stylesheets/index-responsive.scss';

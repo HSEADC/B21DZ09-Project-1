@@ -1,11 +1,30 @@
 body.influencers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  section {
+    .name {
+      display: none;
+    }
+    a {
+      width: 100vw;
+      height: 100px;
+      display: flex;
+      position: relative;
+      font-size: 60px;
+      line-height: 72px;
+      font-weight: 400px;
+      color: #848484;
+      text-decoration: none;
 
-  & > div,
-  & > a {
-    margin: 10px 0;
+      a:hover {
+        height: 200px;
+        font-size: 88px;
+        line-height: 100px;
+        font-weight: 400px;
+        color: white;
+
+        .name {
+          display: block;
+        }
+      }
+    }
   }
 }

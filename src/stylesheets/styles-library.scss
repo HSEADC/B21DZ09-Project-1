@@ -1,0 +1,35 @@
+body.styles-library {
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 42px;
+    line-height: 48px;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  p.describtion {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 600;
+  }
+
+  p.tag {
+    font-size: 9px;
+    line-height: 11px;
+    font-weight: 400;
+  }
+}

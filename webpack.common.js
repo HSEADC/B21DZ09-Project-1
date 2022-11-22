@@ -83,6 +83,24 @@ module.exports = {
       chunks: ['index']
     }),
 
+    // Early Splash screen
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/early-splash-screen.html',
+      filename: './early-splash-screen.html',
+      chunks: ['index']
+    }),
+
+    //Early About
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/early-about.html',
+      filename: './early-about.html',
+      chunks: ['index']
+    }),
+
     //About
     new HtmlWebpackPlugin({
       hash: true,
@@ -96,8 +114,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/library.html',
-      filename: './library.html',
+      template: './src/styles-library.html',
+      filename: './styles-library.html',
       chunks: ['index']
     }),
 
@@ -105,8 +123,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/styles_library/name.html',
-      filename: './styles_library/name.html',
+      template: './src/styles-library/name.html',
+      filename: './styles-library/name.html',
       chunks: ['index']
     }),
 
@@ -119,21 +137,30 @@ module.exports = {
       chunks: ['index']
     }),
 
-    //influencers article
+    //personal article
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/influencers/name.html',
-      filename: './influencers/name.html',
+      template: './src/influencers/personalities/name.html',
+      filename: './influencers/personalities/name.html',
       chunks: ['index']
     }),
 
-    //graveyard
+    //movie article
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/graveyard.html',
-      filename: './graveyard.html',
+      template: './src/influencers/movies/name.html',
+      filename: './influencers/movies/name.html',
+      chunks: ['index']
+    }),
+
+    //antitrends
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/antitrends.html',
+      filename: './antitrends.html',
       chunks: ['index']
     }),
 
@@ -142,6 +169,24 @@ module.exports = {
       {
         path: path.join(__dirname, './src/partials/analytics.html'),
         location: 'analytics',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/header.html'),
+        location: 'header',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/footer.html'),
+        location: 'footer',
         template_filename: '*',
         priority: 'replace'
       }
