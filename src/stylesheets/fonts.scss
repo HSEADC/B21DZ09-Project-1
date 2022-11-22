@@ -1,40 +1,41 @@
 @font-face {
-  font-family: 'Inter', sans-serif;
-  src: url('fonts/Inter-Regular.ttf') format('ttf');
+  font-family: 'Inter';
+  src: url('fonts/Inter-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Druk Text Wide Cyr';
-  src: url('fonts/Druk-Text-Wide-Cyr-Heavy.otf') format('otf');
+  src: url('fonts/Druk-Text-Wide-Cyr-Heavy.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Druk Text Wide Cyr';
-  src: url('fonts/Druk-Text-Wide-Cyr-Medium.otf') format('otf');
+  src: url('fonts/Druk-Text-Wide-Cyr-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Druk Text Cyr';
-  src: url('fonts/Druk-Text-Cyr-Heavy.otf') format('otf');
+  src: url('fonts/Druk-Text-Cyr-Heavy.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Druk Condensed Cyr Super';
-  src: url('fonts/Druk-Condensed-Cyr-Super.otf') format('otf');
+  src: url('fonts/Druk-Condensed-Cyr-Super.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DRUZHOK';
-  src: url('fonts/DRUZHOK.otf') format('otf');
+  src: url('fonts/DRUZHOK.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
