@@ -8,8 +8,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    page: './src/page.jsx'
+    index: './src/index.js'
   },
   output: {
     filename: '[name].js',
@@ -84,13 +83,58 @@ module.exports = {
       chunks: ['index']
     }),
 
-    // Internal pages
+    //About
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/pages/page.html',
-      filename: './pages/page.html',
-      chunks: ['page']
+      template: './src/about.html',
+      filename: './about.html',
+      chunks: ['index']
+    }),
+
+    //library
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/library.html',
+      filename: './library.html',
+      chunks: ['index']
+    }),
+
+    //library article
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles_library/name.html',
+      filename: './styles_library/name.html',
+      chunks: ['index']
+    }),
+
+    //influencers
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers.html',
+      filename: './influencers.html',
+      chunks: ['index']
+    }),
+
+    //influencers article
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/name.html',
+      filename: './influencers/name.html',
+      chunks: ['index']
+    }),
+
+    //graveyard
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/graveyard.html',
+      filename: './graveyard.html',
+      chunks: ['index']
     }),
 
     // Partials

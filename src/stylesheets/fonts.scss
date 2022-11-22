@@ -1,31 +1,43 @@
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Light.woff2') format('woff2'),
-    url('fonts/PT-Root-UI_Light.woff') format('woff');
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Thin.ttf') format('ttf');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Regular.woff2') format('woff2'),
-    url('fonts/PT-Root-UI_Regular.woff') format('woff');
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Medium.woff2') format('woff2'),
-    url('fonts/PT-Root-UI_Medium.woff') format('woff');
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Medium.ttf') format('ttf');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Bold.woff2') format('woff2'),
-    url('fonts/PT-Root-UI_Bold.woff') format('woff');
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Bold.ttf') format('ttf');
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-ExtraBold.ttf') format('ttf');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Black.ttf') format('ttf');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;800;900&display=swap');
