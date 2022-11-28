@@ -1,3 +1,6 @@
+@import 'stylesheets/about-responsive.scss';
+@import 'stylesheets/index-responsive.scss';
+
 @import 'stylesheets/reset.scss';
 @import 'stylesheets/vars.scss';
 @import 'stylesheets/fonts.scss';
@@ -11,6 +14,3 @@
 @import 'stylesheets/name.scss';
 @import 'stylesheets/influencers.scss';
 @import 'stylesheets/antitrends.scss';
-
-@import 'stylesheets/about-responsive.scss';
-@import 'stylesheets/index-responsive.scss';
