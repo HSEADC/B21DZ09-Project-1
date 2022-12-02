@@ -14,6 +14,9 @@ body.index {
       font-size: 24px;
       font-weight: 400;
     }
+    .text {
+      line-height: 120%;
+    }
     .number {
       font-family: 'DRUZHOK';
       font-weight: 400;
@@ -353,6 +356,7 @@ body.index {
       }
     }
     .n2 {
+      height: 90vh;
       display: flex;
       flex-direction: row;
       overflow: visible;
@@ -486,6 +490,20 @@ body.index {
           flex-direction: row;
           align-items: flex-start;
           justify-content: flex-start;
+          animation: flow 10s ease-out 1.5s infinite alternate-reverse forwards;
+
+          @keyframes flow {
+            0% {
+              transform: translateX(-800px);
+            }
+            30% {
+              transform: translateX(-800px);
+            }
+
+            100% {
+              transform: translateX(0);
+            }
+          }
 
           .style {
             width: 210px;
@@ -497,6 +515,7 @@ body.index {
             flex-direction: column;
             align-items: center;
           }
+
           .container-lil {
             // width: 325px;
             // height: 325px;
@@ -556,7 +575,7 @@ body.index {
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      height: 115vh;
+      height: 100vh;
       // justify-content: center;
       // align-items: center;
 
@@ -749,6 +768,7 @@ body.index {
       font-family: 'Druk Wide Cyr';
       font-weight: 200;
       font-size: 14px;
+      line-height: 150%;
       color: var(--green);
     }
   }
@@ -771,7 +791,7 @@ body.index {
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1365px) {
+@media only screen and (min-width: 1025px) and (max-width: 1365px) {
   body.index {
     .content {
       padding-left: 30px;
@@ -920,7 +940,7 @@ body.index {
   }
 }
 
-@media only screen and (min-width: 615px) and (max-width: 1023px) {
+@media only screen and (min-width: 615px) and (max-width: 1024px) {
   body.index {
     .content {
       padding-left: 30px;
@@ -1150,6 +1170,326 @@ body.index {
     }
   }
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* iPad Portrait */
+  body.index {
+    .content {
+      padding-left: 30px;
+      padding-right: 30px;
+      p {
+        font-size: 12px;
+      }
+      .normal,
+      .wide {
+        font-size: 24px;
+        line-height: 130%;
+      }
+      .number {
+        font-size: 180px;
+      }
+      .header {
+        .logo {
+          width: 125px;
+          height: 28px;
+        }
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+        .vk {
+          width: 40px;
+        }
+      }
+      .cover {
+        height: 50vh;
+        .rectangle {
+          height: 60vh;
+        }
+        .image {
+          width: 105px;
+          height: 115px;
+          top: 200px;
+        }
+        .title {
+          top: 5vh;
+          .secondline {
+            margin-top: 80px;
+            .change {
+              height: 20vw;
+            }
+          }
+          .Druzhok {
+            font-size: calc(
+              50px + (170 + 170 * 0.65) * ((100vw - 320px) / 1920)
+            );
+          }
+        }
+      }
+      .n5 {
+        height: 55vh;
+        margin-top: 100px;
+        .left {
+          width: 30vw;
+        }
+        .right {
+          .normal {
+            margin-left: 150px;
+          }
+          .text {
+            margin-left: 150px;
+            margin-top: 20px;
+          }
+          .image2 {
+            width: 115px;
+            height: 175px;
+            top: 140px;
+          }
+          .image3 {
+            width: 168px;
+            height: 242px;
+            left: 114px;
+            top: 200px;
+          }
+          .image4 {
+            width: 105px;
+            height: 160px;
+            top: 150px;
+          }
+        }
+      }
+      .n4 {
+        height: 55vh;
+        .left {
+          .image5 {
+            height: 55vh;
+            width: 50vw;
+          }
+          .rectangle {
+            width: 50vw;
+          }
+        }
+        .right {
+          .number {
+            height: 180px;
+          }
+          .container {
+            .normal {
+              margin-right: 0;
+            }
+            .inline {
+              padding-left: 75px;
+            }
+            .text {
+              margin-top: 50px;
+            }
+          }
+        }
+      }
+      .n3 {
+        height: 40vh;
+        .left {
+          .number {
+            margin-top: 150px;
+          }
+          .container {
+            margin-top: 120px;
+          }
+        }
+        .image6 {
+          margin-top: -160px;
+        }
+      }
+      .n2 {
+        display: none;
+      }
+
+      .n2-mobile {
+        display: block;
+        height: 85vh;
+        .bottom {
+          margin-top: 0;
+          .slider-gallery {
+            @keyframes flow {
+              0% {
+                transform: translateX(-350px);
+              }
+              30% {
+                transform: translateX(-350px);
+              }
+
+              100% {
+                transform: translateX(0);
+              }
+            }
+          }
+        }
+      }
+
+      .n1 {
+        height: 60vh;
+        .lastheading {
+          .text {
+            margin-left: 260px;
+            margin-top: 50px;
+          }
+        }
+        .series-gallery {
+          margin-top: -160px;
+          .carry,
+          .samanta {
+            height: 280px;
+          }
+          .juls {
+            height: 400px;
+          }
+          .euphoria {
+            height: 330px;
+          }
+          .carry,
+          .juls,
+          .euphoria,
+          .samanta {
+            margin-top: 40px;
+          }
+        }
+      }
+      .launch {
+        margin-top: 70px;
+        .normal1 {
+          margin-left: 150px;
+          font-size: 24px;
+        }
+        .wide {
+          margin-left: 180px;
+        }
+        input {
+          width: 400px;
+        }
+        button {
+          width: 10em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: landscape) {
+  /* iPad Landscape */
+  body.index {
+    .content {
+      padding-left: 30px;
+      padding-right: 30px;
+      p {
+        font-size: 14px;
+      }
+      .normal,
+      .wide {
+        font-size: 34px;
+      }
+      .number {
+        font-size: 250px;
+      }
+      .header {
+        .logo {
+          width: 125px;
+          height: 28px;
+        }
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+        .vk {
+          width: 40px;
+        }
+      }
+      .cover {
+        .image {
+          width: 150px;
+          height: 158px;
+        }
+        .title {
+          .change {
+            height: 215px;
+          }
+        }
+      }
+
+      .n5 {
+        .left {
+          width: 30vw;
+        }
+        .right {
+          .image2 {
+            width: 165px;
+            height: 245px;
+          }
+          .image3 {
+            width: 234px;
+            height: 336px;
+            left: 164px;
+          }
+          .image4 {
+            width: 150px;
+            height: 222px;
+          }
+        }
+      }
+
+      .n4 {
+        .left {
+          .image5 {
+            width: 45vw;
+          }
+          .rectangle {
+            width: 45vw;
+          }
+        }
+        .right {
+          .container {
+            .inline {
+              padding-left: 105px;
+            }
+          }
+        }
+      }
+
+      .n2 {
+        display: none;
+      }
+
+      .n2-mobile {
+        display: block;
+        height: 100vh;
+        .bottom {
+          margin-top: 0;
+
+          .slider-gallery {
+            animation: none;
+          }
+        }
+      }
+
+      .n1 {
+        .series-gallery {
+          .carry,
+          .juls,
+          .euphoria,
+          .samanta {
+            margin-top: 50px;
+          }
+        }
+      }
+      .launch {
+        margin-top: 70px;
+        .normal1 {
+          font-size: 34px;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 320px) and (max-width: 614px) {
   body.index {
     .content {
