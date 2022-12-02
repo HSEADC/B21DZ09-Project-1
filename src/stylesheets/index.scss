@@ -670,45 +670,93 @@ body.index {
         }
       }
     }
-
-    .launch {
-      margin-top: 150px;
-      height: 60vh;
+    .launch-bg {
+      height: 350px;
+      width: 800px;
+      margin-bottom: 200px;
+      background-color: var(--green);
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 100px;
 
-      .normal1 {
-        font-family: 'Druk Text Cyr';
-        font-weight: 800;
-        font-size: 48px;
-        text-transform: uppercase;
-        margin-left: 300px;
-      }
-      .normal {
-        margin-left: -50px;
-        margin-top: 14px;
-      }
-      .wide {
-        margin-left: 350px;
-        margin-top: 14px;
-        margin-bottom: 100px;
+      .launch {
+        margin-top: 80px;
+        margin-bottom: 60px;
+        // height: 60vh;
+        width: 700px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title-launch {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 660px;
+        }
+
+        .line-launch {
+          width: 94%;
+          height: 1px;
+          background-color: var(--black);
+          margin-top: 30px;
+          margin-bottom: 10px;
+        }
+
+        .subtitle-launch {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 660px;
+          margin-bottom: 30px;
+        }
+
+        .normal1 {
+          font-family: 'Druk Text Cyr';
+          font-weight: 800;
+          font-size: 48px;
+          text-transform: uppercase;
+          // margin-left: 300px;
+        }
+        .normal {
+          display: inline-block;
+          font-size: 59px;
+          // margin-left: -50px;
+          // margin-top: 14px;
+        }
+        .wide {
+          display: inline-block;
+          font-size: 59px;
+          margin-left: 15px;
+          line-height: 94%;
+          // margin-top: 14px;
+          // margin-bottom: 100px;
+        }
       }
     }
 
     form {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
-      align-content: flex-start;
+      justify-content: space-between;
+      width: 660px;
+      // padding-left: 20px;
     }
     input {
       width: 460px;
-      height: 55px;
-      background: var(--black);
+      height: 70px;
+      background: black;
       // border-radius: 12px;
       border: none;
+      font-family: 'Druk Text Wide Cyr';
+      font-weight: 200;
+      font-size: 14px;
+
       padding: 0 25px;
     }
     button {
@@ -718,12 +766,16 @@ body.index {
       align-content: center;
       align-items: center;
       justify-content: center;
-      width: 13.1em;
-      height: 55px;
+      font-family: 'Druk Text Wide Cyr';
+      font-weight: 200;
+      font-size: 14px;
+      // width: 13.1em;
+      width: 200px;
+      height: 70px;
       // border-radius: 12px;
       border: none;
-      background: var(--green);
-      margin-left: 20px;
+      background: white;
+      // margin-left: 20px;
       color: var(--black);
       transition: 0.3s;
 
@@ -736,10 +788,10 @@ body.index {
     }
 
     button:hover {
-      background: var(--black);
+      background: black;
       cursor: pointer;
       h4 {
-        color: var(--green);
+        color: white;
       }
     }
   }
@@ -765,7 +817,7 @@ body.index {
     z-index: 0;
 
     p {
-      font-family: 'Druk Wide Cyr';
+      font-family: 'Druk Text Wide Cyr';
       font-weight: 200;
       font-size: 14px;
       line-height: 150%;
@@ -1158,7 +1210,7 @@ body.index {
           font-size: 24px;
         }
         .wide {
-          margin-left: 180px;
+          // margin-left: 180px;
         }
         input {
           width: 400px;
@@ -1697,24 +1749,44 @@ body.index {
           }
         }
       }
+      .launch-bg {
+        width: 364px;
+        height: 260px;
 
-      .launch {
-        margin-top: 0px;
-        .normal1 {
-          font-size: 25px;
-          margin-left: 90px;
-        }
-        .wide {
-          margin-left: 120px;
-        }
-        input {
-          width: 220px;
-        }
-        button {
-          margin-left: 0;
-          width: 100px;
-          h4 {
-            font-size: 12px;
+        .launch {
+          margin-top: 50px;
+          width: 306px;
+
+          .title-launch {
+            width: 306px;
+          }
+          .normal {
+            font-size: 26px;
+          }
+          .wide {
+            font-size: 28px;
+            line-height: 105%;
+            margin-left: 0px;
+          }
+          .subtitle-launch {
+            width: 306px;
+          }
+          .line-launch {
+            margin-top: 15px;
+            width: 99%;
+          }
+          #my-form {
+            width: 306px;
+          }
+          input {
+            width: 206px;
+          }
+          button {
+            margin-left: 0;
+            width: 100px;
+            h4 {
+              font-size: 12px;
+            }
           }
         }
       }
