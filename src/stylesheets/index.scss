@@ -587,6 +587,7 @@ body.index {
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         width: 100%;
         height: 800px;
         margin-top: -200px;
@@ -697,6 +698,7 @@ body.index {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          align-items: center;
           width: 660px;
         }
 
@@ -1203,21 +1205,8 @@ body.index {
           }
         }
       }
-      .launch {
-        margin-top: 70px;
-        .normal1 {
-          margin-left: 150px;
-          font-size: 24px;
-        }
-        .wide {
-          // margin-left: 180px;
-        }
-        input {
-          width: 400px;
-        }
-        button {
-          width: 10em;
-        }
+      .launch-bg {
+        width: 90vw;
       }
     }
   }
@@ -1358,7 +1347,7 @@ body.index {
 
       .n2-mobile {
         display: block;
-        height: 85vh;
+        height: 70vh;
         .bottom {
           margin-top: 0;
           .slider-gallery {
@@ -1406,20 +1395,12 @@ body.index {
           }
         }
       }
-      .launch {
-        margin-top: 70px;
-        .normal1 {
-          margin-left: 150px;
-          font-size: 24px;
-        }
-        .wide {
-          margin-left: 180px;
-        }
-        input {
-          width: 400px;
-        }
-        button {
-          width: 10em;
+      .launch-bg {
+        width: 90vw;
+        .launch {
+          input {
+            width: 480px;
+          }
         }
       }
     }
@@ -1468,6 +1449,7 @@ body.index {
       }
 
       .n5 {
+        height: 100vh;
         .left {
           width: 30vw;
         }
@@ -1489,9 +1471,11 @@ body.index {
       }
 
       .n4 {
+        height: 100vh;
         .left {
           .image5 {
             width: 45vw;
+            height: 100vh;
           }
           .rectangle {
             width: 45vw;
@@ -1504,6 +1488,9 @@ body.index {
             }
           }
         }
+      }
+      .n3 {
+        height: 80vh;
       }
 
       .n2 {
@@ -1523,6 +1510,7 @@ body.index {
       }
 
       .n1 {
+        height: 100vh;
         .series-gallery {
           .carry,
           .juls,
@@ -1532,17 +1520,19 @@ body.index {
           }
         }
       }
-      .launch {
-        margin-top: 70px;
-        .normal1 {
-          font-size: 34px;
+      .launch-bg {
+        width: 90vw;
+        .launch {
+          input {
+            width: 480px;
+          }
         }
       }
     }
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 614px) {
+@media only screen and (min-width: 220px) and (max-width: 614px) {
   body.index {
     .content {
       padding-left: 20px;
@@ -1608,7 +1598,7 @@ body.index {
       }
       .n5 {
         // overflow: visible;
-        height: 80vh;
+        height: 100vh;
         .right {
           .heading {
             margin-top: 80px;
@@ -1635,12 +1625,14 @@ body.index {
             width: 155px;
             height: 235px;
             left: 28px;
+            margin-left: 10px;
           }
           .image4 {
             width: 100px;
             height: 160px;
             left: 34vw;
             top: 533px;
+            margin-top: 10px;
           }
         }
       }
@@ -1674,7 +1666,7 @@ body.index {
               margin-right: 50vw;
             }
             .inline {
-              padding-left: 50px;
+              padding-left: 40px;
               margin-top: 10px;
             }
             .text {
@@ -1750,7 +1742,7 @@ body.index {
         }
       }
       .launch-bg {
-        width: 364px;
+        width: 90vw;
         height: 260px;
 
         .launch {
@@ -1780,12 +1772,13 @@ body.index {
           }
           input {
             width: 206px;
+            font-size: 10px;
           }
           button {
             margin-left: 0;
             width: 100px;
             h4 {
-              font-size: 12px;
+              font-size: 10px;
             }
           }
         }
@@ -1794,6 +1787,74 @@ body.index {
     .footer {
       p {
         font-size: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 220px) and (max-width: 360px) {
+  body.index {
+    .content {
+      .normal,
+      .wide {
+        font-size: 20px;
+        line-height: 130%;
+      }
+
+      .number {
+        font-size: 100px;
+      }
+
+      .cover {
+        height: 100vh;
+        .image {
+          width: 125px;
+          height: 135px;
+          top: 160px;
+        }
+        .title {
+          .Druzhok {
+            font-size: calc(
+              50px + (170 + 170 * 0.4) * ((100vw - 320px) / 1920)
+            );
+          }
+        }
+      }
+      .n4 {
+        .left {
+          .image5 {
+            width: 140px;
+          }
+          .rectangle {
+            width: 140px;
+          }
+        }
+        .right {
+          width: 45vw;
+
+          .container {
+            .inline {
+              padding-left: 20px;
+              margin-top: 0px;
+            }
+          }
+        }
+      }
+      .n3 {
+        .left {
+          .container {
+            .wide {
+              font-size: 20px;
+            }
+          }
+        }
+        .image6 {
+          display: none;
+        }
+      }
+
+      .launch-bg {
+        width: 90vw;
       }
     }
   }
