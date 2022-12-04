@@ -14,6 +14,9 @@ body.index {
       font-size: 24px;
       font-weight: 400;
     }
+    .text {
+      line-height: 120%;
+    }
     .number {
       font-family: 'DRUZHOK';
       font-weight: 400;
@@ -353,6 +356,7 @@ body.index {
       }
     }
     .n2 {
+      height: 90vh;
       display: flex;
       flex-direction: row;
       overflow: visible;
@@ -486,6 +490,20 @@ body.index {
           flex-direction: row;
           align-items: flex-start;
           justify-content: flex-start;
+          animation: flow 10s ease-out 1.5s infinite alternate-reverse forwards;
+
+          @keyframes flow {
+            0% {
+              transform: translateX(-800px);
+            }
+            30% {
+              transform: translateX(-800px);
+            }
+
+            100% {
+              transform: translateX(0);
+            }
+          }
 
           .style {
             width: 210px;
@@ -497,6 +515,7 @@ body.index {
             flex-direction: column;
             align-items: center;
           }
+
           .container-lil {
             // width: 325px;
             // height: 325px;
@@ -556,7 +575,7 @@ body.index {
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      height: 115vh;
+      height: 100vh;
       // justify-content: center;
       // align-items: center;
 
@@ -568,6 +587,7 @@ body.index {
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         width: 100%;
         height: 800px;
         margin-top: -200px;
@@ -651,45 +671,94 @@ body.index {
         }
       }
     }
-
-    .launch {
-      margin-top: 150px;
-      height: 60vh;
+    .launch-bg {
+      height: 350px;
+      width: 800px;
+      margin-bottom: 200px;
+      background-color: var(--green);
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 100px;
 
-      .normal1 {
-        font-family: 'Druk Text Cyr';
-        font-weight: 800;
-        font-size: 48px;
-        text-transform: uppercase;
-        margin-left: 300px;
-      }
-      .normal {
-        margin-left: -50px;
-        margin-top: 14px;
-      }
-      .wide {
-        margin-left: 350px;
-        margin-top: 14px;
-        margin-bottom: 100px;
+      .launch {
+        margin-top: 80px;
+        margin-bottom: 60px;
+        // height: 60vh;
+        width: 700px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title-launch {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 660px;
+        }
+
+        .line-launch {
+          width: 94%;
+          height: 1px;
+          background-color: var(--black);
+          margin-top: 30px;
+          margin-bottom: 10px;
+        }
+
+        .subtitle-launch {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 660px;
+          margin-bottom: 30px;
+        }
+
+        .normal1 {
+          font-family: 'Druk Text Cyr';
+          font-weight: 800;
+          font-size: 48px;
+          text-transform: uppercase;
+          // margin-left: 300px;
+        }
+        .normal {
+          display: inline-block;
+          font-size: 59px;
+          // margin-left: -50px;
+          // margin-top: 14px;
+        }
+        .wide {
+          display: inline-block;
+          font-size: 59px;
+          margin-left: 15px;
+          line-height: 94%;
+          // margin-top: 14px;
+          // margin-bottom: 100px;
+        }
       }
     }
 
     form {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
-      align-content: flex-start;
+      justify-content: space-between;
+      width: 660px;
+      // padding-left: 20px;
     }
     input {
       width: 460px;
-      height: 55px;
-      background: var(--black);
+      height: 70px;
+      background: black;
       // border-radius: 12px;
       border: none;
+      font-family: 'Druk Text Wide Cyr';
+      font-weight: 200;
+      font-size: 14px;
+
       padding: 0 25px;
     }
     button {
@@ -699,12 +768,16 @@ body.index {
       align-content: center;
       align-items: center;
       justify-content: center;
-      width: 13.1em;
-      height: 55px;
+      font-family: 'Druk Text Wide Cyr';
+      font-weight: 200;
+      font-size: 14px;
+      // width: 13.1em;
+      width: 200px;
+      height: 70px;
       // border-radius: 12px;
       border: none;
-      background: var(--green);
-      margin-left: 20px;
+      background: white;
+      // margin-left: 20px;
       color: var(--black);
       transition: 0.3s;
 
@@ -717,10 +790,10 @@ body.index {
     }
 
     button:hover {
-      background: var(--black);
+      background: black;
       cursor: pointer;
       h4 {
-        color: var(--green);
+        color: white;
       }
     }
   }
@@ -746,9 +819,10 @@ body.index {
     z-index: 0;
 
     p {
-      font-family: 'Druk Wide Cyr';
+      font-family: 'Druk Text Wide Cyr';
       font-weight: 200;
       font-size: 14px;
+      line-height: 150%;
       color: var(--green);
     }
   }
@@ -771,7 +845,7 @@ body.index {
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1365px) {
+@media only screen and (min-width: 1025px) and (max-width: 1365px) {
   body.index {
     .content {
       padding-left: 30px;
@@ -920,7 +994,7 @@ body.index {
   }
 }
 
-@media only screen and (min-width: 615px) and (max-width: 1023px) {
+@media only screen and (min-width: 615px) and (max-width: 1024px) {
   body.index {
     .content {
       padding-left: 30px;
@@ -1131,26 +1205,334 @@ body.index {
           }
         }
       }
-      .launch {
-        margin-top: 70px;
-        .normal1 {
-          margin-left: 150px;
-          font-size: 24px;
+      .launch-bg {
+        width: 90vw;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* iPad Portrait */
+  body.index {
+    .content {
+      padding-left: 30px;
+      padding-right: 30px;
+      p {
+        font-size: 12px;
+      }
+      .normal,
+      .wide {
+        font-size: 24px;
+        line-height: 130%;
+      }
+      .number {
+        font-size: 180px;
+      }
+      .header {
+        .logo {
+          width: 125px;
+          height: 28px;
         }
-        .wide {
-          margin-left: 180px;
+        .icon {
+          width: 24px;
+          height: 24px;
         }
-        input {
-          width: 400px;
+        .vk {
+          width: 40px;
         }
-        button {
-          width: 10em;
+      }
+      .cover {
+        height: 50vh;
+        .rectangle {
+          height: 60vh;
+        }
+        .image {
+          width: 105px;
+          height: 115px;
+          top: 200px;
+        }
+        .title {
+          top: 5vh;
+          .secondline {
+            margin-top: 80px;
+            .change {
+              height: 20vw;
+            }
+          }
+          .Druzhok {
+            font-size: calc(
+              50px + (170 + 170 * 0.65) * ((100vw - 320px) / 1920)
+            );
+          }
+        }
+      }
+      .n5 {
+        height: 55vh;
+        margin-top: 100px;
+        .left {
+          width: 30vw;
+        }
+        .right {
+          .normal {
+            margin-left: 150px;
+          }
+          .text {
+            margin-left: 150px;
+            margin-top: 20px;
+          }
+          .image2 {
+            width: 115px;
+            height: 175px;
+            top: 140px;
+          }
+          .image3 {
+            width: 168px;
+            height: 242px;
+            left: 114px;
+            top: 200px;
+          }
+          .image4 {
+            width: 105px;
+            height: 160px;
+            top: 150px;
+          }
+        }
+      }
+      .n4 {
+        height: 55vh;
+        .left {
+          .image5 {
+            height: 55vh;
+            width: 50vw;
+          }
+          .rectangle {
+            width: 50vw;
+          }
+        }
+        .right {
+          .number {
+            height: 180px;
+          }
+          .container {
+            .normal {
+              margin-right: 0;
+            }
+            .inline {
+              padding-left: 75px;
+            }
+            .text {
+              margin-top: 50px;
+            }
+          }
+        }
+      }
+      .n3 {
+        height: 40vh;
+        .left {
+          .number {
+            margin-top: 150px;
+          }
+          .container {
+            margin-top: 120px;
+          }
+        }
+        .image6 {
+          margin-top: -160px;
+        }
+      }
+      .n2 {
+        display: none;
+      }
+
+      .n2-mobile {
+        display: block;
+        height: 70vh;
+        .bottom {
+          margin-top: 0;
+          .slider-gallery {
+            @keyframes flow {
+              0% {
+                transform: translateX(-350px);
+              }
+              30% {
+                transform: translateX(-350px);
+              }
+
+              100% {
+                transform: translateX(0);
+              }
+            }
+          }
+        }
+      }
+
+      .n1 {
+        height: 60vh;
+        .lastheading {
+          .text {
+            margin-left: 260px;
+            margin-top: 50px;
+          }
+        }
+        .series-gallery {
+          margin-top: -160px;
+          .carry,
+          .samanta {
+            height: 280px;
+          }
+          .juls {
+            height: 400px;
+          }
+          .euphoria {
+            height: 330px;
+          }
+          .carry,
+          .juls,
+          .euphoria,
+          .samanta {
+            margin-top: 40px;
+          }
+        }
+      }
+      .launch-bg {
+        width: 90vw;
+        .launch {
+          input {
+            width: 480px;
+          }
         }
       }
     }
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 614px) {
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: landscape) {
+  /* iPad Landscape */
+  body.index {
+    .content {
+      padding-left: 30px;
+      padding-right: 30px;
+      p {
+        font-size: 14px;
+      }
+      .normal,
+      .wide {
+        font-size: 34px;
+      }
+      .number {
+        font-size: 250px;
+      }
+      .header {
+        .logo {
+          width: 125px;
+          height: 28px;
+        }
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+        .vk {
+          width: 40px;
+        }
+      }
+      .cover {
+        .image {
+          width: 150px;
+          height: 158px;
+        }
+        .title {
+          .change {
+            height: 215px;
+          }
+        }
+      }
+
+      .n5 {
+        height: 100vh;
+        .left {
+          width: 30vw;
+        }
+        .right {
+          .image2 {
+            width: 165px;
+            height: 245px;
+          }
+          .image3 {
+            width: 234px;
+            height: 336px;
+            left: 164px;
+          }
+          .image4 {
+            width: 150px;
+            height: 222px;
+          }
+        }
+      }
+
+      .n4 {
+        height: 100vh;
+        .left {
+          .image5 {
+            width: 45vw;
+            height: 100vh;
+          }
+          .rectangle {
+            width: 45vw;
+          }
+        }
+        .right {
+          .container {
+            .inline {
+              padding-left: 105px;
+            }
+          }
+        }
+      }
+      .n3 {
+        height: 80vh;
+      }
+
+      .n2 {
+        display: none;
+      }
+
+      .n2-mobile {
+        display: block;
+        height: 100vh;
+        .bottom {
+          margin-top: 0;
+
+          .slider-gallery {
+            animation: none;
+          }
+        }
+      }
+
+      .n1 {
+        height: 100vh;
+        .series-gallery {
+          .carry,
+          .juls,
+          .euphoria,
+          .samanta {
+            margin-top: 50px;
+          }
+        }
+      }
+      .launch-bg {
+        width: 90vw;
+        .launch {
+          input {
+            width: 480px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 220px) and (max-width: 614px) {
   body.index {
     .content {
       padding-left: 20px;
@@ -1216,7 +1598,7 @@ body.index {
       }
       .n5 {
         // overflow: visible;
-        height: 80vh;
+        height: 100vh;
         .right {
           .heading {
             margin-top: 80px;
@@ -1243,12 +1625,14 @@ body.index {
             width: 155px;
             height: 235px;
             left: 28px;
+            margin-left: 10px;
           }
           .image4 {
             width: 100px;
             height: 160px;
             left: 34vw;
             top: 533px;
+            margin-top: 10px;
           }
         }
       }
@@ -1282,7 +1666,7 @@ body.index {
               margin-right: 50vw;
             }
             .inline {
-              padding-left: 50px;
+              padding-left: 40px;
               margin-top: 10px;
             }
             .text {
@@ -1357,24 +1741,45 @@ body.index {
           }
         }
       }
+      .launch-bg {
+        width: 90vw;
+        height: 260px;
 
-      .launch {
-        margin-top: 0px;
-        .normal1 {
-          font-size: 25px;
-          margin-left: 90px;
-        }
-        .wide {
-          margin-left: 120px;
-        }
-        input {
-          width: 220px;
-        }
-        button {
-          margin-left: 0;
-          width: 100px;
-          h4 {
-            font-size: 12px;
+        .launch {
+          margin-top: 50px;
+          width: 306px;
+
+          .title-launch {
+            width: 306px;
+          }
+          .normal {
+            font-size: 26px;
+          }
+          .wide {
+            font-size: 28px;
+            line-height: 105%;
+            margin-left: 0px;
+          }
+          .subtitle-launch {
+            width: 306px;
+          }
+          .line-launch {
+            margin-top: 15px;
+            width: 99%;
+          }
+          #my-form {
+            width: 306px;
+          }
+          input {
+            width: 206px;
+            font-size: 10px;
+          }
+          button {
+            margin-left: 0;
+            width: 100px;
+            h4 {
+              font-size: 10px;
+            }
           }
         }
       }
@@ -1382,6 +1787,74 @@ body.index {
     .footer {
       p {
         font-size: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 220px) and (max-width: 360px) {
+  body.index {
+    .content {
+      .normal,
+      .wide {
+        font-size: 20px;
+        line-height: 130%;
+      }
+
+      .number {
+        font-size: 100px;
+      }
+
+      .cover {
+        height: 100vh;
+        .image {
+          width: 125px;
+          height: 135px;
+          top: 160px;
+        }
+        .title {
+          .Druzhok {
+            font-size: calc(
+              50px + (170 + 170 * 0.4) * ((100vw - 320px) / 1920)
+            );
+          }
+        }
+      }
+      .n4 {
+        .left {
+          .image5 {
+            width: 140px;
+          }
+          .rectangle {
+            width: 140px;
+          }
+        }
+        .right {
+          width: 45vw;
+
+          .container {
+            .inline {
+              padding-left: 20px;
+              margin-top: 0px;
+            }
+          }
+        }
+      }
+      .n3 {
+        .left {
+          .container {
+            .wide {
+              font-size: 20px;
+            }
+          }
+        }
+        .image6 {
+          display: none;
+        }
+      }
+
+      .launch-bg {
+        width: 90vw;
       }
     }
   }

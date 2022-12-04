@@ -6,9 +6,52 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
+
+    <!-- Primary Meta Tags -->
+    <title>WOW!MAG — говорим о моде по-новому</title>
+    <meta name="title" content="WOW!MAG — говорим о моде по-новому" />
+    <meta
+      name="description"
+      content="Узнайте о разных модных стилях, лучших образах мировых звезд и персонажей из кино и сериалов, а также антитрендах вместе с WOW!MAG."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wow!mag.adc.ac/" />
+    <meta property="og:title" content="WOW!MAG — говорим о моде по-новому" />
+    <meta
+      property="og:description"
+      content="Узнайте о разных модных стилях, лучших образах мировых звезд и персонажей из кино и сериалов, а также антитрендах вместе с WOW!MAG."
+    />
+    <meta
+      property="og:image"
+      content="${require(`./src/images/metatagcover.png`)}"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://wow!mag.adc.ac/" />
+    <meta
+      property="twitter:title"
+      content="WOW!MAG — говорим о моде по-новому"
+    />
+    <meta
+      property="twitter:description"
+      content="Узнайте о разных модных стилях, лучших образах мировых звезд и персонажей из кино и сериалов, а также антитрендах вместе с WOW!MAG."
+    />
+    <meta
+      property="twitter:image"
+      content="${require(`src/images/metatagcover-twitter.png`)}"
+    />
+
     <link rel="icon" href="images/favicon.png" type="image/png" />
     <title>WOW!MAG</title>
     <analytics></analytics>
+    <!-- <script src="src/javascripts/java-script.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="javascripts/slick/slick.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="javascripts/slick/slick.css"/>
+ <link rel="stylesheet" type="text/css" href="javascripts/slick/slick-theme.css"/> -->
   </head>
   <body class="index">
     <div class="content">
@@ -66,7 +109,7 @@
           <div class="heading">
             <p class="normal">Читай подробные</p>
             <p class="wide">ликбез-статьи</p>
-            <p class="normal">по каждому стилю</p>
+            <!-- <p class="normal">по каждому стилю</p> -->
             <p class="text">Узнай, как повторить любой стиль самостоятельно.</p>
           </div>
           <div class="image2"></div>
@@ -208,28 +251,40 @@
       <a href="about.html" class="normal"
         >A пока посмотрите страницу о проекте</a
       > -->
-      <section class="launch">
-        <p class="normal1">Подписывайся,</p>
-        <p class="normal">чтобы не пропустить,</p>
-        <p class="wide">запуск</p>
-        <form
-          id="my-form"
-          action="https://formspree.io/f/xeqdzqbb"
-          method="POST"
-        >
-          <label>
-            <input type="email" name="email" placeholder="example@gmail.com" />
-          </label>
-          <div class="column">
-            <button type="submit">
-              <h4>отправить</h4>
-              <!-- <image class="send" src="images/send.svg" /> -->
-            </button>
-            <!-- <div class="more">
+      <section class="launch-bg">
+        <div class="launch">
+          <div class="title-launch">
+            <p class="normal">узнать о</p>
+            <p class="wide">запуске</p>
+          </div>
+          <div class="line-launch"></div>
+          <div class="subtitle-launch">
+            <p class="text">оставьте нам свою почту</p>
+            <p class="text">мы уведомим вас</p>
+          </div>
+          <form
+            id="my-form"
+            action="https://formspree.io/f/xeqdzqbb"
+            method="POST"
+          >
+            <label>
+              <input
+                type="email"
+                name="email"
+                placeholder="example@gmail.com"
+              />
+            </label>
+            <div class="column">
+              <button type="submit">
+                <h4>отправить</h4>
+                <!-- <image class="send" src="images/send.svg" /> -->
+              </button>
+              <!-- <div class="more">
               <a href="about.html" class="about">Подробнее о&nbsp;проекте</a>
             </div> -->
-          </div>
-        </form>
+            </div>
+          </form>
+        </div>
       </section>
     </div>
     <section class="opacity"></section>
