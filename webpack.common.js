@@ -12,8 +12,8 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'docs'),
-    clean: true
+    path: path.resolve(__dirname, 'docs')
+    // clean: true
   },
   module: {
     rules: [
@@ -68,6 +68,7 @@ module.exports = {
       }
     ]
   },
+
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
@@ -114,17 +115,25 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/styles-library.html',
-      filename: './styles-library.html',
+      template: './src/styles.html',
+      filename: './styles.html',
       chunks: ['index']
     }),
 
-    //library article
+    //Styles article
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/styles-library/name.html',
-      filename: './styles-library/name.html',
+      template: './src/styles/name.html',
+      filename: './styles/name.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/sport-chic.html',
+      filename: './styles/sport-chic.html',
       chunks: ['index']
     }),
 

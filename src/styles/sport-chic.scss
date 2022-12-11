@@ -1,0 +1,1011 @@
+body.sport-chic {
+  background: var(--white);
+  height: 100%;
+
+  a {
+    text-decoration: none;
+    color: var(--black);
+  }
+
+  b {
+    font-family: 'Inter';
+    font-weight: 700;
+  }
+
+  p,
+  li {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135%;
+  }
+
+  h5 {
+    font-size: 8px;
+    font-family: 'Druk Text Wide Cyr';
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 12px;
+    font-family: 'Druk Text Wide Cyr';
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-family: 'Druk Text Wide Cyr';
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 68px;
+    font-family: 'Druk Cyr';
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 388px;
+    text-align: center;
+    line-height: 100%;
+
+    &.druzhok {
+      font-family: 'DRUZHOK';
+      font-weight: 400;
+    }
+
+    &.druk {
+      font-family: 'Druk Condensed Cyr Super';
+      font-weight: 800;
+    }
+  }
+
+  .navbar {
+    position: fixed;
+    z-index: 20;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 60px 25px 0px 25px;
+
+    .logo {
+      height: 33px;
+      width: 260px;
+      background-image: url('./images/newlogo.svg');
+      background-position: top left;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 540px;
+    }
+  }
+
+  section {
+    // height: 100vh;
+
+    &.cover {
+      height: 110vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .topgrid {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        column-gap: 20px;
+        width: 1636px;
+        // height: 100vh;
+        margin: 0 auto;
+        position: absolute;
+        z-index: 10;
+
+        .image {
+          grid-column: 9 / 11;
+          height: 282px;
+          position: relative;
+          z-index: 10;
+          top: 35vh;
+          background-image: url('styles/images/sport-chic/cover.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        column-gap: 20px;
+        width: 1636px;
+        // height: 100vh;
+        margin: 0 auto;
+        position: relative;
+
+        .small-description {
+          grid-column: 2 / 18;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+          margin-bottom: 28px;
+          margin-top: 210px;
+        }
+
+        .name {
+          grid-column: 3 / 17;
+          // display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          height: 65vh;
+          position: relative;
+          z-index: 5;
+
+          h1 {
+            &.druk {
+              margin-top: -140px;
+              span {
+                // font-size: 388px;
+                font-family: 'Druk Text Wide Cyr';
+                font-weight: 800;
+              }
+            }
+          }
+        }
+
+        .sticker {
+          grid-column: 2 / 7;
+          background: var(--green);
+          padding: 90px 72px 22px 32px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          position: relative;
+          top: -25vh;
+
+          h3 {
+            margin-top: 20px;
+            margin-bottom: 9px;
+          }
+
+          .wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .tag {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              padding: 8px 18px;
+              background: var(--green);
+              border-radius: 23px;
+              border: 1px solid var(--black);
+              height: 28px;
+              margin-right: 6px;
+              margin-top: 9px;
+              width: auto;
+
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
+        .influencers {
+          grid-column: 15 / 18;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          position: relative;
+          top: -6vh;
+
+          .wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-end;
+            margin-top: 30px;
+
+            .person {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin-left: 30px;
+
+              .avatar {
+                filter: grayscale(1);
+                height: 55px;
+                width: 55px;
+                border-radius: 50%;
+                margin-bottom: 8px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+              }
+
+              h5 {
+                width: 58px;
+                text-align: center;
+                line-height: 130%;
+              }
+            }
+            .first {
+              .avatar {
+                background-image: url('styles/images/sport-chic/bellahadid.jpg');
+                background-size: 165%;
+                background-position: 40% 35%;
+              }
+            }
+            .second {
+              .avatar {
+                background-image: url('styles/images/sport-chic/kendall.jpg');
+              }
+            }
+            .third {
+              .avatar {
+                background-image: url('styles/images/sport-chic/hailey.jpg');
+              }
+            }
+          }
+        }
+
+        .line {
+          grid-column: 1 / 19;
+          height: 2px;
+          position: relative;
+          top: -15vh;
+          background: var(--black);
+        }
+      }
+    }
+    &.appearance {
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        column-gap: 20px;
+        width: 1636px;
+        // height: 100vh;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 200px;
+
+        .small-description {
+          grid-column: 2 / 18;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+          margin-bottom: 46px;
+          margin-top: 100px;
+        }
+        .heading {
+          grid-column: 3 / 9;
+          margin-bottom: 75px;
+          h2 {
+            line-height: 70%;
+            span {
+              margin-bottom: 20px;
+              font-family: 'Druk Text Wide Cyr';
+              font-weight: 1000;
+              font-size: 50px;
+            }
+          }
+        }
+        .textwrapper {
+          grid-column: 3 / 17;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 20px;
+
+          p {
+            grid-column: 1 / 2;
+          }
+          .table {
+            grid-column: 2 / 3;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 90px;
+
+            .wrapper {
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: flex-start;
+              margin-bottom: 14px;
+
+              p {
+                width: 40%;
+              }
+              h3 {
+                width: 60%;
+              }
+            }
+            .line {
+              width: 100%;
+              height: 1px;
+              background: var(--black);
+              margin-bottom: 14px;
+            }
+          }
+        }
+
+        .example {
+          margin-top: 44px;
+          grid-column: 2 /18;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          column-gap: 20px;
+
+          .card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &.first {
+              grid-column: 1/2;
+            }
+
+            h5 {
+              margin-top: 15px;
+              text-align: left;
+              line-height: 130%;
+            }
+
+            .image {
+              width: 100%;
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              height: 522px;
+            }
+
+            .one {
+              background-image: url('styles/images/sport-chic/appearence1.png');
+            }
+            .two {
+              background-image: url('styles/images/sport-chic/appearence2.png');
+              height: 574px;
+            }
+            .three {
+              background-image: url('styles/images/sport-chic/appearence3.png');
+            }
+            .four {
+              background-image: url('styles/images/sport-chic/appearence4.png');
+              height: 574px;
+            }
+          }
+        }
+      }
+    }
+
+    &.character {
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        width: 1636px;
+        // height: 100vh;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 200px;
+
+        .gallery {
+          grid-column: 1 / 2;
+          display: flex;
+          flex-direction: column;
+
+          .slider-image {
+            .image {
+              width: 100%;
+              height: 634px;
+              background-image: url('styles/images/sport-chic/character1.png');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+          }
+          .slider-nav {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .wrapper {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+
+              h5 {
+                font-size: 12px;
+              }
+              .number {
+                font-family: 'Druk Cyr';
+                font-weight: 800;
+                font-size: 18px;
+                margin-right: 30px;
+              }
+            }
+            .arrow {
+              width: 44px;
+              height: 44px;
+              background-image: url('./images/greenarrow.svg');
+              background-size: contain;
+              background-position: center;
+              transform: rotate(45deg);
+            }
+          }
+        }
+
+        .textwrapper {
+          grid-column: 2 / 3;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-left: 112px;
+
+          .heading {
+            margin-bottom: 56px;
+
+            h2 {
+              line-height: 90%;
+              span {
+                font-family: 'Druk Text Wide Cyr';
+                font-weight: 1000;
+                font-size: 68px;
+              }
+            }
+          }
+
+          p {
+            width: calc(100% - 92px);
+          }
+        }
+      }
+    }
+
+    &.material {
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        column-gap: 20px;
+        width: 1636px;
+        // height: 100vh;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 200px;
+
+        .textwrapper {
+          grid-column: 3 / 10;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .heading {
+            margin-bottom: 56px;
+
+            h2 {
+              line-height: 100%;
+              span {
+                font-family: 'Druk Text Wide Cyr';
+                font-weight: 1000;
+                font-size: 68px;
+              }
+            }
+          }
+        }
+        .gallery {
+          grid-column: 11 / 16;
+          display: flex;
+          flex-direction: column;
+
+          .slider-image {
+            .image {
+              width: 100%;
+              height: 738px;
+              background-image: url('styles/images/sport-chic/material1.png');
+              background-size: cover;
+              background-position: top;
+              background-repeat: no-repeat;
+            }
+          }
+          .slider-nav {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .wrapper {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+
+              h5 {
+                font-size: 12px;
+              }
+              .number {
+                font-family: 'Druk Cyr';
+                font-weight: 800;
+                font-size: 18px;
+                margin-right: 30px;
+              }
+            }
+            .arrow {
+              width: 44px;
+              height: 44px;
+              background-image: url('./images/greenarrow.svg');
+              background-size: contain;
+              background-position: center;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+
+    &.base {
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        column-gap: 20px;
+        width: 1636px;
+        // height: 100vh;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 200px;
+
+        .gallery {
+          grid-column: 1 / 10;
+          display: flex;
+          flex-direction: column;
+
+          .slider-image {
+            grid-column: 1 / 10;
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            column-gap: 20px;
+
+            .image1 {
+              grid-column: 1 / 5;
+              width: 100%;
+              height: 521px;
+              background-image: url('styles/images/sport-chic/base1.png');
+              background-size: cover;
+              background-position: top;
+              background-repeat: no-repeat;
+            }
+            .image2 {
+              grid-column: 5 / 10;
+              width: 100%;
+              height: 657px;
+              background-image: url('styles/images/sport-chic/base2.png');
+              background-size: cover;
+              background-position: top;
+              background-repeat: no-repeat;
+            }
+          }
+          .slider-nav {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .wrapper {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+
+              h5 {
+                font-size: 12px;
+              }
+              .number {
+                font-family: 'Druk Cyr';
+                font-weight: 800;
+                font-size: 18px;
+                margin-right: 30px;
+              }
+            }
+            .arrow {
+              width: 44px;
+              height: 44px;
+              background-image: url('./images/greenarrow.svg');
+              background-size: contain;
+              background-position: center;
+              transform: rotate(45deg);
+            }
+          }
+        }
+
+        .textwrapper {
+          grid-column: 11 / 18;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .heading {
+            margin-bottom: 56px;
+
+            h2 {
+              line-height: 100%;
+              span {
+                font-family: 'Druk Text Wide Cyr';
+                font-weight: 1000;
+                font-size: 68px;
+              }
+            }
+          }
+          ul {
+            list-style: none;
+
+            li {
+              padding-bottom: 30px;
+            }
+            li::before {
+              content: '';
+              display: inline-block;
+              height: 10px;
+              width: 10px;
+              vertical-align: middle;
+              border-radius: 50%;
+              background-color: var(--black);
+              margin-right: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    &.formula {
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        column-gap: 20px;
+        width: 1636px;
+        // height: 100vh;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 200px;
+
+        .textwrapper {
+          grid-column: 3 / 9;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .heading {
+            margin-bottom: 56px;
+
+            h2 {
+              line-height: 100%;
+              span {
+                font-family: 'Druk Text Wide Cyr';
+                font-weight: 1000;
+                font-size: 68px;
+              }
+            }
+          }
+          ul {
+            list-style: none;
+
+            li {
+              padding-bottom: 30px;
+            }
+            li::before {
+              content: '';
+              display: inline-block;
+              height: 10px;
+              width: 10px;
+              vertical-align: middle;
+              border-radius: 50%;
+              background-color: var(--black);
+              margin-right: 12px;
+            }
+          }
+        }
+        .gallery {
+          grid-column: 10 / 19;
+          display: flex;
+          flex-direction: column;
+
+          .slider-image {
+            grid-column: 10 / 19;
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            column-gap: 20px;
+
+            .image1 {
+              grid-column: 1 / 6;
+              width: 100%;
+              height: 630px;
+              background-image: url('styles/images/sport-chic/formula1.png');
+              background-size: cover;
+              background-position: top;
+              background-repeat: no-repeat;
+            }
+            .image2 {
+              grid-column: 6 / 10;
+              width: 100%;
+              height: 538px;
+              background-image: url('styles/images/sport-chic/formula2.png');
+              background-size: cover;
+              background-position: top;
+              background-repeat: no-repeat;
+            }
+          }
+          .slider-nav {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .wrapper {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+
+              h5 {
+                font-size: 12px;
+              }
+              .number {
+                font-family: 'Druk Cyr';
+                font-weight: 800;
+                font-size: 18px;
+                margin-right: 30px;
+              }
+            }
+            .arrow {
+              width: 44px;
+              height: 44px;
+              background-image: url('./images/greenarrow.svg');
+              background-size: contain;
+              background-position: center;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+
+    &.recomendations {
+      background: var(--green);
+      .grid {
+        padding-top: 115px;
+        padding-bottom: 115px;
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        column-gap: 20px;
+        width: 1636px;
+        // height: 100vh;
+        margin: 0 auto;
+        position: relative;
+
+        .wrapper {
+          grid-column: 2 / 6;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+
+          h2 {
+            font-size: 30px;
+            font-family: 'Druk Text Wide Cyr';
+            font-weight: 500;
+            text-transform: none;
+          }
+          .back {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .icon {
+              width: 44px;
+              height: 44px;
+              background-image: url('./images/blackarrow.svg');
+              background-size: contain;
+              background-position: center;
+              transform: rotate(-135deg);
+            }
+            h3 {
+              font-size: 14px;
+              font-family: 'Druk Text Wide Cyr';
+              font-weight: 500;
+              text-decoration: underline;
+              color: black;
+              margin-left: 10px;
+            }
+          }
+        }
+        .styles {
+          grid-column: 10 / 19;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          column-gap: 20px;
+
+          .card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &.first {
+              grid-column: 1 / 2;
+            }
+
+            h3 {
+              font-size: 20px;
+              font-family: 'Druk Text Cyr';
+              font-weight: 500px;
+              margin-top: 16px;
+            }
+            .wrapper {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: flex-start;
+
+              .tag {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 8px 18px;
+                background: var(--green);
+                border-radius: 23px;
+                border: 1px solid var(--black);
+                height: 28px;
+                margin-right: 3px;
+                margin-top: 9px;
+                width: auto;
+
+                p {
+                  font-size: 12px;
+                }
+              }
+            }
+
+            .image {
+              width: 100%;
+              height: 365px;
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+            .one {
+              background-image: url('styles/images/minimalism.png');
+            }
+            .two {
+              background-image: url('styles/images/classic.png');
+            }
+            .three {
+              background-image: url('styles/images/businesscasual.png');
+            }
+          }
+        }
+      }
+    }
+
+    &.footer {
+      background: var(--black);
+      color: var(--gray);
+
+      .grid {
+        padding-top: 55px;
+        padding-bottom: 135px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 20px;
+        width: 1636px;
+        // height: 100vh;
+        margin: 0 auto;
+        position: relative;
+
+        h3 {
+          font-size: 12px;
+          text-transform: none;
+          font-weight: 500;
+          line-height: 140%;
+          margin-bottom: 10px;
+        }
+
+        p,
+        h4,
+        a {
+          font-size: 12px;
+          margin-bottom: 10px;
+          color: var(--gray);
+        }
+
+        h4 {
+          text-transform: none;
+          text-decoration: underline;
+          text-decoration-color: var(--green);
+          text-decoration-thickness: 2px;
+          font-family: 'Inter';
+          line-height: 120%;
+          font-weight: 400;
+          cursor: default;
+        }
+
+        .top {
+          grid-column: 1 /7;
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          column-gap: 20px;
+
+          .first {
+            grid-column: 1 / 2;
+          }
+          .second {
+            grid-column: 2 / 3;
+          }
+          .styles {
+            grid-column: 3 / 4;
+          }
+          .influencers {
+            grid-column: 4 / 5;
+          }
+          .third {
+            grid-column: 5 / 6;
+          }
+
+          .socialnetworks {
+            grid-column: 6 / 7;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .icon {
+              display: flex;
+              margin-left: 30px;
+              width: 30px;
+              height: 30px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              cursor: pointer;
+            }
+            .telegram {
+              background-image: url('./images/tgwhite.svg');
+            }
+            .instagram {
+              background-image: url('./images/instawhite.svg');
+            }
+            .vk {
+              width: 49px;
+              background-image: url('./images/vkwhite.svg');
+            }
+            .dzen {
+              background-image: url('./images/dzenwhite.svg');
+            }
+          }
+        }
+        .bottom {
+          margin-top: 100px;
+          grid-column: 1 / 7;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}

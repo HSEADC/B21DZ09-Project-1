@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Druk Text Wide Cyr';
   src: url('fonts/Druk-Text-Wide-Cyr-Heavy.otf') format('opentype');
   font-weight: 800;
@@ -20,9 +27,44 @@
 }
 
 @font-face {
+  font-family: 'Druk Text Wide Cyr';
+  src: url('fonts/Druk Text Wide Cyr Super.otf') format('opentype');
+  font-weight: 1000;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Druk Text Cyr';
   src: url('fonts/Druk-Text-Cyr-Heavy.otf') format('opentype');
   font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Druk Text Cyr';
+  src: url('fonts/Druk Text Cyr Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Druk Cyr';
+  src: url('fonts/Druk Cyr Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Druk Cyr';
+  src: url('fonts/Druk Cyr Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Druk Cyr';
+  src: url('fonts/Druk Cyr Medium.otf') format('opentype');
+  font-weight: 500;
   font-style: normal;
 }
 
