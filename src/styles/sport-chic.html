@@ -43,10 +43,10 @@
       property="twitter:image"
       content="${require(`src/images/metatagcover-twitter.png`)}"
     />
-    <!-- <link rel="stylesheet" href="..//javascript/slick/slick.css" />
-    <link rel="stylesheet" href="..//javascript/slick/slick-theme.css" />
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script src="animejs/lib/anime.min.js"></script>
     <script src="sport-chic.js"></script>
-    <script src="..//javascript/slick/slick.min.js"></script> -->
+
     <!-- <link rel="icon" href="./images/favicon.png" type="image/png" /> -->
     <title>Стиль sport chic</title>
   </head>
@@ -69,40 +69,43 @@
           <h4>актуален в 2022/2023</h4>
         </div>
         <div class="name">
-          <h1 class="druzhok">sport</h1>
-          <h1 class="druk"><span>C</span>HIC</h1>
+          <span class="text-wrapper">
+            <span class="letter druzhok">sport</span>
+            <span class="letter druk"> <span class="wide">C</span>HIC</span>
+          </span>
         </div>
-
-        <div class="sticker">
-          <p>
-            Спортшик&nbsp;&mdash; это стиль, построенный на&nbsp;сочетании
-            спортивных и&nbsp;гламурных вещей. Вам нравится, как одеваются Белла
-            Хадид, Кендалл Дженнер и&nbsp;Хейли Болдуин-Бибер? Тогда
-            вы&nbsp;самый настоящий адепт спортшика!
-          </p>
-          <h3>характер</h3>
-          <div class="wrapper">
-            <div class="tag" data-tag="comfort"><p>комфорт</p></div>
-            <div class="tag" data-tag="liberty"><p>либеральность</p></div>
-            <div class="tag" data-tag="glamour"><p>гламур</p></div>
-            <div class="tag" data-tag="spectacular"><p>эффектность</p></div>
+        <div class="bigwrapper">
+          <div class="sticker">
+            <p>
+              Спортшик&nbsp;&mdash; это стиль, построенный на&nbsp;сочетании
+              спортивных и&nbsp;гламурных вещей. Вам нравится, как одеваются
+              Белла Хадид, Кендалл Дженнер и&nbsp;Хейли Болдуин-Бибер? Тогда
+              вы&nbsp;самый настоящий адепт спортшика!
+            </p>
+            <h3>характер</h3>
+            <div class="wrapper">
+              <div class="tag" data-tag="comfort"><p>комфорт</p></div>
+              <div class="tag" data-tag="liberty"><p>либеральность</p></div>
+              <div class="tag" data-tag="glamour"><p>гламур</p></div>
+              <div class="tag" data-tag="spectacular"><p>эффектность</p></div>
+            </div>
           </div>
-        </div>
-        <div class="influencers">
-          <h4>Адепты и инфлюенсеры</h4>
-          <div class="wrapper">
-            <a href="#" class="first person"
-              ><div class="avatar"></div>
-              <h5>Белла Хадид</h5></a
-            >
-            <a href="#" class="second person"
-              ><div class="avatar"></div>
-              <h5>Кендалл Дженнер</h5></a
-            >
-            <a href="#" class="third person"
-              ><div class="avatar"></div>
-              <h5>Хейли Бибер</h5></a
-            >
+          <div class="influencers">
+            <h4>Адепты и инфлюенсеры</h4>
+            <div class="wrapper">
+              <a href="#" class="first person"
+                ><div class="avatar"></div>
+                <h5>Белла Хадид</h5></a
+              >
+              <a href="#" class="second person"
+                ><div class="avatar"></div>
+                <h5>Кендалл Дженнер</h5></a
+              >
+              <a href="#" class="third person"
+                ><div class="avatar"></div>
+                <h5>Хейли Бибер</h5></a
+              >
+            </div>
           </div>
         </div>
         <div class="line"></div>
@@ -183,13 +186,20 @@
     <section class="character">
       <div class="grid">
         <div class="gallery">
-          <div class="slider slider-image">
-            <div class="image"></div>
+          <div class="rail">
+            <div class="slideimg current"></div>
+            <div class="slideimg"></div>
+            <div class="slideimg"></div>
+            <div class="slideimg"></div>
           </div>
-          <div class="slider slider-nav">
+
+          <div class="slider-nav">
             <div class="wrapper">
-              <h5 class="number">1 / 12</h5>
-              <h5>образы в стиле спорт-шик</h5>
+              <div class="number">
+                <span class="count"> <input type="text" value="1" /> </span
+                ><span> / 4</span>
+              </div>
+              <h5>образы в стиле спортшик</h5>
             </div>
 
             <div class="arrow"></div>
@@ -256,12 +266,20 @@
           </p>
         </div>
         <div class="gallery">
-          <div class="slider slider-image">
-            <div class="image"></div>
+          <div class="rail">
+            <div class="slideimg current"></div>
+            <div class="slideimg"></div>
+            <div class="slideimg"></div>
+            <div class="slideimg"></div>
+            <div class="slideimg"></div>
+            <div class="slideimg"></div>
           </div>
           <div class="slider slider-nav">
             <div class="wrapper">
-              <h5 class="number">1 / 12</h5>
+              <div class="number">
+                <span class="count"> <input type="text" value="1" /> </span
+                ><span> / 6</span>
+              </div>
               <h5>образы в стиле спорт-шик</h5>
             </div>
 

@@ -1,0 +1,1468 @@
+body.lilnasx {
+  background: var(--black);
+  color: var(--white);
+  height: 100%;
+
+  a {
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  b {
+    font-family: 'Inter';
+    font-weight: 700;
+  }
+
+  p,
+  li {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-family: 'Druk Cyr';
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-family: 'Druk Text Wide Cyr';
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: 68px;
+    font-family: 'Druk Cyr';
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 90%;
+
+    span {
+      font-family: 'Druk Text Wide Cyr';
+      font-weight: 1000;
+    }
+  }
+  input {
+    background: transparent;
+    color: white;
+    padding: none;
+  }
+
+  .grid {
+    display: grid;
+    width: 1540px;
+    grid-template-columns: repeat(24, 1fr);
+    column-gap: 20px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    background: var(--black);
+    padding-top: 20px;
+    padding-bottom: 15px;
+    .grid {
+      .logo {
+        grid-column: 1 / 5;
+        height: 33px;
+        width: 100%;
+        background-image: url('./images/newlogowhite.svg');
+        background-position: top left;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .wrapper {
+        grid-column: 17 / 25;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        h4 {
+          font-size: 12px;
+          font-family: 'Druk Text Wide Cyr';
+          font-weight: 800;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  section {
+    &.cover {
+      .grid {
+        height: 100vh;
+        .name {
+          grid-column: 3 / 23;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: auto;
+          position: relative;
+
+          .text-wrapper {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            z-index: 5;
+            position: relative;
+          }
+          .letter {
+            display: inline-block;
+          }
+          .letter:first-child {
+            font-family: 'Druk Text Wide Cyr';
+          }
+          .druk,
+          .druzhok {
+            font-size: 300px;
+            text-align: center;
+            line-height: 100%;
+          }
+          .druzhok {
+            font-family: 'DRUZHOK';
+            font-weight: 400;
+          }
+
+          .druk {
+            font-family: 'Druk Condensed Cyr Super';
+            font-weight: 800;
+
+            .wide {
+              font-family: 'Druk Text Wide Cyr';
+            }
+          }
+        }
+        .image {
+          width: 527px;
+          height: 527px;
+          position: absolute;
+
+          z-index: 1;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-image: url('influencers/individuals/images/lilnasx/cover.png');
+          animation: opacity 2s ease;
+
+          @keyframes opacity {
+            0% {
+              opacity: 0;
+            }
+            60% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    &.info {
+      width: 100%;
+      height: 900px;
+      margin-bottom: 200px;
+
+      overflow: hidden;
+
+      .grid {
+        align-content: flex-start;
+
+        h1 {
+          font-family: 'Druk Cyr';
+          font-weight: 800;
+          font-size: 125px;
+          grid-column: 2 / 8;
+          text-transform: uppercase;
+        }
+
+        .infoblock {
+          color: black;
+          grid-column: 12 / 25;
+
+          .table {
+            width: calc(100% + 300px);
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            padding-left: 65px;
+            padding-top: 70px;
+            padding-bottom: 130px;
+            padding-right: 300px;
+
+            background: var(--green);
+
+            .wrapper {
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: baseline;
+              margin-bottom: 60px;
+
+              h4 {
+                margin-right: 85px;
+                line-height: 120%;
+              }
+              h3 {
+              }
+
+              .tag-wrapper {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .tag {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 8px 18px;
+                  background: var(--green);
+                  border-radius: 23px;
+                  border: 1px solid var(--black);
+                  height: 28px;
+                  margin-right: 6px;
+                  margin-top: 9px;
+                  width: auto;
+
+                  p {
+                    margin-top: 0;
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .image {
+          grid-column: 1 / 14;
+          width: 100%;
+          height: 630px;
+          position: absolute;
+          z-index: 5;
+          top: 244px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url('influencers/individuals/images/lilnasx/info1.png');
+        }
+        p {
+          grid-column: 15 / 24;
+          margin-top: 100px;
+        }
+      }
+    }
+
+    &.character {
+      margin-bottom: 200px;
+      .grid {
+        .wrapper {
+          grid-column: 2 / 11;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          p {
+            margin-top: 50px;
+          }
+        }
+
+        .example {
+          margin-top: 50px;
+          grid-column: 2 /24;
+          display: grid;
+          grid-template-columns: repeat(22, 1fr);
+          column-gap: 20px;
+
+          .card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &.first {
+              grid-column: 1/6;
+            }
+            &.second {
+              grid-column: 6 / 13;
+            }
+            &.third {
+              grid-column: 13 / 23;
+            }
+
+            h3 {
+              margin-top: 15px;
+              text-align: left;
+              line-height: 130%;
+            }
+
+            .image {
+              width: 100%;
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+
+            .one {
+              height: 490px;
+              background-image: url('influencers/individuals/images/lilnasx/character1.png');
+            }
+            .two {
+              height: 618px;
+              background-image: url('influencers/individuals/images/lilnasx/character2.png');
+            }
+            .three {
+              height: 428px;
+              background-image: url('influencers/individuals/images/lilnasx/character3.jpg');
+            }
+          }
+        }
+      }
+    }
+
+    &.collabs {
+      margin-bottom: 200px;
+      .grid {
+        .gallery {
+          grid-column: 1 /14;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+
+          .rail {
+            overflow: hidden;
+            width: 100%;
+            height: 580px;
+
+            .slideimg {
+              width: 100%;
+              height: 100%;
+              background-size: cover;
+              background-position: top center;
+              background-repeat: no-repeat;
+              display: none;
+            }
+
+            .slideimg.current {
+              display: block;
+            }
+            .slideimg:first-child {
+              background-image: url('influencers/individuals/images/lilnasx/collab1.jpg');
+            }
+            .slideimg:nth-child(2) {
+              background-image: url('influencers/individuals/images/lilnasx/collab2.jpg');
+            }
+            .slideimg:nth-child(3) {
+              background-image: url('influencers/individuals/images/lilnasx/collab3.jpeg');
+            }
+            .slideimg:nth-child(4) {
+              background-image: url('influencers/individuals/images/lilnasx/collab4.png');
+            }
+          }
+          .slider-nav {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .wrapper {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+
+              h5,
+              input {
+                font-size: 12px;
+              }
+              .number,
+              input {
+                font-family: 'Druk Cyr';
+                font-weight: 800;
+                font-size: 18px;
+                margin-right: 30px;
+              }
+              input {
+                margin-right: 0;
+                width: 0.8em;
+                border: none;
+                -webkit-appearance: none;
+              }
+            }
+            .arrow {
+              width: 44px;
+              height: 44px;
+              background-image: url('./images/greenarrow.svg');
+              background-size: contain;
+              background-position: center;
+              transform: rotate(45deg);
+            }
+          }
+        }
+
+        .wrapper {
+          grid-column: 15 / 24;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          p {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+
+    &.best {
+      margin-bottom: 200px;
+      .grid {
+        .wrapper {
+          grid-column: 2 / 11;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          p {
+            margin-top: 50px;
+          }
+        }
+
+        .gallery {
+          grid-column: 13 /24;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+
+          .rail {
+            overflow: hidden;
+            width: 100%;
+            height: 900px;
+
+            .slideimg {
+              width: 100%;
+              height: 100%;
+              background-size: cover;
+              background-position: top center;
+              background-repeat: no-repeat;
+              display: none;
+            }
+
+            .slideimg.current {
+              display: block;
+            }
+            .slideimg:first-child {
+              background-image: url('influencers/individuals/images/lilnasx/best1.jpg');
+            }
+            .slideimg:nth-child(2) {
+              background-image: url('influencers/individuals/images/lilnasx/best2.jpg');
+            }
+            .slideimg:nth-child(3) {
+              background-image: url('influencers/individuals/images/lilnasx/best3.jpg');
+            }
+            .slideimg:nth-child(4) {
+              background-image: url('influencers/individuals/images/lilnasx/best4.jpg');
+            }
+            .slideimg:nth-child(4) {
+              background-image: url('influencers/individuals/images/lilnasx/best5.jpg');
+            }
+          }
+          .slider-nav {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .wrapper {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+
+              h5,
+              input {
+                font-size: 12px;
+              }
+              .number,
+              input {
+                font-family: 'Druk Cyr';
+                font-weight: 800;
+                font-size: 18px;
+                margin-right: 30px;
+              }
+              input {
+                margin-right: 0;
+                width: 0.8em;
+                border: none;
+                -webkit-appearance: none;
+              }
+            }
+            .arrow {
+              width: 44px;
+              height: 44px;
+              background-image: url('./images/greenarrow.svg');
+              background-size: contain;
+              background-position: center;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+
+    &.recomendations {
+      background: var(--green);
+      color: black;
+
+      .grid {
+        padding-top: 115px;
+        padding-bottom: 115px;
+
+        h2 {
+          grid-column: 1 / 7;
+          font-size: 30px;
+          font-family: 'Druk Text Wide Cyr';
+          font-weight: 500;
+          text-transform: none;
+        }
+        a {
+          color: black;
+        }
+        .back {
+          grid-column: 1 / 7;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .icon {
+            width: 44px;
+            height: 44px;
+            background-image: url('./images/blackarrow.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: rotate(-135deg);
+          }
+          h3 {
+            font-size: 14px;
+            font-family: 'Druk Text Wide Cyr';
+            font-weight: 500;
+            text-decoration: underline;
+            color: black;
+            margin-left: 10px;
+          }
+        }
+
+        .card {
+          grid-column: 20 / 25;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .image {
+            height: 370px;
+            width: 100%;
+            background-position: top center;
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+          .one {
+            background-image: url('influencers/individuals/images/nickiminaj.png');
+          }
+
+          h3 {
+            font-size: 20px;
+            font-family: 'Druk Text Cyr';
+            font-weight: 500px;
+            margin-top: 16px;
+          }
+          .wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            .tag {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              padding: 8px 18px;
+              background: var(--green);
+              border-radius: 23px;
+              border: 1px solid var(--black);
+              height: 28px;
+              margin-right: 3px;
+              margin-top: 9px;
+              width: auto;
+
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.footer {
+      background: var(--black);
+      color: var(--gray);
+
+      .grid {
+        padding-top: 55px;
+        padding-bottom: 135px;
+
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 20px;
+        width: 1540px;
+
+        h3 {
+          font-size: 12px;
+          text-transform: none;
+          font-weight: 500;
+          line-height: 140%;
+          margin-bottom: 10px;
+        }
+
+        p,
+        h4,
+        a {
+          font-size: 12px;
+          margin-bottom: 10px;
+          color: var(--gray);
+        }
+
+        h4 {
+          text-transform: none;
+          text-decoration: underline;
+          text-decoration-color: var(--green);
+          text-decoration-thickness: 2px;
+          font-family: 'Inter';
+          line-height: 120%;
+          font-weight: 400;
+          cursor: default;
+        }
+
+        .top {
+          grid-column: 1 /7;
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          column-gap: 20px;
+
+          .first {
+            grid-column: 1 / 2;
+          }
+          .second {
+            grid-column: 2 / 3;
+          }
+          .styles {
+            grid-column: 3 / 4;
+          }
+          .influencers {
+            grid-column: 4 / 5;
+          }
+          .third {
+            grid-column: 5 / 6;
+          }
+
+          .socialnetworks {
+            grid-column: 6 / 7;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .icon {
+              display: flex;
+              margin-left: 30px;
+              width: 30px;
+              height: 30px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              cursor: pointer;
+            }
+            .telegram {
+              background-image: url('./images/tgwhite.svg');
+            }
+            .instagram {
+              background-image: url('./images/instawhite.svg');
+            }
+            .vk {
+              width: 49px;
+              background-image: url('./images/vkwhite.svg');
+            }
+            .dzen {
+              background-image: url('./images/dzenwhite.svg');
+            }
+          }
+        }
+        .bottom {
+          margin-top: 100px;
+          grid-column: 1 / 7;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1679px) {
+  body.lilnasx {
+    p,
+    h4,
+    h3 {
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 55px;
+    }
+
+    .grid {
+      width: 1282px;
+      grid-template-columns: repeat(24, 1fr);
+      column-gap: 14px;
+    }
+
+    .navbar {
+      .grid {
+        .logo {
+          height: 26px;
+        }
+        .wrapper {
+          h4 {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    section {
+      &.cover {
+        .grid {
+          .name {
+            .druk,
+            .druzhok {
+              font-size: 245px;
+            }
+          }
+
+          .image {
+            width: 430px;
+            height: 430px;
+          }
+        }
+      }
+
+      &.info {
+        height: 700px;
+        margin-bottom: 200px;
+        .grid {
+          h1 {
+            font-size: 100px;
+          }
+
+          .infoblock {
+            .table {
+              padding-left: 40px;
+              padding-top: 56px;
+              padding-bottom: 130px;
+              padding-right: 300px;
+
+              .wrapper {
+                h4 {
+                  margin-right: 68px;
+                }
+
+                .tag-wrapper {
+                  .tag {
+                    padding: 6px 14px;
+
+                    height: 22px;
+
+                    p {
+                      font-size: 9px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .image {
+            height: 514px;
+
+            top: 200px;
+          }
+        }
+      }
+
+      &.character {
+        margin-bottom: 200px;
+        .grid {
+          .wrapper {
+          }
+
+          .example {
+            margin-top: 50px;
+
+            column-gap: 14px;
+
+            .card {
+              .one {
+                height: 400px;
+                background-image: url('influencers/individuals/images/lilnasx/character1.png');
+              }
+              .two {
+                height: 503px;
+                background-image: url('influencers/individuals/images/lilnasx/character2.png');
+              }
+              .three {
+                height: 348px;
+                background-image: url('influencers/individuals/images/lilnasx/character3.jpg');
+              }
+            }
+          }
+        }
+      }
+
+      &.collabs {
+        .grid {
+          .gallery {
+            .rail {
+              height: 470px;
+            }
+            .slider-nav {
+              margin-top: 15px;
+              .wrapper {
+                h5,
+                .number,
+                input {
+                  font-size: 14px;
+                }
+              }
+              .arrow {
+                width: 36px;
+                height: 36px;
+              }
+            }
+          }
+        }
+      }
+
+      &.best {
+        .grid {
+          .gallery {
+            .rail {
+              height: 750px;
+            }
+            .slider-nav {
+              margin-top: 15px;
+              .wrapper {
+                h5,
+                .number,
+                input {
+                  font-size: 14px;
+                }
+              }
+              .arrow {
+                width: 36px;
+                height: 36px;
+              }
+            }
+          }
+        }
+      }
+
+      &.recomendations {
+        .grid {
+          h2 {
+            font-size: 25px;
+          }
+
+          .back {
+            .icon {
+              width: 36px;
+              height: 36px;
+            }
+            h3 {
+              font-size: 14px;
+            }
+          }
+
+          .card {
+            .image {
+              height: 300px;
+            }
+
+            h3 {
+              font-size: 16px;
+            }
+            .wrapper {
+              .tag {
+                padding: 6px 14px;
+
+                height: 22px;
+
+                p {
+                  font-size: 9px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.footer {
+        .grid {
+          column-gap: 14px;
+          width: 1282px;
+
+          .top {
+            column-gap: 14px;
+
+            .socialnetworks {
+              .icon {
+                width: 24px;
+                height: 24px;
+              }
+
+              .vk {
+                width: 34px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1365px) {
+  body.lilnasx {
+    p,
+    h4,
+    h3 {
+      font-size: 12px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .grid {
+      width: 948px;
+
+      column-gap: 12px;
+    }
+
+    .navbar {
+      .grid {
+        .logo {
+          height: 21px;
+        }
+        .wrapper {
+          h4 {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+
+    section {
+      &.cover {
+        .grid {
+          .name {
+            .druk,
+            .druzhok {
+              font-size: 186px;
+            }
+          }
+
+          .image {
+            width: 326px;
+            height: 326px;
+          }
+        }
+      }
+
+      &.info {
+        height: 550px;
+        margin-bottom: 200px;
+        .grid {
+          h1 {
+            font-size: 77px;
+          }
+          p {
+            margin-top: 60px;
+          }
+
+          .infoblock {
+            .table {
+              padding-left: 50px;
+              padding-top: 44px;
+              padding-bottom: 130px;
+              padding-right: 300px;
+
+              .wrapper {
+                margin-bottom: 30px;
+                h4 {
+                  margin-right: 36px;
+                }
+
+                .tag-wrapper {
+                  .tag {
+                    padding: 5px 12px;
+
+                    height: 18px;
+
+                    p {
+                      font-size: 8px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .image {
+            height: 391px;
+
+            top: 150px;
+          }
+        }
+      }
+
+      &.character {
+        margin-bottom: 200px;
+        .grid {
+          .wrapper {
+            grid-column: 2 / 10;
+            h2 {
+              width: 90%;
+            }
+          }
+          .example {
+            margin-top: 50px;
+
+            column-gap: 12px;
+
+            .card {
+              .one {
+                height: 305px;
+              }
+              .two {
+                height: 382px;
+              }
+              .three {
+                height: 264px;
+              }
+            }
+          }
+        }
+      }
+
+      &.collabs {
+        .grid {
+          .gallery {
+            .rail {
+              height: 358px;
+            }
+            .slider-nav {
+              .wrapper {
+                h5,
+                .number,
+                input {
+                  font-size: 12px;
+                }
+              }
+              .arrow {
+                width: 28px;
+                height: 28px;
+              }
+            }
+          }
+        }
+      }
+
+      &.best {
+        .grid {
+          .wrapper {
+            h2 {
+              width: 90%;
+            }
+          }
+
+          .gallery {
+            .rail {
+              height: 600px;
+            }
+            .slider-nav {
+              .wrapper {
+                h5,
+                .number,
+                input {
+                  font-size: 12px;
+                }
+              }
+              .arrow {
+                width: 28px;
+                height: 28px;
+              }
+            }
+          }
+        }
+      }
+
+      &.recomendations {
+        .grid {
+          h2 {
+            font-size: 20px;
+          }
+
+          .back {
+            .icon {
+              width: 28px;
+              height: 28px;
+            }
+            h3 {
+              font-size: 12px;
+            }
+          }
+
+          .card {
+            .image {
+              height: 230px;
+            }
+
+            h3 {
+              font-size: 12px;
+            }
+            .wrapper {
+              .tag {
+                padding: 5px 12px;
+
+                height: 18px;
+
+                p {
+                  font-size: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.footer {
+        .grid {
+          column-gap: 12px;
+          width: 948px;
+          h3 {
+            font-size: 10px;
+          }
+
+          .top {
+            column-gap: 12px;
+
+            .socialnetworks {
+              .icon {
+                width: 18px;
+                height: 18px;
+              }
+
+              .vk {
+                width: 26px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1023px) {
+  body.lilnasx {
+    p,
+    h4 {
+      font-size: 12px;
+    }
+
+    h3 {
+      font-size: 8px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+
+    .grid {
+      width: 687px;
+
+      column-gap: 9px;
+    }
+
+    .navbar {
+      .grid {
+        .logo {
+          height: 16px;
+        }
+        .wrapper {
+          grid-column: 15 / 25;
+          h4 {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+
+    section {
+      &.cover {
+        .grid {
+          .name {
+            .druk,
+            .druzhok {
+              font-size: 137px;
+            }
+          }
+
+          .image {
+            width: 270px;
+            height: 270px;
+          }
+        }
+      }
+
+      &.info {
+        height: auto;
+        .grid {
+          h1 {
+            font-size: 57px;
+          }
+          p {
+            margin-top: 46px;
+          }
+
+          .infoblock {
+            .table {
+              padding-left: 60px;
+              padding-top: 30px;
+              padding-bottom: 100px;
+              padding-right: 300px;
+
+              .wrapper {
+                margin-bottom: 30px;
+                h4 {
+                  margin-right: 32px;
+                }
+                h3 {
+                  font-size: 8px;
+                }
+
+                .tag-wrapper {
+                  .tag {
+                    padding: 5px 12px;
+
+                    height: 18px;
+
+                    p {
+                      font-size: 8px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .image {
+            height: 287px;
+
+            top: 110px;
+          }
+        }
+      }
+
+      &.character {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        .grid {
+          .wrapper {
+            grid-column: 2 / 14;
+            p {
+              margin-top: 20px;
+            }
+            h2 {
+              width: 70%;
+            }
+          }
+          .example {
+            margin-top: 50px;
+
+            column-gap: 9px;
+
+            .card {
+              h3 {
+                margin-top: 8px;
+              }
+              .one {
+                height: 224px;
+              }
+              .two {
+                height: 281px;
+              }
+              .three {
+                height: 194px;
+              }
+            }
+          }
+        }
+      }
+
+      &.collabs {
+        margin-bottom: 100px;
+        .grid {
+          .gallery {
+            .rail {
+              height: 264px;
+            }
+            .slider-nav {
+              margin-top: 12px;
+              .wrapper {
+                h5,
+                .number,
+                input {
+                  font-size: 12px;
+                }
+              }
+              .arrow {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      &.best {
+        margin-bottom: 100px;
+        .grid {
+          .wrapper {
+            h2 {
+              width: 90%;
+            }
+          }
+
+          .gallery {
+            .rail {
+              height: 450px;
+            }
+            .slider-nav {
+              margin-top: 12px;
+              .wrapper {
+                h5,
+                .number,
+                input {
+                  font-size: 12px;
+                }
+              }
+              .arrow {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      &.recomendations {
+        .grid {
+          padding-top: 50px;
+          padding-bottom: 50px;
+          h2 {
+            font-size: 14px;
+          }
+
+          .back {
+            .icon {
+              width: 20px;
+              height: 20px;
+            }
+            h3 {
+              font-size: 8px;
+            }
+          }
+
+          .card {
+            grid-column: 19 /25;
+            .image {
+              height: 168px;
+            }
+
+            h3 {
+              font-size: 10px;
+            }
+
+            .wrapper {
+              .tag {
+                padding: 5px 12px;
+
+                height: 18px;
+
+                p {
+                  font-size: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.footer {
+        .grid {
+          column-gap: 9px;
+          width: 687px;
+          padding-bottom: 60px;
+
+          h3 {
+            font-size: 6px;
+          }
+
+          p,
+          h4,
+          a {
+            font-size: 6px;
+          }
+
+          .top {
+            .socialnetworks {
+              .icon {
+                width: 13px;
+                height: 13px;
+              }
+
+              .vk {
+                width: 19px;
+              }
+            }
+          }
+          .bottom {
+            margin-top: 100px;
+          }
+        }
+      }
+    }
+  }
+}

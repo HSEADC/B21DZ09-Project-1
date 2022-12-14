@@ -137,6 +137,14 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/classic.html',
+      filename: './styles/classic.html',
+      chunks: ['index']
+    }),
+
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
@@ -146,12 +154,12 @@ module.exports = {
       chunks: ['index']
     }),
 
-    //personal article
+    //individuals article
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/influencers/personalities/name.html',
-      filename: './influencers/personalities/name.html',
+      template: './src/influencers/individuals/lilnasx.html',
+      filename: './influencers/individuals/lilnasx.html',
       chunks: ['index']
     }),
 
