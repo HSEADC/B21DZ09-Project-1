@@ -98,6 +98,7 @@ body.lilnasx {
     &.cover {
       .grid {
         height: 100vh;
+
         .name {
           grid-column: 3 / 23;
           display: flex;
@@ -156,7 +157,7 @@ body.lilnasx {
           background-size: cover;
           background-repeat: no-repeat;
           background-image: url('influencers/individuals/images/lilnasx/cover.png');
-          animation: opacity 2s ease;
+          animation: opacity 1s ease;
 
           @keyframes opacity {
             0% {

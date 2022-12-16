@@ -167,8 +167,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/influencers/movies/name.html',
-      filename: './influencers/movies/name.html',
+      template: './src/influencers/movies/sexandthecity.html',
+      filename: './influencers/movies/sexandthecity.html',
       chunks: ['index']
     }),
 
