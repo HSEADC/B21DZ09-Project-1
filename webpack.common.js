@@ -93,6 +93,14 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/zaglushka.html',
+      filename: './zaglushka.html',
+      chunks: ['index']
+    }),
+
     //Early About
     new HtmlWebpackPlugin({
       hash: true,
