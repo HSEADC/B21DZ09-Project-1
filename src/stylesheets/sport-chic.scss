@@ -107,7 +107,7 @@ body.sport-chic {
           position: relative;
           z-index: 10;
           top: 35vh;
-          background-image: url('styles/images/sport-chic/cover.png');
+          background-image: url('./images/styles/sport-chic/cover.png');
           background-size: cover;
           background-repeat: no-repeat;
           animation: opacity 2s ease;
@@ -286,19 +286,19 @@ body.sport-chic {
               }
               .first {
                 .avatar {
-                  background-image: url('styles/images/sport-chic/bellahadid.jpg');
+                  background-image: url('./images/styles/sport-chic/bellahadid.jpg');
                   background-size: 165%;
                   background-position: 40% 35%;
                 }
               }
               .second {
                 .avatar {
-                  background-image: url('styles/images/sport-chic/kendall.jpg');
+                  background-image: url('./images/styles/sport-chic/kendall.jpg');
                 }
               }
               .third {
                 .avatar {
-                  background-image: url('styles/images/sport-chic/hailey.jpg');
+                  background-image: url('./images/styles/sport-chic/hailey.jpg');
                 }
               }
             }
@@ -418,17 +418,17 @@ body.sport-chic {
             }
 
             .one {
-              background-image: url('styles/images/sport-chic/appearence1.png');
+              background-image: url('./images/styles/sport-chic/appearence1.png');
             }
             .two {
-              background-image: url('styles/images/sport-chic/appearence2.png');
+              background-image: url('./images/styles/sport-chic/appearence2.png');
               height: 574px;
             }
             .three {
-              background-image: url('styles/images/sport-chic/appearence3.png');
+              background-image: url('./images/styles/sport-chic/appearence3.png');
             }
             .four {
-              background-image: url('styles/images/sport-chic/appearence4.png');
+              background-image: url('./images/styles/sport-chic/appearence4.png');
               height: 574px;
             }
           }
@@ -471,16 +471,16 @@ body.sport-chic {
               display: block;
             }
             .slideimg:first-child {
-              background-image: url('styles/images/sport-chic/character1.png');
+              background-image: url('./images/styles/sport-chic/character1.png');
             }
             .slideimg:nth-child(2) {
-              background-image: url('styles/images/sport-chic/character2.jpg');
+              background-image: url('./images/styles/sport-chic/character2.jpg');
             }
             .slideimg:nth-child(3) {
-              background-image: url('styles/images/sport-chic/character3.jpg');
+              background-image: url('./images/styles/sport-chic/character3.jpg');
             }
             .slideimg:nth-child(4) {
-              background-image: url('styles/images/sport-chic/character4.jpg');
+              background-image: url('./images/styles/sport-chic/character4.jpg');
             }
           }
           .slider-nav {
@@ -603,22 +603,22 @@ body.sport-chic {
               display: block;
             }
             .slideimg:first-child {
-              background-image: url('styles/images/sport-chic/material1.png');
+              background-image: url('./images/styles/sport-chic/material1.png');
             }
             .slideimg:nth-child(2) {
-              background-image: url('styles/images/sport-chic/material2.jpg');
+              background-image: url('./images/styles/sport-chic/material2.jpg');
             }
             .slideimg:nth-child(3) {
-              background-image: url('styles/images/sport-chic/material3.jpg');
+              background-image: url('./images/styles/sport-chic/material3.jpg');
             }
             .slideimg:nth-child(4) {
-              background-image: url('styles/images/sport-chic/material4.jpg');
+              background-image: url('./images/styles/sport-chic/material4.jpg');
             }
             .slideimg:nth-child(5) {
-              background-image: url('styles/images/sport-chic/material5.jpg');
+              background-image: url('./images/styles/sport-chic/material5.jpg');
             }
             .slideimg:nth-child(6) {
-              background-image: url('styles/images/sport-chic/material6.jpg');
+              background-image: url('./images/styles/sport-chic/material6.jpg');
             }
           }
           .slider-nav {
@@ -690,7 +690,7 @@ body.sport-chic {
               grid-column: 1 / 5;
               width: 100%;
               height: 521px;
-              background-image: url('styles/images/sport-chic/base1.png');
+              background-image: url('./images/styles/sport-chic/base1.png');
               background-size: cover;
               background-position: top;
               background-repeat: no-repeat;
@@ -699,7 +699,7 @@ body.sport-chic {
               grid-column: 5 / 10;
               width: 100%;
               height: 657px;
-              background-image: url('styles/images/sport-chic/base2.png');
+              background-image: url('./images/styles/sport-chic/base2.png');
               background-size: cover;
               background-position: top;
               background-repeat: no-repeat;
@@ -839,7 +839,7 @@ body.sport-chic {
               grid-column: 1 / 6;
               width: 100%;
               height: 630px;
-              background-image: url('styles/images/sport-chic/formula1.png');
+              background-image: url('./images/styles/sport-chic/formula1.png');
               background-size: cover;
               background-position: top;
               background-repeat: no-repeat;
@@ -848,7 +848,7 @@ body.sport-chic {
               grid-column: 6 / 10;
               width: 100%;
               height: 538px;
-              background-image: url('styles/images/sport-chic/formula2.png');
+              background-image: url('./images/styles/sport-chic/formula2.png');
               background-size: cover;
               background-position: top;
               background-repeat: no-repeat;
@@ -993,13 +993,10 @@ body.sport-chic {
               background-repeat: no-repeat;
             }
             .one {
-              background-image: url('styles/images/minimalism.png');
             }
             .two {
-              background-image: url('styles/images/classic.png');
             }
             .three {
-              background-image: url('styles/images/businesscasual.png');
             }
           }
         }

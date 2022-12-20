@@ -25,7 +25,7 @@
     />
     <meta
       property="og:image"
-      content="${require(`./src/images/metatagcover.png`)}"
+      content="https://wowmag.adc.ac/share/metatagcover.png"
     />
 
     <!-- Twitter -->
@@ -41,23 +41,23 @@
     />
     <meta
       property="twitter:image"
-      content="${require(`src/images/metatagcover-twitter.png`)}"
+      content="https://wowmag.adc.ac/share/metatagcover-twitter.png"
     />
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
-    <script src="animejs/lib/anime.min.js"></script>
-    <script src="sport-chic.js"></script>
+    <!-- <script src="./javascript/animejs/lib/anime.min.js"></script>
+    <script src="./javascript/sport-chic.js"></script> -->
 
     <!-- <link rel="icon" href="./images/favicon.png" type="image/png" /> -->
     <title>Стиль sport chic</title>
   </head>
   <body class="sport-chic">
     <div class="navbar">
-      <div class="logo"></div>
-      <div class="wrapper">
+      <a class="logo" href="/"></a>
+      <!-- <div class="wrapper">
         <a href="#"><h4>СТИЛИ</h4></a>
         <a href="#"><h4>ИНФЛЮЕНСЕРЫ</h4></a>
         <a href="#"><h4>АНТИТРЕНДЫ</h4></a>
-      </div>
+      </div> -->
     </div>
     <section class="cover">
       <div class="topgrid">
@@ -423,25 +423,26 @@
     <section class="footer">
       <div class="grid">
         <div class="top">
-          <a href="#" class="first"><h3>Главная</h3></a>
+          <a href="/" class="first"><h3>Главная</h3></a>
           <a href="#" class="second"><h3>О проекте</h3></a>
           <div class="wrapper styles">
             <h3>Стили</h3>
-            <a href="#"><p>Country</p></a>
-            <a href="#"><p>Classic</p></a>
+
             <a href="#"><p>Sport-chic</p></a>
           </div>
 
           <div class="wrapper influencers">
             <h3>Инфлюенсеры</h3>
             <h4>Звезды</h4>
-            <a href="#"><p>Billie Eilish</p></a>
-            <a href="#"><p>Lil Nas X</p></a>
-            <a href="#"><p>Travis Scott</p></a>
+
+            <a href="/influencers/individuals/lilnasx.html"><p>Lil Nas X</p></a>
+
             <h4>Кино и серилы</h4>
-            <a href="#"><p>Friends</p></a>
+            <a href="/influencers/movies/sexandthecity.html"
+              ><p>Sex and the city</p></a
+            >
           </div>
-          <a href="#" class="third"><h3>Антитренды</h3></a>
+
           <div class="socialnetworks">
             <a
               href="https://t.me/blogfancyu"

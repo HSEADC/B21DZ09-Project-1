@@ -16,8 +16,7 @@
 @import 'stylesheets/influencers.scss';
 @import 'stylesheets/antitrends.scss';
 
-@import 'styles/sport-chic.scss';
-@import 'styles/classic.scss';
+@import 'stylesheets/sport-chic.scss';
 
-@import 'influencers/individuals/lilnasx.scss';
-@import 'influencers/movies/sexandthecity.scss';
+@import 'stylesheets/lilnasx.scss';
+@import 'stylesheets/sexandthecity.scss';

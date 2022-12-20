@@ -134,27 +134,12 @@ module.exports = {
     }),
 
     //Styles article
-    new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/styles/name.html',
-      filename: './styles/name.html',
-      chunks: ['index']
-    }),
 
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
       template: './src/styles/sport-chic.html',
       filename: './styles/sport-chic.html',
-      chunks: ['index']
-    }),
-
-    new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/styles/classic.html',
-      filename: './styles/classic.html',
       chunks: ['index']
     }),
 

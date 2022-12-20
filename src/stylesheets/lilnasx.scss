@@ -156,7 +156,7 @@ body.lilnasx {
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
-          background-image: url('influencers/individuals/images/lilnasx/cover.png');
+          background-image: url('./images/influencers/individuals/lilnasx/cover.png');
           animation: opacity 1s ease;
 
           @keyframes opacity {
@@ -261,7 +261,7 @@ body.lilnasx {
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
-          background-image: url('influencers/individuals/images/lilnasx/info1.png');
+          background-image: url('./images/influencers/individuals/lilnasx/info1.png');
         }
         p {
           grid-column: 15 / 24;
@@ -321,15 +321,15 @@ body.lilnasx {
 
             .one {
               height: 490px;
-              background-image: url('influencers/individuals/images/lilnasx/character1.png');
+              background-image: url('./images/influencers/individuals/lilnasx/character1.png');
             }
             .two {
               height: 618px;
-              background-image: url('influencers/individuals/images/lilnasx/character2.png');
+              background-image: url('./images/influencers/individuals/lilnasx/character2.png');
             }
             .three {
               height: 428px;
-              background-image: url('influencers/individuals/images/lilnasx/character3.jpg');
+              background-image: url('./images/influencers/individuals/lilnasx/character3.jpg');
             }
           }
         }
@@ -363,16 +363,16 @@ body.lilnasx {
               display: block;
             }
             .slideimg:first-child {
-              background-image: url('influencers/individuals/images/lilnasx/collab1.jpg');
+              background-image: url('./images/influencers/individuals/lilnasx/collab1.jpg');
             }
             .slideimg:nth-child(2) {
-              background-image: url('influencers/individuals/images/lilnasx/collab2.jpg');
+              background-image: url('./images/influencers/individuals/lilnasx/collab2.jpg');
             }
             .slideimg:nth-child(3) {
-              background-image: url('influencers/individuals/images/lilnasx/collab3.jpeg');
+              background-image: url('./images/influencers/individuals/lilnasx/collab3.jpeg');
             }
             .slideimg:nth-child(4) {
-              background-image: url('influencers/individuals/images/lilnasx/collab4.png');
+              background-image: url('./images/influencers/individuals/lilnasx/collab4.png');
             }
           }
           .slider-nav {
@@ -467,19 +467,19 @@ body.lilnasx {
               display: block;
             }
             .slideimg:first-child {
-              background-image: url('influencers/individuals/images/lilnasx/best1.jpg');
+              background-image: url('./images/influencers/individuals/lilnasx/best1.jpg');
             }
             .slideimg:nth-child(2) {
-              background-image: url('influencers/individuals/images/lilnasx/best2.jpg');
+              background-image: url('./images/influencers/individuals/lilnasx/best2.jpg');
             }
             .slideimg:nth-child(3) {
-              background-image: url('influencers/individuals/images/lilnasx/best3.jpg');
+              background-image: url('./images/influencers/individuals/lilnasx/best3.jpg');
             }
             .slideimg:nth-child(4) {
-              background-image: url('influencers/individuals/images/lilnasx/best4.jpg');
+              background-image: url('./images/influencers/individuals/lilnasx/best4.jpg');
             }
             .slideimg:nth-child(4) {
-              background-image: url('influencers/individuals/images/lilnasx/best5.jpg');
+              background-image: url('./images/influencers/individuals/lilnasx/best5.jpg');
             }
           }
           .slider-nav {
@@ -583,7 +583,7 @@ body.lilnasx {
             background-repeat: no-repeat;
           }
           .one {
-            background-image: url('influencers/individuals/images/nickiminaj.png');
+            background-image: url('./images/influencers/individuals/nickiminaj.png');
           }
 
           h3 {
@@ -831,15 +831,12 @@ body.lilnasx {
             .card {
               .one {
                 height: 400px;
-                background-image: url('influencers/individuals/images/lilnasx/character1.png');
               }
               .two {
                 height: 503px;
-                background-image: url('influencers/individuals/images/lilnasx/character2.png');
               }
               .three {
                 height: 348px;
-                background-image: url('influencers/individuals/images/lilnasx/character3.jpg');
               }
             }
           }
