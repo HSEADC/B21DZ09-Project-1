@@ -773,16 +773,23 @@ body.index {
 
         width: 100%;
       }
+
       input {
         width: 680px;
         height: 120px;
         background: black;
         border: none;
         font-family: 'Druk Text Wide Cyr';
-        font-weight: 500;
+        font-weight: 800;
         font-size: 14px;
         padding: 0 25px;
+        color: var(--white);
+
+        &::placeholder {
+          color: var(--white);
+        }
       }
+
       button {
         display: flex;
         flex-direction: row;
@@ -798,8 +805,8 @@ body.index {
         cursor: pointer;
 
         h3 {
-          font-family: 'Druk Wide Cyr';
-          font-weight: 500;
+          font-family: 'Druk Text Wide Cyr';
+          font-weight: 800;
           font-size: 16px;
           color: var(--black);
         }
@@ -829,7 +836,7 @@ body.index {
         h3 {
           font-size: 12px;
           text-transform: none;
-          font-weight: 500;
+          // font-weight: 500;
           line-height: 140%;
           margin-bottom: 10px;
         }
