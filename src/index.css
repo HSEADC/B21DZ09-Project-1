@@ -6,6 +6,7 @@
 @import 'stylesheets/fonts.scss';
 @import 'stylesheets/basics.scss';
 @import 'stylesheets/index.scss';
+@import 'stylesheets/styleguide.scss';
 
 @import 'stylesheets/early-splash-screen.scss';
 @import 'stylesheets/zaglushka.scss';

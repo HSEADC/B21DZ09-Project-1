@@ -115,6 +115,14 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styleguide.html',
+      filename: './styleguide.html',
+      chunks: ['index']
+    }),
+
     //About
     new HtmlWebpackPlugin({
       hash: true,
