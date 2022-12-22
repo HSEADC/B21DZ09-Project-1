@@ -8,9 +8,7 @@
 @import 'stylesheets/index.scss';
 @import 'stylesheets/styleguide.scss';
 
-@import 'stylesheets/early-splash-screen.scss';
 @import 'stylesheets/zaglushka.scss';
-@import 'stylesheets/early-about.scss';
 @import 'stylesheets/about.scss';
 @import 'stylesheets/styles-library.scss';
 @import 'stylesheets/name.scss';
