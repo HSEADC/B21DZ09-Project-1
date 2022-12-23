@@ -1,5 +1,3 @@
-//error
-
 body.index {
   background: var(--white);
   color: var(--black);
@@ -53,16 +51,15 @@ body.index {
     background: var(--white);
     padding-top: 20px;
     padding-bottom: 15px;
-    .grid {
-      .logo {
-        grid-column: 1 / 5;
-        height: 33px;
-        width: 100%;
-        background-image: url('./images/newlogo.svg');
-        background-position: top left;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+
+    .logo {
+      grid-column: 1 / 5;
+      height: 33px;
+      width: 100%;
+      background-image: url('./images/newlogo.svg');
+      background-position: top left;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 
@@ -220,16 +217,18 @@ body.index {
         h3 {
           margin-bottom: 170px;
         }
+        p,
         span {
           font-family: 'DRUZHOK';
           font-weight: 400;
           font-size: 60px;
+          line-height: 100%;
+        }
 
-          .bold {
-            font-family: 'Druk Cyr';
-            font-weight: 800;
-            text-transform: uppercase;
-          }
+        .bold {
+          font-family: 'Druk Cyr';
+          font-weight: 800;
+          text-transform: uppercase;
         }
       }
     }
@@ -920,6 +919,1828 @@ body.index {
           flex-direction: row;
           justify-content: space-between;
           align-items: flex-start;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1250px) and (max-width: 1600px) {
+  body.index {
+    p,
+    li {
+      font-size: 16px;
+    }
+
+    h3 {
+      font-size: 12px;
+    }
+
+    h2 {
+      font-size: 42px;
+    }
+
+    .grid {
+      width: 1232px;
+      column-gap: 20px;
+    }
+
+    .navbar {
+      padding-top: 20px;
+      padding-bottom: 15px;
+
+      .logo {
+        grid-column: 1 / 5;
+        height: 28px;
+        width: 100%;
+      }
+    }
+
+    .button {
+      padding: 10px 24px;
+      font-size: 14px;
+
+      .icon {
+        margin-left: 10px;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    section {
+      &.cover {
+        margin-bottom: 200px;
+
+        .top {
+          .image:first-child {
+            height: 180px;
+            top: 500px;
+          }
+          .image:nth-child(2) {
+            height: 255px;
+            position: relative;
+            top: 300px;
+          }
+        }
+
+        .name {
+          margin-top: 100px;
+
+          .text-wrapper {
+            .druzhok {
+              font-size: 222px;
+            }
+
+            .druk {
+              font-size: 330px;
+            }
+
+            .druzhok:nth-child(3) {
+              padding-left: 300px;
+            }
+          }
+        }
+      }
+
+      &.mission {
+        margin-bottom: 100px;
+        .sticker {
+          grid-column: 12 / 25;
+          margin-top: 20vh;
+          padding-left: 60px;
+          padding-bottom: 100px;
+
+          h3 {
+            margin-bottom: 100px;
+          }
+          p,
+          span {
+            font-size: 46px;
+          }
+        }
+      }
+
+      &.style {
+        margin-bottom: 400px;
+
+        .name {
+          .druzhok {
+            margin-bottom: -30px;
+            font-size: 180px;
+          }
+          .druk {
+            margin-top: -30px;
+            font-size: 180px;
+          }
+        }
+        .card {
+          .image {
+            height: 690px;
+          }
+        }
+      }
+
+      &.antitrends {
+        .top {
+          .image:first-child {
+            height: 120px;
+            bottom: 100px;
+          }
+        }
+
+        .image:first-child {
+          height: 270px;
+          margin-top: 140px;
+        }
+        .image:nth-child(2) {
+          height: 364px;
+        }
+
+        .name {
+          h3 {
+            padding-right: 30px;
+          }
+
+          .text-wrapper {
+            .druzhok {
+              margin-bottom: -30px;
+              font-size: 183px;
+              padding-left: 30px;
+            }
+            .druk {
+              margin-top: -30px;
+              font-size: 183px;
+            }
+          }
+        }
+
+        .sticker {
+          grid-column: 12 / 18;
+          top: -150px;
+          padding: 60px 40px 60px 40px;
+        }
+      }
+
+      &.popcult {
+        padding-top: 300px;
+        margin-bottom: 150px;
+
+        .grid {
+          .one {
+            height: 280px;
+            margin-top: 120px;
+          }
+
+          span {
+            margin-top: 120px;
+          }
+        }
+      }
+
+      &.influencers {
+        .top {
+          padding-top: 130px;
+
+          .image:first-child {
+            height: 148px;
+            margin-top: 210px;
+          }
+
+          .image:nth-child(2) {
+            height: 260px;
+          }
+
+          .image:nth-child(3) {
+            height: 126px;
+            margin-top: 70px;
+          }
+        }
+
+        h3 {
+          margin-bottom: 30px;
+        }
+
+        .name {
+          .text-wrapper {
+            .druzhok {
+              font-size: 180px;
+              margin-bottom: -30px;
+            }
+
+            .druzhok:first-child {
+              padding-left: 100px;
+            }
+
+            .druk {
+              font-size: 180px;
+              padding-left: 250px;
+              margin-top: -30px;
+            }
+          }
+          .wrapper {
+            margin-top: 40px;
+
+            p {
+              width: 24em;
+            }
+          }
+        }
+      }
+
+      &.movies {
+        h3 {
+          margin-top: 30vh;
+          margin-bottom: 50px;
+        }
+        .name {
+          grid-column: 4 / 24;
+
+          .druzhok {
+            font-size: 180px;
+            margin-bottom: -30px;
+          }
+          .padding {
+            padding-left: 260px;
+          }
+
+          .druk {
+            font-size: 180px;
+            margin-top: -30px;
+          }
+        }
+
+        .wrapper {
+          grid-column: 18 / 24;
+
+          .button {
+            margin-top: 30px;
+          }
+        }
+
+        .bottom {
+          padding-top: 200px;
+
+          .image:first-child {
+            height: 342px;
+            margin-top: 100px;
+          }
+
+          .image:nth-child(2) {
+            grid-column: 10 / 16;
+            height: 500px;
+            top: 0vh;
+          }
+        }
+      }
+
+      &.launch {
+        height: 100vh;
+        padding-top: 200px;
+        .forma {
+          grid-column: 3 / 23;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding: 100px 120px 100px 120px;
+
+          .druk {
+            font-size: 70px;
+
+            .wide {
+              font-size: 70px;
+            }
+          }
+
+          .line {
+            margin-top: 30px;
+            margin-bottom: 20px;
+          }
+
+          .wrapper {
+            margin-bottom: 20px;
+            width: 100%;
+          }
+        }
+
+        form {
+          display: flex;
+          flex-direction: row;
+
+          width: 100%;
+        }
+
+        input {
+          width: 534px;
+          height: 92px;
+          padding: 0 25px;
+        }
+
+        button {
+          width: 278px;
+          height: 92px;
+        }
+      }
+
+      &.footer {
+        .grid {
+          width: 1232px;
+          column-gap: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 970px) and (max-width: 1249px) {
+  body.index {
+    p,
+    li {
+      font-size: 12px;
+    }
+
+    h3 {
+      font-size: 10px;
+    }
+
+    h2 {
+      font-size: 34px;
+    }
+
+    .grid {
+      width: 948px;
+      column-gap: 12px;
+    }
+
+    .navbar {
+      padding-top: 20px;
+      padding-bottom: 15px;
+
+      .logo {
+        grid-column: 1 / 5;
+        height: 22px;
+        width: 100%;
+      }
+    }
+
+    .button {
+      padding: 8px 20px;
+      font-size: 10px;
+
+      .icon {
+        margin-left: 7px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    section {
+      &.cover {
+        margin-bottom: 200px;
+
+        .top {
+          .image:first-child {
+            height: 136px;
+            top: 480px;
+          }
+          .image:nth-child(2) {
+            height: 194px;
+            top: 270px;
+          }
+        }
+
+        .name {
+          margin-top: 100px;
+
+          .text-wrapper {
+            .druzhok {
+              font-size: 170px;
+            }
+
+            .druk {
+              font-size: 250px;
+            }
+
+            .druzhok:nth-child(3) {
+              padding-left: 220px;
+            }
+          }
+        }
+      }
+
+      &.mission {
+        margin-bottom: 100px;
+        .sticker {
+          grid-column: 12 / 25;
+          margin-top: 25vh;
+          padding-left: 60px;
+          padding-bottom: 100px;
+
+          h3 {
+            margin-bottom: 100px;
+          }
+          p,
+          span {
+            font-size: 36px;
+          }
+        }
+      }
+
+      &.looks {
+        .heading {
+          grid-column: 2 / 7;
+          margin-bottom: 20px;
+
+          h3 {
+            margin-bottom: 20px;
+          }
+        }
+
+        .table {
+          column-gap: 12px;
+
+          .card {
+            h2 {
+              margin-bottom: 24px;
+
+              span {
+                font-size: 28px;
+              }
+            }
+
+            &.first {
+              margin-top: 80px;
+            }
+
+            &.second {
+              margin-top: 80px;
+            }
+
+            &.third {
+              .description {
+                margin-top: 80px;
+              }
+            }
+
+            &.fourth {
+              margin-top: 80px;
+            }
+
+            .one {
+              height: 300px;
+            }
+
+            .two {
+              height: 250px;
+            }
+
+            .three {
+              height: 260px;
+            }
+
+            .four {
+              height: 300px;
+            }
+
+            .description {
+              top: 450px;
+
+              .line {
+                margin-bottom: 30px;
+              }
+
+              p {
+                font-size: 10px;
+                width: 80%;
+              }
+            }
+          }
+        }
+      }
+
+      &.style {
+        margin-bottom: 300px;
+
+        .name {
+          .druzhok {
+            margin-bottom: -20px;
+            font-size: 136px;
+          }
+          .druk {
+            margin-top: -20px;
+            font-size: 136px;
+          }
+        }
+        .card {
+          .image {
+            height: 500px;
+          }
+          .tag-wrapper {
+            .tag {
+              margin-top: 6px;
+              padding: 6px 14px;
+
+              height: 20px;
+
+              p {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      &.antitrends {
+        .top {
+          .image:first-child {
+            height: 90px;
+            bottom: 0px;
+          }
+        }
+
+        .image:first-child {
+          height: 200px;
+          margin-top: 50px;
+        }
+        .image:nth-child(2) {
+          height: 276px;
+        }
+
+        .name {
+          h3 {
+            padding-right: 30px;
+          }
+
+          .text-wrapper {
+            .druzhok {
+              margin-bottom: -20px;
+              font-size: 140px;
+              padding-left: 30px;
+            }
+            .druk {
+              margin-top: -20px;
+              font-size: 140px;
+            }
+          }
+        }
+
+        .sticker {
+          grid-column: 12 / 18;
+          top: -40px;
+          padding: 60px 40px 60px 40px;
+        }
+      }
+
+      &.popcult {
+        height: 130vh;
+        padding-bottom: 200px;
+        margin-bottom: 0px;
+
+        .grid {
+          .one {
+            height: 215px;
+            margin-top: 200px;
+          }
+          .two {
+            height: 100vh;
+            top: -25vh;
+          }
+
+          span {
+            font-size: 40px;
+            margin-top: 200px;
+          }
+        }
+
+        .blackrectangle {
+          height: 100vh;
+          width: 100%;
+        }
+      }
+
+      &.influencers {
+        .top {
+          padding-top: 130px;
+
+          .image:first-child {
+            height: 112px;
+            margin-top: 140px;
+          }
+
+          .image:nth-child(2) {
+            height: 200px;
+            margin-top: -20px;
+          }
+
+          .image:nth-child(3) {
+            height: 100px;
+            margin-top: 30px;
+          }
+        }
+
+        h3 {
+          margin-bottom: 30px;
+        }
+
+        .name {
+          .text-wrapper {
+            .druzhok {
+              font-size: 137px;
+              margin-bottom: -20px;
+            }
+
+            .druzhok:first-child {
+              padding-left: 100px;
+            }
+
+            .druk {
+              font-size: 137px;
+              padding-left: 200px;
+              margin-top: -20px;
+            }
+          }
+          .wrapper {
+            margin-top: 30px;
+
+            p {
+              width: 24em;
+            }
+          }
+        }
+      }
+
+      &.movies {
+        h3 {
+          margin-top: 150px;
+          margin-bottom: 50px;
+        }
+        .name {
+          grid-column: 4 / 24;
+
+          .druzhok {
+            font-size: 137px;
+            margin-bottom: -20px;
+          }
+          .padding {
+            padding-left: 260px;
+          }
+
+          .druk {
+            font-size: 137px;
+            margin-top: -20px;
+          }
+        }
+
+        .wrapper {
+          grid-column: 18 / 24;
+
+          .button {
+            margin-top: 30px;
+          }
+        }
+
+        .bottom {
+          padding-top: 100px;
+
+          .image:first-child {
+            height: 265px;
+            margin-top: 80px;
+          }
+
+          .image:nth-child(2) {
+            grid-column: 9 / 15;
+            height: 380px;
+            top: 0vh;
+          }
+        }
+      }
+
+      &.launch {
+        height: 100vh;
+        padding-top: 200px;
+        .forma {
+          grid-column: 3 / 23;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding: 60px 90px 60px 90px;
+
+          .druk {
+            font-size: 56px;
+
+            .wide {
+              font-size: 56px;
+            }
+          }
+
+          .line {
+            margin-top: 20px;
+            margin-bottom: 10px;
+          }
+
+          .wrapper {
+            margin-bottom: 20px;
+            width: 100%;
+          }
+        }
+
+        form {
+          display: flex;
+          flex-direction: row;
+
+          width: 100%;
+        }
+
+        input {
+          width: 406px;
+          height: 70px;
+          padding: 0 25px;
+        }
+
+        button {
+          width: 212px;
+          height: 70px;
+        }
+      }
+
+      &.footer {
+        .grid {
+          width: 948px;
+          column-gap: 12px;
+
+          h3,
+          p {
+            font-size: 10px;
+          }
+          .top .socialnetworks {
+            .icon {
+              width: 24px;
+              height: 24px;
+            }
+
+            .vk {
+              width: 36px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 969px) {
+  body.index {
+    p,
+    li {
+      font-size: 10px;
+    }
+
+    h3 {
+      font-size: 10px;
+    }
+
+    h2 {
+      font-size: 34px;
+    }
+
+    .grid {
+      width: 712px;
+      column-gap: 8px;
+    }
+
+    .navbar {
+      padding-top: 20px;
+      padding-bottom: 10px;
+
+      .logo {
+        grid-column: 1 / 5;
+        height: 16px;
+        width: 100%;
+      }
+    }
+
+    .button {
+      padding: 8px 20px;
+      font-size: 8px;
+
+      .icon {
+        margin-left: 6px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    section {
+      &.cover {
+        height: 100vh;
+        margin-bottom: 0px;
+
+        .top {
+          .image:first-child {
+            grid-column: 15 / 20;
+            height: 175px;
+            top: 43vh;
+          }
+          .image:nth-child(2) {
+            grid-column: 6 / 13;
+            height: 260px;
+            top: -5vh;
+          }
+        }
+
+        .name {
+          margin-top: 30vh;
+
+          .text-wrapper {
+            .druzhok {
+              font-size: 130px;
+            }
+
+            .druk {
+              font-size: 192px;
+            }
+
+            .druzhok:nth-child(3) {
+              padding-left: 132px;
+            }
+          }
+        }
+      }
+
+      &.mission {
+        margin-bottom: 100px;
+
+        .image {
+          grid-column: 1 / 23;
+        }
+        .sticker {
+          grid-column: 10 / 25;
+          margin-top: 25vh;
+          padding-left: 34px;
+          padding-bottom: 100px;
+
+          h3 {
+            margin-bottom: 100px;
+          }
+          p,
+          span {
+            font-size: 36px;
+          }
+        }
+      }
+
+      &.looks {
+        .heading {
+          grid-column: 2 / 8;
+          margin-bottom: 20px;
+
+          h3 {
+            margin-bottom: 20px;
+          }
+        }
+
+        .table {
+          column-gap: 12px;
+
+          .card {
+            h2 {
+              font-size: 21px;
+              margin-bottom: 24px;
+
+              span {
+                font-size: 21px;
+              }
+            }
+
+            &.first {
+              margin-top: 80px;
+            }
+
+            &.second {
+              margin-top: 80px;
+            }
+
+            &.third {
+              margin-top: 200px;
+              .description {
+                margin-top: 0px;
+              }
+            }
+
+            &.fourth {
+              margin-top: 80px;
+            }
+
+            .one {
+              height: 225px;
+            }
+
+            .two {
+              height: 240px;
+            }
+
+            .three {
+              height: 200px;
+            }
+
+            .four {
+              height: 225px;
+            }
+
+            .description {
+              top: 450px;
+
+              .line {
+                margin-bottom: 30px;
+              }
+
+              p {
+                font-size: 10px;
+                width: 80%;
+              }
+            }
+          }
+        }
+      }
+
+      &.rectangle {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        z-index: 1;
+        top: -170px;
+        margin-bottom: -250px;
+        background: var(--green);
+      }
+
+      &.style {
+        margin-bottom: 300px;
+
+        .name {
+          .druzhok {
+            margin-bottom: -20px;
+            font-size: 105px;
+          }
+          .druk {
+            margin-top: -20px;
+            font-size: 105px;
+          }
+        }
+        .card {
+          .image {
+            height: 440px;
+          }
+          .tag-wrapper {
+            margin-top: 4px;
+            .tag {
+              margin-top: 6px;
+              padding: 5px 12px;
+
+              height: 18px;
+
+              p {
+                font-size: 8px;
+              }
+            }
+          }
+        }
+      }
+
+      &.antitrends {
+        .top {
+          .image:first-child {
+            height: 60px;
+            bottom: 20px;
+          }
+        }
+
+        .image:first-child {
+          height: 160px;
+          margin-top: 50px;
+        }
+        .image:nth-child(2) {
+          height: 212px;
+        }
+
+        .name {
+          h3 {
+            padding-right: 1px;
+            width: 110px;
+          }
+
+          .text-wrapper {
+            .druzhok {
+              margin-bottom: -20px;
+              font-size: 108px;
+              padding-left: 30px;
+            }
+            .druk {
+              margin-top: -20px;
+              font-size: 108px;
+            }
+          }
+        }
+
+        .sticker {
+          grid-column: 12 / 19;
+          top: -60px;
+          padding: 50px 30px 70px 30px;
+        }
+      }
+
+      &.popcult {
+        height: 120vh;
+        padding-bottom: 200px;
+        margin-bottom: 0px;
+
+        .grid {
+          .one {
+            grid-column: 3 / 9;
+            height: 215px;
+            margin-top: 200px;
+          }
+          .two {
+            height: 90vh;
+            top: -15vh;
+          }
+
+          span {
+            font-size: 40px;
+            margin-top: 200px;
+          }
+        }
+
+        .blackrectangle {
+          height: 120vh;
+          width: 100%;
+        }
+      }
+
+      &.influencers {
+        .top {
+          padding-top: 100px;
+
+          .image:first-child {
+            height: 86px;
+            margin-top: 120px;
+          }
+
+          .image:nth-child(2) {
+            height: 164px;
+            margin-top: -20px;
+          }
+
+          .image:nth-child(3) {
+            height: 74px;
+            margin-top: 30px;
+          }
+        }
+
+        h3 {
+          margin-bottom: 30px;
+        }
+
+        .name {
+          .text-wrapper {
+            .druzhok {
+              font-size: 105px;
+              margin-bottom: -15px;
+            }
+
+            .druzhok:first-child {
+              padding-left: 100px;
+            }
+
+            .druk {
+              font-size: 105px;
+              padding-left: 140px;
+              margin-top: -15px;
+            }
+          }
+          .wrapper {
+            margin-top: 30px;
+
+            p {
+              width: 24em;
+            }
+          }
+        }
+      }
+
+      &.movies {
+        h3 {
+          grid-column: 17 / 24;
+          margin-top: 250px;
+          margin-bottom: 30px;
+        }
+        .name {
+          grid-column: 4 / 24;
+
+          .druzhok {
+            font-size: 105px;
+            margin-bottom: -20px;
+          }
+          .padding {
+            padding-left: 220px;
+          }
+
+          .druk {
+            font-size: 105px;
+            margin-top: -20px;
+          }
+        }
+
+        .wrapper {
+          grid-column: 17 / 24;
+
+          .button {
+            margin-top: 20px;
+          }
+        }
+
+        .bottom {
+          padding-top: 200px;
+
+          .image:first-child {
+            height: 205px;
+            margin-top: 80px;
+          }
+
+          .image:nth-child(2) {
+            grid-column: 9 / 15;
+            height: 290px;
+            top: 0vh;
+          }
+        }
+      }
+
+      &.launch {
+        height: auto;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        .forma {
+          grid-column: 3 / 23;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding: 60px 60px 60px 60px;
+
+          .druk {
+            font-size: 44px;
+
+            .wide {
+              font-size: 44px;
+            }
+          }
+
+          .line {
+            margin-top: 20px;
+            margin-bottom: 10px;
+          }
+
+          .wrapper {
+            margin-bottom: 20px;
+            width: 100%;
+          }
+        }
+
+        form {
+          display: flex;
+          flex-direction: row;
+
+          width: 100%;
+        }
+
+        input {
+          width: 312px;
+          height: 54px;
+          padding: 0 25px;
+          font-size: 8px;
+        }
+
+        button {
+          width: 164px;
+          height: 54px;
+          h3 {
+            font-size: 10px;
+          }
+        }
+      }
+
+      &.footer {
+        .grid {
+          width: 712px;
+          column-gap: 8px;
+
+          h3 {
+            font-size: 8px;
+          }
+
+          p,
+          h4,
+          a {
+            font-size: 8px;
+          }
+          .top .socialnetworks {
+            .icon {
+              width: 16px;
+              height: 16px;
+            }
+
+            .vk {
+              width: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 719px) {
+  body.index {
+    p,
+    li {
+      font-size: 12px;
+    }
+
+    h3 {
+      font-size: 7px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    .grid {
+      width: 324px;
+      column-gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .navbar {
+      padding-top: 20px;
+      padding-bottom: 10px;
+
+      .logo {
+        grid-column: 1 / 3;
+        height: 16px;
+        width: 100%;
+      }
+    }
+
+    .button {
+      padding: 6px 16px;
+      font-size: 8px;
+
+      .icon {
+        margin-left: 6px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    section {
+      &.cover {
+        height: 100vh;
+        margin-bottom: 150px;
+
+        .top {
+          .image:first-child {
+            grid-column: 1 / 3;
+            height: 170px;
+            width: 80%;
+            top: 55vh;
+          }
+          .image:nth-child(2) {
+            grid-column: 3 / 5;
+            height: 160px;
+            top: 20vh;
+          }
+        }
+
+        .name {
+          grid-column: 1 / 5;
+          margin-top: 35vh;
+
+          .text-wrapper {
+            .druzhok {
+              font-size: 60px;
+            }
+
+            .druk {
+              font-size: 88px;
+            }
+
+            .druzhok:nth-child(3) {
+              padding-left: 60px;
+            }
+          }
+        }
+      }
+
+      &.mission {
+        margin-bottom: 100px;
+        padding-top: 120px;
+        height: 600px;
+
+        .image {
+          grid-column: 1 / 4;
+          margin-top: 100px;
+          height: 350px;
+          background-position: 150px;
+          background-size: 80%;
+        }
+        .sticker {
+          grid-column: 2 / 5;
+          margin-top: -100px;
+          padding-left: 16px;
+          padding-bottom: 70px;
+
+          h3 {
+            margin-bottom: 20px;
+          }
+          p,
+          span {
+            font-size: 24px;
+          }
+        }
+      }
+
+      &.looks {
+        .heading {
+          grid-column: 1 / 3;
+          margin-bottom: 20px;
+
+          h3 {
+            margin-bottom: 14px;
+          }
+        }
+
+        .table {
+          margin-top: 30px;
+          grid-column: 1 / 5;
+          grid-template-columns: repeat(4, 1fr);
+          column-gap: 20px;
+
+          .card {
+            h2 {
+              font-size: 20px;
+              margin-bottom: 24px;
+
+              span {
+                font-size: 20px;
+              }
+            }
+
+            &.first {
+              grid-column: 1 / 3;
+              margin-top: 0px;
+            }
+
+            &.second {
+              grid-column: 3 / 5;
+              margin-top: 0px;
+            }
+
+            &.third {
+              grid-column: 1 / 3;
+              margin-top: 0px;
+              .description {
+                margin-top: 0px;
+              }
+            }
+
+            &.fourth {
+              grid-column: 3 / 5;
+              margin-top: 80px;
+              z-index: 5;
+            }
+
+            .one {
+              height: 200px;
+            }
+
+            .two {
+              height: 270px;
+            }
+
+            .three {
+              height: 225px;
+            }
+
+            .four {
+              height: 225px;
+            }
+
+            .description {
+              position: relative;
+              top: 0;
+
+              .line {
+                margin: 10px 0;
+              }
+
+              p {
+                font-size: 10px;
+                width: 80%;
+              }
+            }
+          }
+        }
+      }
+
+      &.rectangle {
+        width: 100%;
+        height: 80vh;
+        position: relative;
+        z-index: 1;
+        top: -180px;
+        margin-bottom: -280px;
+        background: var(--green);
+      }
+
+      &.style {
+        overflow: hidden;
+        height: 350px;
+        padding-top: 50px;
+        margin-bottom: 150px;
+
+        .name {
+          grid-column: 1 / 4;
+
+          h3 {
+            margin-bottom: 15px;
+          }
+          .druzhok {
+            padding-left: 10px;
+            margin-bottom: -10px;
+            font-size: 56px;
+          }
+          .druk {
+            margin-top: -10px;
+            font-size: 56px;
+          }
+
+          .wrapper {
+            margin-top: 24px;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+              width: 14em;
+            }
+
+            .button {
+              margin-top: 15px;
+            }
+          }
+        }
+        .card {
+          top: -5vh;
+          grid-column: 3 / 5;
+          .image {
+            height: 265px;
+            width: 130%;
+            margin-bottom: 10px;
+          }
+
+          .tag-wrapper {
+            width: 120%;
+            margin-top: 4px;
+            .tag {
+              padding: 4px 10px;
+
+              height: 16px;
+              margin-right: 6px;
+              margin-top: 6px;
+
+              p {
+                margin-top: 0;
+                font-size: 8px;
+              }
+            }
+          }
+        }
+      }
+
+      &.antitrends {
+        .top {
+          .image:first-child {
+            grid-column: 1/2;
+            height: 60px;
+            bottom: 130px;
+          }
+        }
+
+        .none {
+          display: none;
+        }
+        .image:nth-child(2) {
+          grid-column: 3 / 5;
+          width: 80%;
+          margin-top: 180px;
+          height: 160px;
+          z-index: 5;
+        }
+
+        .name {
+          grid-column: 2 / 5;
+          grid-template-columns: repeat(3, 1fr);
+          column-gap: 20px;
+          h3 {
+            padding-right: 1px;
+            width: 76px;
+          }
+
+          .text-wrapper {
+            grid-column: 1 / 4;
+            .druzhok {
+              margin-bottom: -10px;
+              font-size: 64px;
+              padding-left: 0px;
+            }
+            .druk {
+              margin-top: -10px;
+              font-size: 64px;
+            }
+          }
+        }
+
+        .sticker {
+          grid-column: 1 / 4;
+          width: 100%;
+          top: -60px;
+          left: -50px;
+          padding: 70px 60px 40px 50px;
+        }
+      }
+
+      &.popcult {
+        height: 120vh;
+        padding-bottom: 200px;
+        margin-bottom: 200px;
+
+        .grid {
+          .one {
+            grid-column: 1 / 3;
+            width: 65%;
+            height: 160px;
+            margin-top: 200px;
+          }
+          .two {
+            grid-column: 3 / 5;
+            height: 90vh;
+            top: -15vh;
+            background-position: -200px;
+          }
+
+          span {
+            grid-column: 2 / 4;
+            font-size: 20px;
+            margin-top: -150px;
+          }
+        }
+
+        .blackrectangle {
+          height: 120vh;
+          width: 100%;
+        }
+      }
+
+      &.influencers {
+        .top {
+          padding-top: 100px;
+
+          .none {
+            display: none;
+          }
+
+          .image:nth-child(2) {
+            grid-column: 4 / 5;
+            height: 112px;
+            width: 120%;
+            margin-top: -200px;
+          }
+
+          .image:nth-child(3) {
+            grid-column: 1 / 3;
+            width: 60%;
+            height: 68px;
+            margin-top: -40px;
+            margin-left: 20px;
+          }
+        }
+
+        h3 {
+          margin-bottom: 14px;
+        }
+
+        .name {
+          grid-column: 1 /5;
+          .text-wrapper {
+            .druzhok {
+              font-size: 58px;
+              margin-bottom: -10px;
+            }
+
+            .druzhok:first-child {
+              padding-left: 0px;
+            }
+
+            .druzhok:nth-child(2) {
+              padding-left: 120px;
+            }
+
+            .druk {
+              font-size: 58px;
+              padding-left: 0px;
+              margin-top: -10px;
+            }
+          }
+          .wrapper {
+            align-items: flex-start;
+            margin-top: 30px;
+
+            p {
+              width: 24em;
+            }
+          }
+        }
+      }
+
+      &.movies {
+        h3 {
+          grid-column: 3 / 5;
+          margin-top: 250px;
+          margin-bottom: 30px;
+        }
+        .name {
+          grid-column: 1 / 5;
+
+          .druzhok {
+            font-size: 60px;
+            margin-bottom: -10px;
+          }
+          .padding {
+            padding-left: 100px;
+          }
+
+          .druk {
+            font-size: 60px;
+            margin-top: -10px;
+          }
+        }
+
+        .wrapper {
+          grid-column: 1 / 5;
+          flex-direction: row;
+          align-items: flex-start;
+          margin-top: 20px;
+
+          .button {
+            margin-top: 0px;
+          }
+        }
+
+        .bottom {
+          padding-top: 200px;
+
+          .image:first-child {
+            grid-column: 1 / 2;
+            width: 140%;
+            height: 140px;
+            margin-top: 0px;
+          }
+
+          .image:nth-child(2) {
+            grid-column: 2 / 3;
+            width: 140%;
+            height: 200px;
+            margin-top: -60px;
+            margin-left: 20px;
+          }
+        }
+      }
+
+      &.launch {
+        height: auto;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        .forma {
+          grid-column: 1 / 5;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding: 40px 20px 40px 20px;
+
+          p {
+            font-size: 8px;
+          }
+          .druk {
+            font-size: 26px;
+
+            .wide {
+              font-size: 26px;
+            }
+          }
+
+          .line {
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+
+          .wrapper {
+            margin-bottom: 20px;
+            width: 100%;
+          }
+        }
+
+        form {
+          width: 100%;
+        }
+
+        input {
+          width: 200px;
+          height: 42px;
+          padding: 0 14px;
+          font-size: 6px;
+        }
+
+        button {
+          width: 86px;
+          height: 42px;
+          h3 {
+            font-size: 6px;
+          }
+        }
+      }
+
+      &.footer {
+        .grid {
+          padding-top: 55px;
+          padding-bottom: 100px;
+          grid-template-columns: repeat(4, 1fr);
+          column-gap: 20px;
+          width: 324px;
+
+          h3 {
+            font-size: 10px;
+            margin-bottom: 50px;
+          }
+
+          p,
+          h4,
+          a {
+            font-size: 10px;
+            margin-bottom: 14px;
+          }
+
+          .top {
+            grid-column: 1 /5;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 15px;
+
+            .first {
+              grid-column: 1 / 3;
+            }
+            .second {
+              grid-column: 3 / 5;
+            }
+            .styles {
+              grid-column: 1 / 3;
+            }
+            .influencers {
+              grid-column: 3 / 5;
+            }
+            .third {
+              grid-column: 3 / 5;
+            }
+
+            .socialnetworks {
+              margin-top: 50px;
+              grid-column: 1 / 5;
+              justify-content: space-between;
+
+              .icon {
+                margin-left: 0px;
+                width: 34px;
+                height: 34px;
+              }
+              .vk {
+                width: 49px;
+              }
+            }
+          }
+          .bottom {
+            margin-top: 100px;
+            grid-column: 1 / 5;
+
+            h3 {
+              font-size: 8px;
+              font-weight: 500;
+            }
+          }
         }
       }
     }
