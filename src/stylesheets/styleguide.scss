@@ -238,11 +238,11 @@ body.styleguide {
         }
       }
       .logo-gif {
-        // поменять на гифку
         margin-top: 150px;
         margin-bottom: 150px;
         grid-column: 3 / 15;
-        background-image: url('./images/newlogo.svg');
+        // background-image: url('./images/newlogo.svg');
+        background-image: url('./images/logo.gif');
         width: 100%;
         height: 162px;
         background-size: contain;
@@ -327,12 +327,6 @@ body.styleguide {
           column-gap: 20px;
           width: 100%;
 
-          // width: 100%;
-          // display: flex;
-          // flex-direction: row;
-          // justify-content: space-between;
-          // align-items: center;
-
           .logo {
             margin-top: 0;
             width: 100%;
@@ -397,22 +391,24 @@ body.styleguide {
       }
 
       .three {
-        .logo {
-          grid-column: 1 / 6;
-          height: 180px;
-          background-image: url('./images/logov2.svg');
-        }
-
-        .arrow {
-          grid-column: 5 / 6;
-        }
-
-        .black {
-          grid-column: 7 / 11;
-          height: 296px;
+        .row {
           .logo {
-            width: 65%;
-            background-image: url('./images/logov2white.svg');
+            grid-column: 1 / 5;
+            height: 180px;
+            background-image: url('./images/logov2.svg');
+          }
+
+          .arrow {
+            grid-column: 5 / 6;
+          }
+
+          .black {
+            grid-column: 7 / 11;
+            height: 296px;
+            .logo {
+              width: 65%;
+              background-image: url('./images/logov2white.svg');
+            }
           }
         }
       }
@@ -1266,7 +1262,7 @@ body.styleguide {
   }
 }
 
-@media only screen and (min-width: 1296px) and (max-width: 1679px) {
+@media only screen and (min-width: 1300px) and (max-width: 1679px) {
   body.styleguide {
     p,
     li {
@@ -1457,7 +1453,7 @@ body.styleguide {
   }
 }
 
-@media only screen and (min-width: 918px) and (max-width: 1295px) {
+@media only screen and (min-width: 930px) and (max-width: 1299px) {
   body.styleguide {
     p,
     li {
@@ -1698,12 +1694,7 @@ body.styleguide {
         .three {
           .row {
             .logo {
-              grid-column: 1 / 5;
               height: 120px;
-            }
-
-            .arrow {
-              grid-column: 5 / 6;
             }
 
             .black {
@@ -1890,30 +1881,8 @@ body.styleguide {
           }
         }
 
-        .logo-green {
-          grid-column: 3 / 8;
-          background: var(--green);
-          .logo {
-            background-image: url('./images/newlogo.svg');
-          }
-        }
-
-        .logo-black {
-          grid-column: 9 / 14;
-          border: 1px solid var(--white);
-
-          .logo {
-            background-image: url('./images/newlogowhite.svg');
-          }
-        }
-
         .logo-white {
-          grid-column: 3 / 8;
-          background: var(--white);
           margin-top: 40px;
-          .logo {
-            background-image: url('./images/newlogo.svg');
-          }
         }
       }
 
@@ -1969,7 +1938,7 @@ body.styleguide {
         }
 
         .inter {
-          margin-top: 60px;
+          margin-top: 80px;
           margin-bottom: 80px;
 
           h3 {
@@ -2225,21 +2194,11 @@ body.styleguide {
         }
 
         .top {
-          grid-column: 1 / 17;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
           margin-bottom: 30px;
         }
 
         .title {
-          grid-column: 1 / 17;
-          background-image: url('./images/newlogowhite.svg');
           height: 220px;
-          width: 100%;
-          background-size: contain;
-          background-position: top left;
-          background-repeat: no-repeat;
         }
       }
     }
