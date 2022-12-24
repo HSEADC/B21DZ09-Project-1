@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const webpack = require('webpack')
 const path = require('path')
@@ -12,8 +13,8 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'docs'),
-    clean: true
+    path: path.resolve(__dirname, 'docs')
+    // clean: true
   },
   module: {
     rules: [
@@ -68,10 +69,15 @@ module.exports = {
       }
     ]
   },
+
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
+    }),
+
+    new CopyPlugin({
+      patterns: [{ from: 'src/share', to: 'share' }]
     }),
 
     // Landing page
@@ -83,21 +89,19 @@ module.exports = {
       chunks: ['index']
     }),
 
-    // Early Splash screen
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/early-splash-screen.html',
-      filename: './early-splash-screen.html',
+      template: './src/zaglushka.html',
+      filename: './zaglushka.html',
       chunks: ['index']
     }),
 
-    //Early About
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/early-about.html',
-      filename: './early-about.html',
+      template: './src/styleguide.html',
+      filename: './styleguide.html',
       chunks: ['index']
     }),
 
@@ -114,17 +118,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/styles-library.html',
-      filename: './styles-library.html',
+      template: './src/styles.html',
+      filename: './styles.html',
       chunks: ['index']
     }),
 
-    //library article
+    //Styles article
+
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/styles-library/name.html',
-      filename: './styles-library/name.html',
+      template: './src/styles/sport-chic.html',
+      filename: './styles/sport-chic.html',
       chunks: ['index']
     }),
 
@@ -137,12 +142,12 @@ module.exports = {
       chunks: ['index']
     }),
 
-    //personal article
+    //individuals article
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/influencers/personalities/name.html',
-      filename: './influencers/personalities/name.html',
+      template: './src/influencers/individuals/lilnasx.html',
+      filename: './influencers/individuals/lilnasx.html',
       chunks: ['index']
     }),
 
@@ -150,8 +155,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/influencers/movies/name.html',
-      filename: './influencers/movies/name.html',
+      template: './src/influencers/movies/sexandthecity.html',
+      filename: './influencers/movies/sexandthecity.html',
       chunks: ['index']
     }),
 

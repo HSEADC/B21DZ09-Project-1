@@ -1,16 +1,18 @@
-@import 'stylesheets/about-responsive.scss';
-@import 'stylesheets/index-responsive.scss';
-
 @import 'stylesheets/reset.scss';
 @import 'stylesheets/vars.scss';
 @import 'stylesheets/fonts.scss';
 @import 'stylesheets/basics.scss';
 @import 'stylesheets/index.scss';
+@import 'stylesheets/styleguide.scss';
 
-@import 'stylesheets/early-splash-screen.scss';
-@import 'stylesheets/early-about.scss';
+@import 'stylesheets/zaglushka.scss';
 @import 'stylesheets/about.scss';
 @import 'stylesheets/styles-library.scss';
 @import 'stylesheets/name.scss';
 @import 'stylesheets/influencers.scss';
 @import 'stylesheets/antitrends.scss';
+
+@import 'stylesheets/sport-chic.scss';
+
+@import 'stylesheets/lilnasx.scss';
+@import 'stylesheets/sexandthecity.scss';
