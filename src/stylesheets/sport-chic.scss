@@ -757,21 +757,21 @@ body.sport-chic {
             }
           }
           ul {
-            list-style: none;
+            list-style: disc;
 
             li {
               padding-bottom: 30px;
             }
-            li::before {
-              content: '';
-              display: inline-block;
-              height: 10px;
-              width: 10px;
-              vertical-align: middle;
-              border-radius: 50%;
-              background-color: var(--black);
-              margin-right: 12px;
-            }
+            // li::before {
+            //   content: '';
+            //   display: inline-block;
+            //   height: 10px;
+            //   width: 10px;
+            //   vertical-align: middle;
+            //   border-radius: 50%;
+            //   background-color: var(--black);
+            //   margin-right: 12px;
+            // }
           }
         }
       }
@@ -807,21 +807,21 @@ body.sport-chic {
             }
           }
           ul {
-            list-style: none;
+            list-style: disc;
 
             li {
               padding-bottom: 30px;
             }
-            li::before {
-              content: '';
-              display: inline-block;
-              height: 10px;
-              width: 10px;
-              vertical-align: middle;
-              border-radius: 50%;
-              background-color: var(--black);
-              margin-right: 12px;
-            }
+            // li::before {
+            //   content: '';
+            //   display: inline-block;
+            //   height: 10px;
+            //   width: 10px;
+            //   vertical-align: middle;
+            //   border-radius: 50%;
+            //   background-color: var(--black);
+            //   margin-right: 12px;
+            // }
           }
         }
         .gallery {
@@ -890,6 +890,7 @@ body.sport-chic {
     }
 
     &.recomendations {
+      height: 400px;
       background: var(--green);
       .grid {
         padding-top: 115px;
@@ -903,6 +904,7 @@ body.sport-chic {
         position: relative;
 
         .wrapper {
+          height: 300px;
           grid-column: 2 / 6;
           display: flex;
           flex-direction: column;
