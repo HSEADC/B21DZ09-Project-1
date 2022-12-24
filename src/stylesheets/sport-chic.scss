@@ -1021,13 +1021,16 @@ body.sport-chic {
         position: relative;
 
         h3 {
+          font-family: 'Druk Text Wide Cyr';
           font-size: 12px;
           text-transform: none;
-          font-weight: 500;
+          font-weight: 800;
           line-height: 140%;
           margin-bottom: 10px;
         }
-
+        .authors {
+          margin-right: 20px;
+        }
         p,
         h4,
         a {
@@ -1036,14 +1039,20 @@ body.sport-chic {
           color: var(--gray);
         }
 
+        .wrapper {
+          p {
+            color: var(--green);
+          }
+        }
+
         h4 {
           text-transform: none;
-          text-decoration: underline;
-          text-decoration-color: var(--green);
-          text-decoration-thickness: 2px;
+          // text-decoration: underline;
+          // text-decoration-color: var(--green);
+          // text-decoration-thickness: 2px;
           font-family: 'Inter';
           line-height: 120%;
-          font-weight: 400;
+          font-weight: 800;
           cursor: default;
         }
 
