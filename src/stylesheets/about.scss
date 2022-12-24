@@ -279,7 +279,7 @@ body.about {
   }
 }
 
-@media only screen and (min-width: 970px) and (max-width: 1249px) {
+@media only screen and (min-width: 970px) and (max-width: 1309px) {
   body.about {
     .display {
       .grid {
@@ -395,20 +395,12 @@ body.about {
         .logo {
           height: 24px;
           width: 230px;
-          display: block;
-          background-image: url('./images/newlogowhite.svg');
-          background-position: top left;
-          background-size: contain;
           background-repeat: no-repeat;
           margin-top: 40px;
         }
         .subtitle {
           font-size: 9px;
           color: #a4a4a4;
-          font-family: 'Druk Text Wide Cyr';
-          font-weight: 800;
-          text-transform: uppercase;
-          text-align: left;
           line-height: 110%;
           padding-bottom: 20px;
         }
@@ -426,10 +418,6 @@ body.about {
             p {
               font-size: 16px;
               color: white;
-              font-family: 'Druk Text Wide Cyr';
-              font-weight: 800;
-              text-transform: uppercase;
-              text-align: left;
               line-height: 110%;
             }
           }
@@ -442,9 +430,7 @@ body.about {
           .bigTitle {
             font-size: 220px;
             color: white;
-            font-family: 'Druk Condensed Cyr Super';
             font-weight: 900;
-            text-transform: uppercase;
             text-align: left;
             line-height: 100%;
             -webkit-transform: rotate(-90deg);
@@ -471,8 +457,7 @@ body.about {
         flex-direction: column;
         .imageBlock {
           .ourImage {
-            background-image: url('./images/we.jpg');
-            background-size: 100%;
+            background-size: cover;
             background-position: -140px;
             background-repeat: no-repeat;
             width: calc(100% + 300px);
@@ -500,6 +485,7 @@ body.about {
 
           .contentAbout {
             padding-top: 8vh;
+            padding-left: 50px;
 
             .number {
               font-size: 12px;
