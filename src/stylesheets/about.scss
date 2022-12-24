@@ -1,5 +1,8 @@
 body.about {
   background: var(--black);
+  a {
+    text-decoration: none;
+  }
   .display {
     overflow: hidden;
 
@@ -11,7 +14,9 @@ body.about {
       margin: 0 auto;
       position: relative;
     }
-
+    .blackSectionMobile {
+      display: none;
+    }
     .blackSection {
       background-color: var(--black);
       grid-column: 1 /7;
@@ -126,10 +131,13 @@ body.about {
       flex-direction: column;
       .imageBlock {
         .ourImage {
+          background-image: url('./images/we.jpg');
+          background-size: cover;
+          background-position: -100px;
+          background-repeat: no-repeat;
           width: calc(100% + 300px);
           height: 40vh;
           padding-right: 300px;
-          background: white;
         }
 
         .button {
@@ -205,6 +213,507 @@ body.about {
             flex-direction: row;
             justify-content: flex-start;
             margin-left: 6vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1310px) and (max-width: 1600px) {
+  body.about {
+    .display {
+      .grid {
+        grid-template-columns: repeat(16, 1fr);
+        column-gap: 20px;
+        width: 1304px;
+        margin: 0 auto;
+      }
+
+      .blackSection {
+        grid-column: 1 /7;
+
+        .column2 {
+          .bigTitle {
+            font-size: 370px;
+            line-height: 80%;
+            margin-top: -35px;
+          }
+
+          .underBigTitle {
+            margin-left: -30px;
+
+            span {
+              font-size: 105px;
+            }
+          }
+        }
+      }
+
+      .colorSection {
+        .imageBlock {
+          .ourImage {
+            background-position: -100px;
+            width: calc(100% + 300px);
+            height: 40vh;
+            padding-right: 300px;
+          }
+
+          .button {
+            padding: 10px 24px;
+            font-size: 16px;
+            justify-content: center;
+            border-radius: 50px;
+            width: auto;
+            top: 30px;
+
+            .icon {
+              margin-left: 16px;
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 970px) and (max-width: 1249px) {
+  body.about {
+    .display {
+      .grid {
+        grid-template-columns: repeat(16, 1fr);
+        column-gap: 12px;
+        width: 986px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .blackSection {
+        grid-column: 1 /8;
+
+        .logo {
+          height: 24px;
+          width: 230px;
+          margin-top: 40px;
+        }
+        .subtitle {
+          font-size: 9px;
+          padding-bottom: 20px;
+        }
+
+        .projectContent {
+          margin-top: 50px;
+        }
+        .bottomblock {
+          .smallRotatedSubtitle {
+            margin-left: 40px;
+
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+        .column2 {
+          .bigTitle {
+            font-size: 250px;
+            margin-top: -35px;
+          }
+
+          .underBigTitle {
+            margin-left: -30px;
+
+            span {
+              font-size: 67px;
+            }
+          }
+        }
+      }
+
+      .colorSection {
+        grid-column: 8 / 17;
+        .imageBlock {
+          .button {
+            padding: 10px 24px;
+            font-size: 12px;
+            justify-content: center;
+            border-radius: 50px;
+            width: auto;
+            top: 30px;
+
+            .icon {
+              margin-left: 16px;
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+        .greenSection {
+          .contentAbout {
+            .number {
+              font-family: 'Druk Text Wide Cyr';
+              font-weight: 800;
+              font-size: 12px;
+            }
+            .question {
+              font-size: 16px;
+              margin-top: 20px;
+            }
+            .answer {
+              font-size: 10px;
+              margin-top: 20px;
+              line-height: 110%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 969px) {
+  body.about {
+    .display {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        width: 724px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .blackSection {
+        grid-column: 1 /3;
+
+        .column1 {
+          width: 50%;
+          height: 99vh;
+          padding: 10px 20px;
+        }
+
+        .logo {
+          height: 24px;
+          width: 230px;
+          display: block;
+          background-image: url('./images/newlogowhite.svg');
+          background-position: top left;
+          background-size: contain;
+          background-repeat: no-repeat;
+          margin-top: 40px;
+        }
+        .subtitle {
+          font-size: 9px;
+          color: #a4a4a4;
+          font-family: 'Druk Text Wide Cyr';
+          font-weight: 800;
+          text-transform: uppercase;
+          text-align: left;
+          line-height: 110%;
+          padding-bottom: 20px;
+        }
+
+        .projectContent {
+          margin-top: 50px;
+        }
+        .bottomblock {
+          // height: 30vh;
+          .smallRotatedSubtitle {
+            -webkit-transform: rotate(-90deg);
+            transform-origin: bottom left;
+            margin-left: 40px;
+
+            p {
+              font-size: 16px;
+              color: white;
+              font-family: 'Druk Text Wide Cyr';
+              font-weight: 800;
+              text-transform: uppercase;
+              text-align: left;
+              line-height: 110%;
+            }
+          }
+        }
+        .column2 {
+          width: 50%;
+          height: 99vh;
+          display: flex;
+
+          .bigTitle {
+            font-size: 220px;
+            color: white;
+            font-family: 'Druk Condensed Cyr Super';
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: left;
+            line-height: 100%;
+            -webkit-transform: rotate(-90deg);
+            transform-origin: bottom;
+            margin-top: 113px;
+            margin-left: 210px;
+          }
+
+          .underBigTitle {
+            display: flex;
+            flex-direction: column;
+            margin-left: -30px;
+
+            span {
+              font-size: 85px;
+            }
+          }
+        }
+      }
+
+      .colorSection {
+        grid-column: 3 / 5;
+        display: flex;
+        flex-direction: column;
+        .imageBlock {
+          .ourImage {
+            background-image: url('./images/we.jpg');
+            background-size: 100%;
+            background-position: -140px;
+            background-repeat: no-repeat;
+            width: calc(100% + 300px);
+            height: 30vh;
+            padding-right: 300px;
+          }
+
+          .button {
+            padding: 10px 24px;
+            font-size: 12px;
+            justify-content: center;
+            border-radius: 50px;
+            width: auto;
+            top: 30px;
+
+            .icon {
+              margin-left: 16px;
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+        .greenSection {
+          height: 70vh;
+
+          .contentAbout {
+            padding-top: 8vh;
+
+            .number {
+              font-size: 12px;
+            }
+            .question {
+              font-size: 16px;
+              margin-top: 14px;
+            }
+            .answer {
+              font-size: 10px;
+              margin-top: 14px;
+              line-height: 110%;
+            }
+            .block {
+              width: 80%;
+              height: auto;
+              margin-right: 0;
+              padding-bottom: 40px;
+            }
+
+            .toprow {
+              flex-direction: column;
+
+              margin-left: 0;
+            }
+            .bottomrow {
+              flex-direction: column;
+
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 719px) {
+  body.about {
+    .display {
+      .grid {
+        display: flex;
+        flex-direction: column;
+      }
+      .blackSectionMobile {
+        display: block;
+        height: 750px;
+
+        .logo {
+          height: 24px;
+          width: 122px;
+          display: block;
+          background-image: url('./images/newlogowhite.svg');
+          background-position: top left;
+          background-size: contain;
+          background-repeat: no-repeat;
+          margin: 20px 20px;
+        }
+
+        .ourImage {
+          height: 40vh;
+          width: 40%;
+          background-image: url('./images/we.jpg');
+          background-size: cover;
+          background-position: -160px;
+          background-repeat: no-repeat;
+        }
+
+        .underBigTitle {
+          margin-top: 20px;
+          width: 100vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          span {
+            color: var(--white);
+            font-family: 'Druk Condensed Cyr Super';
+            font-weight: 900;
+            font-size: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+          }
+
+          .top {
+            margin-bottom: -10px;
+          }
+
+          .bottom {
+            margin-top: -10px;
+          }
+          .wide {
+            font-family: 'Druk Text Wide Cyr';
+            font-weight: 800;
+            margin-left: -4px;
+          }
+          .medium {
+            font-family: 'Druk Cyr';
+            font-weight: 800;
+          }
+        }
+        // .projectContent {
+        //   margin-top: 40px;
+        //   display: flex;
+        //   flex-direction: row;
+        //   flex-wrap: wrap;
+        //   justify-content: flex-start;
+        //   width: 80vw;
+        //   margin-left: 40px;
+        //
+        //   .subtitle {
+        //     font-size: 10px;
+        //     color: var(--green);
+        //     font-family: 'Druk Text Wide Cyr';
+        //     font-weight: 800;
+        //     text-transform: uppercase;
+        //     text-align: left;
+        //     line-height: 110%;
+        //     padding-bottom: 20px;
+        //     margin-right: 25px;
+        //   }
+        //
+        //   .smallRotatedSubtitle {
+        //     width: 190px;
+        //     margin-top: 20px;
+        //
+        //     p {
+        //       font-size: 16px;
+        //       color: white;
+        //       font-family: 'Druk Text Wide Cyr';
+        //       font-weight: 800;
+        //       text-transform: uppercase;
+        //       text-align: left;
+        //       line-height: 110%;
+        //     }
+        //   }
+        // }
+
+        .button {
+          padding: 10px 10px;
+          font-size: 12px;
+          justify-content: center;
+          border-radius: 50px;
+          width: 160px;
+          top: 40px;
+
+          background: var(--green);
+          color: var(--black);
+
+          display: flex;
+          align-items: center;
+
+          position: relative;
+
+          .icon {
+            margin-left: 14px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url('./images/blackarrow.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: rotate(45deg);
+          }
+        }
+      }
+      .blackSection {
+        display: none;
+      }
+
+      .colorSection {
+        grid-column: 3 / 5;
+        display: flex;
+        flex-direction: column;
+        .imageBlock {
+          display: none;
+        }
+        .greenSection {
+          height: 100vh;
+
+          .contentAbout {
+            padding-top: 8vh;
+
+            .number {
+              font-size: 12px;
+            }
+            .question {
+              font-size: 16px;
+              margin-top: 14px;
+            }
+            .answer {
+              font-size: 10px;
+              margin-top: 14px;
+              line-height: 110%;
+            }
+            .block {
+              margin-left: 40px;
+              width: 70vw;
+              height: auto;
+              margin-right: 0;
+              padding-bottom: 40px;
+            }
+
+            .toprow {
+              flex-direction: column;
+
+              margin-left: 0;
+            }
+            .bottomrow {
+              flex-direction: column;
+
+              margin-left: 0;
+            }
           }
         }
       }

@@ -1,22 +1,22 @@
-$(document).ready(function () {
-  let slide = $('.slideimg')
-  let delay = 1000
-  cicle()
-
-  function cicle() {
-    for (let i = 0; i < slide.length; i++) {
-      checker(slide[i], delay)
-      delay += 1000
-
-      if (slide.length - i === 1) cicle()
-    }
-  }
-
-  function checker(elem, delay) {
-    setTimeout(function () {
-      $(elem).addClass('current').siblings().removeClass('current')
-    }, delay)
-  }
+// $(document).ready(function () {
+//   let slide = $('.slideimg')
+//   let delay = 1000
+//   cicle()
+//
+//   function cicle() {
+//     for (let i = 0; i < slide.length; i++) {
+//       checker(slide[i], delay)
+//       delay += 1000
+//
+//       if (slide.length - i === 1) cicle()
+//     }
+//   }
+//
+//   function checker(elem, delay) {
+//     setTimeout(function () {
+//       $(elem).addClass('current').siblings().removeClass('current')
+//     }, delay)
+//   }
 
   // function autoplay() {
   //   interval = setInterval(function () {
