@@ -1,0 +1,18 @@
+.C_NavBarCategories {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 530px;
+  height: auto;
+
+  .A_NavBarCategory {
+    margin-right: 40px;
+  }
+}
+
+.C_Styles {
+  width: 100%;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 20px;
+}

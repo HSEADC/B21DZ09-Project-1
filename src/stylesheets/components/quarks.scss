@@ -1,0 +1,122 @@
+.Q_SearchIcon {
+  width: 24px;
+  height: 24px;
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &.black {
+    background-image: url('./images/Q_SearchIcon-black.svg');
+  }
+
+  &.white {
+    background-image: url('./images/Q_SearchIcon-white.svg');
+  }
+}
+
+.Q_SocialMediaIcon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tg {
+  background-image: url('./images/telegram.svg');
+
+  &.white {
+    background-image: url('./images/tgwhite.svg');
+  }
+}
+
+.inst {
+  background-image: url('./images/insta.svg');
+
+  &.white {
+    background-image: url('./images/instawhite.svg');
+  }
+}
+
+.vk {
+  background-image: url('./images/vk.svg');
+  width: 48px;
+
+  &.white {
+    background-image: url('./images/vkwhite.svg');
+  }
+}
+
+.dzen {
+  height: 34px;
+  background-image: url('./images/dzen.svg');
+
+  &.white {
+    background-image: url('./images/dzenwhite.svg');
+  }
+}
+
+.Q_WideLetter {
+  line-height: 100%;
+  font-size: 388px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.Q_Line {
+  width: 100%;
+  height: 1px;
+  background: var(--black);
+  position: relative;
+}
+
+.Q_Image {
+  width: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  &.long {
+    height: 592px;
+  }
+
+  &.medium {
+    height: 508px;
+  }
+
+  &.short {
+    height: 430px;
+  }
+}
+
+.Q_Arrow {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  background: var(--green);
+  background-image: url('./images/basic/ArrowHorizontalBlack.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  //
+  // &.black {
+  //   background: var(--black);
+  // }
+  //
+  // &.black.right:hover {
+  //   background: var(--green);
+  //   background-image: url('./images/basic/ArrowHorizontalBlack.svg');
+  // }
+  //
+  // &.black:active {
+  //   background: var(--darkgreen);
+  // }
+  //
+  // &.right {
+  // }
+}

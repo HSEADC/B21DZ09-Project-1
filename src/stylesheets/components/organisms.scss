@@ -1,0 +1,49 @@
+.O_StyleArticleDescription {
+  grid-column: 2 / 7;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 60px 60px 30px 30px;
+  background: var(--green);
+  margin-top: -200px;
+  z-index: -1;
+}
+
+.O_SliderGallery {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &.LeftWide {
+    grid-column: 1 / 9;
+  }
+
+  &.RightNarrow {
+    grid-column: 10 / 16;
+  }
+
+  &.RightWide {
+    grid-column: 11 / 19;
+  }
+
+  .Q_Image {
+    img {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+.O_StyleCard {
+  width: 100%;
+  text-decoration: none;
+  color: var(--black);
+
+  .A_StyleName {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

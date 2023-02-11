@@ -133,6 +133,14 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/sport-chic-new.html',
+      filename: './styles/sport-chic-new.html',
+      chunks: ['index']
+    }),
+
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
@@ -181,8 +189,17 @@ module.exports = {
 
     new HtmlWebpackPartialsPlugin([
       {
-        path: path.join(__dirname, './src/partials/header.html'),
-        location: 'header',
+        path: path.join(__dirname, './src/partials/navbar.html'),
+        location: 'navbar',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/BlackFooter.html'),
+        location: 'BlackFooter',
         template_filename: '*',
         priority: 'replace'
       }
