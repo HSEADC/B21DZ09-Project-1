@@ -11,8 +11,29 @@
 }
 
 .C_Styles {
+  grid-column: 2 / 18;
   width: 100%;
   display: inline-flex;
   align-items: flex-start;
   gap: 20px;
+}
+
+.C_CharacterCards {
+  width: 100%;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 103px;
+}
+
+.C_StyleCategoryMenuOptions{
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.C_StyleCategoryMenu{
+  grid-column: 1 / 19;
+  width: 100%;
+  display: inline-flex;
+  gap: 30px;
 }

@@ -73,11 +73,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 6px;
 
   .M_Tag {
     margin-right: 6px;
-    margin-top: 6px;
   }
 }
 
@@ -131,27 +129,34 @@
   border-bottom: 1px solid var(--black);
 }
 
-.W_Photo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 40px;
+// .W_Photo {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   margin-bottom: 40px;
+//
+//   &.first {
+//     grid-column: 2 / 6;
+//   }
+//
+//   &.second {
+//     grid-column: 6 / 10;
+//   }
+//
+//   &.third {
+//     grid-column: 10 / 14;
+//   }
+//
+//   &.fourth {
+//     grid-column: 14 / 18;
+//   }
+// }
 
-  &.first {
-    grid-column: 2 / 6;
-  }
-
-  &.second {
-    grid-column: 6 / 10;
-  }
-
-  &.third {
-    grid-column: 10 / 14;
-  }
-
-  &.fourth {
-    grid-column: 14 / 18;
-  }
+.W_PhotoRow {
+  grid-column: 2 / 18;
+  width: 100%;
+  display: inline-flex;
+  gap: 20px;
 }
 
 .W_ArticleChapterBlock {
@@ -184,4 +189,24 @@
   display: inline-flex;
   align-items: flex-start;
   gap: 20px;
+}
+
+.W_GreenBlockRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.W_GreenBlock{
+  grid-column: 8 / 19;
+  background: var(--green);
+  padding: 60px 30px 60px 30px;
+
+  .A_TitleCharacteristics{
+    width: 170px;
+    margin-right: 20px;
+  }
+
 }

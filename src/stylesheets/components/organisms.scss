@@ -7,6 +7,15 @@
   background: var(--green);
   margin-top: -200px;
   z-index: -1;
+
+  .W_TagBar {
+    margin-top: 6px;
+
+    .M_Tag {
+      margin-top: 6px;
+    }
+  }
+
 }
 
 .O_SliderGallery {
@@ -46,4 +55,39 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  .W_TagBar {
+    margin-top: 6px;
+
+    .M_Tag {
+      margin-top: 6px;
+    }
+  }
+}
+
+.O_Characters {
+  grid-column: 2 / 17;
+  width: 100%;
+
+  .A_StyleArticleSubText {
+    margin-bottom: 48px;
+  }
+
+  .A_CharecterName {
+    margin-top: 16px;
+  }
+}
+
+.O_StyleCategoryMenu{
+  display: flex;
+  flex-direction: column;
+}
+
+.O_StyleCategoryMenu:hover .M_StyleCategoryMenuBottom{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.O_StyleCategoryMenu:hover .BlackBottomRight{
+    display: none;
 }

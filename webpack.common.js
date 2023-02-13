@@ -168,6 +168,14 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/movies/sexandthecity-new.html',
+      filename: './influencers/movies/sexandthecity-new.html',
+      chunks: ['index']
+    }),
+
     //antitrends
     new HtmlWebpackPlugin({
       hash: true,
@@ -189,8 +197,17 @@ module.exports = {
 
     new HtmlWebpackPartialsPlugin([
       {
-        path: path.join(__dirname, './src/partials/navbar.html'),
-        location: 'navbar',
+        path: path.join(__dirname, './src/partials/Navbar.html'),
+        location: 'Navbar',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/BlackNavbar.html'),
+        location: 'BlackNavbar',
         template_filename: '*',
         priority: 'replace'
       }
@@ -207,8 +224,17 @@ module.exports = {
 
     new HtmlWebpackPartialsPlugin([
       {
-        path: path.join(__dirname, './src/partials/footer.html'),
-        location: 'footer',
+        path: path.join(__dirname, './src/partials/GreenFooter.html'),
+        location: 'GreenFooter',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/Footer.html'),
+        location: 'Footer',
         template_filename: '*',
         priority: 'replace'
       }
