@@ -43,3 +43,28 @@
     grid-column: 7 / 19;
   }
 }
+
+.S_Character{
+  .W_ArticleTitle{
+    grid-column: 2 / 8;
+  }
+  .Q_Image{
+    grid-column: 3 / 11;
+    margin-top: -100px;
+    height: 800px;
+  }
+  .underblock{
+    grid-column: 12 / 18;
+    margin-top: 120px;
+  }
+  .underphoto{
+    grid-column: 3 / 10;
+    margin-top: 120px;
+  }
+}
+
+.S_StyleCategory{
+  .A_MoreButton{
+    grid-column: 17 / 19;
+  }
+}

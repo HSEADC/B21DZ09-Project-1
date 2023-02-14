@@ -339,3 +339,13 @@
   font-weight: 400;
   font-family: 'DRUZHOK';
 }
+
+.A_MoreButton{
+  font-size: 24px;
+  font-weight: 500;
+  font-family: 'Druk Text Cyr';
+}
+
+.A_MoreButton:hover {
+  border-bottom: 5px solid var(--green);
+}

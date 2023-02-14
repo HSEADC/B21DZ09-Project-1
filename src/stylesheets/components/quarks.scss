@@ -120,3 +120,12 @@
     transform: rotate(-125deg);
   }
 }
+
+.Q_HintIcon{
+  width: 20px;
+  height: 20px;
+  background: var(--black);
+  background-image: url('./images/basic/i.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
