@@ -341,9 +341,12 @@
 }
 
 .A_MoreButton{
+  height: 30px;
+  width: max-content;
   font-size: 24px;
   font-weight: 500;
   font-family: 'Druk Text Cyr';
+  cursor: pointer;
 }
 
 .A_MoreButton:hover {
