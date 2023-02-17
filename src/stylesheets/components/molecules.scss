@@ -38,6 +38,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .W_TitleText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .M_Tag {
@@ -58,6 +65,16 @@
 
 .M_Character {
   margin-top: 30px;
+
+  .W_TagBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .M_Tag {
+      margin-right: 6px;
+    }
+  }
 }
 
 .M_AvatarInfluencer {
@@ -69,6 +86,14 @@
 
 .M_StyleOption {
   margin-bottom: 24px;
+
+  .W_StyleOptionRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--black);
+  }
 }
 
 .M_Photo {
@@ -86,6 +111,11 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 12px;
+
+  .W_SliderText {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .M_CharecterCard {
@@ -115,9 +145,6 @@
 
 .M_StyleCategoryMenuBottom{
   display: none;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-end;
   width: 100%;
   padding: 80px 30px 20px 30px;
   margin-top: -60px;
@@ -125,6 +152,12 @@
 
   .Q_Arrow{
     margin-top: 10px;
+  }
+
+  .C_StyleCategoryMenuOptions{
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 }
 

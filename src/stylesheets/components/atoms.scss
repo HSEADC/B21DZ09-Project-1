@@ -170,6 +170,10 @@
   font-weight: 400;
   font-family: 'Inter';
 
+  p {
+    margin-bottom: 40px; 
+  }
+
   b {
     font-weight: 700;
   }
@@ -239,6 +243,7 @@
   text-decoration: none;
   color: var(--black);
 }
+
 .A_ButtonBack:hover {
   text-decoration: underline;
 }

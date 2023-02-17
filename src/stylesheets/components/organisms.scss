@@ -1,3 +1,87 @@
+.O_NavBar{
+  position: relative;
+ display: grid;
+ width: 1630px;
+ grid-template-columns: repeat(18, 1fr);
+ column-gap: 20px;
+ margin: 0 auto;
+
+ .W_NavBar {
+   grid-column: 2 / 18;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: flex-end;
+   justify-content: space-between;
+   margin-top: 40px;
+
+   .Q_SearchIcon {
+     margin-left: 20px;
+   }
+
+   .W_NavBarCategories {
+     display: flex;
+     flex-direction: row;
+     align-items: flex-end;
+     justify-content: space-between;
+     width: 620px;
+     height: auto;
+
+     .C_NavBarCategories {
+       display: flex;
+       flex-direction: row;
+       align-items: flex-start;
+       width: 530px;
+       height: auto;
+
+       .A_NavBarCategory {
+         margin-right: 40px;
+       }
+     }
+   }
+ }
+}
+
+.O_Footer{
+ position: relative;
+ display: grid;
+ width: 1630px;
+ grid-template-columns: repeat(18, 1fr);
+ column-gap: 20px;
+ margin: 0 auto;
+
+ .W_SocialMediaIcons {
+   grid-column: 16 / 19;
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+   justify-content: space-between;
+   width: 100%;
+ }
+
+ .W_NamesFooter,
+ .W_CopyrightFooter {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-end;
+   width: 100%;
+   margin-top: 50px;
+
+   .A_BoldTextFooter {
+     margin-top: 10px;
+   }
+ }
+
+ .W_NamesFooter {
+   grid-column: 16 / 19;
+ }
+
+ .W_CopyrightFooter {
+   grid-column: 1 / 3;
+ }
+}
+
 .O_StyleArticleDescription {
   grid-column: 2 / 7;
   position: relative;
@@ -44,6 +128,13 @@
       }
     }
   }
+
+  .W_DoubleSlide {
+    width: 100%;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
 }
 
 .O_StyleCard {
@@ -57,10 +148,14 @@
   }
 
   .W_TagBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 6px;
 
     .M_Tag {
       margin-top: 6px;
+      margin-right: 6px;
     }
   }
 }
@@ -90,4 +185,15 @@
 }
 .O_StyleCategoryMenu:hover .BlackBottomRight{
     display: none;
+}
+
+.O_RecomendationsBlock{
+  position: relative;
+  display: grid;
+  width: 1630px;
+  grid-template-columns: repeat(18, 1fr);
+  column-gap: 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0 auto;
 }
