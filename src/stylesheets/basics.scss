@@ -10,6 +10,8 @@ body {
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 body.influencers {

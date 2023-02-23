@@ -24,6 +24,7 @@
 }
 
 .tg {
+  height: 34px;
   background-image: url('./images/telegram.svg');
 
   &.white {
@@ -49,7 +50,6 @@
 }
 
 .dzen {
-  height: 34px;
   background-image: url('./images/dzen.svg');
 
   &.white {
@@ -104,7 +104,7 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  &.BlackBottomRight{
+  &.BlackBottomRight {
     background: var(--black);
     background-image: url('./images/basic/ArrowHorizontalWhite.svg');
     background-position: center;
@@ -112,7 +112,7 @@
     transform: rotate(45deg);
   }
 
-  &.BlackTopLeft{
+  &.BlackTopLeft {
     background: var(--black);
     background-image: url('./images/basic/ArrowHorizontalWhite.svg');
     background-position: center;
@@ -121,7 +121,7 @@
   }
 }
 
-.Q_HintIcon{
+.Q_HintIcon {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -129,4 +129,202 @@
   background-image: url('./images/basic/i.svg');
   background-position: center;
   background-repeat: no-repeat;
+}
+
+//adaptives
+
+@media only screen and (min-width: 1280px) and (max-width: 1679px) {
+  .Q_SearchIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Q_SocialMediaIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .vk {
+    width: 48px;
+  }
+
+  .tg {
+    height: 34px;
+  }
+
+  .Q_WideLetter {
+    font-size: 388px;
+  }
+
+  .Q_Image {
+    &.long {
+      height: 418px;
+    }
+
+    &.medium {
+      height: 353px;
+    }
+
+    &.short {
+      height: 310px;
+    }
+  }
+
+  .Q_Arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .Q_HintIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .Q_SearchIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Q_SocialMediaIcon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .vk {
+    width: 23px;
+  }
+
+  .tg {
+    height: 16px;
+  }
+
+  .Q_WideLetter {
+    font-size: 316px;
+  }
+
+  .Q_Image {
+    &.long {
+      height: 310px;
+    }
+
+    &.medium {
+      height: 276px;
+    }
+
+    &.short {
+      height: 235px;
+    }
+  }
+
+  .Q_Arrow {
+    width: 26px;
+    height: 26px;
+  }
+
+  .Q_HintIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 744px) and (max-width: 1023px) {
+  .Q_SearchIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Q_SocialMediaIcon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .vk {
+    width: 23px;
+  }
+
+  .tg {
+    height: 16px;
+  }
+
+  .Q_WideLetter {
+    font-size: 233px;
+  }
+
+  .Q_Image {
+    &.long {
+      height: 230px;
+    }
+
+    &.medium {
+      height: 190px;
+    }
+
+    &.short {
+      height: 162px;
+    }
+  }
+
+  .Q_Arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Q_HintIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 743px) {
+  .Q_SearchIcon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .Q_SocialMediaIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .vk {
+    width: 48px;
+  }
+
+  .tg {
+    height: 30px;
+  }
+
+  .Q_WideLetter {
+    font-size: 110px;
+  }
+
+  .Q_Image {
+    &.long {
+      width: 155px;
+      height: 256px;
+    }
+
+    &.medium {
+      width: 155px;
+      height: 230px;
+    }
+
+    &.short {
+      width: 155px;
+      height: 200px;
+    }
+  }
+
+  .Q_Arrow {
+    width: 30px;
+    height: 30px;
+    background-size: 60%;
+  }
+
+  .Q_HintIcon {
+    width: 20px;
+    height: 20px;
+  }
 }
