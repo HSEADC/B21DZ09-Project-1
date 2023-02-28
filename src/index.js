@@ -1,5 +1,5 @@
 import './index.css'
-import './javascript/sport-chic.js'
+import './javascript/gallery-slider.js'
 
 import $ from 'jquery'
 import anime from 'animejs/lib/anime.es.js'

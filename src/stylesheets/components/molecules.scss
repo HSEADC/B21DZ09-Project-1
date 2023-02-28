@@ -167,6 +167,21 @@
   width: 100%;
 }
 
+.M_SliderImage {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+
+  .W_SliderRail {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: max-content;
+    height: 100%;
+    transition: all 1s ease;
+  }
+}
+
 //adaptives
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
