@@ -99,24 +99,21 @@
   width: 47px;
   height: 47px;
   border-radius: 50%;
-  background: var(--green);
+  background-color: var(--green);
   background-image: url('./images/basic/ArrowHorizontalBlack.svg');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 60%;
 
   &.BlackBottomRight {
-    background: var(--black);
+    background-color: var(--black);
     background-image: url('./images/basic/ArrowHorizontalWhite.svg');
-    background-position: center;
-    background-repeat: no-repeat;
     transform: rotate(45deg);
   }
 
   &.BlackTopLeft {
-    background: var(--black);
+    background-color: var(--black);
     background-image: url('./images/basic/ArrowHorizontalWhite.svg');
-    background-position: center;
-    background-repeat: no-repeat;
     transform: rotate(-125deg);
   }
 }

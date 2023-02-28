@@ -238,20 +238,21 @@
   .A_ButtonBack:hover {
     text-decoration: underline;
   }
+}
 
-  .A_ButtonBack::before {
-    content: '';
-    display: inline-block;
-    width: 47px;
-    height: 47px;
-    margin-right: 10px;
-    border-radius: 50%;
-    background-color: var(--black);
-    background-image: url('./images/basic/ArrowHorizontalWhite.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: rotate(-180deg);
-  }
+.A_ButtonBack::before {
+  content: '';
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: var(--black);
+  background-image: url('./images/basic/ArrowHorizontalWhite.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  transform: rotate(-180deg);
 }
 
 .A_StyleName {
@@ -470,12 +471,12 @@
 
   .A_ButtonBack {
     font-size: 16px;
+  }
 
-    .A_ButtonBack::before {
-      width: 47px;
-      height: 47px;
-      margin-right: 10px;
-    }
+  .A_ButtonBack::before {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
   }
 
   .A_StyleName {
@@ -644,12 +645,12 @@
 
   .A_ButtonBack {
     font-size: 10px;
+  }
 
-    .A_ButtonBack::before {
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-    }
+  .A_ButtonBack::before {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
   }
 
   .A_StyleName {
@@ -818,12 +819,11 @@
 
   .A_ButtonBack {
     font-size: 8px;
-
-    .A_ButtonBack::before {
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-    }
+  }
+  .A_ButtonBack::before {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
   }
 
   .A_StyleName {
@@ -983,12 +983,12 @@
 
   .A_ButtonBack {
     font-size: 12px;
+  }
 
-    .A_ButtonBack::before {
-      width: 30px;
-      height: 30px;
-      margin-right: 10px;
-    }
+  .A_ButtonBack::before {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
   }
 
   .A_StyleName {
