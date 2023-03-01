@@ -48,7 +48,7 @@
 }
 
 .M_Tag {
-  height: 30px;
+  height: auto;
   width: auto;
   padding: 8px 20px;
   border-radius: 25px;
@@ -106,14 +106,24 @@
 .M_Slider {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+  height: 54px;
   margin-top: 12px;
+  overflow: hidden;
 
-  .W_SliderText {
+  .W_SliderDescription {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    .W_SliderText {
+      display: flex;
+      flex-direction: row;
+      padding: 8px 0;
+    }
   }
 }
 
@@ -169,7 +179,7 @@
 
 .M_SliderImage {
   width: 100%;
-  height: 700px;
+  height: 70%;
   overflow: hidden;
 
   .W_SliderRail {
@@ -195,11 +205,17 @@
     }
   }
 
-  .M_StyleOption {
-    margin-bottom: 12px;
+  // .M_StyleOption {
+  //   margin-bottom: 12px;
+  //
+  //   .W_StyleOptionRow {
+  //     padding-bottom: 4px;
+  //   }
+  // }
 
-    .W_StyleOptionRow {
-      padding-bottom: 4px;
+  .M_Title {
+    .A_TitleDruzhok {
+      margin-bottom: -130px;
     }
   }
 
@@ -208,6 +224,7 @@
   }
 
   .M_Slider {
+    height: 40px;
     margin-top: 12px;
   }
 
@@ -241,9 +258,14 @@
   }
 
   .M_Tag {
-    height: 24px;
-    padding: 8px 20px;
+    padding: 6px 20px;
     font-size: 10px;
+  }
+
+  .M_Title {
+    .A_TitleDruzhok {
+      margin-bottom: -100px;
+    }
   }
 
   .M_Character {
@@ -262,6 +284,10 @@
     .W_StyleOptionRow {
       padding-bottom: 4px;
     }
+  }
+
+  .M_Slider {
+    height: 36px;
   }
 
   .M_CharecterCard {
@@ -302,9 +328,14 @@
   }
 
   .M_Tag {
-    height: 20px;
-    padding: 5px 10px;
+    padding: 6px 10px;
     font-size: 6px;
+  }
+
+  .M_Title {
+    .A_TitleDruzhok {
+      margin-bottom: -70px;
+    }
   }
 
   .M_Character {
@@ -325,6 +356,9 @@
     }
   }
 
+  .M_Slider {
+    height: 36px;
+  }
   .M_CharecterCard {
     height: 286px;
   }
@@ -405,9 +439,8 @@
   }
 
   .M_Tag {
-    height: 20px;
     padding: 6px 10px;
-    font-size: 6px;
+    font-size: 8px;
   }
 
   .M_Character {
@@ -429,6 +462,7 @@
   }
 
   .M_Slider {
+    height: 36px;
     margin-top: 12px;
   }
 

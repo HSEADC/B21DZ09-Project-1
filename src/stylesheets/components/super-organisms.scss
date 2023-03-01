@@ -178,7 +178,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
   }
 
   .W_GreenBlock {
@@ -277,7 +277,7 @@
 
     .W_StyleArticleSub {
       grid-column: 1 / 19;
-      margin-top: 100px;
+      margin-top: 60px;
       margin-bottom: 40px;
     }
 
@@ -315,10 +315,10 @@
       flex-direction: column;
       align-items: flex-start;
       width: 100%;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
 
       &.style {
-        grid-column: 3 / 10;
+        grid-column: 2 / 10;
       }
     }
 
@@ -360,11 +360,11 @@
 
   .S_RecomendationsBlock {
     .A_RecomendationText {
-      grid-column: 2 / 7;
+      grid-column: 1 / 7;
     }
 
     .A_ButtonBack {
-      grid-column: 2 / 4;
+      grid-column: 1 / 4;
     }
 
     .C_Styles {
@@ -383,7 +383,7 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin-bottom: 120px;
+      margin-bottom: 70px;
     }
 
     .W_GreenBlock {
@@ -463,7 +463,7 @@
 
     .W_StyleArticleSub {
       grid-column: 1 / 19;
-      margin-top: 80px;
+      margin-top: 50px;
       margin-bottom: 20px;
     }
 
@@ -557,7 +557,7 @@
     margin-bottom: 150px;
 
     .W_GreenBlockRow {
-      margin-bottom: 120px;
+      margin-bottom: 40px;
     }
 
     .W_GreenBlock {
@@ -667,7 +667,7 @@
       margin-bottom: 30px;
 
       &.style {
-        grid-column: 2 / 9;
+        grid-column: 2 / 10;
       }
     }
 
@@ -728,7 +728,7 @@
     margin-bottom: 150px;
 
     .W_GreenBlockRow {
-      margin-bottom: 120px;
+      margin-bottom: 40px;
     }
 
     .W_GreenBlock {
@@ -857,10 +857,15 @@
 
   .S_ArticleBlock {
     width: 330px;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 0 auto;
     margin-bottom: 80px;
+
+    &.reverse {
+      flex-direction: column-reverse;
+    }
 
     .W_StyleArticleSub {
       grid-column: 1 / 5;
