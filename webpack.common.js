@@ -149,6 +149,14 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/classic.html',
+      filename: './styles/classic.html',
+      chunks: ['index']
+    }),
+
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
