@@ -8,30 +8,22 @@ body {
 }
 
 body {
-  font-family: 'PT Root UI', Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
-.images {
-  display: flex;
+body.influencers {
+  background: var(--black);
+  color: var(--white);
+}
 
-  * {
-    width: 24px;
-    height: 24px;
-    margin: 0 10px;
-  }
+body.styles {
+  background: var(--white);
+  color: var(--black);
+}
 
-  .image {
-    &#bgPNG {
-      background-image: url('images/image.png');
-    }
-
-    &#bgJPG {
-      background-image: url('images/image.jpg');
-    }
-
-    &#bgSVG {
-      background-image: url('images/image.svg');
-    }
-  }
+section {
+  margin-bottom: 140px;
 }

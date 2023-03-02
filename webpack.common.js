@@ -2,19 +2,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    page: './src/page.jsx'
+    index: './src/index.js'
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'docs'),
-    clean: true
+    path: path.resolve(__dirname, 'docs')
+    // clean: true
   },
   module: {
     rules: [
@@ -69,10 +69,15 @@ module.exports = {
       }
     ]
   },
+
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
+    }),
+
+    new CopyPlugin({
+      patterns: [{ from: 'src/share', to: 'share' }]
     }),
 
     // Landing page
@@ -81,6 +86,22 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/index.html',
       filename: './index.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/zaglushka.html',
+      filename: './zaglushka.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styleguide.html',
+      filename: './styleguide.html',
       chunks: ['index']
     }),
 
@@ -97,17 +118,26 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/library.html',
-      filename: './library.html',
+      template: './src/styles.html',
+      filename: './styles.html',
       chunks: ['index']
     }),
 
-    //library article
+    //Styles article
+
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/library/name.html',
-      filename: './library/name.html',
+      template: './src/styles/sport-chic.html',
+      filename: './styles/sport-chic.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/sport-chic-new.html',
+      filename: './styles/sport-chic-new.html',
       chunks: ['index']
     }),
 
@@ -120,31 +150,39 @@ module.exports = {
       chunks: ['index']
     }),
 
-    //influencers article
+    //individuals article
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/influencers/name.html',
-      filename: './influencers/name.html',
+      template: './src/influencers/individuals/lilnasx.html',
+      filename: './influencers/individuals/lilnasx.html',
       chunks: ['index']
     }),
 
-    //influencers
+    //movie article
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/graveyard.html',
-      filename: './graveyard.html',
+      template: './src/influencers/movies/sexandthecity.html',
+      filename: './influencers/movies/sexandthecity.html',
       chunks: ['index']
     }),
 
-    // Internal pages
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/pages/page.html',
-      filename: './pages/page.html',
-      chunks: ['page']
+      template: './src/influencers/movies/sexandthecity-new.html',
+      filename: './influencers/movies/sexandthecity-new.html',
+      chunks: ['index']
+    }),
+
+    //antitrends
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/antitrends.html',
+      filename: './antitrends.html',
+      chunks: ['index']
     }),
 
     // Partials
@@ -152,6 +190,51 @@ module.exports = {
       {
         path: path.join(__dirname, './src/partials/analytics.html'),
         location: 'analytics',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/Navbar.html'),
+        location: 'Navbar',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/BlackNavbar.html'),
+        location: 'BlackNavbar',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/BlackFooter.html'),
+        location: 'BlackFooter',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/GreenFooter.html'),
+        location: 'GreenFooter',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/Footer.html'),
+        location: 'Footer',
         template_filename: '*',
         priority: 'replace'
       }

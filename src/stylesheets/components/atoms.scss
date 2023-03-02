@@ -1,0 +1,1046 @@
+.A_Logo {
+  display: block;
+  width: 280px;
+  height: 38px;
+  background-position: top left;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &.black {
+    background-image: url('./images/newlogo.svg');
+  }
+
+  &.white {
+    background-image: url('./images/newlogowhite.svg');
+  }
+}
+
+.A_NavBarCategory {
+  display: block;
+  font-size: 14px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black);
+  padding-bottom: 2px;
+
+  &.white {
+    color: var(--white);
+  }
+}
+
+.A_NavBarCategory:hover {
+  border-bottom: 5px solid var(--green);
+}
+
+.A_BoldTextFooter {
+  display: block;
+  width: 100%;
+  line-height: 135%;
+  font-size: 14px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--black);
+
+  &.white {
+    color: var(--white);
+  }
+}
+
+.A_NormTextFooter {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  font-family: 'Inter';
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--black);
+
+  &.white {
+    color: var(--white);
+  }
+}
+
+.A_StyleArticleSubText {
+  font-size: 14px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.A_TitleDruzhok {
+  line-height: 100%;
+  font-size: 388px;
+  font-family: 'DRUZHOK';
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.A_TitleDruk {
+  line-height: 100%;
+  font-size: 388px;
+  font-family: 'Druk Condensed Cyr Super';
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.A_TitleImage {
+  position: absolute;
+  width: 190px;
+  height: 286px;
+  z-index: 2;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.A_ArticleText {
+  line-height: 135%;
+  font-size: 18px;
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+.A_CharecterText {
+  font-size: 20px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.A_RecomendedInfluencersTitle {
+  font-size: 14px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.A_AvatarInfluencerName {
+  width: 84px;
+  margin-top: 10px;
+  font-size: 10px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 500;
+  text-align: center;
+}
+
+.A_AvatarImage {
+  width: 64px;
+  height: 64px;
+  filter: grayscale(1);
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.A_ArticleHeadingWide {
+  font-size: 56px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.A_ArticleHeadingNormal {
+  font-size: 78px;
+  font-family: 'Druk Cyr';
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.A_ArticleBody {
+  line-height: 135%;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Inter';
+
+  p {
+    margin-bottom: 40px;
+  }
+
+  b {
+    font-weight: 700;
+  }
+
+  ul {
+    list-style: disc;
+
+    li {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.A_OptionStyleTitle {
+  width: 252px;
+  margin-right: 20px;
+  line-height: 120%;
+  font-size: 20px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.A_OptionStyleText {
+  width: 252px;
+  font-size: 20px;
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+.A_Slide {
+  &.double {
+    width: 100%;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.A_DescriptorInArticle {
+  margin-top: 18px;
+  font-size: 14px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 800;
+}
+
+.A_Counter {
+  margin-right: 20px;
+  font-size: 20px;
+  font-family: 'Druk Cyr';
+  font-weight: 800;
+}
+
+.A_SlideDescription {
+  font-size: 20px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 800;
+}
+
+.A_SliderButton {
+}
+
+.A_RecomendationText {
+  font-size: 36px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 500;
+  color: var(--black);
+}
+
+.A_ButtonBack {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  font-size: 16px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--black);
+
+  .A_ButtonBack:hover {
+    text-decoration: underline;
+  }
+}
+
+.A_ButtonBack::before {
+  content: '';
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: var(--black);
+  background-image: url('./images/basic/ArrowHorizontalWhite.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  transform: rotate(-180deg);
+}
+
+.A_StyleName {
+  font-size: 24px;
+  font-family: 'Druk Text Cyr';
+  font-weight: 500;
+}
+
+.A_CharecterName {
+  line-height: 100%;
+  font-size: 36px;
+  font-family: 'Druk Cyr';
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.A_TitleCharacteristics {
+  font-size: 20px;
+  font-family: 'Druk Cyr';
+  font-weight: 800;
+  text-transform: lowercase;
+  color: var(--black);
+}
+
+.A_ContentCharacteristics {
+  font-size: 20px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 800;
+  text-transform: lowercase;
+  color: var(--black);
+}
+
+.A_CoverText {
+  margin-top: -50px;
+  font-size: 625px;
+  font-family: 'Druk Condensed Cyr Super';
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  user-select: none;
+
+  .wide {
+    font-family: 'Druk Text Wide Cyr';
+    font-weight: 800;
+  }
+
+  .medium {
+    font-family: 'Druk Text Cyr';
+    font-weight: 800;
+  }
+}
+
+.A_StyleCategoryName {
+  position: relative;
+  display: inline-flex;
+  gap: 10px;
+  align-items: flex-end;
+  line-height: 100%;
+  font-size: 126px;
+  font-family: 'Druk Condensed Cyr Super';
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black);
+  z-index: 2;
+}
+
+.A_StyleCategoryMenuOption {
+  margin-top: 6px;
+  line-height: 80%;
+  font-size: 20px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.A_SectionName {
+  font-size: 200px;
+  font-family: 'DRUZHOK';
+  font-weight: 400;
+}
+
+.A_MoreButton {
+  height: 30px;
+  width: max-content;
+  font-size: 24px;
+  font-family: 'Druk Text Cyr';
+  font-weight: 500;
+  cursor: pointer;
+
+  .A_MoreButton:hover {
+    border-bottom: 5px solid var(--green);
+  }
+}
+
+//adaptives
+
+@media only screen and (min-width: 1280px) and (max-width: 1679px) {
+  .A_Logo {
+    width: 280px;
+    height: 38px;
+  }
+
+  .A_NavBarCategory {
+    padding-bottom: 2px;
+    font-size: 14px;
+  }
+
+  .A_NavBarCategory:hover {
+    border-bottom: 5px solid var(--green);
+  }
+
+  .A_BoldTextFooter {
+    font-size: 10px;
+  }
+
+  .A_NormTextFooter {
+    font-size: 10px;
+  }
+
+  .A_StyleArticleSubText {
+    font-size: 14px;
+  }
+
+  .A_TitleDruzhok {
+    line-height: 100%;
+    font-size: 348px;
+  }
+
+  .A_TitleDruk {
+    line-height: 100%;
+    font-size: 348px;
+  }
+
+  .A_TitleImage {
+    width: 190px;
+    height: 286px;
+  }
+
+  .A_ArticleText {
+    line-height: 135%;
+    font-size: 18px;
+  }
+
+  .A_CharecterText {
+    font-size: 20px;
+  }
+
+  .A_RecomendedInfluencersTitle {
+    font-size: 14px;
+  }
+
+  .A_AvatarInfluencerName {
+    width: 84px;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  .A_AvatarImage {
+    width: 64px;
+    height: 64px;
+  }
+
+  .A_ArticleHeadingWide {
+    font-size: 56px;
+  }
+
+  .A_ArticleHeadingNormal {
+    font-size: 78px;
+  }
+
+  .A_ArticleBody {
+    line-height: 135%;
+    font-size: 18px;
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    ul {
+      li {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .A_OptionStyleTitle {
+    width: 196px;
+    margin-right: 15px;
+    font-size: 14px;
+  }
+
+  .A_OptionStyleText {
+    width: 196px;
+    font-size: 14px;
+  }
+
+  .A_DescriptorInArticle {
+    margin-top: 18px;
+    font-size: 12px;
+  }
+
+  .A_Counter {
+    margin-right: 20px;
+    font-size: 12px;
+  }
+
+  .A_SlideDescription {
+    font-size: 12px;
+  }
+
+  .A_RecomendationText {
+    font-size: 32px;
+  }
+
+  .A_ButtonBack {
+    font-size: 16px;
+  }
+
+  .A_ButtonBack::before {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .A_StyleName {
+    font-size: 20px;
+  }
+
+  .A_CharecterName {
+    font-size: 36px;
+  }
+
+  .A_TitleCharacteristics {
+    font-size: 14px;
+  }
+
+  .A_ContentCharacteristics {
+    font-size: 14px;
+  }
+
+  .A_CoverText {
+    margin-top: -50px;
+    font-size: 520px;
+  }
+
+  .A_StyleCategoryName {
+    gap: 10px;
+    font-size: 114px;
+  }
+
+  .A_StyleCategoryMenuOption {
+    margin-top: 6px;
+    line-height: 80%;
+    font-size: 12px;
+  }
+
+  .A_SectionName {
+    font-size: 140px;
+  }
+
+  .A_MoreButton {
+    height: 20px;
+    font-size: 14px;
+
+    .A_MoreButton:hover {
+      border-bottom: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .A_Logo {
+    width: 148px;
+    height: 20px;
+  }
+
+  .A_NavBarCategory {
+    padding-bottom: 2px;
+    font-size: 10px;
+  }
+
+  .A_NavBarCategory:hover {
+    border-bottom: 5px;
+  }
+
+  .A_BoldTextFooter {
+    font-size: 6px;
+  }
+
+  .A_NormTextFooter {
+    font-size: 6px;
+  }
+
+  .A_StyleArticleSubText {
+    font-size: 10px;
+  }
+
+  .A_TitleDruzhok {
+    line-height: 100%;
+    font-size: 300px;
+  }
+
+  .A_TitleDruk {
+    line-height: 100%;
+    font-size: 300px;
+  }
+
+  .A_TitleImage {
+    width: 158px;
+    height: 238px;
+  }
+
+  .A_ArticleText {
+    line-height: 135%;
+    font-size: 14px;
+  }
+
+  .A_CharecterText {
+    font-size: 10px;
+  }
+
+  .A_RecomendedInfluencersTitle {
+    font-size: 10px;
+  }
+
+  .A_AvatarInfluencerName {
+    width: 65px;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  .A_AvatarImage {
+    width: 56px;
+    height: 56px;
+  }
+
+  .A_ArticleHeadingWide {
+    font-size: 30px;
+  }
+
+  .A_ArticleHeadingNormal {
+    font-size: 40px;
+  }
+
+  .A_ArticleBody {
+    line-height: 135%;
+    font-size: 12px;
+
+    p {
+      margin-bottom: 24px;
+    }
+
+    ul {
+      li {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .A_OptionStyleTitle {
+    width: 150px;
+    margin-right: 15px;
+    font-size: 10px;
+  }
+
+  .A_OptionStyleText {
+    width: 145px;
+    font-size: 10px;
+  }
+
+  .A_DescriptorInArticle {
+    margin-top: 18px;
+    font-size: 10px;
+  }
+
+  .A_Counter {
+    margin-right: 20px;
+    font-size: 12px;
+  }
+
+  .A_SlideDescription {
+    font-size: 12px;
+  }
+
+  .A_RecomendationText {
+    font-size: 14px;
+  }
+
+  .A_ButtonBack {
+    font-size: 10px;
+  }
+
+  .A_ButtonBack::before {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .A_StyleName {
+    font-size: 14px;
+  }
+
+  .A_CharecterName {
+    font-size: 32px;
+  }
+
+  .A_TitleCharacteristics {
+    font-size: 12px;
+  }
+
+  .A_ContentCharacteristics {
+    font-size: 12px;
+  }
+
+  .A_CoverText {
+    margin-top: -50px;
+    font-size: 410px;
+  }
+
+  .A_StyleCategoryName {
+    gap: 10px;
+    font-size: 60px;
+  }
+
+  .A_StyleCategoryMenuOption {
+    margin-top: 6px;
+    line-height: 80%;
+    font-size: 8px;
+  }
+
+  .A_SectionName {
+    font-size: 100px;
+  }
+
+  .A_MoreButton {
+    height: 20px;
+    font-size: 10px;
+
+    .A_MoreButton:hover {
+      border-bottom: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: 744px) and (max-width: 1023px) {
+  .A_Logo {
+    width: 148px;
+    height: 20px;
+  }
+
+  .A_NavBarCategory {
+    padding-bottom: 2px;
+    font-size: 8px;
+  }
+
+  .A_NavBarCategory:hover {
+    border-bottom: 5px;
+  }
+
+  .A_BoldTextFooter {
+    font-size: 6px;
+  }
+
+  .A_NormTextFooter {
+    font-size: 6px;
+  }
+
+  .A_StyleArticleSubText {
+    font-size: 8px;
+  }
+
+  .A_TitleDruzhok {
+    line-height: 100%;
+    font-size: 200px;
+  }
+
+  .A_TitleDruk {
+    line-height: 100%;
+    font-size: 200px;
+  }
+
+  .A_TitleImage {
+    width: 125px;
+    height: 188px;
+  }
+
+  .A_ArticleText {
+    line-height: 135%;
+    font-size: 8px;
+  }
+
+  .A_CharecterText {
+    font-size: 8px;
+  }
+
+  .A_RecomendedInfluencersTitle {
+    font-size: 8px;
+  }
+
+  .A_AvatarInfluencerName {
+    width: 65px;
+    margin-top: 10px;
+    font-size: 8px;
+  }
+
+  .A_AvatarImage {
+    width: 44px;
+    height: 44px;
+  }
+
+  .A_ArticleHeadingWide {
+    font-size: 30px;
+  }
+
+  .A_ArticleHeadingNormal {
+    font-size: 40px;
+  }
+
+  .A_ArticleBody {
+    line-height: 135%;
+    font-size: 8px;
+
+    p {
+      margin-bottom: 18px;
+    }
+
+    ul {
+      li {
+        padding-bottom: 16px;
+      }
+    }
+  }
+
+  .A_OptionStyleTitle {
+    width: 104px;
+    margin-right: 12px;
+    font-size: 8px;
+  }
+
+  .A_OptionStyleText {
+    width: 104px;
+    font-size: 8px;
+  }
+
+  .A_DescriptorInArticle {
+    margin-top: 8px;
+    font-size: 8px;
+  }
+
+  .A_Counter {
+    margin-right: 20px;
+    font-size: 8px;
+  }
+
+  .A_SlideDescription {
+    font-size: 8px;
+  }
+
+  .A_RecomendationText {
+    font-size: 14px;
+  }
+
+  .A_ButtonBack {
+    font-size: 8px;
+  }
+  .A_ButtonBack::before {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .A_StyleName {
+    font-size: 14px;
+  }
+
+  .A_CharecterName {
+    font-size: 32px;
+  }
+
+  .A_TitleCharacteristics {
+    font-size: 8px;
+  }
+
+  .A_ContentCharacteristics {
+    font-size: 8px;
+  }
+
+  .A_CoverText {
+    margin-top: -50px;
+    font-size: 296px;
+  }
+
+  .A_StyleCategoryName {
+    gap: 10px;
+    font-size: 60px;
+  }
+
+  .A_StyleCategoryMenuOption {
+    margin-top: 6px;
+    line-height: 80%;
+    font-size: 8px;
+  }
+
+  .A_SectionName {
+    font-size: 70px;
+  }
+
+  .A_MoreButton {
+    height: 14px;
+    font-size: 8px;
+
+    .A_MoreButton:hover {
+      border-bottom: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 743px) {
+  .A_Logo {
+    width: 148px;
+    height: 20px;
+  }
+
+  .A_BoldTextFooter {
+    font-size: 10px;
+  }
+
+  .A_NormTextFooter {
+    font-size: 10px;
+  }
+
+  .A_StyleArticleSubText {
+    font-size: 8px;
+  }
+
+  .A_TitleDruzhok {
+    line-height: 100%;
+    font-size: 110px;
+  }
+
+  .A_TitleDruk {
+    line-height: 100%;
+    font-size: 110px;
+  }
+
+  .A_TitleImage {
+    width: 242px;
+    height: 275px;
+  }
+
+  .A_ArticleText {
+    line-height: 135%;
+    font-size: 8px;
+  }
+
+  .A_CharecterText {
+    font-size: 8px;
+  }
+
+  .A_RecomendedInfluencersTitle {
+    font-size: 8px;
+  }
+
+  .A_AvatarInfluencerName {
+    width: 65px;
+    margin-top: 10px;
+    font-size: 8px;
+  }
+
+  .A_AvatarImage {
+    width: 44px;
+    height: 44px;
+  }
+
+  .A_ArticleHeadingWide {
+    font-size: 40px;
+  }
+
+  .A_ArticleHeadingNormal {
+    font-size: 48px;
+  }
+
+  .A_ArticleBody {
+    line-height: 135%;
+    font-size: 14px;
+
+    p {
+      margin-bottom: 18px;
+    }
+
+    ul {
+      li {
+        padding-bottom: 16px;
+      }
+    }
+  }
+
+  .A_OptionStyleTitle {
+    width: 155px;
+    margin-right: 20px;
+    font-size: 10px;
+  }
+
+  .A_OptionStyleText {
+    width: 155px;
+    font-size: 10px;
+  }
+
+  .A_DescriptorInArticle {
+    margin-top: 8px;
+    font-size: 8px;
+  }
+
+  .A_Counter {
+    margin-right: 14px;
+    font-size: 12px;
+  }
+
+  .A_SlideDescription {
+    font-size: 12px;
+  }
+
+  .A_RecomendationText {
+    font-size: 20px;
+  }
+
+  .A_ButtonBack {
+    font-size: 12px;
+  }
+
+  .A_ButtonBack::before {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .A_StyleName {
+    font-size: 20px;
+  }
+
+  .A_CharecterName {
+    font-size: 24px;
+  }
+
+  .A_TitleCharacteristics {
+    font-size: 8px;
+    font-family: 'Druk Text Wide Cyr';
+  }
+
+  .A_ContentCharacteristics {
+    font-size: 8px;
+    font-family: 'Inter';
+    font-weight: 400;
+  }
+
+  .A_CoverText {
+    margin-top: -20px;
+    font-size: 138px;
+  }
+
+  .A_StyleCategoryName {
+    gap: 10px;
+    font-size: 50px;
+  }
+
+  .A_StyleCategoryMenuOption {
+    margin-top: 6px;
+    line-height: 80%;
+    font-size: 8px;
+  }
+
+  .A_SectionName {
+    font-size: 50px;
+  }
+
+  .A_MoreButton {
+    display: none;
+  }
+}

@@ -1,0 +1,327 @@
+.Q_SearchIcon {
+  width: 24px;
+  height: 24px;
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &.black {
+    background-image: url('./images/Q_SearchIcon-black.svg');
+  }
+
+  &.white {
+    background-image: url('./images/Q_SearchIcon-white.svg');
+  }
+}
+
+.Q_SocialMediaIcon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tg {
+  height: 34px;
+  background-image: url('./images/telegram.svg');
+
+  &.white {
+    background-image: url('./images/tgwhite.svg');
+  }
+}
+
+.inst {
+  background-image: url('./images/insta.svg');
+
+  &.white {
+    background-image: url('./images/instawhite.svg');
+  }
+}
+
+.vk {
+  background-image: url('./images/vk.svg');
+  width: 48px;
+
+  &.white {
+    background-image: url('./images/vkwhite.svg');
+  }
+}
+
+.dzen {
+  background-image: url('./images/dzen.svg');
+
+  &.white {
+    background-image: url('./images/dzenwhite.svg');
+  }
+}
+
+.Q_WideLetter {
+  line-height: 100%;
+  font-size: 388px;
+  font-family: 'Druk Text Wide Cyr';
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.Q_Line {
+  width: 100%;
+  height: 1px;
+  background: var(--black);
+  position: relative;
+}
+
+.Q_Image {
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  &.long {
+    height: 592px;
+  }
+
+  &.medium {
+    height: 508px;
+  }
+
+  &.short {
+    height: 430px;
+  }
+}
+
+.Q_Arrow {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  background-color: var(--green);
+  background-image: url('./images/basic/ArrowHorizontalBlack.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+
+  &.BlackBottomRight {
+    background-color: var(--black);
+    background-image: url('./images/basic/ArrowHorizontalWhite.svg');
+    transform: rotate(45deg);
+  }
+
+  &.BlackTopLeft {
+    background-color: var(--black);
+    background-image: url('./images/basic/ArrowHorizontalWhite.svg');
+    transform: rotate(-125deg);
+  }
+}
+
+.Q_HintIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--black);
+  background-image: url('./images/basic/i.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+//adaptives
+
+@media only screen and (min-width: 1280px) and (max-width: 1679px) {
+  .Q_SearchIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Q_SocialMediaIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .vk {
+    width: 48px;
+  }
+
+  .tg {
+    height: 34px;
+  }
+
+  .Q_WideLetter {
+    font-size: 348px;
+  }
+
+  .Q_Image {
+    &.long {
+      height: 418px;
+    }
+
+    &.medium {
+      height: 353px;
+    }
+
+    &.short {
+      height: 310px;
+    }
+  }
+
+  .Q_Arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .Q_HintIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .Q_SearchIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Q_SocialMediaIcon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .vk {
+    width: 23px;
+  }
+
+  .tg {
+    height: 16px;
+  }
+
+  .Q_WideLetter {
+    font-size: 300px;
+  }
+
+  .Q_Image {
+    &.long {
+      height: 310px;
+    }
+
+    &.medium {
+      height: 276px;
+    }
+
+    &.short {
+      height: 235px;
+    }
+  }
+
+  .Q_Arrow {
+    width: 26px;
+    height: 26px;
+  }
+
+  .Q_HintIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 744px) and (max-width: 1023px) {
+  .Q_SearchIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Q_SocialMediaIcon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .vk {
+    width: 23px;
+  }
+
+  .tg {
+    height: 16px;
+  }
+
+  .Q_WideLetter {
+    font-size: 200px;
+  }
+
+  .Q_Image {
+    &.long {
+      height: 230px;
+    }
+
+    &.medium {
+      height: 190px;
+    }
+
+    &.short {
+      height: 162px;
+    }
+  }
+
+  .Q_Arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Q_HintIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 743px) {
+  .Q_SearchIcon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .Q_SocialMediaIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .vk {
+    width: 48px;
+  }
+
+  .tg {
+    height: 30px;
+  }
+
+  .Q_WideLetter {
+    font-size: 110px;
+  }
+
+  .Q_Image {
+    &.long {
+      width: 155px;
+      height: 256px;
+    }
+
+    &.medium {
+      width: 155px;
+      height: 230px;
+    }
+
+    &.short {
+      width: 155px;
+      height: 200px;
+    }
+  }
+
+  .Q_Arrow {
+    width: 30px;
+    height: 30px;
+    background-size: 60%;
+  }
+
+  .Q_HintIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
