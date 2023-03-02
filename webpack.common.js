@@ -141,6 +141,14 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/50s-style.html',
+      filename: './styles/50s-style.html',
+      chunks: ['index']
+    }),
+
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
