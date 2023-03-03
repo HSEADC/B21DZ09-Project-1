@@ -157,6 +157,13 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/Y2K.html',
+      filename: './styles/Y2K.html',
+      chunks: ['index']
+    }),
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
