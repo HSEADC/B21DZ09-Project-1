@@ -171,6 +171,13 @@ module.exports = {
       filename: './styles/smart-casual.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/minimalism.html',
+      filename: './styles/minimalism.html',
+      chunks: ['index']
+    }),
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
