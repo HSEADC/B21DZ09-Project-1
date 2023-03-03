@@ -156,7 +156,6 @@
   }
 
   .C_Styles {
-    grid-column: 7 / 19;
     width: 100%;
     display: inline-flex;
     align-items: flex-start;
@@ -277,8 +276,8 @@
 
     .W_StyleArticleSub {
       grid-column: 1 / 19;
-      margin-top: 60px;
-      margin-bottom: 40px;
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
 
     .W_RecomendedInfluencers {
@@ -368,7 +367,6 @@
     }
 
     .C_Styles {
-      grid-column: 7 / 19;
       gap: 12px;
     }
   }
@@ -546,7 +544,6 @@
     }
 
     .C_Styles {
-      grid-column: 7 / 19;
       gap: 12px;
     }
   }
@@ -717,7 +714,6 @@
     }
 
     .C_Styles {
-      grid-column: 7 / 19;
       gap: 12px;
     }
   }
@@ -928,7 +924,6 @@
   }
 
   .S_RecomendationsBlock {
-    overflow: hidden;
     .A_RecomendationText {
     }
 

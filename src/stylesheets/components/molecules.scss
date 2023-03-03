@@ -38,6 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
 
   .W_TitleText {
     display: flex;
@@ -179,7 +180,7 @@
 
 .M_SliderImage {
   width: 100%;
-  height: 70%;
+  height: 60vh;
   overflow: hidden;
 
   .W_SliderRail {
@@ -215,7 +216,7 @@
 
   .M_Title {
     .A_TitleDruzhok {
-      margin-bottom: -130px;
+      margin-bottom: -120px;
     }
   }
 
@@ -314,6 +315,10 @@
   .M_SectionName {
     grid-column: 1 / 15;
   }
+
+  .M_SliderImage {
+    height: 45vh;
+  }
 }
 
 @media only screen and (min-width: 744px) and (max-width: 1023px) {
@@ -382,6 +387,10 @@
 
   .M_SectionName {
     grid-column: 1 / 15;
+  }
+
+  .M_SliderImage {
+    height: 35vh;
   }
 }
 
@@ -485,5 +494,9 @@
 
   .M_SectionName {
     grid-column: 1 / 5;
+  }
+
+  .M_SliderImage {
+    height: 60vh;
   }
 }

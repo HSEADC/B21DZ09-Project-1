@@ -39,3 +39,19 @@ function sliderGallery() {
 }
 
 document.addEventListener('DOMContentLoaded', sliderGallery)
+
+const marginrecs = document.querySelector('.O_RecomendationsBlock')
+const railrecs = document.querySelector('.W_StylesRail')
+const marginleft = window
+  .getComputedStyle(marginrecs)
+  .getPropertyValue('margin-left')
+
+const mediaphone = window.matchMedia(
+  '(min-width: 360px) and (max-width: 768px)'
+)
+
+if (mediaphone.matches) {
+  railrecs.style.width = 'calc(100vw - ' + marginleft + ')'
+} else {
+  railrecs.style.width = '100%'
+}

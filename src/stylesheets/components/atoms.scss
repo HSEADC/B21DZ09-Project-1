@@ -191,6 +191,7 @@
 
 .A_OptionStyleText {
   width: 252px;
+  line-height: 135%;
   font-size: 20px;
   font-family: 'Inter';
   font-weight: 400;
@@ -244,6 +245,7 @@
   font-weight: 500;
   text-decoration: none;
   color: var(--black);
+  cursor: pointer;
 
   .A_ButtonBack:hover {
     text-decoration: underline;
@@ -394,12 +396,12 @@
 
   .A_TitleDruzhok {
     line-height: 100%;
-    font-size: 348px;
+    font-size: 300px;
   }
 
   .A_TitleDruk {
     line-height: 100%;
-    font-size: 348px;
+    font-size: 300px;
   }
 
   .A_TitleImage {
@@ -408,7 +410,6 @@
   }
 
   .A_ArticleText {
-    line-height: 135%;
     font-size: 18px;
   }
 
@@ -536,6 +537,10 @@
     .A_MoreButton:hover {
       border-bottom: 5px;
     }
+  }
+
+  .A_CardImage {
+    height: 420px;
   }
 }
 
@@ -711,6 +716,10 @@
       border-bottom: 5px;
     }
   }
+
+  .A_CardImage {
+    height: 350px;
+  }
 }
 
 @media only screen and (min-width: 744px) and (max-width: 1023px) {
@@ -757,11 +766,11 @@
 
   .A_ArticleText {
     line-height: 135%;
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .A_CharecterText {
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .A_RecomendedInfluencersTitle {
@@ -789,7 +798,7 @@
 
   .A_ArticleBody {
     line-height: 135%;
-    font-size: 8px;
+    font-size: 12px;
 
     p {
       margin-bottom: 18px;
@@ -883,6 +892,10 @@
     .A_MoreButton:hover {
       border-bottom: 5px;
     }
+  }
+
+  .A_CardImage {
+    height: 240px;
   }
 }
 
@@ -1046,5 +1059,9 @@
 
   .A_MoreButton {
     display: none;
+  }
+
+  .A_CardImage {
+    height: 350px;
   }
 }
