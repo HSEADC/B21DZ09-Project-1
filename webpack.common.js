@@ -164,6 +164,13 @@ module.exports = {
       filename: './styles/Y2K.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/smart-casual.html',
+      filename: './styles/smart-casual.html',
+      chunks: ['index']
+    }),
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
