@@ -193,6 +193,13 @@ module.exports = {
       filename: './styles/country.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/animalism.html',
+      filename: './styles/animalism.html',
+      chunks: ['index']
+    }),
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
