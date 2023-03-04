@@ -123,7 +123,7 @@
 .A_AvatarInfluencerName {
   width: 84px;
   margin-top: 10px;
-  font-size: 10px;
+  font-size: 12px;
   font-family: 'Druk Text Wide Cyr';
   font-weight: 500;
   text-align: center;
@@ -214,6 +214,7 @@
 }
 
 .A_Counter {
+  min-width: 16px;
   margin-right: 20px;
   font-size: 20px;
   font-family: 'Druk Cyr';
@@ -221,6 +222,7 @@
 }
 
 .A_SlideDescription {
+  max-width: 460px;
   font-size: 20px;
   font-family: 'Druk Text Wide Cyr';
   font-weight: 800;
@@ -299,21 +301,25 @@
 
 .A_CoverText {
   margin-top: -50px;
-  font-size: 625px;
+  font-size: 670px;
   font-family: 'Druk Condensed Cyr Super';
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
   user-select: none;
+  z-index: -1;
 
   .wide {
     font-family: 'Druk Text Wide Cyr';
     font-weight: 800;
+    letter-spacing: -16px;
+    margin-left: -40px;
   }
 
   .medium {
     font-family: 'Druk Text Cyr';
     font-weight: 800;
+    letter-spacing: -10px;
   }
 }
 
@@ -362,9 +368,24 @@
 }
 
 .A_CardImage {
-  height: 414px;
+  height: 440px;
 }
 
+.A_HintText {
+  position: absolute;
+  width: 250px;
+  margin-top: -84px;
+  padding: 20px;
+  line-height: 135%;
+  font-size: 14px;
+  font-family: 'Inter';
+  font-weight: 500;
+  background-color: var(--green);
+
+  &.hidden {
+    display: none;
+  }
+}
 //adaptives
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
@@ -695,13 +716,13 @@
 
   .A_StyleCategoryName {
     gap: 10px;
-    font-size: 60px;
+    font-size: 70px;
   }
 
   .A_StyleCategoryMenuOption {
     margin-top: 6px;
     line-height: 80%;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .A_SectionName {
@@ -719,6 +740,13 @@
 
   .A_CardImage {
     height: 350px;
+  }
+
+  .A_HintText {
+    width: 180px;
+    margin-top: -70px;
+    padding: 20px;
+    font-size: 10px;
   }
 }
 
@@ -872,7 +900,7 @@
 
   .A_StyleCategoryName {
     gap: 10px;
-    font-size: 60px;
+    font-size: 54px;
   }
 
   .A_StyleCategoryMenuOption {
@@ -896,6 +924,13 @@
 
   .A_CardImage {
     height: 240px;
+  }
+
+  .A_HintText {
+    width: 154px;
+    margin-top: -60px;
+    padding: 14px;
+    font-size: 8px;
   }
 }
 
@@ -1040,6 +1075,15 @@
   .A_CoverText {
     margin-top: -20px;
     font-size: 138px;
+
+    .wide {
+      margin-left: 0;
+      letter-spacing: -4px;
+    }
+
+    .medium {
+      letter-spacing: -4px;
+    }
   }
 
   .A_StyleCategoryName {
@@ -1063,5 +1107,12 @@
 
   .A_CardImage {
     height: 350px;
+  }
+
+  .A_HintText {
+    width: 160px;
+    margin-top: -60px;
+    padding: 10px;
+    font-size: 10px;
   }
 }

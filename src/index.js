@@ -1,4 +1,6 @@
 import './index.css'
+import './javascript/hint.js'
+// import './javascript/randomimage.js'
 import './javascript/gallery-slider.js'
 
 import $ from 'jquery'
