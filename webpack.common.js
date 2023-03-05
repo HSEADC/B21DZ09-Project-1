@@ -214,6 +214,13 @@ module.exports = {
       filename: './styles/art-deco.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/boho.html',
+      filename: './styles/boho.html',
+      chunks: ['index']
+    }),
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
