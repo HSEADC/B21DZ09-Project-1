@@ -200,6 +200,13 @@ module.exports = {
       filename: './styles/animalism.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/baby-doll.html',
+      filename: './styles/baby-doll.html',
+      chunks: ['index']
+    }),
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
