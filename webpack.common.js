@@ -228,6 +228,13 @@ module.exports = {
       filename: './styles/80s-style.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/combined-vintage.html',
+      filename: './styles/combined-vintage.html',
+      chunks: ['index']
+    }),
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
