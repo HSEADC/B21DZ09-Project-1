@@ -221,6 +221,13 @@ module.exports = {
       filename: './styles/boho.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/80s-style.html',
+      filename: './styles/80s-style.html',
+      chunks: ['index']
+    }),
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
