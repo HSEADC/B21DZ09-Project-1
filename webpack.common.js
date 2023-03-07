@@ -256,6 +256,13 @@ module.exports = {
       filename: './styles/hip-hop.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/futurism.html',
+      filename: './styles/futurism.html',
+      chunks: ['index']
+    }),
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
