@@ -4,6 +4,7 @@
   background-position: top center;
   background-size: contain;
   background-repeat: no-repeat;
+  cursor: pointer;
 
   &.black {
     background-image: url('./images/Q_SearchIcon-black.svg');
@@ -21,6 +22,7 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .tg {
@@ -104,6 +106,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 60%;
+  cursor: pointer;
 
   &.BlackBottomRight {
     background-color: var(--black);
@@ -119,13 +122,14 @@
 }
 
 .Q_HintIcon {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: var(--black);
   background-image: url('./images/basic/i.svg');
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 //adaptives
@@ -150,7 +154,7 @@
   }
 
   .Q_WideLetter {
-    font-size: 348px;
+    font-size: 300px;
   }
 
   .Q_Image {

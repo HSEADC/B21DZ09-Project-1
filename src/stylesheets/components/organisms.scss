@@ -7,7 +7,7 @@
   margin: 0 auto;
 
   .W_NavBar {
-    grid-column: 2 / 18;
+    grid-column: 1 / 19;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -24,19 +24,14 @@
       flex-direction: row;
       align-items: flex-end;
       justify-content: space-between;
-      width: 620px;
       height: auto;
 
       .C_NavBarCategories {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        width: 530px;
-        height: auto;
-
-        .A_NavBarCategory {
-          margin-right: 40px;
-        }
+        gap: 40px;
+        height: 20px;
       }
     }
   }
@@ -172,7 +167,7 @@
 
   .A_StyleName {
     margin-top: 10px;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
   }
 
   .W_TagBar {
@@ -212,7 +207,7 @@
   align-items: flex-end;
 }
 .O_StyleCategoryMenu:hover .BlackBottomRight {
-  display: none;
+  opacity: 0;
 }
 
 .O_RecomendationsBlock {
@@ -224,6 +219,10 @@
   padding-top: 100px;
   padding-bottom: 100px;
   margin: 0 auto;
+
+  .W_StylesRail {
+    grid-column: 7 /19;
+  }
 }
 
 //adaptives
@@ -239,18 +238,6 @@
 
       .Q_SearchIcon {
         margin-left: 20px;
-      }
-
-      .W_NavBarCategories {
-        width: 620px;
-
-        .C_NavBarCategories {
-          width: 530px;
-
-          .A_NavBarCategory {
-            margin-right: 40px;
-          }
-        }
       }
     }
   }
@@ -272,7 +259,7 @@
   .O_StyleArticleDescription {
     grid-column: 1 / 7;
     padding: 60px 20px 30px 20px;
-    margin-top: -100px;
+    margin-top: -130px;
 
     .W_TagBar {
       margin-top: 6px;
@@ -294,7 +281,7 @@
   .O_StyleCard {
     .A_StyleName {
       margin-top: 10px;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
     }
 
     .W_TagBar {
@@ -320,6 +307,10 @@
     column-gap: 12px;
     padding-top: 100px;
     padding-bottom: 100px;
+
+    .W_StylesRail {
+      grid-column: 7 /19;
+    }
   }
 }
 
@@ -334,18 +325,6 @@
 
       .Q_SearchIcon {
         margin-left: 20px;
-      }
-
-      .W_NavBarCategories {
-        width: 440px;
-
-        .C_NavBarCategories {
-          width: 380px;
-
-          .A_NavBarCategory {
-            margin-right: 40px;
-          }
-        }
       }
     }
   }
@@ -389,7 +368,7 @@
   .O_StyleCard {
     .A_StyleName {
       margin-top: 10px;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
     }
 
     .W_TagBar {
@@ -415,6 +394,10 @@
     column-gap: 12px;
     padding-top: 100px;
     padding-bottom: 100px;
+
+    .W_StylesRail {
+      grid-column: 7 /19;
+    }
   }
 }
 
@@ -429,18 +412,6 @@
 
       .Q_SearchIcon {
         margin-left: 20px;
-      }
-
-      .W_NavBarCategories {
-        width: 340px;
-
-        .C_NavBarCategories {
-          width: 302px;
-
-          .A_NavBarCategory {
-            margin-right: 30px;
-          }
-        }
       }
     }
   }
@@ -484,7 +455,7 @@
   .O_StyleCard {
     .A_StyleName {
       margin-top: 10px;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
     }
 
     .W_TagBar {
@@ -510,6 +481,10 @@
     column-gap: 12px;
     padding-top: 100px;
     padding-bottom: 100px;
+
+    .W_StylesRail {
+      grid-column: 7 /19;
+    }
   }
 }
 
@@ -584,9 +559,10 @@
   }
 
   .O_StyleCard {
+    min-width: 200px;
     .A_StyleName {
       margin-top: 10px;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
     }
 
     .W_TagBar {
@@ -628,5 +604,9 @@
     width: 330px;
     padding-top: 50px;
     padding-bottom: 50px;
+
+    .W_StylesRail {
+      overflow-x: scroll;
+    }
   }
 }
