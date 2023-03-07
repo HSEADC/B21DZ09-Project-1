@@ -218,6 +218,34 @@
   margin: 0;
 }
 
+.O_RunningLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.O_Influencers {
+  position: relative;
+  display: grid;
+  width: 1630px;
+  grid-template-columns: repeat(18, 1fr);
+  column-gap: 20px;
+  margin: 0 auto;
+  padding-bottom: 300px;
+
+  .W_InfluencersNames {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    grid-column: 1 / 19;
+    width: 100%;
+  }
+}
+
 //adaptives
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {

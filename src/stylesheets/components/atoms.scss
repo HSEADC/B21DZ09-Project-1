@@ -431,6 +431,58 @@
   }
 }
 
+.A_RunningLineImage {
+  position: absolute;
+  width: 350px;
+  height: 300px;
+  z-index: 2;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.A_InfluenserImages {
+  display: none;
+  position: absolute;
+  max-width: 300px;
+  min-width: 150px;
+  max-height: 300px;
+  min-height: 150px;
+  z-index: 1;
+
+  .Q_Image {
+    position: relative;
+  }
+
+  .Q_Image:nth-child(1) {
+    left: 200px;
+    top: -230px;
+  }
+
+  .Q_Image:nth-child(2) {
+    left: -120px;
+    top: -400px;
+  }
+  .Q_Image:nth-child(3) {
+    left: 230px;
+    top: -350px;
+  }
+}
+
+.A_InfluencerName {
+  font-size: 72px;
+  font-family: 'Druk Cyr';
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white);
+  cursor: pointer;
+  z-index: 2;
+}
+
 //adaptives
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
