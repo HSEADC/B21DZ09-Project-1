@@ -242,6 +242,13 @@ module.exports = {
       filename: './styles/buisness-casual.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/gothic.html',
+      filename: './styles/gothic.html',
+      chunks: ['index']
+    }),
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
