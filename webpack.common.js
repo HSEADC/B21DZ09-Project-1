@@ -167,6 +167,14 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/lilnasx-new.html',
+      filename: './influencers/individuals/lilnasx-new.html',
+      chunks: ['index']
+    }),
+
     //movie article
     new HtmlWebpackPlugin({
       hash: true,
