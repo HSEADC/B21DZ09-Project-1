@@ -6,12 +6,14 @@
   --green: #afff05;
   --darkgreen: #9be400;
 
+  --ultrawide: 1630px;
   --wide: 712px;
   --narrow: 530px;
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
   :root {
+    --ultrawide: 1230px;
     --wide: 540px;
     --narrow: 402px;
   }
@@ -19,6 +21,7 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
   :root {
+    --ultrawide: 974px;
     --wide: 426px;
     --narrow: 316px;
   }
@@ -26,6 +29,7 @@
 
 @media only screen and (min-width: 744px) and (max-width: 1023px) {
   :root {
+    --ultrawide: 694px;
     --wide: 302px;
     --narrow: 222px;
   }
@@ -33,6 +37,7 @@
 
 @media only screen and (min-width: 360px) and (max-width: 743px) {
   :root {
+    --ultrawide: 330px;
     --wide: 330px;
     --narrow: 330px;
   }

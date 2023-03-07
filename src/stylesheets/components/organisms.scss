@@ -84,7 +84,7 @@
   height: auto;
   padding: 60px 60px 30px 30px;
   background: var(--green);
-  margin-top: -200px;
+  // margin-top: -35%;
   z-index: -1;
 
   .W_TagBar {
@@ -104,10 +104,6 @@
   &.LeftWide {
     grid-column: 1 / 9;
 
-    // .Q_Image {
-    //   width: var(--wide);
-    // }
-
     .A_Slide {
       width: var(--wide);
     }
@@ -116,21 +112,13 @@
   &.RightNarrow {
     grid-column: 10 / 16;
 
-    // .Q_Image {
-    //   width: var(--narrow);
-    // }
-
     .A_Slide {
       width: var(--narrow);
     }
   }
 
   &.RightWide {
-    grid-column: 11 / 19;
-
-    // .Q_Image {
-    //   width: var(--wide);
-    // }
+    grid-column: 10 / 18;
 
     .A_Slide {
       width: var(--wide);
@@ -140,24 +128,18 @@
   &.LeftNarrow {
     grid-column: 1 / 7;
 
-    // .Q_Image {
-    //   width: var(--narrow);
-    // }
-
     .A_Slide {
       width: var(--narrow);
     }
   }
 
-  // .Q_Image {
-  //   img {
-  //     display: none;
-  //
-  //     &.active {
-  //       display: block;
-  //     }
-  //   }
-  // }
+  &.Wide {
+    grid-column: 1 / 19;
+
+    .A_Slide {
+      width: var(--ultrawide);
+    }
+  }
 }
 
 .O_StyleCard {
@@ -225,6 +207,17 @@
   }
 }
 
+.O_ToggleSwitchInfluencers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: max-content;
+  padding: 30px 0;
+  margin: 0;
+}
+
 //adaptives
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
@@ -259,7 +252,7 @@
   .O_StyleArticleDescription {
     grid-column: 1 / 7;
     padding: 60px 20px 30px 20px;
-    margin-top: -130px;
+    // margin-top: -130px;
 
     .W_TagBar {
       margin-top: 6px;
@@ -346,7 +339,7 @@
   .O_StyleArticleDescription {
     grid-column: 1 / 8;
     padding: 60px 40px 20px 20px;
-    margin-top: -80px;
+    // margin-top: -80px;
 
     .W_TagBar {
       margin-top: 6px;
@@ -433,7 +426,7 @@
   .O_StyleArticleDescription {
     grid-column: 1 / 8;
     padding: 40px 40px 20px 20px;
-    margin-top: -40px;
+    // margin-top: -40px;
 
     .W_TagBar {
       margin-top: 6px;
@@ -536,7 +529,7 @@
   .O_StyleArticleDescription {
     grid-column: 1 / 4;
     padding: 40px 30px 20px 20px;
-    margin-top: -30px;
+    // margin-top: -30px;
 
     .W_TagBar {
       margin-top: 6px;

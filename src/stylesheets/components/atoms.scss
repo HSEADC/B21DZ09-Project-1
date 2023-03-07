@@ -386,6 +386,51 @@
     display: none;
   }
 }
+
+.A_ToggleSwitchOption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-family: 'Inter';
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--black);
+  cursor: pointer;
+
+  &.active {
+    color: var(--black);
+    background-color: var(--green);
+  }
+}
+
+.A_RunningLine {
+  animation: line 10s linear infinite;
+  font-size: 790px;
+  font-family: 'Druk Condensed Cyr Super';
+  font-weight: 800;
+  color: var(--white);
+
+  .Q_WideLetter {
+    font-size: 790px;
+    font-family: 'Druk Text Wide Cyr';
+  }
+
+  @keyframes line {
+    0% {
+      transform: translateX(0px);
+    }
+
+    100% {
+      transform: translateX(-2000px);
+    }
+  }
+}
+
 //adaptives
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
@@ -954,12 +999,12 @@
 
   .A_TitleDruzhok {
     line-height: 100%;
-    font-size: 110px;
+    font-size: 76px;
   }
 
   .A_TitleDruk {
     line-height: 100%;
-    font-size: 110px;
+    font-size: 86px;
   }
 
   .A_TitleImage {
