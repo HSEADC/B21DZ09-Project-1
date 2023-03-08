@@ -263,6 +263,13 @@ module.exports = {
       filename: './styles/futurism.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/street-style.html',
+      filename: './styles/street-style.html',
+      chunks: ['index']
+    }),
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
