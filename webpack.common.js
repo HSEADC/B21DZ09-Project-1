@@ -338,6 +338,13 @@ module.exports = {
       filename: './influencers/individuals/harry-styles.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/freddy-mercury.html',
+      filename: './influencers/individuals/freddy-mercury.html',
+      chunks: ['index']
+    }),
     //movie article
     new HtmlWebpackPlugin({
       hash: true,
