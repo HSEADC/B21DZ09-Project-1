@@ -303,6 +303,41 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/billie-eilish.html',
+      filename: './influencers/individuals/billie-eilish.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/kanye.html',
+      filename: './influencers/individuals/kanye.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/zendaya.html',
+      filename: './influencers/individuals/zendaya.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/timothee-chalamet.html',
+      filename: './influencers/individuals/timothee-chalamet.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/harry-styles.html',
+      filename: './influencers/individuals/harry-styles.html',
+      chunks: ['index']
+    }),
     //movie article
     new HtmlWebpackPlugin({
       hash: true,
