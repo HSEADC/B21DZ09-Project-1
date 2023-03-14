@@ -345,6 +345,20 @@ module.exports = {
       filename: './influencers/individuals/freddy-mercury.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/lady-gaga.html',
+      filename: './influencers/individuals/lady-gaga.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/rhianna.html',
+      filename: './influencers/individuals/rhianna.html',
+      chunks: ['index']
+    }),
     //movie article
     new HtmlWebpackPlugin({
       hash: true,
