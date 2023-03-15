@@ -359,6 +359,13 @@ module.exports = {
       filename: './influencers/individuals/rhianna.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/jenna-ortega.html',
+      filename: './influencers/individuals/jenna-ortega.html',
+      chunks: ['index']
+    }),
     //movie article
     new HtmlWebpackPlugin({
       hash: true,
