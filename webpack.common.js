@@ -382,6 +382,13 @@ module.exports = {
       filename: './influencers/movies/sexandthecity-new.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/movies/euphoria.html',
+      filename: './influencers/movies/euphoria.html',
+      chunks: ['index']
+    }),
 
     //antitrends
     new HtmlWebpackPlugin({
