@@ -389,6 +389,21 @@ module.exports = {
       filename: './influencers/movies/euphoria.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/movies/sex-education.html',
+      filename: './influencers/movies/sex-education.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/movies/devil-wears-prada.html',
+      filename: './influencers/movies/devil-wears-prada.html',
+      chunks: ['index']
+    }),
 
     //antitrends
     new HtmlWebpackPlugin({
