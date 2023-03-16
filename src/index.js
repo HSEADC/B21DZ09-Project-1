@@ -1,4 +1,9 @@
 import './index.css'
+
+import './javascript/antitrendstoggle.js'
+import './javascript/antitrendsgallery.js'
+import './javascript/antitrendsscroll.js'
+// import './javascript/influencerstoggle.js'
 import './javascript/hint.js'
 // import './javascript/randomimage.js'
 import './javascript/gallery-slider.js'
