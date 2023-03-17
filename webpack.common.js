@@ -263,6 +263,20 @@ module.exports = {
       filename: './styles/futurism.html',
       chunks: ['index']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/street-style.html',
+      filename: './styles/street-style.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/avangard.html',
+      filename: './styles/avangard.html',
+      chunks: ['index']
+    }),
     //influencers
     new HtmlWebpackPlugin({
       hash: true,
@@ -289,6 +303,69 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/billie-eilish.html',
+      filename: './influencers/individuals/billie-eilish.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/kanye.html',
+      filename: './influencers/individuals/kanye.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/zendaya.html',
+      filename: './influencers/individuals/zendaya.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/timothee-chalamet.html',
+      filename: './influencers/individuals/timothee-chalamet.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/harry-styles.html',
+      filename: './influencers/individuals/harry-styles.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/freddy-mercury.html',
+      filename: './influencers/individuals/freddy-mercury.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/lady-gaga.html',
+      filename: './influencers/individuals/lady-gaga.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/rhianna.html',
+      filename: './influencers/individuals/rhianna.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/jenna-ortega.html',
+      filename: './influencers/individuals/jenna-ortega.html',
+      chunks: ['index']
+    }),
     //movie article
     new HtmlWebpackPlugin({
       hash: true,
@@ -303,6 +380,28 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/influencers/movies/sexandthecity-new.html',
       filename: './influencers/movies/sexandthecity-new.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/movies/euphoria.html',
+      filename: './influencers/movies/euphoria.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/movies/sex-education.html',
+      filename: './influencers/movies/sex-education.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/movies/devil-wears-prada.html',
+      filename: './influencers/movies/devil-wears-prada.html',
       chunks: ['index']
     }),
 
