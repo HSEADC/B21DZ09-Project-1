@@ -20,6 +20,9 @@ for (let i = 0; i < options.length; i++) {
 
   function search() {
     option.querySelector('.M_Antitrend').classList.toggle('active')
+    option
+      .querySelector('.M_Antitrend')
+      .scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'end' })
     background.classList.toggle('active')
   }
 

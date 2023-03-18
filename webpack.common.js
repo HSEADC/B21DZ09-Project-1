@@ -114,6 +114,14 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/landing.html',
+      filename: './landing.html',
+      chunks: ['index']
+    }),
+
     //library
     new HtmlWebpackPlugin({
       hash: true,

@@ -445,10 +445,28 @@
   height: 300px;
   z-index: 2;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .Q_Image {
+    img {
+      animation: slideup 0.5s 1 ease-out;
+
+      @keyframes slideup {
+        0% {
+          object-position: 0px -150px;
+        }
+        100% {
+          object-position: center top;
+        }
+      }
+    }
+  }
+}
+
+.A_RunningLineImage:hover {
+  .Q_Image {
+    img {
+      object-position: 0px -400px;
+      transition: all 0.5s ease-out;
+    }
   }
 }
 
@@ -459,11 +477,24 @@
   min-width: 150px;
   max-height: 300px;
   min-height: 150px;
-  filter: brightness(75%);
+  filter: brightness(70%);
   z-index: 1;
 
   .Q_Image {
     position: relative;
+
+    img {
+      animation: slideup 0.5s 1 ease-out;
+
+      @keyframes slideup {
+        0% {
+          object-position: 0px -150px;
+        }
+        100% {
+          object-position: center top;
+        }
+      }
+    }
   }
 
   .Q_Image:nth-child(1) {
@@ -561,6 +592,49 @@
   &.short {
     max-height: 500px;
     min-height: 400px;
+  }
+}
+
+.A_MainPageCoverText {
+  line-height: 100%;
+
+  &.druk {
+    font-size: 350px;
+    font-family: 'Druk Condensed Cyr Super';
+
+    .Q_WideLetter {
+      font-family: 'Druk Text Wide Cyr';
+      font-weight: 800;
+    }
+  }
+
+  &.druzhok {
+    margin-bottom: -55px;
+    font-size: 310px;
+    font-family: 'DRUZHOK';
+  }
+}
+
+.A_MainPageCoverText:nth-child(3) {
+  padding-left: 350px;
+}
+
+.A_ArticlePreviewTitle {
+  font-size: 260px;
+
+  &.druk {
+    line-height: 80%;
+    font-family: 'Druk Condensed Cyr Super';
+
+    .Q_WideLetter {
+      font-family: 'Druk Text Wide Cyr';
+      font-weight: 800;
+    }
+  }
+  &.druzhok {
+    line-height: 100%;
+    margin-bottom: -60px;
+    font-family: 'DRUZHOK';
   }
 }
 

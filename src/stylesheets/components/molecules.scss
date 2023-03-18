@@ -140,21 +140,82 @@
 }
 
 .M_ButtonSurvey {
-  grid-column: 15 / 18;
   display: inline-flex;
   gap: 12px;
   justify-content: center;
   align-items: center;
-  width: 248px;
-  height: 78px;
-  margin-top: 80px;
+  width: max-content;
+  height: max-content;
+  padding: 20px 20px;
   border-radius: 50px;
   font-size: 20px;
   font-family: 'Inter';
   font-weight: 500;
   text-decoration: none;
-  background: var(--black);
-  color: var(--white);
+
+  &.black {
+    background-color: var(--black);
+    color: var(--white);
+  }
+
+  &.black:hover {
+    transition: all 0.5s ease-out;
+    background-color: var(--green);
+    color: var(--black);
+
+    .Q_Arrow {
+      &.black {
+        transition: all 0.5s ease-out;
+        background-color: var(--black);
+        background-image: url('./images/basic/ArrowHorizontalWhite.svg');
+      }
+    }
+  }
+
+  &.black:active {
+    background-color: var(--darkgreen);
+    color: var(--black);
+
+    .Q_Arrow {
+      &.black {
+        background-color: var(--black);
+        background-image: url('./images/basic/ArrowHorizontalWhite.svg');
+      }
+    }
+  }
+
+  &.green {
+    background-color: var(--green);
+    color: var(--black);
+  }
+
+  &.green:hover {
+    transition: all 0.5s ease-out;
+    border: 1px solid var(--white);
+    background-color: var(--black);
+    color: var(--white);
+
+    .Q_Arrow {
+      &.green {
+        transition: all 0.5s ease-out;
+        background-color: var(--green);
+        background-image: url('./images/basic/ArrowHorizontalBlack.svg');
+      }
+    }
+  }
+
+  &.green:active {
+    border: 1px solid var(--green);
+    background-color: var(--black);
+    color: var(--green);
+
+    .Q_Arrow {
+      &.green {
+        background-color: var(--green);
+        background-image: url('./images/basic/ArrowHorizontalBlack.svg');
+      }
+    }
+  }
 }
 
 .M_StyleCategoryMenuBottom {

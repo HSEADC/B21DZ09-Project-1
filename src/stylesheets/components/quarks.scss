@@ -61,7 +61,7 @@
 
 .Q_WideLetter {
   line-height: 100%;
-  font-size: 388px;
+  // font-size: 388px;
   font-family: 'Druk Text Wide Cyr';
   font-weight: 800;
   text-transform: uppercase;
@@ -101,23 +101,23 @@
   width: 47px;
   height: 47px;
   border-radius: 50%;
-  background-color: var(--green);
-  background-image: url('./images/basic/ArrowHorizontalBlack.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 60%;
   cursor: pointer;
 
-  &.BlackBottomRight {
-    background-color: var(--black);
-    background-image: url('./images/basic/ArrowHorizontalWhite.svg');
-    transform: rotate(45deg);
+  &.black {
+    background-color: var(--green);
+    background-image: url('./images/basic/ArrowHorizontalBlack.svg');
   }
 
-  &.BlackTopLeft {
+  &.green {
     background-color: var(--black);
     background-image: url('./images/basic/ArrowHorizontalWhite.svg');
-    transform: rotate(-125deg);
+  }
+
+  &.left {
+    transform: rotate(180deg);
   }
 }
 
@@ -136,7 +136,7 @@
   display: none;
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: -webkit-fill-available;
   background-color: var(--black);
   opacity: 80%;
   filter: blur(50);
@@ -145,6 +145,15 @@
   &.active {
     display: block;
   }
+}
+
+.Q_BlackBackgroundMainPage {
+  position: absolute;
+  width: 100vw;
+  height: 430vh;
+  margin-top: -60vh;
+  z-index: -1;
+  background-color: var(--black);
 }
 
 //adaptives
