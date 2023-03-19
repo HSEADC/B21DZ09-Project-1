@@ -4,6 +4,7 @@
 @import 'stylesheets/basics.scss';
 @import 'stylesheets/index.scss';
 @import 'stylesheets/styleguide.scss';
+@import 'stylesheets/landing.scss';
 
 @import 'stylesheets/components/quarks.scss';
 @import 'stylesheets/components/atoms.scss';

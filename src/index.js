@@ -1,5 +1,5 @@
 import './index.css'
-
+import './javascript/stylegalleryrail.js'
 import './javascript/antitrendstoggle.js'
 import './javascript/antitrendsgallery.js'
 import './javascript/antitrendsscroll.js'
@@ -7,7 +7,6 @@ import './javascript/antitrendsscroll.js'
 import './javascript/hint.js'
 // import './javascript/randomimage.js'
 import './javascript/gallery-slider.js'
-
 import $ from 'jquery'
 import anime from 'animejs/lib/anime.es.js'
 

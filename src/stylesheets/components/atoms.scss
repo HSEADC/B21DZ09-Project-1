@@ -38,7 +38,7 @@
   display: block;
   width: 100%;
   line-height: 135%;
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Druk Text Wide Cyr';
   font-weight: 500;
   text-decoration: none;
@@ -52,7 +52,7 @@
 .A_NormTextFooter {
   display: block;
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Inter';
   font-weight: 400;
   text-decoration: none;
@@ -539,39 +539,31 @@
 }
 
 .A_LineImages {
-  position: absolute;
-  max-width: 300px;
-  min-width: 150px;
-  max-height: 300px;
-  min-height: 150px;
+  position: relative;
   z-index: 2;
 
   .Q_Image {
-    position: relative;
+    position: absolute;
   }
 
   .Q_Image:nth-child(1) {
     left: 10vw;
-    top: 10vh;
+    top: 15vh;
+    width: 250px;
+    height: 360px;
   }
 
   .Q_Image:nth-child(2) {
-    left: 40vw;
-    top: -30vh;
+    left: 55vw;
+    top: 30vh;
+    width: 250px;
+    height: 380px;
   }
   .Q_Image:nth-child(3) {
-    left: 70vw;
-    top: -60vh;
-  }
-
-  .Q_Image:nth-child(4) {
-    left: 100vw;
-    top: -80vh;
-  }
-
-  .Q_Image:nth-child(5) {
-    left: 130vw;
-    top: -140vh;
+    left: 80vw;
+    top: 0vh;
+    width: 200px;
+    height: 260px;
   }
 }
 
@@ -625,6 +617,7 @@
   &.druk {
     line-height: 80%;
     font-family: 'Druk Condensed Cyr Super';
+    text-transform: uppercase;
 
     .Q_WideLetter {
       font-family: 'Druk Text Wide Cyr';
@@ -656,11 +649,11 @@
   }
 
   .A_BoldTextFooter {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .A_NormTextFooter {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .A_StyleArticleSubText {
@@ -820,10 +813,10 @@
   .A_RunningLineTwo {
     margin-top: -70px;
     animation: line 15s linear infinite;
-    font-size: 690px;
+    font-size: 650px;
 
     .Q_WideLetter {
-      font-size: 690px;
+      font-size: 650px;
     }
   }
 
@@ -856,6 +849,56 @@
   .A_InfluencerName {
     font-size: 56px;
   }
+
+  .A_ToggleSwitchOption {
+    width: 126px;
+    height: 46px;
+    font-size: 14px;
+  }
+
+  .A_LineImages {
+    .Q_Image:nth-child(1) {
+      width: 200px;
+      height: 310px;
+    }
+
+    .Q_Image:nth-child(2) {
+      width: 200px;
+      height: 330px;
+    }
+    .Q_Image:nth-child(3) {
+      width: 150px;
+      height: 210px;
+    }
+  }
+
+  .A_MainPageCoverText {
+    line-height: 100%;
+
+    &.druk {
+      font-size: 280px;
+    }
+
+    &.druzhok {
+      margin-bottom: -30px;
+      font-size: 230px;
+    }
+  }
+
+  .A_MainPageCoverText:nth-child(3) {
+    padding-left: 260px;
+  }
+
+  .A_ArticlePreviewTitle {
+    font-size: 210px;
+
+    &.druk {
+      line-height: 80%;
+    }
+    &.druzhok {
+      margin-bottom: -60px;
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -866,7 +909,7 @@
 
   .A_NavBarCategory {
     padding-bottom: 2px;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .A_NavBarCategory:hover {
@@ -874,15 +917,15 @@
   }
 
   .A_BoldTextFooter {
-    font-size: 6px;
+    font-size: 12px;
   }
 
   .A_NormTextFooter {
-    font-size: 6px;
+    font-size: 12px;
   }
 
   .A_StyleArticleSubText {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .A_TitleDruzhok {
@@ -906,7 +949,7 @@
   }
 
   .A_CharecterText {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .A_RecomendedInfluencersTitle {
@@ -934,7 +977,7 @@
 
   .A_ArticleBody {
     line-height: 135%;
-    font-size: 12px;
+    font-size: 14px;
 
     p {
       margin-bottom: 24px;
@@ -948,19 +991,19 @@
   }
 
   .A_OptionStyleTitle {
-    width: 150px;
+    width: 152px;
     margin-right: 15px;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .A_OptionStyleText {
-    width: 145px;
-    font-size: 10px;
+    width: 206px;
+    font-size: 12px;
   }
 
   .A_DescriptorInArticle {
     margin-top: 18px;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .A_Counter {
@@ -973,21 +1016,21 @@
   }
 
   .A_RecomendationText {
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .A_ButtonBack {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .A_ButtonBack::before {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+    width: 26px;
+    height: 26px;
+    margin-right: 8px;
   }
 
   .A_StyleName {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .A_CharecterName {
@@ -1072,6 +1115,67 @@
   .A_InfluencerName {
     font-size: 40px;
   }
+
+  .A_LineImages {
+    .Q_Image:nth-child(1) {
+      width: 170px;
+      height: 280px;
+    }
+
+    .Q_Image:nth-child(2) {
+      width: 170px;
+      height: 300px;
+    }
+    .Q_Image:nth-child(3) {
+      width: 120px;
+      height: 180px;
+    }
+  }
+
+  .A_PageDescription {
+    max-width: 400px;
+    font-size: 14px;
+  }
+
+  .A_AntitrendImage {
+    &.long {
+      max-height: 550px;
+      min-height: 400px;
+    }
+
+    &.short {
+      max-height: 400px;
+      min-height: 250px;
+    }
+  }
+
+  .A_MainPageCoverText {
+    line-height: 100%;
+
+    &.druk {
+      font-size: 230px;
+    }
+
+    &.druzhok {
+      margin-bottom: -30px;
+      font-size: 180px;
+    }
+  }
+
+  .A_MainPageCoverText:nth-child(3) {
+    padding-left: 210px;
+  }
+
+  .A_ArticlePreviewTitle {
+    font-size: 170px;
+
+    &.druk {
+      line-height: 80%;
+    }
+    &.druzhok {
+      margin-bottom: -60px;
+    }
+  }
 }
 
 @media only screen and (min-width: 744px) and (max-width: 1023px) {
@@ -1082,7 +1186,7 @@
 
   .A_NavBarCategory {
     padding-bottom: 2px;
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .A_NavBarCategory:hover {
@@ -1090,15 +1194,15 @@
   }
 
   .A_BoldTextFooter {
-    font-size: 6px;
+    font-size: 11px;
   }
 
   .A_NormTextFooter {
-    font-size: 6px;
+    font-size: 12px;
   }
 
   .A_StyleArticleSubText {
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .A_TitleDruzhok {
@@ -1150,7 +1254,7 @@
 
   .A_ArticleBody {
     line-height: 135%;
-    font-size: 12px;
+    font-size: 14px;
 
     p {
       margin-bottom: 18px;
@@ -1166,43 +1270,43 @@
   .A_OptionStyleTitle {
     width: 104px;
     margin-right: 12px;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .A_OptionStyleText {
     width: 104px;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .A_DescriptorInArticle {
     margin-top: 8px;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .A_Counter {
     margin-right: 20px;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .A_SlideDescription {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .A_RecomendationText {
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .A_ButtonBack {
-    font-size: 8px;
+    font-size: 14px;
   }
   .A_ButtonBack::before {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+    width: 26px;
+    height: 26px;
+    margin-right: 6px;
   }
 
   .A_StyleName {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .A_CharecterName {
@@ -1210,11 +1314,11 @@
   }
 
   .A_TitleCharacteristics {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .A_ContentCharacteristics {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .A_CoverText {
@@ -1256,6 +1360,88 @@
     padding: 14px;
     font-size: 8px;
   }
+
+  ///
+  .A_ToggleSwitchOption {
+    width: 120px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 12px;
+  }
+
+  .A_RunningLine,
+  .A_RunningLineTwo {
+    margin-top: -60px;
+    animation: line 20s linear infinite;
+    font-size: 590px;
+
+    .Q_WideLetter {
+      font-size: 590px;
+    }
+  }
+
+  .A_LineImages {
+    .Q_Image:nth-child(1) {
+      top: 10vh;
+      width: 150px;
+      height: 260px;
+    }
+
+    .Q_Image:nth-child(2) {
+      top: 20vh;
+      width: 150px;
+      height: 250px;
+    }
+    .Q_Image:nth-child(3) {
+      width: 100px;
+      height: 160px;
+    }
+  }
+
+  .A_PageDescription {
+    max-width: 400px;
+    font-size: 14px;
+  }
+
+  .A_AntitrendImage {
+    &.long {
+      max-height: 450px;
+      min-height: 300px;
+    }
+
+    &.short {
+      max-height: 300px;
+      min-height: 250px;
+    }
+  }
+
+  .A_MainPageCoverText {
+    line-height: 100%;
+
+    &.druk {
+      font-size: 160px;
+    }
+
+    &.druzhok {
+      margin-bottom: -30px;
+      font-size: 130px;
+    }
+  }
+
+  .A_MainPageCoverText:nth-child(3) {
+    padding-left: 150px;
+  }
+
+  .A_ArticlePreviewTitle {
+    font-size: 120px;
+
+    &.druk {
+      line-height: 80%;
+    }
+    &.druzhok {
+      margin-bottom: -40px;
+    }
+  }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 743px) {
@@ -1265,15 +1451,15 @@
   }
 
   .A_BoldTextFooter {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .A_NormTextFooter {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .A_StyleArticleSubText {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .A_TitleDruzhok {
@@ -1293,15 +1479,15 @@
 
   .A_ArticleText {
     line-height: 135%;
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .A_CharecterText {
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .A_RecomendedInfluencersTitle {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .A_AvatarInfluencerName {
@@ -1351,7 +1537,7 @@
 
   .A_DescriptorInArticle {
     margin-top: 8px;
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .A_Counter {
@@ -1368,7 +1554,7 @@
   }
 
   .A_ButtonBack {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .A_ButtonBack::before {
@@ -1438,5 +1624,101 @@
     margin-top: -60px;
     padding: 10px;
     font-size: 10px;
+  }
+
+  .A_RunningLine,
+  .A_RunningLineTwo {
+    display: none;
+  }
+
+  .A_StaticLine {
+    width: 360px;
+    margin-top: -20px;
+    font-size: 116px;
+    font-family: 'Druk Cyr';
+    font-weight: 800;
+    color: var(--white);
+
+    .Q_WideLetter {
+      font-size: 116px;
+      font-family: 'Druk Text Wide Cyr';
+    }
+  }
+
+  .A_LineImages {
+    .Q_Image:nth-child(1) {
+      top: 22vh;
+      width: 150px;
+      height: 230px;
+    }
+
+    .Q_Image:nth-child(2) {
+      top: 40vh;
+      width: 150px;
+      height: 200px;
+    }
+    .Q_Image:nth-child(3) {
+      top: 18vh;
+      left: 70vw;
+      width: 80px;
+      height: 110px;
+    }
+  }
+
+  .A_PageDescription {
+    max-width: 400px;
+    font-size: 14px;
+  }
+
+  .A_AntitrendImage {
+    &.long {
+      max-height: 450px;
+      min-height: 300px;
+    }
+
+    &.short {
+      max-height: 300px;
+      min-height: 250px;
+    }
+  }
+
+  .A_ToggleSwitchOption {
+    width: 170px;
+    height: 46px;
+    font-size: 14px;
+  }
+
+  .A_PageDescription {
+    font-size: 14px;
+    max-width: 360px;
+  }
+
+  .A_MainPageCoverText {
+    line-height: 100%;
+
+    &.druk {
+      font-size: 80px;
+    }
+
+    &.druzhok {
+      margin-bottom: -10px;
+      font-size: 60px;
+    }
+  }
+
+  .A_MainPageCoverText:nth-child(3) {
+    padding-left: 74px;
+  }
+
+  .A_ArticlePreviewTitle {
+    font-size: 90px;
+
+    &.druk {
+      text-align: left;
+    }
+
+    &.druzhok {
+      margin-bottom: -20px;
+    }
   }
 }

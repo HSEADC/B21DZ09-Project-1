@@ -288,10 +288,6 @@
   margin: 0 auto;
   margin-bottom: 200px;
 
-  &.fixed {
-    position: fixed;
-  }
-
   .W_AntitrendOption {
     cursor: pointer;
     max-height: 300px;
@@ -391,8 +387,8 @@
   }
 
   .M_ButtonSurvey {
-    grid-column: 15 / 17;
-    margin-top: 40px;
+    grid-column: 15 / 18;
+    margin-top: 20px;
     color: var(--white);
   }
 }
@@ -484,7 +480,7 @@
     }
   }
 
-  .O_ToggleSwitchInfluencers {
+  .O_ToggleSwitch {
     padding: 20px 0 0 0;
   }
 
@@ -501,6 +497,23 @@
       gap: 40px;
     }
   }
+
+  .O_Gallery {
+    column-gap: 12px;
+  }
+
+  .O_AntitrendsPreview {
+    width: 1230px;
+    column-gap: 12px;
+
+    .W_ArticleTitle {
+      grid-column: 10 / 19;
+    }
+
+    .M_ButtonSurvey {
+      grid-column: 16 / 19;
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -510,7 +523,7 @@
 
     .W_NavBar {
       grid-column: 1 / 19;
-      margin-top: 20px;
+      margin-top: 40px;
 
       .Q_SearchIcon {
         margin-left: 20px;
@@ -529,6 +542,18 @@
       .A_BoldTextFooter {
         margin-top: 6px;
       }
+    }
+
+    .W_NamesFooter {
+      grid-column: 15 / 19;
+    }
+
+    .W_CopyrightFooter {
+      grid-column: 1 / 4;
+    }
+
+    .W_SocialMediaIcons {
+      grid-column: 15 / 19;
     }
   }
 
@@ -589,7 +614,7 @@
     }
   }
 
-  .O_ToggleSwitchInfluencers {
+  .O_ToggleSwitch {
     padding: 20px 0 0 0;
   }
 
@@ -606,6 +631,15 @@
       gap: 30px;
     }
   }
+
+  .O_Gallery {
+    column-gap: 12px;
+  }
+
+  .O_AntitrendsPreview {
+    width: 974px;
+    column-gap: 12px;
+  }
 }
 
 @media only screen and (min-width: 744px) and (max-width: 1023px) {
@@ -615,7 +649,7 @@
 
     .W_NavBar {
       grid-column: 1 / 19;
-      margin-top: 20px;
+      margin-top: 40px;
 
       .Q_SearchIcon {
         margin-left: 20px;
@@ -634,6 +668,18 @@
       .A_BoldTextFooter {
         margin-top: 6px;
       }
+    }
+
+    .W_NamesFooter {
+      grid-column: 14 / 19;
+    }
+
+    .W_CopyrightFooter {
+      grid-column: 1 / 4;
+    }
+
+    .W_SocialMediaIcons {
+      grid-column: 14 / 19;
     }
   }
 
@@ -691,6 +737,28 @@
 
     .W_StylesRail {
       grid-column: 7 /19;
+    }
+  }
+
+  .O_ScrollAntitrends {
+    margin-bottom: 80px;
+  }
+
+  .O_Gallery {
+    column-gap: 12px;
+
+    .W_AntitrendOption {
+      max-height: 190px;
+      min-height: 160px;
+    }
+  }
+
+  .O_AntitrendsPreview {
+    width: 694px;
+    column-gap: 12px;
+
+    .W_ArticleTitle {
+      grid-column: 10 / 19;
     }
   }
 }
@@ -814,6 +882,131 @@
 
     .W_StylesRail {
       overflow-x: scroll;
+    }
+  }
+
+  .O_ToggleSwitch {
+    padding: 20px 0 40px 0;
+  }
+
+  .O_RunningLine {
+    margin-bottom: 0px;
+  }
+
+  .O_ScrollAntitrends {
+    margin-top: 100px;
+    margin-bottom: 0px;
+  }
+
+  .O_Gallery {
+    grid-column: 1 / 5;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    margin-bottom: 0;
+
+    .W_AntitrendOption {
+      max-height: 190px;
+      min-height: 160px;
+    }
+
+    .W_AntitrendOption {
+      max-height: 300px;
+      min-height: 150px;
+
+      &#cardigan {
+        grid-column: 1/ 3;
+      }
+
+      &#naked {
+        grid-column: 3/ 5;
+        margin-top: 100%;
+      }
+
+      &#snud {
+        grid-column: 2 / 4;
+        margin-top: 20%;
+      }
+
+      &#sweater {
+        grid-column: 1/ 3;
+        margin-top: 100%;
+      }
+
+      &#oversize {
+        grid-column: 1/ 5;
+        margin-top: 10%;
+      }
+
+      &#collar {
+        grid-column: 2/ 4;
+        margin-top: 20%;
+      }
+
+      &#skinny {
+        grid-column: 1/ 3;
+        margin-top: -100%;
+      }
+
+      &#neon {
+        grid-column: 1 / 3;
+        margin-top: 15%;
+      }
+
+      &#clutch {
+        grid-column: 3 / 5;
+        margin-top: 100%;
+      }
+
+      &#decor {
+        grid-column: 3/ 5;
+        margin-top: 20%;
+      }
+
+      &#jacket {
+        grid-column: 2/ 4;
+        margin-top: 20%;
+      }
+
+      &#waist {
+        grid-column: 2/ 4;
+        margin-top: 20%;
+      }
+
+      &#hils {
+        grid-column: 1/ 4;
+        margin-top: 20%;
+      }
+
+      &#pleating {
+        grid-column: 3/ 5;
+        margin-top: 20%;
+      }
+
+      &#ugly {
+        grid-column: 3 / 5;
+        margin-top: 15%;
+      }
+    }
+  }
+
+  .O_AntitrendsPreview {
+    grid-column: 1 / 5;
+    width: 330px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+
+    .W_ArticleTitle {
+      grid-column: 1 / 5;
+
+      .A_ArticleHeadingWide {
+        font-size: 28px;
+      }
+    }
+
+    .M_ButtonSurvey {
+      grid-column: 1 / 5;
+      margin-top: 10px;
     }
   }
 }

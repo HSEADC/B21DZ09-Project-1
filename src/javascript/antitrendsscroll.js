@@ -17,7 +17,7 @@ document.querySelector('.C_AntitrendsRail').style.paddingLeft =
     e.preventDefault()
     e = window.event || e
     let delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail))
-    scrollContainer.scrollLeft -= delta * 40
+    scrollContainer.scrollLeft -= delta * 30
   }
   if (scrollContainer.addEventListener) {
     // IE9, Chrome, Safari, Opera

@@ -22,5 +22,11 @@ for (let i = 0; i < toggleSwitchOption.length; i++) {
 const runningLineOne = document.querySelector('.M_RunningLine')
 const runningLineTwo = document.querySelector('.M_RunningLineTwo')
 
-runningLineOne.innerHTML = runningLineOne.innerHTML + runningLineOne.innerHTML
-runningLineTwo.innerHTML = runningLineTwo.innerHTML + runningLineTwo.innerHTML
+const mediaphone = window.matchMedia(
+  '(min-width: 768px) and (max-width: 3000px)'
+)
+
+if (mediaphone.matches) {
+  runningLineOne.innerHTML = runningLineOne.innerHTML + runningLineOne.innerHTML
+  runningLineTwo.innerHTML = runningLineTwo.innerHTML + runningLineTwo.innerHTML
+}

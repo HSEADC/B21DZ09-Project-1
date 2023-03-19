@@ -150,8 +150,8 @@
 .Q_BlackBackgroundMainPage {
   position: absolute;
   width: 100vw;
-  height: 430vh;
-  margin-top: -60vh;
+  height: 4800px;
+  margin-top: -700px;
   z-index: -1;
   background-color: var(--black);
 }
@@ -177,9 +177,9 @@
     height: 34px;
   }
 
-  .Q_WideLetter {
-    font-size: 300px;
-  }
+  // .Q_WideLetter {
+  //   font-size: 300px;
+  // }
 
   .Q_Image {
     &.long {
@@ -204,6 +204,11 @@
     width: 20px;
     height: 20px;
   }
+
+  .Q_BlackBackgroundMainPage {
+    height: 4000px;
+    margin-top: -450px;
+  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -213,21 +218,21 @@
   }
 
   .Q_SocialMediaIcon {
-    width: 14px;
-    height: 14px;
+    width: 26px;
+    height: 26px;
   }
 
   .vk {
-    width: 23px;
+    width: 35px;
   }
 
   .tg {
-    height: 16px;
+    height: 28px;
   }
 
-  .Q_WideLetter {
-    font-size: 300px;
-  }
+  // .Q_WideLetter {
+  //   font-size: 300px;
+  // }
 
   .Q_Image {
     &.long {
@@ -252,6 +257,11 @@
     width: 20px;
     height: 20px;
   }
+
+  .Q_BlackBackgroundMainPage {
+    height: 3200px;
+    margin-top: -400px;
+  }
 }
 
 @media only screen and (min-width: 744px) and (max-width: 1023px) {
@@ -261,21 +271,21 @@
   }
 
   .Q_SocialMediaIcon {
-    width: 14px;
-    height: 14px;
+    width: 24px;
+    height: 24px;
   }
 
   .vk {
-    width: 23px;
+    width: 33px;
   }
 
   .tg {
-    height: 16px;
+    height: 26px;
   }
 
-  .Q_WideLetter {
-    font-size: 200px;
-  }
+  // .Q_WideLetter {
+  //   font-size: 200px;
+  // }
 
   .Q_Image {
     &.long {
@@ -300,6 +310,11 @@
     width: 20px;
     height: 20px;
   }
+
+  .Q_BlackBackgroundMainPage {
+    height: 2800px;
+    margin-top: -400px;
+  }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 743px) {
@@ -321,9 +336,9 @@
     height: 30px;
   }
 
-  .Q_WideLetter {
-    font-size: 86px;
-  }
+  // .Q_WideLetter {
+  //   font-size: 86px;
+  // }
 
   .Q_Image {
     &.long {
@@ -351,5 +366,10 @@
   .Q_HintIcon {
     width: 20px;
     height: 20px;
+  }
+
+  .Q_BlackBackgroundMainPage {
+    height: 3000px;
+    margin-top: -380px;
   }
 }
