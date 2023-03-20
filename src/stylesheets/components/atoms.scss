@@ -1,7 +1,7 @@
 .A_Logo {
   display: block;
-  width: 280px;
-  height: 38px;
+  width: 281px;
+  height: 39px;
   background-position: top left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -12,6 +12,36 @@
 
   &.white {
     background-image: url('./images/newlogowhite.svg');
+  }
+}
+
+.A_Logo:hover {
+  &.black {
+    background-image: url('./images/basic/logo.gif');
+  }
+
+  &.white {
+    background-image: url('./images/basic/logowhite.gif');
+  }
+}
+
+.A_LogoGifFix {
+  position: absolute;
+  top: -100vh;
+  left: -100vw;
+  display: block;
+  width: 280px;
+  height: 38px;
+  background-position: top left;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &.black {
+    background-image: url('./images/basic/logo.gif');
+  }
+
+  &.white {
+    background-image: url('./images/basic/logowhite.gif');
   }
 }
 
@@ -416,7 +446,6 @@
 .A_RunningLineTwo {
   width: max-content;
   margin-top: -90px;
-  animation: line 15s linear infinite;
   animation-play-state: running;
   font-size: 790px;
   font-family: 'Druk Condensed Cyr Super';
@@ -439,32 +468,21 @@
   }
 }
 
+.A_RunningLine {
+  animation: line 15s linear infinite;
+}
+
+.A_RunningLineTwo {
+  animation: line 25s linear infinite;
+}
+
 .A_RunningLineImage {
   position: absolute;
   width: 350px;
-  height: 300px;
   z-index: 2;
 
   .Q_Image {
     img {
-      animation: slideup 0.5s 1 ease-out;
-
-      @keyframes slideup {
-        0% {
-          object-position: 0px -150px;
-        }
-        100% {
-          object-position: center top;
-        }
-      }
-    }
-  }
-}
-
-.A_RunningLineImage:hover {
-  .Q_Image {
-    img {
-      object-position: 0px -400px;
       transition: all 0.5s ease-out;
     }
   }
@@ -521,6 +539,10 @@
   color: var(--white);
   cursor: pointer;
   z-index: 2;
+}
+
+.A_FixedImage {
+  display: none;
 }
 
 .A_TitleLine {
@@ -812,7 +834,6 @@
   .A_RunningLine,
   .A_RunningLineTwo {
     margin-top: -70px;
-    animation: line 15s linear infinite;
     font-size: 650px;
 
     .Q_WideLetter {
@@ -822,7 +843,7 @@
 
   .A_RunningLineImage {
     width: 320px;
-    height: 250px;
+    height: 320px;
   }
 
   .A_InfluenserImages {
@@ -1095,7 +1116,6 @@
   .A_RunningLine,
   .A_RunningLineTwo {
     margin-top: -60px;
-    animation: line 20s linear infinite;
     font-size: 590px;
 
     .Q_WideLetter {
@@ -1103,9 +1123,17 @@
     }
   }
 
+  .A_RunningLine {
+    animation: line 20s linear infinite;
+  }
+
+  .A_RunningLineTwo {
+    animation: line 30s linear infinite;
+  }
+
   .A_RunningLineImage {
     width: 280px;
-    height: 200px;
+    height: 280px;
   }
 
   .A_InfluenserImages {
@@ -1361,23 +1389,43 @@
     font-size: 8px;
   }
 
+  .A_RunningLine,
+  .A_RunningLineTwo {
+    margin-top: -60px;
+    font-size: 590px;
+
+    .Q_WideLetter {
+      font-size: 590px;
+    }
+  }
+
+  .A_RunningLine {
+    animation: line 20s linear infinite;
+  }
+
+  .A_RunningLineTwo {
+    animation: line 30s linear infinite;
+  }
+
+  .A_RunningLineImage {
+    width: 220px;
+    height: 220px;
+  }
+
+  .A_InfluenserImages {
+    display: none;
+  }
+
+  .A_InfluencerName {
+    font-size: 40px;
+  }
+
   ///
   .A_ToggleSwitchOption {
     width: 120px;
     height: 40px;
     border-radius: 50px;
     font-size: 12px;
-  }
-
-  .A_RunningLine,
-  .A_RunningLineTwo {
-    margin-top: -60px;
-    animation: line 20s linear infinite;
-    font-size: 590px;
-
-    .Q_WideLetter {
-      font-size: 590px;
-    }
   }
 
   .A_LineImages {
@@ -1626,6 +1674,19 @@
     font-size: 10px;
   }
 
+  .A_RunningLineImage {
+    display: none;
+  }
+
+  .A_InfluenserImages {
+    display: none;
+  }
+
+  .A_InfluencerName {
+    font-size: 32px;
+    padding-bottom: 40px;
+  }
+
   .A_RunningLine,
   .A_RunningLineTwo {
     display: none;
@@ -1643,6 +1704,17 @@
       font-size: 116px;
       font-family: 'Druk Text Wide Cyr';
     }
+  }
+
+  .A_FixedImage {
+    display: block;
+    grid-column: 2 / 5;
+    position: absolute;
+    height: 40vh;
+    width: 100%;
+    margin-top: 50px;
+    filter: brightness(70%);
+    z-index: -1;
   }
 
   .A_LineImages {

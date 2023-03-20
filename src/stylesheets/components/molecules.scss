@@ -629,6 +629,23 @@
     width: 252px;
   }
 
+  .M_InfluencerName {
+    &:hover {
+      .A_InfluencerName {
+        color: var(--green);
+      }
+      .A_InfluenserImages {
+        display: none;
+      }
+    }
+
+    &:active {
+      .A_InfluencerName {
+        color: var(--green);
+      }
+    }
+  }
+
   .M_Antitrend {
     width: 694px;
     column-gap: 12px;

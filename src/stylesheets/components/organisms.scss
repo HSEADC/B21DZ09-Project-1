@@ -740,6 +740,20 @@
     }
   }
 
+  .O_RunningLine {
+    margin-bottom: 80px;
+  }
+
+  .O_Influencers {
+    width: 694px;
+    column-gap: 12px;
+    padding-bottom: 50px;
+
+    .W_InfluencersNames {
+      gap: 30px;
+    }
+  }
+
   .O_ScrollAntitrends {
     margin-bottom: 80px;
   }
@@ -887,6 +901,23 @@
 
   .O_ToggleSwitch {
     padding: 20px 0 40px 0;
+  }
+
+  .O_Influencers {
+    width: 330px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    padding-bottom: 100px;
+
+    .W_InfluencersNames {
+      grid-column: 1 / 5;
+      display: flex;
+      gap: 0px;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
 
   .O_RunningLine {

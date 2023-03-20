@@ -1585,6 +1585,60 @@
     }
   }
 
+  .S_Influencers {
+    .M_RunningLine {
+      .Q_Image {
+        position: absolute;
+        z-index: 2;
+      }
+
+      .Q_Image:nth-child(3) {
+        top: 25vh;
+        left: 6vw;
+        height: 100px;
+        width: 100px;
+      }
+
+      .Q_Image:nth-child(4) {
+        top: 65vh;
+        left: 50vw;
+        height: 155px;
+        width: 155px;
+      }
+    }
+
+    .W_StaticLine {
+      margin-top: 100px;
+    }
+  }
+
+  .S_Movies {
+    .M_RunningLineTwo {
+      .Q_Image {
+        position: absolute;
+        z-index: 2;
+      }
+
+      .Q_Image:nth-child(3) {
+        top: 65vh;
+        left: 50vw;
+        height: 155px;
+        width: 155px;
+      }
+
+      .Q_Image:nth-child(4) {
+        top: 25vh;
+        left: 6vw;
+        height: 100px;
+        width: 100px;
+      }
+    }
+
+    .W_StaticLine {
+      margin-top: 100px;
+    }
+  }
+
   .S_Gallery {
     width: 330px;
     grid-template-columns: repeat(4, 1fr);
@@ -1680,7 +1734,7 @@
       .W_ArticlePreviewTitle {
         .A_ArticlePreviewTitle {
           &.druzhok {
-            font-size: 40px;
+            font-size: 60px;
             margin-bottom: -10px;
           }
         }
