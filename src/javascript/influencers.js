@@ -1,3 +1,4 @@
 import '../index.css'
+import './navbarscroll.js'
 import './influencerstoggle.js'
-import './titleimage.js'
+import './runninglineimage.js'

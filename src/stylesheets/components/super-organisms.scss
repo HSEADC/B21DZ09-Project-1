@@ -1,10 +1,17 @@
 .S_NavBar {
-  color: var(--black);
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding-bottom: 20px;
-  margin-bottom: 0px;
+  margin: 0 auto;
+  color: var(--black);
+  background-color: var(--white);
+  transition: top 0.3s;
+  z-index: 10;
 
   &.white {
     color: var(--white);
+    background-color: var(--black);
   }
 }
 
@@ -90,6 +97,18 @@
 
   &.influencers {
     margin-bottom: 200px;
+
+    &#timothee {
+      .A_TitleDruzhok {
+        font-size: 320px;
+        margin-bottom: -120px;
+      }
+
+      .A_TitleDruk {
+        font-size: 380px;
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -560,6 +579,18 @@
 
     &.influencers {
       margin-bottom: 200px;
+
+      &#timothee {
+        .A_TitleDruzhok {
+          font-size: 250px;
+          margin-bottom: -80px;
+        }
+
+        .A_TitleDruk {
+          font-size: 250px;
+          text-align: center;
+        }
+      }
     }
   }
 
@@ -827,6 +858,18 @@
 
     &.influencers {
       margin-bottom: 80px;
+
+      &#timothee {
+        .A_TitleDruzhok {
+          font-size: 190px;
+          margin-bottom: -70px;
+        }
+
+        .A_TitleDruk {
+          font-size: 200px;
+          text-align: center;
+        }
+      }
     }
   }
 
@@ -1095,6 +1138,18 @@
 
     &.influencers {
       margin-bottom: 80px;
+
+      &#timothee {
+        .A_TitleDruzhok {
+          font-size: 140px;
+          margin-bottom: -50px;
+        }
+
+        .A_TitleDruk {
+          font-size: 150px;
+          text-align: center;
+        }
+      }
     }
   }
 
@@ -1172,6 +1227,7 @@
       .W_TagBar {
         .M_Tag {
           margin-right: 6px;
+          margin-bottom: 6px;
         }
       }
     }
@@ -1367,7 +1423,7 @@
       min-height: 75vh;
 
       .O_StyleArticleDescription {
-        margin-top: -55px;
+        margin-top: -30px;
       }
 
       &.individuals {
@@ -1375,10 +1431,16 @@
           margin-top: -20vh;
         }
       }
+
+      .A_TitleImage {
+        width: 242px;
+        height: 275px;
+      }
     }
 
     &.influencers {
       margin-bottom: 100px;
+      height: 50vh;
 
       .M_Title {
         align-items: center;
@@ -1387,19 +1449,34 @@
         .A_TitleImage {
           width: 144px;
           height: 144px;
-          z-index: 2;
+          z-index: -1;
           margin: 0;
+          margin-top: -210px;
         }
 
         .A_TitleDruzhok {
-          font-size: 160px;
+          line-height: 100%;
+          font-size: 80px;
         }
 
         .A_TitleDruk {
-          font-size: 160px;
-          line-height: 80%;
+          line-height: 100%;
+          font-size: 100px;
           text-align: center;
         }
+      }
+    }
+
+    &#timothee {
+      .A_TitleDruzhok {
+        line-height: 100%;
+        font-size: 70px;
+      }
+
+      .A_TitleDruk {
+        line-height: 100%;
+        font-size: 100px;
+        text-align: center;
       }
     }
   }
@@ -1514,7 +1591,7 @@
       padding: 20px 20px 20px 20px;
       position: absolute;
       margin-left: 120px;
-      margin-top: 300px;
+      margin-top: 280px;
 
       .A_TitleCharacteristics {
         width: 100%;
@@ -1691,8 +1768,14 @@
     }
 
     .W_StylesRail {
-      overflow-x: scroll;
       grid-column: 1 / 5;
+      overflow-x: scroll;
+      scrollbar-width: 0;
+    }
+
+    .W_StylesRail::-webkit-scrollbar {
+      width: 0;
+      height: 0;
     }
 
     .C_Styles {

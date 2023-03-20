@@ -1,17 +1,15 @@
-const runningLineImages = document.querySelectorAll(
-  '.A_RunningLineImage > .Q_Image'
-)
+const titleImages = document.querySelectorAll('.A_TitleImage')
 
-for (let i = 0; i < runningLineImages.length; i++) {
-  const runningLineImage = runningLineImages[i]
-  const runningLineImageContent = runningLineImage.querySelector('img')
-  const imageHeight = runningLineImageContent.height
+for (let i = 0; i < titleImages.length; i++) {
+  const titleImage = titleImages[i]
+  const titleImageContent = titleImage.querySelector('img')
+  const imageHeight = titleImageContent.height
 
-  runningLineImage.addEventListener('mouseenter', () => {
-    runningLineImageContent.style.objectPosition = '0px -' + imageHeight + 'px'
+  titleImage.addEventListener('mouseenter', () => {
+    titleImageContent.style.objectPosition = '0px -' + imageHeight + 'px'
   })
 
-  runningLineImage.addEventListener('mouseleave', () => {
-    runningLineImageContent.style.objectPosition = '0px 0px'
+  titleImage.addEventListener('mouseleave', () => {
+    titleImageContent.style.objectPosition = '0px 0px'
   })
 }

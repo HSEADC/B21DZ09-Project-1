@@ -118,18 +118,15 @@
 
 .A_TitleImage {
   position: absolute;
-  max-width: 180px;
-  max-height: 280px;
+  max-width: 150px;
+  max-height: 220px;
   z-index: 2;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  img:hover {
-    display: none;
+    transition: all 0.5s ease-out;
   }
 }
 
@@ -326,6 +323,7 @@
 }
 
 .A_ContentCharacteristics {
+  line-height: 125%;
   font-size: 20px;
   font-family: 'Druk Text Wide Cyr';
   font-weight: 800;
@@ -693,8 +691,8 @@
   }
 
   .A_TitleImage {
-    max-width: 180px;
-    max-height: 280px;
+    max-width: 120px;
+    max-height: 200px;
   }
 
   .A_ArticleText {
@@ -960,8 +958,8 @@
   }
 
   .A_TitleImage {
-    max-width: 150px;
-    max-height: 220px;
+    max-width: 120px;
+    max-height: 200px;
   }
 
   .A_ArticleText {
@@ -1244,8 +1242,8 @@
   }
 
   .A_TitleImage {
-    max-width: 125px;
-    max-height: 180px;
+    max-width: 100px;
+    max-height: 150px;
   }
 
   .A_ArticleText {
@@ -1342,11 +1340,11 @@
   }
 
   .A_TitleCharacteristics {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .A_ContentCharacteristics {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .A_CoverText {
@@ -1521,8 +1519,8 @@
   }
 
   .A_TitleImage {
-    max-width: 242px;
-    max-height: 275px;
+    width: 242px;
+    height: 275px;
   }
 
   .A_ArticleText {
@@ -1620,12 +1618,12 @@
   }
 
   .A_TitleCharacteristics {
-    font-size: 8px;
+    font-size: 11px;
     font-family: 'Druk Text Wide Cyr';
   }
 
   .A_ContentCharacteristics {
-    font-size: 8px;
+    font-size: 11px;
     font-family: 'Inter';
     font-weight: 400;
   }

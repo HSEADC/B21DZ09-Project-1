@@ -1,4 +1,5 @@
 import './index.css'
+
 // import './javascript/randomimage.js'
 
 import anime from 'animejs/lib/anime.es.js'
