@@ -1556,6 +1556,12 @@
 
     .W_StylesRail {
       overflow-x: scroll;
+      scrollbar-width: 0;
+    }
+
+    .W_StylesRail::-webkit-scrollbar {
+      width: 0;
+      height: 0;
     }
 
     .C_Styles {
