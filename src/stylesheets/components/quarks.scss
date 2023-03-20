@@ -4,6 +4,7 @@
   background-position: top center;
   background-size: contain;
   background-repeat: no-repeat;
+  cursor: pointer;
 
   &.black {
     background-image: url('./images/Q_SearchIcon-black.svg');
@@ -21,9 +22,11 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .tg {
+  height: 34px;
   background-image: url('./images/telegram.svg');
 
   &.white {
@@ -49,7 +52,6 @@
 }
 
 .dzen {
-  height: 34px;
   background-image: url('./images/dzen.svg');
 
   &.white {
@@ -59,7 +61,7 @@
 
 .Q_WideLetter {
   line-height: 100%;
-  font-size: 388px;
+  // font-size: 388px;
   font-family: 'Druk Text Wide Cyr';
   font-weight: 800;
   text-transform: uppercase;
@@ -99,34 +101,275 @@
   width: 47px;
   height: 47px;
   border-radius: 50%;
-  background: var(--green);
-  background-image: url('./images/basic/ArrowHorizontalBlack.svg');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 60%;
+  cursor: pointer;
 
-  &.BlackBottomRight{
-    background: var(--black);
-    background-image: url('./images/basic/ArrowHorizontalWhite.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: rotate(45deg);
+  &.black {
+    background-color: var(--green);
+    background-image: url('./images/basic/ArrowHorizontalBlack.svg');
   }
 
-  &.BlackTopLeft{
-    background: var(--black);
+  &.green {
+    background-color: var(--black);
     background-image: url('./images/basic/ArrowHorizontalWhite.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: rotate(-125deg);
+  }
+
+  &.left {
+    transform: rotate(180deg);
   }
 }
 
-.Q_HintIcon{
-  width: 20px;
-  height: 20px;
+.Q_HintIcon {
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: var(--black);
   background-image: url('./images/basic/i.svg');
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.Q_BackgroundBlur {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: -webkit-fill-available;
+  background-color: var(--black);
+  opacity: 80%;
+  filter: blur(50);
+  z-index: 2;
+
+  &.active {
+    display: block;
+  }
+}
+
+.Q_BlackBackgroundMainPage {
+  position: absolute;
+  width: 100vw;
+  height: 4800px;
+  margin-top: -700px;
+  z-index: -1;
+  background-color: var(--black);
+}
+
+//adaptives
+
+@media only screen and (min-width: 1280px) and (max-width: 1679px) {
+  .Q_SearchIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Q_SocialMediaIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .vk {
+    width: 48px;
+  }
+
+  .tg {
+    height: 34px;
+  }
+
+  // .Q_WideLetter {
+  //   font-size: 300px;
+  // }
+
+  .Q_Image {
+    &.long {
+      height: 418px;
+    }
+
+    &.medium {
+      height: 353px;
+    }
+
+    &.short {
+      height: 310px;
+    }
+  }
+
+  .Q_Arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .Q_HintIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .Q_BlackBackgroundMainPage {
+    height: 4000px;
+    margin-top: -450px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .Q_SearchIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Q_SocialMediaIcon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .vk {
+    width: 35px;
+  }
+
+  .tg {
+    height: 28px;
+  }
+
+  // .Q_WideLetter {
+  //   font-size: 300px;
+  // }
+
+  .Q_Image {
+    &.long {
+      height: 310px;
+    }
+
+    &.medium {
+      height: 276px;
+    }
+
+    &.short {
+      height: 235px;
+    }
+  }
+
+  .Q_Arrow {
+    width: 26px;
+    height: 26px;
+  }
+
+  .Q_HintIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .Q_BlackBackgroundMainPage {
+    height: 3200px;
+    margin-top: -400px;
+  }
+}
+
+@media only screen and (min-width: 744px) and (max-width: 1023px) {
+  .Q_SearchIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Q_SocialMediaIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .vk {
+    width: 33px;
+  }
+
+  .tg {
+    height: 26px;
+  }
+
+  // .Q_WideLetter {
+  //   font-size: 200px;
+  // }
+
+  .Q_Image {
+    &.long {
+      height: 230px;
+    }
+
+    &.medium {
+      height: 190px;
+    }
+
+    &.short {
+      height: 162px;
+    }
+  }
+
+  .Q_Arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Q_HintIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .Q_BlackBackgroundMainPage {
+    height: 2800px;
+    margin-top: -400px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 743px) {
+  .Q_SearchIcon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .Q_SocialMediaIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .vk {
+    width: 48px;
+  }
+
+  .tg {
+    height: 30px;
+  }
+
+  // .Q_WideLetter {
+  //   font-size: 86px;
+  // }
+
+  .Q_Image {
+    &.long {
+      width: 155px;
+      height: 256px;
+    }
+
+    &.medium {
+      width: 155px;
+      height: 230px;
+    }
+
+    &.short {
+      width: 155px;
+      height: 200px;
+    }
+  }
+
+  .Q_Arrow {
+    width: 30px;
+    height: 30px;
+    background-size: 60%;
+  }
+
+  .Q_HintIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .Q_BlackBackgroundMainPage {
+    height: 3000px;
+    margin-top: -380px;
+  }
 }

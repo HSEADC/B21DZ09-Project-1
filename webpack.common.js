@@ -9,7 +9,12 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
+    articles: './src/javascript/articles.js',
+    styles: './src/javascript/styles.js',
+    influencers: './src/javascript/influencers.js',
+    antitrends: './src/javascript/antitrends.js',
+    mainpage: './src/javascript/mainpage.js'
   },
   output: {
     filename: '[name].js',
@@ -80,15 +85,16 @@ module.exports = {
       patterns: [{ from: 'src/share', to: 'share' }]
     }),
 
-    // Landing page
+    // Main Page
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['index']
+      chunks: ['mainpage']
     }),
 
+    // About
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
@@ -97,6 +103,7 @@ module.exports = {
       chunks: ['index']
     }),
 
+    // Styleguide
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
@@ -114,13 +121,22 @@ module.exports = {
       chunks: ['index']
     }),
 
-    //library
+    // Landing page
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/landing.html',
+      filename: './landing.html',
+      chunks: ['index']
+    }),
+
+    //Styles
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
       template: './src/styles.html',
       filename: './styles.html',
-      chunks: ['index']
+      chunks: ['styles']
     }),
 
     //Styles article
@@ -130,7 +146,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/styles/sport-chic.html',
       filename: './styles/sport-chic.html',
-      chunks: ['index']
+      chunks: ['articles']
     }),
 
     new HtmlWebpackPlugin({
@@ -138,7 +154,144 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/styles/sport-chic-new.html',
       filename: './styles/sport-chic-new.html',
-      chunks: ['index']
+      chunks: ['articles']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/50s-style.html',
+      filename: './styles/50s-style.html',
+      chunks: ['articles']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/classic.html',
+      filename: './styles/classic.html',
+      chunks: ['articles']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/Y2K.html',
+      filename: './styles/Y2K.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/smart-casual.html',
+      filename: './styles/smart-casual.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/minimalism.html',
+      filename: './styles/minimalism.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/lingerie.html',
+      filename: './styles/lingerie.html',
+      chunks: ['articles']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/country.html',
+      filename: './styles/country.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/animalism.html',
+      filename: './styles/animalism.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/baby-doll.html',
+      filename: './styles/baby-doll.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/art-deco.html',
+      filename: './styles/art-deco.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/boho.html',
+      filename: './styles/boho.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/80s-style.html',
+      filename: './styles/80s-style.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/combined-vintage.html',
+      filename: './styles/combined-vintage.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/buisness-casual.html',
+      filename: './styles/buisness-casual.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/gothic.html',
+      filename: './styles/gothic.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/hip-hop.html',
+      filename: './styles/hip-hop.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/futurism.html',
+      filename: './styles/futurism.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/street-style.html',
+      filename: './styles/street-style.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styles/avangard.html',
+      filename: './styles/avangard.html',
+      chunks: ['articles']
     }),
 
     //influencers
@@ -147,7 +300,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/influencers.html',
       filename: './influencers.html',
-      chunks: ['index']
+      chunks: ['influencers']
     }),
 
     //individuals article
@@ -159,13 +312,85 @@ module.exports = {
       chunks: ['index']
     }),
 
-    //movie article
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/lilnasx-new.html',
+      filename: './influencers/individuals/lilnasx-new.html',
+      chunks: ['articles']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/billie-eilish.html',
+      filename: './influencers/individuals/billie-eilish.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/kanye.html',
+      filename: './influencers/individuals/kanye.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/zendaya.html',
+      filename: './influencers/individuals/zendaya.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/timothee-chalamet.html',
+      filename: './influencers/individuals/timothee-chalamet.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/harry-styles.html',
+      filename: './influencers/individuals/harry-styles.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/freddy-mercury.html',
+      filename: './influencers/individuals/freddy-mercury.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/lady-gaga.html',
+      filename: './influencers/individuals/lady-gaga.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/rhianna.html',
+      filename: './influencers/individuals/rhianna.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/jenna-ortega.html',
+      filename: './influencers/individuals/jenna-ortega.html',
+      chunks: ['articles']
+    }),
+
+    //Movie article
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
       template: './src/influencers/movies/sexandthecity.html',
       filename: './influencers/movies/sexandthecity.html',
-      chunks: ['index']
+      chunks: ['articles']
     }),
 
     new HtmlWebpackPlugin({
@@ -173,7 +398,29 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/influencers/movies/sexandthecity-new.html',
       filename: './influencers/movies/sexandthecity-new.html',
-      chunks: ['index']
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/movies/euphoria.html',
+      filename: './influencers/movies/euphoria.html',
+      chunks: ['articles']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/movies/sex-education.html',
+      filename: './influencers/movies/sex-education.html',
+      chunks: ['articles']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/movies/devil-wears-prada.html',
+      filename: './influencers/movies/devil-wears-prada.html',
+      chunks: ['articles']
     }),
 
     //antitrends
@@ -182,7 +429,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/antitrends.html',
       filename: './antitrends.html',
-      chunks: ['index']
+      chunks: ['antitrends']
     }),
 
     // Partials
