@@ -419,25 +419,37 @@
   }
 }
 
-.A_ToggleSwitchOption {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+// .A_ToggleSwitchOption {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   width: 170px;
+//   height: 50px;
+//   border-radius: 50px;
+//   font-size: 18px;
+//   font-family: 'Inter';
+//   font-weight: 500;
+//   color: var(--white);
+//   background-color: var(--black);
+//   cursor: pointer;
+//
+//   &.active {
+//     color: var(--black);
+//     background-color: var(--green);
+//   }
+// }
+
+.A_ToggleSwitchBar {
+  position: absolute;
+  left: 0px;
+  top: 50%;
   width: 170px;
   height: 50px;
   border-radius: 50px;
-  font-size: 18px;
-  font-family: 'Inter';
-  font-weight: 500;
-  color: var(--white);
-  background-color: var(--black);
-  cursor: pointer;
-
-  &.active {
-    color: var(--black);
-    background-color: var(--green);
-  }
+  background-color: var(--green);
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
 }
 
 .A_RunningLine,
@@ -897,11 +909,11 @@
     font-size: 56px;
   }
 
-  .A_ToggleSwitchOption {
-    width: 126px;
-    height: 46px;
-    font-size: 14px;
-  }
+  // .A_ToggleSwitchOption {
+  //   width: 126px;
+  //   height: 46px;
+  //   font-size: 14px;
+  // }
 
   .A_LineImages {
     .Q_Image:nth-child(1) {
@@ -1147,11 +1159,16 @@
     font-size: 10px;
   }
 
-  .A_ToggleSwitchOption {
-    width: 120px;
+  // .A_ToggleSwitchOption {
+  //   width: 120px;
+  //   height: 40px;
+  //   border-radius: 50px;
+  //   font-size: 12px;
+  // }
+
+  .A_ToggleSwitchBar {
+    width: 98px;
     height: 40px;
-    border-radius: 50px;
-    font-size: 12px;
   }
 
   .A_RunningLine,
@@ -1478,11 +1495,16 @@
   }
 
   ///
-  .A_ToggleSwitchOption {
-    width: 120px;
+  // .A_ToggleSwitchOption {
+  //   width: 120px;
+  //   height: 40px;
+  //   border-radius: 50px;
+  //   font-size: 12px;
+  // }
+
+  .A_ToggleSwitchBar {
+    width: 98px;
     height: 40px;
-    border-radius: 50px;
-    font-size: 12px;
   }
 
   .A_LineImages {
@@ -1841,10 +1863,15 @@
     }
   }
 
-  .A_ToggleSwitchOption {
-    width: 170px;
-    height: 46px;
-    font-size: 14px;
+  // .A_ToggleSwitchOption {
+  //   width: 170px;
+  //   height: 46px;
+  //   font-size: 14px;
+  // }
+
+  .A_ToggleSwitchBar {
+    width: 155px;
+    height: 40px;
   }
 
   .A_PageDescription {
