@@ -645,12 +645,40 @@
     }
   }
   &.druzhok {
-    line-height: 100%;
     margin-bottom: -60px;
+    line-height: 100%;
     font-family: 'DRUZHOK';
   }
 }
 
+.A_ErrorTitle {
+  font-size: 420px;
+  font-family: 'Druk Condensed Cyr Super';
+  text-transform: uppercase;
+  user-select: none;
+
+  .Q_MediumLetter {
+    font-family: 'Druk Cyr';
+    font-weight: 800;
+  }
+}
+
+.A_ErrorWoops {
+  position: relative;
+  padding-left: 30px;
+  margin-top: 10px;
+  margin-bottom: -30px;
+  font-size: 58px;
+  font-family: 'DRUZHOK';
+  z-index: 2;
+}
+
+.A_ErrorText {
+  line-height: 135%;
+  font-size: 20px;
+  font-family: 'Inter';
+  font-weight: 400;
+}
 //adaptives
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
@@ -917,6 +945,21 @@
     &.druzhok {
       margin-bottom: -60px;
     }
+  }
+
+  .A_ErrorTitle {
+    font-size: 360px;
+  }
+
+  .A_ErrorWoops {
+    padding-left: 30px;
+    margin-top: 50px;
+    margin-bottom: -30px;
+    font-size: 58px;
+  }
+
+  .A_ErrorText {
+    font-size: 18px;
   }
 }
 
@@ -1201,6 +1244,22 @@
     &.druzhok {
       margin-bottom: -60px;
     }
+  }
+
+  .A_ErrorTitle {
+    font-size: 280px;
+  }
+
+  .A_ErrorWoops {
+    width: 80%;
+    padding-left: 30px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    font-size: 36px;
+  }
+
+  .A_ErrorText {
+    font-size: 14px;
   }
 }
 
@@ -1488,12 +1547,42 @@
       margin-bottom: -40px;
     }
   }
+
+  .A_ErrorTitle {
+    font-size: 260px;
+  }
+
+  .A_ErrorWoops {
+    width: 80%;
+    padding-left: 30px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    font-size: 36px;
+  }
+
+  .A_ErrorText {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 743px) {
   .A_Logo {
     width: 148px;
     height: 20px;
+  }
+
+  .A_NavBarCategory {
+    font-size: 14px;
+    height: 20px;
+    padding-bottom: 6px;
+  }
+
+  .A_NavBarCategory:hover {
+    border-bottom: 2px solid var(--black);
+  }
+
+  .A_NavBarCategory:active {
+    border-bottom: 2px solid var(--black);
   }
 
   .A_BoldTextFooter {
@@ -1790,5 +1879,21 @@
     &.druzhok {
       margin-bottom: -20px;
     }
+  }
+
+  .A_ErrorTitle {
+    font-size: 134px;
+  }
+
+  .A_ErrorWoops {
+    width: 100%;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    font-size: 36px;
+  }
+
+  .A_ErrorText {
+    font-size: 14px;
   }
 }

@@ -529,6 +529,21 @@
   }
 }
 
+.S_Error {
+  display: grid;
+  width: 1630px;
+  grid-template-columns: repeat(18, 1fr);
+  column-gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .Q_Image {
+    grid-column: 4/ 9;
+    max-height: 300px;
+    margin-top: 70px;
+  }
+}
+
 //adaptives
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
@@ -803,6 +818,17 @@
       width: 70vw;
       height: auto;
       margin-top: -300px;
+    }
+  }
+
+  .S_Error {
+    width: 1230px;
+    column-gap: 12px;
+
+    .Q_Image {
+      grid-column: 4/ 9;
+      max-height: 300px;
+      margin-top: 50px;
     }
   }
 }
@@ -1081,6 +1107,17 @@
       width: 80vw;
       height: auto;
       margin-top: -200px;
+    }
+  }
+
+  .S_Error {
+    width: 974px;
+    column-gap: 12px;
+
+    .Q_Image {
+      grid-column: 4/ 9;
+      max-height: 220px;
+      margin-top: 30px;
     }
   }
 }
@@ -1371,6 +1408,17 @@
       margin-top: -120px;
     }
   }
+
+  .S_Error {
+    width: 694px;
+    column-gap: 12px;
+
+    .Q_Image {
+      grid-column: 2/ 6;
+      max-height: 130px;
+      margin-top: 50px;
+    }
+  }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 743px) {
@@ -1384,7 +1432,7 @@
 
   .S_Cover {
     overflow: hidden;
-    width: 330px;
+    width: 332px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     margin: 0 auto;
@@ -1482,7 +1530,7 @@
   }
 
   .S_ArticleBlock {
-    width: 330px;
+    width: 332px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1574,7 +1622,7 @@
   }
 
   .S_Character {
-    width: 330px;
+    width: 332px;
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
@@ -1627,7 +1675,7 @@
   .S_StyleCategory {
     display: flex;
     flex-direction: column;
-    width: 330px;
+    width: 332px;
     margin-top: 100px;
     margin-bottom: 100px;
 
@@ -1652,7 +1700,7 @@
   .S_AllCharacters {
     position: relative;
     display: grid;
-    width: 330px;
+    width: 332px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     margin: 0 auto;
@@ -1660,7 +1708,7 @@
     // margin-top: 100px;
 
     .C_CharacterCards {
-      width: 330px;
+      width: 332px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 20px;
@@ -1723,7 +1771,7 @@
   }
 
   .S_Gallery {
-    width: 330px;
+    width: 332px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     margin: 0 auto;
@@ -1731,7 +1779,7 @@
   }
 
   .S_MainPageCover {
-    width: 330px;
+    width: 332px;
     min-height: 70vh;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
@@ -1757,7 +1805,7 @@
   }
 
   .S_ArticleExamples {
-    width: 330px;
+    width: 332px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     margin-bottom: 100px;
@@ -1787,7 +1835,7 @@
   }
 
   .S_ArticlePreview {
-    width: 330px;
+    width: 332px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     margin-top: 200px;
@@ -1856,6 +1904,21 @@
       width: 90vw;
       height: 60vh;
       margin-top: 20px;
+    }
+  }
+
+  .S_Error {
+    width: 332px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+
+    .Q_Image {
+      position: absolute;
+      grid-column: 1/ 5;
+      width: 332px;
+      height: 200px;
+      margin-top: 20px;
+      z-index: -1;
     }
   }
 }

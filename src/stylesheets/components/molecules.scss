@@ -37,6 +37,10 @@
   }
 }
 
+.M_Menu {
+  display: none;
+}
+
 .M_Title {
   grid-column: 1 / 19;
   display: flex;
@@ -344,6 +348,17 @@
   }
 }
 
+.M_ErrorDescription {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 50px 20px;
+  background-color: var(--green);
+}
+
 //adaptives
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
@@ -530,6 +545,12 @@
       grid-column: 11 / 15;
     }
   }
+
+  .M_ErrorDescription {
+    width: 65%;
+    gap: 20px;
+    padding: 40px 20px;
+  }
 }
 
 @media only screen and (min-width: 744px) and (max-width: 1023px) {
@@ -662,9 +683,48 @@
       grid-column: 11 / 15;
     }
   }
+
+  .M_ErrorDescription {
+    width: 65%;
+    gap: 20px;
+    padding: 40px 20px;
+  }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 743px) {
+  .M_Menu {
+    position: absolute;
+    right: -120vw;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.3s ease-in-out;
+
+    &.black {
+      background-color: var(--green);
+      color: var(--black);
+    }
+
+    &.white {
+      border-left: 1px solid var(--lightgray);
+      background-color: var(--black);
+      color: var(--white);
+    }
+
+    .C_NavBarCategories {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+      height: auto;
+      padding-bottom: 200px;
+    }
+  }
+
   .M_CategoriesFooter {
     margin-bottom: 50px;
     .A_BoldTextFooter {
@@ -839,5 +899,11 @@
       grid-column: 3 / 5;
       max-height: 400px;
     }
+  }
+
+  .M_ErrorDescription {
+    width: 100%;
+    gap: 20px;
+    padding: 40px 20px;
   }
 }

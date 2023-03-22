@@ -4,17 +4,6 @@ const background = document.querySelector('.Q_BackgroundBlur')
 
 const options = document.querySelectorAll('.W_AntitrendOption')
 
-// for (let i = 0; i < options.length; i++) {
-//   const option = options[i]
-//   let optionId = option.id
-//
-//   function search() {
-//     console.log(optionId)
-//   }
-//
-//   option.addEventListener('click', search)
-// }
-
 for (let i = 0; i < options.length; i++) {
   const option = options[i]
 
