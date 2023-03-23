@@ -4,7 +4,9 @@ for (let i = 0; i < titleImages.length; i++) {
   const titleImage = titleImages[i]
   const titleImageContent = titleImage.querySelector('img')
   const imageHeight = titleImageContent.height
+}
 
+function imageAnimation(titleImage) {
   titleImage.addEventListener('mouseenter', () => {
     titleImageContent.style.objectPosition = '0px -' + imageHeight + 'px'
   })

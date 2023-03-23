@@ -12,6 +12,10 @@ const marginleft = parseInt(
 let prevScrollpos = window.pageYOffset
 let navbarHeight = document.querySelector('.S_NavBar').offsetHeight
 
+const mediaphone = window.matchMedia(
+  '(min-width: 360px) and (max-width: 767px)'
+)
+
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset
   if (prevScrollpos > currentScrollPos) {
@@ -22,8 +26,11 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos
 }
 
-function menuInit() {
+function marginInit() {
   document.querySelectorAll('section')[1].style.marginTop = +navbarHeight + 'px'
+}
+
+function menuInit() {
   menuContent.style.paddingLeft = +marginleft + 'px'
   closeButton.style.right = +marginleft + 'px'
   menuButton.addEventListener('click', menuOpen)
@@ -40,4 +47,10 @@ function menuClose() {
   document.body.style.overflow = 'scroll'
 }
 
-document.addEventListener('DOMContentLoaded', menuInit)
+document.addEventListener('DOMContentLoaded', () => {
+  marginInit()
+
+  if (mediaphone.matches) {
+    menuInit()
+  }
+})

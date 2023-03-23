@@ -162,14 +162,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/styles/sport-chic-new.html',
-      filename: './styles/sport-chic-new.html',
-      chunks: ['articles', 'navbar']
-    }),
-
-    new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
       template: './src/styles/50s-style.html',
       filename: './styles/50s-style.html',
       chunks: ['articles', 'navbar']
@@ -264,8 +256,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/styles/buisness-casual.html',
-      filename: './styles/buisness-casual.html',
+      template: './src/styles/business-casual.html',
+      filename: './styles/business-casual.html',
       chunks: ['articles', 'navbar']
     }),
     new HtmlWebpackPlugin({
@@ -314,19 +306,12 @@ module.exports = {
     }),
 
     //individuals article
-    new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/influencers/individuals/lilnasx.html',
-      filename: './influencers/individuals/lilnasx.html',
-      chunks: ['index', 'navbar']
-    }),
 
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/influencers/individuals/lilnasx-new.html',
-      filename: './influencers/individuals/lilnasx-new.html',
+      template: './src/influencers/individuals/lil-nas-x.html',
+      filename: './influencers/individuals/lil-nas-x.html',
       chunks: ['articles', 'navbar']
     }),
 
@@ -368,8 +353,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/influencers/individuals/freddy-mercury.html',
-      filename: './influencers/individuals/freddy-mercury.html',
+      template: './src/influencers/individuals/freddie-mercury.html',
+      filename: './influencers/individuals/freddie-mercury.html',
       chunks: ['articles', 'navbar']
     }),
     new HtmlWebpackPlugin({
@@ -398,18 +383,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/influencers/movies/sexandthecity.html',
-      filename: './influencers/movies/sexandthecity.html',
+      template: './src/influencers/movies/sex-and-the-city.html',
+      filename: './influencers/movies/sex-and-the-city.html',
       chunks: ['articles', 'navbar']
     }),
 
-    new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/influencers/movies/sexandthecity-new.html',
-      filename: './influencers/movies/sexandthecity-new.html',
-      chunks: ['articles', 'navbar']
-    }),
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',

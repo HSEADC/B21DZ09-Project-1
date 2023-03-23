@@ -8,3 +8,4 @@ let div = document.querySelector('.A_TitleImage')
 let img = document.createElement('img')
 img.src = randomImage
 div.appendChild(img)
+//тут все будет по-другому, это для презы
