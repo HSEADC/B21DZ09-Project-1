@@ -7,23 +7,21 @@
 var gallery = document.querySelector('.S_Gallery');
 var antitrends = gallery.querySelectorAll('.M_Antitrend');
 var background = document.querySelector('.Q_BackgroundBlur');
-var options = document.querySelectorAll('.W_AntitrendOption'); // for (let i = 0; i < options.length; i++) {
-//   const option = options[i]
-//   let optionId = option.id
-//
-//   function search() {
-//     console.log(optionId)
-//   }
-//
-//   option.addEventListener('click', search)
-// }
+var options = document.querySelectorAll('.W_AntitrendOption');
 
-var _loop = function _loop(i) {
-  var option = options[i];
+function galleryInit() {
+  for (var i = 0; i < options.length; i++) {
+    var option = options[i];
+    searchInit(option);
+  }
+}
+
+function searchInit(option) {
+  var antitrend = option.querySelector('.M_Antitrend');
 
   function search() {
-    option.querySelector('.M_Antitrend').classList.toggle('active');
-    option.querySelector('.M_Antitrend').scrollIntoView({
+    antitrend.classList.toggle('active');
+    antitrend.scrollIntoView({
       behavior: 'smooth',
       block: 'end',
       inline: 'end'
@@ -32,11 +30,9 @@ var _loop = function _loop(i) {
   }
 
   option.addEventListener('click', search);
-};
-
-for (var i = 0; i < options.length; i++) {
-  _loop(i);
 }
+
+document.addEventListener('DOMContentLoaded', galleryInit());
 
 /***/ }),
 
@@ -46,12 +42,15 @@ for (var i = 0; i < options.length; i++) {
 var scrollContainer = document.querySelector('.O_ScrollAntitrends');
 var marginget = document.querySelector('.O_NavBar');
 var marginleft = parseInt(window.getComputedStyle(marginget).getPropertyValue('margin-left'));
-document.querySelector('.S_Scroll > .A_PageDescription').style.marginLeft = +marginleft + 'px';
-document.querySelector('.C_AntitrendsRail').style.paddingRight = +marginleft + 'px';
-document.querySelector('.C_AntitrendsRail').style.paddingLeft = +marginleft + 'px';
 
-(function () {
-  function scrollH(e) {
+function paddingsInit() {
+  document.querySelector('.S_Scroll > .A_PageDescription').style.marginLeft = +marginleft + 'px';
+  document.querySelector('.C_AntitrendsRail').style.paddingRight = +marginleft + 'px';
+  document.querySelector('.C_AntitrendsRail').style.paddingLeft = +marginleft + 'px';
+}
+
+function scrollInit() {
+  function horizontalScroll(e) {
     e.preventDefault();
     e = window.event || e;
     var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
@@ -59,73 +58,80 @@ document.querySelector('.C_AntitrendsRail').style.paddingLeft = +marginleft + 'p
   }
 
   if (scrollContainer.addEventListener) {
-    // IE9, Chrome, Safari, Opera
-    scrollContainer.addEventListener('mousewheel', scrollH, false); // Firefox
-
-    scrollContainer.addEventListener('DOMMouseScroll', scrollH, false);
+    scrollContainer.addEventListener('mousewheel', horizontalScroll, false);
+    scrollContainer.addEventListener('DOMMouseScroll', horizontalScroll, false);
   } else {
-    // IE 6/7/8
-    scrollContainer.attachEvent('onmousewheel', scrollH);
+    scrollContainer.attachEvent('onmousewheel', horizontalScroll);
   }
-})();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  paddingsInit(), scrollInit();
+});
 
 /***/ }),
 
 /***/ 534:
 /***/ (() => {
 
-var toggleSwitch = document.querySelector('.M_ToggleSwitch');
-var toggleSwitchOption = document.querySelectorAll('.A_ToggleSwitchOption');
-var scrollOption = document.querySelectorAll('.A_ToggleSwitchOption')[0];
-var galleryOption = document.querySelectorAll('.A_ToggleSwitchOption')[1];
 var sectionScroll = document.querySelector('.S_Scroll');
 var sectionGallery = document.querySelector('.S_Gallery');
-
-var _loop = function _loop(i) {
-  toggleSwitch.addEventListener('click', function (e) {
-    toggleSwitchOption[i].classList.toggle('active');
-
-    if (scrollOption.classList.contains('active')) {
-      sectionScroll.classList.add('active'), sectionGallery.classList.remove('active');
-    } else {
-      sectionGallery.classList.add('active'), sectionScroll.classList.remove('active');
-    }
-  });
-};
-
-for (var i = 0; i < toggleSwitchOption.length; i++) {
-  _loop(i);
-}
-
 var runningLineOne = document.querySelector('.M_RunningLine');
 var mediaphone = window.matchMedia('(min-width: 768px) and (max-width: 3000px)');
+var navbarHeight = document.querySelector('.S_NavBar').offsetHeight;
+var gallery = document.getElementById('gallery');
+var scroll = document.getElementById('scroll');
+var toggleSwitch = document.querySelector('.M_ToggleSwitch');
 
-if (mediaphone.matches) {
-  runningLineOne.innerHTML = runningLineOne.innerHTML + runningLineOne.innerHTML;
+function toggleSwitchInit() {
+  sectionGallery.style.marginTop = +navbarHeight + 'px';
+  gallery.addEventListener('click', function () {
+    toggleSwitch.classList.add('off'), sectionGallery.classList.add('active'), sectionScroll.classList.remove('active');
+  });
+  scroll.addEventListener('click', function () {
+    toggleSwitch.classList.remove('off');
+    sectionScroll.classList.add('active'), sectionGallery.classList.remove('active');
+  });
 }
 
-/***/ }),
-
-/***/ 215:
-/***/ (() => {
-
-var prevScrollpos = window.pageYOffset;
-var navbarHeight = document.querySelector('.S_NavBar').offsetHeight;
-console.log(navbarHeight);
-
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector('.S_NavBar').style.top = '0';
-  } else {
-    document.querySelector('.S_NavBar').style.top = '-' + navbarHeight + 'px';
+function runningLinesInit() {
+  if (mediaphone.matches) {
+    runningLineOne.innerHTML = runningLineOne.innerHTML + runningLineOne.innerHTML;
   }
+}
 
-  prevScrollpos = currentScrollPos;
-};
-
-document.querySelectorAll('section')[1].style.marginTop = +navbarHeight + 'px'; // document.getElementById('FirstScreen').style.marginTop = +navbarHeight + 'px'
+document.addEventListener('DOMContentLoaded', function () {
+  runningLinesInit(), toggleSwitchInit();
+}); // const toggleSwitch = document.querySelector('.M_ToggleSwitch')
+// const toggleSwitchOption = document.querySelectorAll('.A_ToggleSwitchOption')
+// const scrollOption = document.querySelectorAll('.A_ToggleSwitchOption')[0]
+// const galleryOption = document.querySelectorAll('.A_ToggleSwitchOption')[1]
+// const sectionScroll = document.querySelector('.S_Scroll')
+// const sectionGallery = document.querySelector('.S_Gallery')
+//
+// for (let i = 0; i < toggleSwitchOption.length; i++) {
+//   toggleSwitch.addEventListener('click', (e) => {
+//     toggleSwitchOption[i].classList.toggle('active')
+//
+//     if (scrollOption.classList.contains('active')) {
+//       sectionScroll.classList.add('active'),
+//         sectionGallery.classList.remove('active')
+//     } else {
+//       sectionGallery.classList.add('active'),
+//         sectionScroll.classList.remove('active')
+//     }
+//   })
+// }
+//
+// const runningLineOne = document.querySelector('.M_RunningLine')
+//
+// const mediaphone = window.matchMedia(
+//   '(min-width: 768px) and (max-width: 3000px)'
+// )
+//
+// if (mediaphone.matches) {
+//   runningLineOne.innerHTML = runningLineOne.innerHTML + runningLineOne.innerHTML
+// }
 
 /***/ }),
 
@@ -134,21 +140,48 @@ document.querySelectorAll('section')[1].style.marginTop = +navbarHeight + 'px'; 
 
 var titleImages = document.querySelectorAll('.A_TitleImage');
 
-var _loop = function _loop(i) {
-  var titleImage = titleImages[i];
+function imagesInit() {
+  for (var i = 0; i < titleImages.length; i++) {
+    var titleImage = titleImages[i];
+    imagesAnimation(titleImage);
+  }
+}
+
+function imagesAnimation(titleImage) {
   var titleImageContent = titleImage.querySelector('img');
-  var imageHeight = titleImageContent.height;
+  var imageHeight = titleImage.offsetHeight;
+  var heightGet = titleImage.parentElement; // const heightImg = parseInt(
+  //   window.getComputedStyle(heightGet).getPropertyValue('height')
+  // )
+  //
+
+  var heightImg = titleImage.offsetHeight;
   titleImage.addEventListener('mouseenter', function () {
-    titleImageContent.style.objectPosition = '0px -' + imageHeight + 'px';
+    titleImageContent.style.objectPosition = '0px -' + heightImg + 'px';
+    console.log(heightImg);
   });
   titleImage.addEventListener('mouseleave', function () {
     titleImageContent.style.objectPosition = '0px 0px';
   });
-};
-
-for (var i = 0; i < titleImages.length; i++) {
-  _loop(i);
 }
+
+document.addEventListener('DOMContentLoaded', imagesInit()); // const titleImages = document.querySelectorAll('.A_TitleImage')
+//
+// for (let i = 0; i < titleImages.length; i++) {
+//   const titleImage = titleImages[i]
+//   const titleImageContent = titleImage.querySelector('img')
+//   const imageHeight = titleImageContent.height
+// }
+//
+// function imageAnimation(titleImage) {
+//   titleImage.addEventListener('mouseenter', () => {
+//     titleImageContent.style.objectPosition = '0px -' + imageHeight + 'px'
+//   })
+//
+//   titleImage.addEventListener('mouseleave', () => {
+//     titleImageContent.style.objectPosition = '0px 0px'
+//   })
+// }
 
 /***/ })
 
@@ -213,18 +246,14 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/* harmony import */ var _navbarscroll_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(215);
-/* harmony import */ var _navbarscroll_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_navbarscroll_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _antitrendstoggle_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(534);
-/* harmony import */ var _antitrendstoggle_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_antitrendstoggle_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _antitrendsgallery_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(655);
-/* harmony import */ var _antitrendsgallery_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_antitrendsgallery_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(794);
-/* harmony import */ var _antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _titleimage_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(292);
-/* harmony import */ var _titleimage_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_titleimage_js__WEBPACK_IMPORTED_MODULE_4__);
-
-
+/* harmony import */ var _antitrendstoggle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(534);
+/* harmony import */ var _antitrendstoggle_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_antitrendstoggle_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _antitrendsgallery_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(655);
+/* harmony import */ var _antitrendsgallery_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_antitrendsgallery_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(794);
+/* harmony import */ var _antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _titleimage_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(292);
+/* harmony import */ var _titleimage_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_titleimage_js__WEBPACK_IMPORTED_MODULE_3__);
 
 
 

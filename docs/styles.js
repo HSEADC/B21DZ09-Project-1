@@ -6,41 +6,22 @@
 
 var hints = document.getElementsByClassName('M_Hint');
 
-var _loop = function _loop(i) {
-  var hint = hints[i];
+function hintInit() {
+  for (var i = 0; i < hints.length; i++) {
+    var hint = hints[i];
+    hintOpen(hint);
+  }
+}
+
+function hintOpen(hint) {
   var hintButton = hint.querySelector('.Q_HintIcon');
   var hintText = hint.querySelector('.A_HintText');
   hintButton.addEventListener('click', function (e) {
     hintText.classList.toggle('hidden');
   });
-};
-
-for (var i = 0; i < hints.length; i++) {
-  _loop(i);
 }
 
-/***/ }),
-
-/***/ 215:
-/***/ (() => {
-
-var prevScrollpos = window.pageYOffset;
-var navbarHeight = document.querySelector('.S_NavBar').offsetHeight;
-console.log(navbarHeight);
-
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector('.S_NavBar').style.top = '0';
-  } else {
-    document.querySelector('.S_NavBar').style.top = '-' + navbarHeight + 'px';
-  }
-
-  prevScrollpos = currentScrollPos;
-};
-
-document.querySelectorAll('section')[1].style.marginTop = +navbarHeight + 'px'; // document.getElementById('FirstScreen').style.marginTop = +navbarHeight + 'px'
+document.addEventListener('DOMContentLoaded', hintInit());
 
 /***/ }),
 
@@ -50,17 +31,21 @@ document.querySelectorAll('section')[1].style.marginTop = +navbarHeight + 'px'; 
 var marginget = document.querySelector('.O_Footer');
 var rails = document.querySelectorAll('.W_StylesRail');
 var marginleft = window.getComputedStyle(marginget).getPropertyValue('margin-left');
+var mediaphone = window.matchMedia('(min-width: 360px) and (max-width: 767px)');
 
-for (var i = 0; i < rails.length; i++) {
-  var rail = rails[i];
-  var mediaphone = window.matchMedia('(min-width: 360px) and (max-width: 767px)');
+function railMarginInit() {
+  for (var i = 0; i < rails.length; i++) {
+    var rail = rails[i];
 
-  if (mediaphone.matches) {
-    rail.style.width = 'calc(100vw - ' + marginleft + ')';
-  } else {
-    rail.style.width = '100%';
+    if (mediaphone.matches) {
+      rail.style.width = 'calc(100vw - ' + marginleft + ')';
+    } else {
+      rail.style.width = '100%';
+    }
   }
 }
+
+document.addEventListener('DOMContentLoaded', railMarginInit());
 
 /***/ })
 
@@ -125,14 +110,10 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/* harmony import */ var _navbarscroll_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(215);
-/* harmony import */ var _navbarscroll_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_navbarscroll_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _stylegalleryrail_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(982);
-/* harmony import */ var _stylegalleryrail_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_stylegalleryrail_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _hint_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(401);
-/* harmony import */ var _hint_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_hint_js__WEBPACK_IMPORTED_MODULE_2__);
-
-
+/* harmony import */ var _stylegalleryrail_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(982);
+/* harmony import */ var _stylegalleryrail_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_stylegalleryrail_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hint_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(401);
+/* harmony import */ var _hint_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_hint_js__WEBPACK_IMPORTED_MODULE_1__);
 
 
 })();
