@@ -15,6 +15,10 @@
   }
 }
 
+.Q_NavBarBurger {
+  display: none;
+}
+
 .Q_SocialMediaIcon {
   display: block;
   width: 30px;
@@ -318,6 +322,40 @@
 }
 
 @media only screen and (min-width: 360px) and (max-width: 743px) {
+  .Q_NavBarBurger {
+    display: block;
+    width: 34px;
+    height: 34px;
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &.black {
+      background-image: url('./images/basic/Q_NavBarBurgerIcon-black.svg');
+    }
+
+    &.white {
+      background-image: url('./images/basic/Q_NavBarBurgerIcon-white.svg');
+    }
+  }
+
+  .Q_Close {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &.black {
+      background-image: url('./images/basic/Q_CloseIcon-black.svg');
+    }
+  }
+
   .Q_SearchIcon {
     width: 34px;
     height: 34px;

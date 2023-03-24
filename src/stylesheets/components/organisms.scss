@@ -37,6 +37,10 @@
   }
 }
 
+.O_NavBarMobile {
+  display: none;
+}
+
 .O_Footer {
   position: relative;
   display: grid;
@@ -214,7 +218,8 @@
   justify-content: center;
   width: 100%;
   height: max-content;
-  padding: 30px 0;
+  // padding: 30px 0;
+  padding: 14px 0;
   margin: 0;
 }
 
@@ -392,6 +397,14 @@
     color: var(--white);
   }
 }
+
+.O_ErrorContent {
+  grid-column: 10 / 18;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
 //adaptives
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
@@ -513,6 +526,10 @@
     .M_ButtonSurvey {
       grid-column: 16 / 19;
     }
+  }
+
+  .O_ErrorContent {
+    grid-column: 10 / 19;
   }
 }
 
@@ -640,6 +657,10 @@
     width: 974px;
     column-gap: 12px;
   }
+
+  .O_ErrorContent {
+    grid-column: 10 / 19;
+  }
 }
 
 @media only screen and (min-width: 744px) and (max-width: 1023px) {
@@ -740,6 +761,10 @@
     }
   }
 
+  .O_ToggleSwitch {
+    padding: 30px 0;
+  }
+
   .O_RunningLine {
     margin-bottom: 80px;
   }
@@ -775,21 +800,22 @@
       grid-column: 10 / 19;
     }
   }
+
+  .O_ErrorContent {
+    grid-column: 7 / 19;
+  }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 743px) {
   .O_NavBar {
-    width: 330px;
+    width: 332px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
 
     .W_NavBar {
       grid-column: 1 / 5;
+      align-items: flex-start;
       margin-top: 40px;
-
-      .Q_SearchIcon {
-        margin-left: 20px;
-      }
 
       .W_NavBarCategories {
         display: none;
@@ -798,7 +824,7 @@
   }
 
   .O_Footer {
-    width: 330px;
+    width: 332px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
 
@@ -890,7 +916,7 @@
   .O_RecomendationsBlock {
     display: flex;
     flex-direction: column;
-    width: 330px;
+    width: 332px;
     padding-top: 50px;
     padding-bottom: 50px;
 
@@ -906,11 +932,11 @@
   }
 
   .O_ToggleSwitch {
-    padding: 20px 0 40px 0;
+    padding: 30px 0;
   }
 
   .O_Influencers {
-    width: 330px;
+    width: 332px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     padding-bottom: 100px;
@@ -1029,7 +1055,7 @@
 
   .O_AntitrendsPreview {
     grid-column: 1 / 5;
-    width: 330px;
+    width: 332px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
 
@@ -1045,5 +1071,10 @@
       grid-column: 1 / 5;
       margin-top: 10px;
     }
+  }
+
+  .O_ErrorContent {
+    grid-column: 2 / 5;
+    margin-top: 180px;
   }
 }

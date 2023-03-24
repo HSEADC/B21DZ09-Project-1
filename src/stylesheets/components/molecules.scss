@@ -37,6 +37,10 @@
   }
 }
 
+.M_Menu {
+  display: none;
+}
+
 .M_Title {
   grid-column: 1 / 19;
   display: flex;
@@ -141,6 +145,10 @@
   flex-direction: column;
   width: 100%;
   height: 444px;
+
+  img {
+    height: 392px;
+  }
 }
 
 .M_ButtonSurvey {
@@ -268,14 +276,112 @@
   margin-left: 30px;
 }
 
+// .M_ToggleSwitch {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: space-between;
+//   border-radius: 50px;
+//   border: 1px solid var(--white);
+//   width: 352px;
+// }
+
 .M_ToggleSwitch {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 352px;
+  height: 50px;
   border-radius: 50px;
   border: 1px solid var(--white);
-  width: 352px;
+  background-color: var(--black);
+  color: var(--lightgray);
+  font-size: 18px;
+  font-family: 'Inter';
+  font-weight: 400;
+  transition: left 0.3s ease-in-out;
+
+  &.off {
+    .A_ToggleSwitchBar {
+      left: 182px;
+    }
+
+    label[for='influencer'] {
+      color: var(--lightgray);
+    }
+
+    label[for='movie'] {
+      color: var(--black);
+    }
+
+    label[for='scroll'] {
+      color: var(--lightgray);
+    }
+
+    label[for='gallery'] {
+      color: var(--black);
+    }
+  }
+
+  .W_ToggleSwitchOptions {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  input {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  label {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    z-index: 1;
+    cursor: pointer;
+
+    &[for='influencer'] {
+      margin-left: 20px;
+      color: var(--black);
+    }
+
+    &[for='movie'] {
+      margin-right: 14px;
+      color: var(--lightgray);
+    }
+
+    &[for='scroll'] {
+      margin-left: 52px;
+      color: var(--black);
+    }
+
+    &[for='gallery'] {
+      margin-right: 48px;
+      color: var(--lightgray);
+    }
+  }
+
+  #influencer,
+  #scroll {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #movie,
+  #gallery {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .M_RunningLine,
@@ -344,6 +450,17 @@
   }
 }
 
+.M_ErrorDescription {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 50px 20px;
+  background-color: var(--green);
+}
+
 //adaptives
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
@@ -395,10 +512,6 @@
 
   .M_SectionName {
     grid-column: 1 / 15;
-  }
-
-  .M_ToggleSwitch {
-    width: 262px;
   }
 
   .M_Antitrend {
@@ -461,6 +574,10 @@
 
   .M_CharecterCard {
     height: 286px;
+
+    img {
+      height: 244px;
+    }
   }
 
   .M_ButtonSurvey {
@@ -490,9 +607,38 @@
   }
 
   .M_ToggleSwitch {
-    border-radius: 50px;
-    border: 1px solid var(--white);
-    width: 252px;
+    width: 208px;
+    height: 40px;
+    font-size: 11px;
+
+    &.off {
+      .A_ToggleSwitchBar {
+        left: 110px;
+      }
+    }
+
+    .W_ToggleSwitchOptions {
+      width: 100%;
+      height: 40px;
+    }
+
+    label {
+      &[for='influencer'] {
+        margin-left: 10px;
+      }
+
+      &[for='movie'] {
+        margin-right: 6px;
+      }
+
+      &[for='scroll'] {
+        margin-left: 27px;
+      }
+
+      &[for='gallery'] {
+        margin-right: 25px;
+      }
+    }
   }
 
   .M_RunningLine,
@@ -529,6 +675,12 @@
     .A_AntitrendImage:nth-child(2) {
       grid-column: 11 / 15;
     }
+  }
+
+  .M_ErrorDescription {
+    width: 65%;
+    gap: 20px;
+    padding: 40px 20px;
   }
 }
 
@@ -598,6 +750,10 @@
   }
   .M_CharecterCard {
     height: 286px;
+
+    img {
+      height: 244px;
+    }
   }
 
   .M_ButtonSurvey {
@@ -626,10 +782,45 @@
     height: 35vh;
   }
 
+  // .M_ToggleSwitch {
+  //   border-radius: 50px;
+  //   border: 1px solid var(--white);
+  //   width: 252px;
+  // }
+
   .M_ToggleSwitch {
-    border-radius: 50px;
-    border: 1px solid var(--white);
-    width: 252px;
+    width: 208px;
+    height: 40px;
+    font-size: 11px;
+
+    &.off {
+      .A_ToggleSwitchBar {
+        left: 110px;
+      }
+    }
+
+    .W_ToggleSwitchOptions {
+      width: 100%;
+      height: 40px;
+    }
+
+    label {
+      &[for='influencer'] {
+        margin-left: 10px;
+      }
+
+      &[for='movie'] {
+        margin-right: 6px;
+      }
+
+      &[for='scroll'] {
+        margin-left: 27px;
+      }
+
+      &[for='gallery'] {
+        margin-right: 25px;
+      }
+    }
   }
 
   .M_InfluencerName {
@@ -662,9 +853,49 @@
       grid-column: 11 / 15;
     }
   }
+
+  .M_ErrorDescription {
+    width: 65%;
+    gap: 20px;
+    padding: 40px 20px;
+  }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 743px) {
+  .M_Menu {
+    position: absolute;
+    right: -120vw;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+
+    &.black {
+      background-color: var(--green);
+      color: var(--black);
+    }
+
+    &.white {
+      border-left: 1px solid var(--lightgray);
+      background-color: var(--black);
+      color: var(--white);
+    }
+
+    .C_NavBarCategories {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+      height: auto;
+      padding-bottom: 200px;
+    }
+  }
+
   .M_CategoriesFooter {
     margin-bottom: 50px;
     .A_BoldTextFooter {
@@ -755,6 +986,10 @@
 
   .M_CharecterCard {
     height: 268px;
+
+    img {
+      height: 234px;
+    }
   }
 
   .M_ButtonSurvey {
@@ -801,8 +1036,43 @@
     }
   }
 
+  // .M_ToggleSwitch {
+  //   width: 360px;
+  // }
+
   .M_ToggleSwitch {
-    width: 360px;
+    width: 330px;
+    height: 40px;
+    font-size: 12px;
+
+    &.off {
+      .A_ToggleSwitchBar {
+        left: 175px;
+      }
+    }
+
+    .W_ToggleSwitchOptions {
+      width: 100%;
+      height: 40px;
+    }
+
+    label {
+      &[for='influencer'] {
+        margin-left: 34px;
+      }
+
+      &[for='movie'] {
+        margin-right: 28px;
+      }
+
+      &[for='scroll'] {
+        margin-left: 55px;
+      }
+
+      &[for='gallery'] {
+        margin-right: 53px;
+      }
+    }
   }
 
   .M_Antitrend {
@@ -839,5 +1109,11 @@
       grid-column: 3 / 5;
       max-height: 400px;
     }
+  }
+
+  .M_ErrorDescription {
+    width: 100%;
+    gap: 20px;
+    padding: 40px 20px;
   }
 }

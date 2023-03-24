@@ -4,28 +4,32 @@ const marginleft = parseInt(
   window.getComputedStyle(marginget).getPropertyValue('margin-left')
 )
 
-document.querySelector('.S_Scroll > .A_PageDescription').style.marginLeft =
-  +marginleft + 'px'
+function paddingsInit() {
+  document.querySelector('.S_Scroll > .A_PageDescription').style.marginLeft =
+    +marginleft + 'px'
 
-document.querySelector('.C_AntitrendsRail').style.paddingRight =
-  +marginleft + 'px'
+  document.querySelector('.C_AntitrendsRail').style.paddingRight =
+    +marginleft + 'px'
 
-document.querySelector('.C_AntitrendsRail').style.paddingLeft =
-  +marginleft + 'px'
-;(function () {
-  function scrollH(e) {
+  document.querySelector('.C_AntitrendsRail').style.paddingLeft =
+    +marginleft + 'px'
+}
+
+function scrollInit() {
+  function horizontalScroll(e) {
     e.preventDefault()
     e = window.event || e
     let delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail))
     scrollContainer.scrollLeft -= delta * 30
   }
   if (scrollContainer.addEventListener) {
-    // IE9, Chrome, Safari, Opera
-    scrollContainer.addEventListener('mousewheel', scrollH, false)
-    // Firefox
-    scrollContainer.addEventListener('DOMMouseScroll', scrollH, false)
+    scrollContainer.addEventListener('mousewheel', horizontalScroll, false)
+    scrollContainer.addEventListener('DOMMouseScroll', horizontalScroll, false)
   } else {
-    // IE 6/7/8
-    scrollContainer.attachEvent('onmousewheel', scrollH)
+    scrollContainer.attachEvent('onmousewheel', horizontalScroll)
   }
-})()
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  paddingsInit(), scrollInit()
+})

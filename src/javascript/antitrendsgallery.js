@@ -4,27 +4,27 @@ const background = document.querySelector('.Q_BackgroundBlur')
 
 const options = document.querySelectorAll('.W_AntitrendOption')
 
-// for (let i = 0; i < options.length; i++) {
-//   const option = options[i]
-//   let optionId = option.id
-//
-//   function search() {
-//     console.log(optionId)
-//   }
-//
-//   option.addEventListener('click', search)
-// }
+function galleryInit() {
+  for (let i = 0; i < options.length; i++) {
+    const option = options[i]
+    searchInit(option)
+  }
+}
 
-for (let i = 0; i < options.length; i++) {
-  const option = options[i]
+function searchInit(option) {
+  let antitrend = option.querySelector('.M_Antitrend')
 
   function search() {
-    option.querySelector('.M_Antitrend').classList.toggle('active')
-    option
-      .querySelector('.M_Antitrend')
-      .scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'end' })
+    antitrend.classList.toggle('active')
+    antitrend.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+      inline: 'end'
+    })
     background.classList.toggle('active')
   }
 
   option.addEventListener('click', search)
 }
+
+document.addEventListener('DOMContentLoaded', galleryInit())
