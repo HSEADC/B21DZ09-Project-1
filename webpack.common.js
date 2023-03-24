@@ -362,7 +362,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/influencers/individuals/lady-gaga.html',
       filename: './influencers/individuals/lady-gaga.html',
-      chunks: ['index', 'navbar']
+      chunks: ['articles', 'navbar']
     }),
     new HtmlWebpackPlugin({
       hash: true,

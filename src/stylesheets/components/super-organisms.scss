@@ -1513,18 +1513,19 @@
           text-align: center;
         }
       }
-    }
 
-    &#timothee {
-      .A_TitleDruzhok {
-        line-height: 100%;
-        font-size: 70px;
-      }
+      &#timothee {
+        .A_TitleDruzhok {
+          margin-bottom: -24px;
+          line-height: 100%;
+          font-size: 70px;
+        }
 
-      .A_TitleDruk {
-        line-height: 100%;
-        font-size: 100px;
-        text-align: center;
+        .A_TitleDruk {
+          line-height: 100%;
+          font-size: 100px;
+          text-align: center;
+        }
       }
     }
   }

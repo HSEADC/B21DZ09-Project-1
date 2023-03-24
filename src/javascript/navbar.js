@@ -4,7 +4,7 @@ const menuButton = document.querySelector('.Q_NavBarBurger')
 const closeButton = document.querySelector('.Q_Close')
 const menu = document.querySelector('.M_Menu')
 const menuContent = document.querySelector('.M_Menu > .C_NavBarCategories')
-const marginget = document.querySelector('.O_NavBar')
+const marginget = document.querySelector('.O_Footer')
 const marginleft = parseInt(
   window.getComputedStyle(marginget).getPropertyValue('margin-left')
 )
