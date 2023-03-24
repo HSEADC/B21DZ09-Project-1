@@ -127,7 +127,7 @@
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: all 0.5s ease-out;
   }
 }
@@ -490,12 +490,14 @@
 
 .A_RunningLineImage {
   position: absolute;
-  width: 350px;
+  max-width: 350px;
+  max-height: 350px;
   z-index: 2;
 
   .Q_Image {
     img {
       transition: all 0.5s ease-out;
+      object-fit: contain;
     }
   }
 }

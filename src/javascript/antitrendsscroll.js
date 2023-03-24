@@ -15,19 +15,21 @@ function paddingsInit() {
     +marginleft + 'px'
 }
 
-function horizontalScroll(e) {
-  e.preventDefault()
-  e = window.event || e
-  let delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail))
-  scrollContainer.scrollLeft -= delta * 30
-}
-if (scrollContainer.addEventListener) {
-  scrollContainer.addEventListener('mousewheel', horizontalScroll, false)
-  scrollContainer.addEventListener('DOMMouseScroll', horizontalScroll, false)
-} else {
-  scrollContainer.attachEvent('onmousewheel', horizontalScroll)
+function scrollInit() {
+  function horizontalScroll(e) {
+    e.preventDefault()
+    e = window.event || e
+    let delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail))
+    scrollContainer.scrollLeft -= delta * 30
+  }
+  if (scrollContainer.addEventListener) {
+    scrollContainer.addEventListener('mousewheel', horizontalScroll, false)
+    scrollContainer.addEventListener('DOMMouseScroll', horizontalScroll, false)
+  } else {
+    scrollContainer.attachEvent('onmousewheel', horizontalScroll)
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  horizontalScroll(), paddingsInit()
+  paddingsInit(), scrollInit()
 })
