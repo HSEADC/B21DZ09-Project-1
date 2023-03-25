@@ -8,28 +8,33 @@ var gallery = document.querySelector('.S_Gallery');
 var antitrends = gallery.querySelectorAll('.M_Antitrend');
 var background = document.querySelector('.Q_BackgroundBlur');
 var options = document.querySelectorAll('.W_AntitrendOption');
+var marginget = document.querySelector('.O_Footer');
+var marginleft = parseInt(window.getComputedStyle(marginget).getPropertyValue('margin-left'));
 
 function galleryInit() {
-  for (var i = 0; i < options.length; i++) {
+  var _loop = function _loop(i) {
     var option = options[i];
-    searchInit(option);
+    option.addEventListener('click', function () {
+      return search(option);
+    });
+  };
+
+  for (var i = 0; i < options.length; i++) {
+    _loop(i);
   }
+
+  background.style.marginLeft = '-' + marginleft + 'px';
 }
 
-function searchInit(option) {
+function search(option) {
   var antitrend = option.querySelector('.M_Antitrend');
-
-  function search() {
-    antitrend.classList.toggle('active');
-    antitrend.scrollIntoView({
-      behavior: 'smooth',
-      block: 'end',
-      inline: 'end'
-    });
-    background.classList.toggle('active');
-  }
-
-  option.addEventListener('click', search);
+  antitrend.classList.toggle('active');
+  antitrend.scrollIntoView({
+    behavior: 'smooth',
+    block: 'end',
+    inline: 'end'
+  });
+  background.classList.toggle('active');
 }
 
 document.addEventListener('DOMContentLoaded', galleryInit());
@@ -40,6 +45,7 @@ document.addEventListener('DOMContentLoaded', galleryInit());
 /***/ (() => {
 
 var scrollContainer = document.querySelector('.O_ScrollAntitrends');
+var scrollTopButton = document.querySelector('.A_ScrollToTop');
 var marginget = document.querySelector('.O_NavBar');
 var marginleft = parseInt(window.getComputedStyle(marginget).getPropertyValue('margin-left'));
 
@@ -47,6 +53,14 @@ function paddingsInit() {
   document.querySelector('.S_Scroll > .A_PageDescription').style.marginLeft = +marginleft + 'px';
   document.querySelector('.C_AntitrendsRail').style.paddingRight = +marginleft + 'px';
   document.querySelector('.C_AntitrendsRail').style.paddingLeft = +marginleft + 'px';
+  scrollTopButton.style.right = +marginleft + 'px';
+}
+
+function scrollTopButtonInit() {
+  scrollTopButton.addEventListener('click', function () {
+    window.scrollTo(0, 0);
+    console.log('click');
+  });
 }
 
 function scrollInit() {
@@ -66,7 +80,7 @@ function scrollInit() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  paddingsInit(), scrollInit();
+  paddingsInit(), scrollInit(), scrollTopButtonInit();
 });
 
 /***/ }),
@@ -131,56 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //
 // if (mediaphone.matches) {
 //   runningLineOne.innerHTML = runningLineOne.innerHTML + runningLineOne.innerHTML
-// }
-
-/***/ }),
-
-/***/ 292:
-/***/ (() => {
-
-var titleImages = document.querySelectorAll('.A_TitleImage');
-
-function imagesInit() {
-  for (var i = 0; i < titleImages.length; i++) {
-    var titleImage = titleImages[i];
-    imagesAnimation(titleImage);
-  }
-}
-
-function imagesAnimation(titleImage) {
-  var titleImageContent = titleImage.querySelector('img');
-  var imageHeight = titleImage.offsetHeight;
-  var heightGet = titleImage.parentElement; // const heightImg = parseInt(
-  //   window.getComputedStyle(heightGet).getPropertyValue('height')
-  // )
-  //
-
-  var heightImg = titleImage.offsetHeight;
-  titleImage.addEventListener('mouseenter', function () {
-    titleImageContent.style.objectPosition = '0px -' + heightImg + 'px';
-    console.log(heightImg);
-  });
-  titleImage.addEventListener('mouseleave', function () {
-    titleImageContent.style.objectPosition = '0px 0px';
-  });
-}
-
-document.addEventListener('DOMContentLoaded', imagesInit()); // const titleImages = document.querySelectorAll('.A_TitleImage')
-//
-// for (let i = 0; i < titleImages.length; i++) {
-//   const titleImage = titleImages[i]
-//   const titleImageContent = titleImage.querySelector('img')
-//   const imageHeight = titleImageContent.height
-// }
-//
-// function imageAnimation(titleImage) {
-//   titleImage.addEventListener('mouseenter', () => {
-//     titleImageContent.style.objectPosition = '0px -' + imageHeight + 'px'
-//   })
-//
-//   titleImage.addEventListener('mouseleave', () => {
-//     titleImageContent.style.objectPosition = '0px 0px'
-//   })
 // }
 
 /***/ })
@@ -252,9 +216,6 @@ var __webpack_exports__ = {};
 /* harmony import */ var _antitrendsgallery_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_antitrendsgallery_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(794);
 /* harmony import */ var _antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _titleimage_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(292);
-/* harmony import */ var _titleimage_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_titleimage_js__WEBPACK_IMPORTED_MODULE_3__);
-
 
 
 
