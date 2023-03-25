@@ -1,4 +1,5 @@
 const scrollContainer = document.querySelector('.O_ScrollAntitrends')
+const scrollTopButton = document.querySelector('.A_ScrollToTop')
 const marginget = document.querySelector('.O_NavBar')
 const marginleft = parseInt(
   window.getComputedStyle(marginget).getPropertyValue('margin-left')
@@ -13,6 +14,15 @@ function paddingsInit() {
 
   document.querySelector('.C_AntitrendsRail').style.paddingLeft =
     +marginleft + 'px'
+
+  scrollTopButton.style.right = +marginleft + 'px'
+}
+
+function scrollTopButtonInit() {
+  scrollTopButton.addEventListener('click', () => {
+    window.scrollTo(0, 0)
+    console.log('click')
+  })
 }
 
 function scrollInit() {
@@ -31,5 +41,5 @@ function scrollInit() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  paddingsInit(), scrollInit()
+  paddingsInit(), scrollInit(), scrollTopButtonInit()
 })

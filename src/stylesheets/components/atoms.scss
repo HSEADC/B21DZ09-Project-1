@@ -611,6 +611,10 @@
   font-size: 18px;
   font-family: 'Druk Text Wide Cyr';
   font-weight: 500;
+
+  .green {
+    color: var(--green);
+  }
 }
 
 .A_AntitrendImage {
@@ -667,6 +671,13 @@
     line-height: 100%;
     font-family: 'DRUZHOK';
   }
+}
+
+.A_ScrollToTop {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  z-index: 10;
 }
 
 .A_ErrorTitle {

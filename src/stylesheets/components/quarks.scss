@@ -123,6 +123,10 @@
   &.left {
     transform: rotate(180deg);
   }
+
+  &.top {
+    transform: rotate(-90deg);
+  }
 }
 
 .Q_HintIcon {
@@ -140,7 +144,7 @@
   display: none;
   position: absolute;
   width: 100vw;
-  height: -webkit-fill-available;
+  height: 1300px;
   background-color: var(--black);
   opacity: 80%;
   filter: blur(50);
@@ -209,6 +213,10 @@
     height: 20px;
   }
 
+  .Q_BackgroundBlur {
+    height: 1240px;
+  }
+
   .Q_BlackBackgroundMainPage {
     height: 4000px;
     margin-top: -450px;
@@ -260,6 +268,10 @@
   .Q_HintIcon {
     width: 20px;
     height: 20px;
+  }
+
+  .Q_BackgroundBlur {
+    height: 1000px;
   }
 
   .Q_BlackBackgroundMainPage {
@@ -315,13 +327,17 @@
     height: 20px;
   }
 
+  .Q_BackgroundBlur {
+    height: 1000px;
+  }
+
   .Q_BlackBackgroundMainPage {
     height: 2800px;
     margin-top: -400px;
   }
 }
 
-@media only screen and (min-width: 360px) and (max-width: 743px) {
+@media only screen and (min-width: 330px) and (max-width: 743px) {
   .Q_NavBarBurger {
     display: block;
     width: 34px;
@@ -404,6 +420,10 @@
   .Q_HintIcon {
     width: 20px;
     height: 20px;
+  }
+
+  .Q_BackgroundBlur {
+    height: 3500px;
   }
 
   .Q_BlackBackgroundMainPage {
