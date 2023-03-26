@@ -933,7 +933,7 @@
     align-items: flex-start;
 
     &.stylescatalog {
-      justify-content: flex-start;
+      justify-content: center;
     }
 
     .A_TitleImage {
@@ -1033,6 +1033,20 @@
       align-items: center;
       justify-content: flex-start;
       width: 100%;
+    }
+  }
+
+  .M_InfluencerName {
+    &:hover {
+      .A_InfluenserImages {
+        display: none;
+      }
+    }
+
+    &:active {
+      .A_InfluencerName {
+        color: var(--green);
+      }
     }
   }
 

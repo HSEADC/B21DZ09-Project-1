@@ -3,7 +3,7 @@ const sectionGallery = document.querySelector('.S_Gallery')
 
 const runningLineOne = document.querySelector('.M_RunningLine')
 const mediaphone = window.matchMedia(
-  '(min-width: 768px) and (max-width: 3000px)'
+  '(min-width: 768px) and (max-width: 5000px)'
 )
 
 let navbarHeight = document.querySelector('.S_NavBar').offsetHeight
