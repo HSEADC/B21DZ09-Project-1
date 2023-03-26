@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
 var sectionScroll = document.querySelector('.S_Scroll');
 var sectionGallery = document.querySelector('.S_Gallery');
 var runningLineOne = document.querySelector('.M_RunningLine');
-var mediaphone = window.matchMedia('(min-width: 768px) and (max-width: 3000px)');
+var mediaphone = window.matchMedia('(min-width: 768px) and (max-width: 5000px)');
 var navbarHeight = document.querySelector('.S_NavBar').offsetHeight;
 var gallery = document.getElementById('gallery');
 var scroll = document.getElementById('scroll');

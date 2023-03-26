@@ -1,6 +1,50 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ 890:
+/***/ (() => {
+
+var mediaphone = window.matchMedia('(min-width: 360px) and (max-width: 767px)');
+var names = document.querySelectorAll('.M_InfluencerName');
+
+function namesInit() {
+  if (mediaphone.matches) {
+    for (var i = 0; i < names.length; i++) {
+      var name = names[i];
+      nameInit(name);
+    }
+  }
+}
+
+function nameInit(name) {
+  var nameParent = name.parentElement;
+  var fixedImage = nameParent.querySelector('.A_FixedImage > .Q_Image > img');
+  var id = name.id;
+  var nameText = name.querySelector('.A_InfluencerName');
+  document.addEventListener('scroll', function () {
+    var coordinate = name.getBoundingClientRect().top;
+
+    if (coordinate > 272 && coordinate < 394) {
+      displayName(id, fixedImage);
+    } else {
+      nameText.style.color = 'var(--white)';
+    }
+  });
+}
+
+function displayName(id, fixedImage) {
+  var name = document.getElementById(id);
+  var nameText = name.querySelector('.A_InfluencerName');
+  nameText.style.color = 'var(--green)';
+  var imgSrcDiv = name.querySelector('.Q_Image > img');
+  var imgSrc = imgSrcDiv.src;
+  fixedImage.src = imgSrc;
+}
+
+document.addEventListener('DOMContentLoaded', namesInit());
+
+/***/ }),
+
 /***/ 530:
 /***/ (() => {
 
@@ -8,7 +52,7 @@ var sectionInfluencers = document.querySelector('.S_Influencers');
 var sectionMovies = document.querySelector('.S_Movies');
 var runningLineOne = document.querySelector('.M_RunningLine');
 var runningLineTwo = document.querySelector('.M_RunningLineTwo');
-var mediaphone = window.matchMedia('(min-width: 768px) and (max-width: 3000px)');
+var mediaphone = window.matchMedia('(min-width: 768px) and (max-width: 5000px)');
 var navbarHeight = document.querySelector('.S_NavBar').offsetHeight;
 var movie = document.getElementById('movie');
 var influencer = document.getElementById('influencer');
@@ -239,7 +283,10 @@ document.addEventListener('DOMContentLoaded', imagesInit());
 var influencerstoggle = __webpack_require__(530);
 // EXTERNAL MODULE: ./src/javascript/runninglineimage.js
 var runninglineimage = __webpack_require__(657);
+// EXTERNAL MODULE: ./src/javascript/influencersmobilescroll.js
+var influencersmobilescroll = __webpack_require__(890);
 ;// CONCATENATED MODULE: ./src/javascript/influencers.js
+
 
 
 

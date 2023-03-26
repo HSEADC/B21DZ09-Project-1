@@ -1,6 +1,55 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ 785:
+/***/ (() => {
+
+var texts = document.querySelectorAll('p');
+var lists = document.querySelectorAll('li');
+var height = window.innerHeight;
+
+function textsInit() {
+  for (var i = 0; i < texts.length; i++) {
+    var text = texts[i];
+    textInit(text);
+  }
+}
+
+function textInit(text) {
+  document.addEventListener('scroll', function () {
+    var coordinate = text.getBoundingClientRect().y;
+
+    if (coordinate < height) {
+      text.style.opacity = '100%';
+    } else {
+      text.style.opacity = '0%';
+    }
+  });
+}
+
+function listsInit() {
+  for (var i = 0; i < lists.length; i++) {
+    var list = lists[i];
+    listInit(list);
+  }
+}
+
+function listInit(list) {
+  document.addEventListener('scroll', function () {
+    var coordinate = list.getBoundingClientRect().y;
+
+    if (coordinate < height) {
+      list.style.opacity = '100%';
+    } else {
+      list.style.opacity = '0%';
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', textsInit(), listsInit());
+
+/***/ }),
+
 /***/ 982:
 /***/ (() => {
 
@@ -134,6 +183,8 @@ function gallerySlide(id) {
 document.addEventListener('DOMContentLoaded', galleriesInit);
 // EXTERNAL MODULE: ./src/javascript/stylegalleryrail.js
 var stylegalleryrail = __webpack_require__(982);
+// EXTERNAL MODULE: ./src/javascript/articletext.js
+var articletext = __webpack_require__(785);
 ;// CONCATENATED MODULE: ./node_modules/animejs/lib/anime.es.js
 /*
  * anime.js v3.2.1
@@ -1450,13 +1501,9 @@ anime.random = function (min, max) { return Math.floor(Math.random() * (max - mi
 // import './titleimage.js'
 
 
- // Wrap every letter in a span
 
-var textWrapper = document.querySelector('.S_Cover > .M_Title > .W_TitleText > .anim'); // textWrapper.innerHTML = textWrapper.textContent.replace(
-//   /\S/g,
-//   "<span class='anim'>$&</span>"
-// )
 
+var textWrapper = document.querySelector('.S_Cover > .M_Title > .W_TitleText > .anim');
 anime_es.timeline({
   loop: false
 }).add({
