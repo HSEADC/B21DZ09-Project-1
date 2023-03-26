@@ -138,7 +138,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/404.html',
       filename: './404.html',
-      chunks: ['index', 'navbar']
+      chunks: ['navbar']
     }),
 
     //Styles
