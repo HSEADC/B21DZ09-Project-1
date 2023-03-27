@@ -130,11 +130,12 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 100%;
+    width: 90%;
 
     .W_SliderText {
       display: flex;
       flex-direction: row;
+      height: 50px;
       padding: 8px 0;
     }
   }
@@ -569,7 +570,7 @@
   }
 
   .M_Slider {
-    height: 36px;
+    height: 60px;
   }
 
   .M_CharecterCard {
@@ -746,7 +747,7 @@
   }
 
   .M_Slider {
-    height: 36px;
+    height: 60px;
   }
   .M_CharecterCard {
     height: 286px;
@@ -980,7 +981,7 @@
   }
 
   .M_Slider {
-    height: 36px;
+    height: 50px;
     margin-top: 12px;
   }
 

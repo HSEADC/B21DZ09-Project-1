@@ -141,6 +141,22 @@ module.exports = {
       chunks: ['navbar']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/400.html',
+      filename: './400.html',
+      chunks: ['navbar']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/500.html',
+      filename: './500.html',
+      chunks: ['navbar']
+    }),
+
     //Styles
     new HtmlWebpackPlugin({
       hash: true,

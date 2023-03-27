@@ -252,15 +252,15 @@
 }
 
 .A_Counter {
-  min-width: 16px;
-  margin-right: 20px;
+  width: 40px;
+  margin-right: 10px;
   font-size: 20px;
   font-family: 'Druk Text Cyr';
   font-weight: 800;
 }
 
 .A_SlideDescription {
-  max-width: 460px;
+  width: 100%;
   font-size: 20px;
   font-family: 'Druk Text Wide Cyr';
   font-weight: 800;
@@ -815,16 +815,16 @@
 
   .A_DescriptorInArticle {
     margin-top: 18px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .A_Counter {
-    margin-right: 20px;
-    font-size: 12px;
+    margin-right: 10px;
+    font-size: 14px;
   }
 
   .A_SlideDescription {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .A_RecomendationText {
@@ -1353,13 +1353,13 @@
   }
 
   .A_RecomendedInfluencersTitle {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .A_AvatarInfluencerName {
     width: 65px;
     margin-top: 10px;
-    font-size: 8px;
+    font-size: 9px;
   }
 
   .A_AvatarImage {
@@ -1391,28 +1391,29 @@
   }
 
   .A_OptionStyleTitle {
-    width: 104px;
+    width: 144px;
     margin-right: 12px;
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .A_OptionStyleText {
-    width: 104px;
-    font-size: 10px;
+    width: 144px;
+    font-size: 11px;
   }
 
   .A_DescriptorInArticle {
     margin-top: 8px;
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .A_Counter {
-    margin-right: 20px;
-    font-size: 10px;
+    width: 40px;
+    margin-right: 6px;
+    font-size: 12px;
   }
 
   .A_SlideDescription {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .A_RecomendationText {
@@ -1681,6 +1682,10 @@
 
   .A_ArticleHeadingWide {
     font-size: 40px;
+
+    &.long {
+      font-size: 34px;
+    }
   }
 
   .A_ArticleHeadingNormal {
@@ -1719,11 +1724,13 @@
   }
 
   .A_Counter {
-    margin-right: 14px;
+    width: 30px;
+    margin-right: 10px;
     font-size: 12px;
   }
 
   .A_SlideDescription {
+    width: 240px;
     font-size: 12px;
   }
 
