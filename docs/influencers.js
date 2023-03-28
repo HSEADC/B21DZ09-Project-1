@@ -212,7 +212,7 @@ const freddymercury1_namespaceObject = __webpack_require__.p + "images/c5eada7c5
 ;// CONCATENATED MODULE: ./src/images/influencers/mainpage/harrystyles2.jpg
 const harrystyles2_namespaceObject = __webpack_require__.p + "images/7d99566ab641ed3156de.jpg";
 ;// CONCATENATED MODULE: ./src/images/influencers/mainpage/jen1.jpg
-const jen1_namespaceObject = __webpack_require__.p + "images/f49da440ccb746a61ec3.jpg";
+const jen1_namespaceObject = __webpack_require__.p + "images/12b33b04927e7ddd79f0.jpg";
 ;// CONCATENATED MODULE: ./src/images/influencers/mainpage/kanye1.jpg
 const kanye1_namespaceObject = __webpack_require__.p + "images/176531b7eeb4a3ef0ed3.jpg";
 ;// CONCATENATED MODULE: ./src/images/influencers/mainpage/ladygaga1.jpg
