@@ -192,8 +192,13 @@
   flex-direction: column;
   align-items: flex-end;
 }
-.O_StyleCategoryMenu:hover .BlackBottomRight {
-  opacity: 0;
+
+.O_StyleCategoryMenu:hover {
+  .A_StyleCategoryName {
+    .Q_Arrow {
+      opacity: 0;
+    }
+  }
 }
 
 .O_RecomendationsBlock {
@@ -904,13 +909,16 @@
   .O_StyleCategoryMenu {
     display: flex;
     flex-direction: column;
+
+    .A_StyleCategoryName {
+      .Q_Arrow {
+        opacity: 0;
+      }
+    }
   }
 
   .O_StyleCategoryMenu:hover .M_StyleCategoryMenuBottom {
     display: none;
-  }
-  .O_StyleCategoryMenu:hover .BlackBottomRight {
-    display: block;
   }
 
   .O_RecomendationsBlock {

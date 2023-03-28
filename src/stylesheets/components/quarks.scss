@@ -124,6 +124,14 @@
     transform: rotate(180deg);
   }
 
+  &.bottomright {
+    transform: rotate(45deg);
+  }
+
+  &.topleft {
+    transform: rotate(-125deg);
+  }
+
   &.top {
     transform: rotate(-90deg);
   }
