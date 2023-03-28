@@ -12,14 +12,4 @@
 @import 'stylesheets/components/organisms.scss';
 @import 'stylesheets/components/super-organisms.scss';
 
-@import 'stylesheets/zaglushka.scss';
 @import 'stylesheets/about.scss';
-@import 'stylesheets/styles-library.scss';
-@import 'stylesheets/name.scss';
-@import 'stylesheets/influencers.scss';
-@import 'stylesheets/antitrends.scss';
-
-@import 'stylesheets/sport-chic.scss';
-
-@import 'stylesheets/lilnasx.scss';
-@import 'stylesheets/sexandthecity.scss';

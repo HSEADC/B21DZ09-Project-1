@@ -7,39 +7,39 @@
   --green: #afff05;
   --darkgreen: #9be400;
 
-  --ultrawide: 1630px;
-  --wide: 712px;
-  --narrow: 530px;
+  --ultrawide: 1636px;
+  --wide: 716px;
+  --narrow: 532px;
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
   :root {
-    --ultrawide: 1230px;
-    --wide: 540px;
-    --narrow: 402px;
+    --ultrawide: 1248px;
+    --wide: 548px;
+    --narrow: 408px;
   }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
   :root {
-    --ultrawide: 974px;
-    --wide: 426px;
-    --narrow: 316px;
+    --ultrawide: 960px;
+    --wide: 420px;
+    --narrow: 312px;
   }
 }
 
 @media only screen and (min-width: 744px) and (max-width: 1023px) {
   :root {
-    --ultrawide: 694px;
-    --wide: 302px;
-    --narrow: 222px;
+    --ultrawide: 708px;
+    --wide: 308px;
+    --narrow: 228px;
   }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 743px) {
   :root {
-    --ultrawide: 330px;
-    --wide: 330px;
-    --narrow: 330px;
+    --ultrawide: 332px;
+    --wide: 332px;
+    --narrow: 332px;
   }
 }

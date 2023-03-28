@@ -1,7 +1,7 @@
 .O_NavBar {
   position: relative;
   display: grid;
-  width: 1630px;
+  width: 1636px;
   grid-template-columns: repeat(18, 1fr);
   column-gap: 20px;
   margin: 0 auto;
@@ -44,7 +44,7 @@
 .O_Footer {
   position: relative;
   display: grid;
-  width: 1630px;
+  width: 1636px;
   grid-template-columns: repeat(18, 1fr);
   column-gap: 20px;
   margin: 0 auto;
@@ -204,7 +204,7 @@
 .O_RecomendationsBlock {
   position: relative;
   display: grid;
-  width: 1630px;
+  width: 1636px;
   grid-template-columns: repeat(18, 1fr);
   column-gap: 20px;
   padding-top: 100px;
@@ -238,7 +238,7 @@
 .O_Influencers {
   position: relative;
   display: grid;
-  width: 1630px;
+  width: 1636px;
   grid-template-columns: repeat(18, 1fr);
   column-gap: 20px;
   margin: 0 auto;
@@ -414,7 +414,7 @@
 
 @media only screen and (min-width: 1280px) and (max-width: 1679px) {
   .O_NavBar {
-    width: 1230px;
+    width: 1248px;
     column-gap: 12px;
 
     .W_NavBar {
@@ -428,7 +428,7 @@
   }
 
   .O_Footer {
-    width: 1230px;
+    width: 1248px;
     column-gap: 12px;
 
     .W_NamesFooter,
@@ -488,7 +488,7 @@
   }
 
   .O_RecomendationsBlock {
-    width: 1230px;
+    width: 1248px;
     column-gap: 12px;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -507,7 +507,7 @@
   }
 
   .O_Influencers {
-    width: 1230px;
+    width: 1248px;
     column-gap: 12px;
     padding-bottom: 200px;
 
@@ -521,7 +521,7 @@
   }
 
   .O_AntitrendsPreview {
-    width: 1230px;
+    width: 1248px;
     column-gap: 12px;
 
     .W_ArticleTitle {
@@ -540,7 +540,7 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
   .O_NavBar {
-    width: 974px;
+    width: 960px;
     column-gap: 12px;
 
     .W_NavBar {
@@ -554,7 +554,7 @@
   }
 
   .O_Footer {
-    width: 974px;
+    width: 960px;
     column-gap: 12px;
 
     .W_NamesFooter,
@@ -626,7 +626,7 @@
   }
 
   .O_RecomendationsBlock {
-    width: 974px;
+    width: 960px;
     column-gap: 12px;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -645,7 +645,7 @@
   }
 
   .O_Influencers {
-    width: 974px;
+    width: 960px;
     column-gap: 12px;
     padding-bottom: 50px;
 
@@ -659,7 +659,7 @@
   }
 
   .O_AntitrendsPreview {
-    width: 974px;
+    width: 960px;
     column-gap: 12px;
   }
 
@@ -670,7 +670,7 @@
 
 @media only screen and (min-width: 744px) and (max-width: 1023px) {
   .O_NavBar {
-    width: 694px;
+    width: 708px;
     column-gap: 12px;
 
     .W_NavBar {
@@ -684,7 +684,7 @@
   }
 
   .O_Footer {
-    width: 694px;
+    width: 708px;
     column-gap: 12px;
 
     .W_NamesFooter,
@@ -756,7 +756,7 @@
   }
 
   .O_RecomendationsBlock {
-    width: 694px;
+    width: 708px;
     column-gap: 12px;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -775,7 +775,7 @@
   }
 
   .O_Influencers {
-    width: 694px;
+    width: 708px;
     column-gap: 12px;
     padding-bottom: 50px;
 
@@ -798,7 +798,7 @@
   }
 
   .O_AntitrendsPreview {
-    width: 694px;
+    width: 708px;
     column-gap: 12px;
 
     .W_ArticleTitle {

@@ -96,15 +96,6 @@ module.exports = {
       chunks: ['mainpage', 'navbar']
     }),
 
-    // About
-    new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/zaglushka.html',
-      filename: './zaglushka.html',
-      chunks: ['index']
-    }),
-
     // Styleguide
     new HtmlWebpackPlugin({
       hash: true,
