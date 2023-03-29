@@ -156,7 +156,6 @@
 
 .A_AvatarInfluencerName {
   width: 84px;
-  margin-top: 10px;
   font-size: 12px;
   font-family: 'Druk Text Wide Cyr';
   font-weight: 500;
@@ -219,7 +218,6 @@
 
 .A_OptionStyleTitle {
   width: 252px;
-  margin-right: 20px;
   line-height: 120%;
   font-size: 20px;
   font-family: 'Druk Text Wide Cyr';
@@ -245,7 +243,6 @@
 }
 
 .A_DescriptorInArticle {
-  margin-top: 18px;
   font-size: 14px;
   font-family: 'Druk Text Wide Cyr';
   font-weight: 800;
@@ -253,7 +250,6 @@
 
 .A_Counter {
   width: 40px;
-  margin-right: 10px;
   font-size: 20px;
   font-family: 'Druk Text Cyr';
   font-weight: 800;
@@ -264,9 +260,6 @@
   font-size: 20px;
   font-family: 'Druk Text Wide Cyr';
   font-weight: 800;
-}
-
-.A_SliderButton {
 }
 
 .A_RecomendationText {
@@ -339,7 +332,6 @@
 }
 
 .A_CoverText {
-  margin-top: -50px;
   font-size: 670px;
   font-family: 'Druk Condensed Cyr Super';
   font-weight: 400;
@@ -378,7 +370,6 @@
 }
 
 .A_StyleCategoryMenuOption {
-  margin-top: 6px;
   line-height: 80%;
   font-size: 20px;
   font-family: 'Druk Text Wide Cyr';
@@ -413,7 +404,6 @@
 .A_HintText {
   position: absolute;
   width: 250px;
-  margin-top: -84px;
   padding: 20px;
   line-height: 135%;
   font-size: 14px;
@@ -425,27 +415,6 @@
     display: none;
   }
 }
-
-// .A_ToggleSwitchOption {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   width: 170px;
-//   height: 50px;
-//   border-radius: 50px;
-//   font-size: 18px;
-//   font-family: 'Inter';
-//   font-weight: 500;
-//   color: var(--white);
-//   background-color: var(--black);
-//   cursor: pointer;
-//
-//   &.active {
-//     color: var(--black);
-//     background-color: var(--green);
-//   }
-// }
 
 .A_ToggleSwitchBar {
   position: absolute;
@@ -462,7 +431,6 @@
 .A_RunningLine,
 .A_RunningLineTwo {
   width: max-content;
-  margin-top: -90px;
   animation-play-state: running;
   font-size: 790px;
   font-family: 'Druk Condensed Cyr Super';
@@ -565,20 +533,20 @@
   display: none;
 }
 
-.A_TitleLine {
-  width: max-content;
-  margin-top: -135px;
-  font-size: 790px;
-  font-family: 'Druk Condensed Cyr Super';
-  font-weight: 800;
-  color: var(--white);
-  user-select: none;
-
-  .Q_WideLetter {
-    font-size: 790px;
-    font-family: 'Druk Text Wide Cyr';
-  }
-}
+// .A_TitleLine {
+//   width: max-content;
+//   margin-top: -135px;
+//   font-size: 790px;
+//   font-family: 'Druk Condensed Cyr Super';
+//   font-weight: 800;
+//   color: var(--white);
+//   user-select: none;
+//
+//   .Q_WideLetter {
+//     font-size: 790px;
+//     font-family: 'Druk Text Wide Cyr';
+//   }
+// }
 
 .A_LineImages {
   position: relative;
@@ -677,13 +645,6 @@
   }
 }
 
-.A_ScrollToTop {
-  position: fixed;
-  bottom: 100px;
-  right: 100px;
-  z-index: 10;
-}
-
 .A_ErrorTitle {
   font-size: 420px;
   font-family: 'Druk Condensed Cyr Super';
@@ -699,8 +660,6 @@
 .A_ErrorWoops {
   position: relative;
   padding-left: 30px;
-  margin-top: 10px;
-  margin-bottom: -30px;
   font-size: 58px;
   font-family: 'DRUZHOK';
   z-index: 2;
@@ -770,7 +729,6 @@
 
   .A_AvatarInfluencerName {
     width: 84px;
-    margin-top: 10px;
     font-size: 10px;
   }
 
@@ -804,7 +762,6 @@
 
   .A_OptionStyleTitle {
     width: 196px;
-    margin-right: 15px;
     font-size: 14px;
   }
 
@@ -814,12 +771,10 @@
   }
 
   .A_DescriptorInArticle {
-    margin-top: 18px;
     font-size: 14px;
   }
 
   .A_Counter {
-    margin-right: 10px;
     font-size: 14px;
   }
 
@@ -858,7 +813,6 @@
   }
 
   .A_CoverText {
-    margin-top: -50px;
     font-size: 520px;
   }
 
@@ -868,7 +822,6 @@
   }
 
   .A_StyleCategoryMenuOption {
-    margin-top: 6px;
     line-height: 80%;
     font-size: 12px;
   }
@@ -892,7 +845,6 @@
 
   .A_RunningLine,
   .A_RunningLineTwo {
-    margin-top: -70px;
     font-size: 650px;
 
     .Q_WideLetter {
@@ -929,12 +881,6 @@
   .A_InfluencerName {
     font-size: 56px;
   }
-
-  // .A_ToggleSwitchOption {
-  //   width: 126px;
-  //   height: 46px;
-  //   font-size: 14px;
-  // }
 
   .A_LineImages {
     .Q_Image:nth-child(1) {
@@ -986,8 +932,6 @@
 
   .A_ErrorWoops {
     padding-left: 30px;
-    margin-top: 50px;
-    margin-bottom: -30px;
     font-size: 58px;
   }
 
@@ -1053,7 +997,6 @@
 
   .A_AvatarInfluencerName {
     width: 65px;
-    margin-top: 10px;
     font-size: 10px;
   }
 
@@ -1087,7 +1030,6 @@
 
   .A_OptionStyleTitle {
     width: 152px;
-    margin-right: 15px;
     font-size: 12px;
   }
 
@@ -1097,12 +1039,10 @@
   }
 
   .A_DescriptorInArticle {
-    margin-top: 18px;
     font-size: 12px;
   }
 
   .A_Counter {
-    margin-right: 20px;
     font-size: 12px;
   }
 
@@ -1141,7 +1081,6 @@
   }
 
   .A_CoverText {
-    margin-top: -50px;
     font-size: 410px;
   }
 
@@ -1151,7 +1090,6 @@
   }
 
   .A_StyleCategoryMenuOption {
-    margin-top: 6px;
     line-height: 80%;
     font-size: 10px;
   }
@@ -1175,17 +1113,9 @@
 
   .A_HintText {
     width: 180px;
-    margin-top: -70px;
     padding: 20px;
     font-size: 10px;
   }
-
-  // .A_ToggleSwitchOption {
-  //   width: 120px;
-  //   height: 40px;
-  //   border-radius: 50px;
-  //   font-size: 12px;
-  // }
 
   .A_ToggleSwitchBar {
     width: 98px;
@@ -1194,7 +1124,6 @@
 
   .A_RunningLine,
   .A_RunningLineTwo {
-    margin-top: -60px;
     font-size: 590px;
 
     .Q_WideLetter {
@@ -1358,7 +1287,6 @@
 
   .A_AvatarInfluencerName {
     width: 65px;
-    margin-top: 10px;
     font-size: 9px;
   }
 
@@ -1392,7 +1320,6 @@
 
   .A_OptionStyleTitle {
     width: 144px;
-    margin-right: 12px;
     font-size: 11px;
   }
 
@@ -1402,13 +1329,11 @@
   }
 
   .A_DescriptorInArticle {
-    margin-top: 8px;
     font-size: 11px;
   }
 
   .A_Counter {
     width: 40px;
-    margin-right: 6px;
     font-size: 12px;
   }
 
@@ -1446,7 +1371,6 @@
   }
 
   .A_CoverText {
-    margin-top: -50px;
     font-size: 296px;
   }
 
@@ -1456,7 +1380,6 @@
   }
 
   .A_StyleCategoryMenuOption {
-    margin-top: 6px;
     line-height: 80%;
     font-size: 8px;
   }
@@ -1479,15 +1402,13 @@
   }
 
   .A_HintText {
-    width: 154px;
-    margin-top: -60px;
+    width: 200px;
     padding: 14px;
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .A_RunningLine,
   .A_RunningLineTwo {
-    margin-top: -60px;
     font-size: 590px;
 
     .Q_WideLetter {
@@ -1599,8 +1520,6 @@
   .A_ErrorWoops {
     width: 80%;
     padding-left: 30px;
-    margin-top: 20px;
-    margin-bottom: -20px;
     font-size: 36px;
   }
 
@@ -1671,7 +1590,6 @@
 
   .A_AvatarInfluencerName {
     width: 65px;
-    margin-top: 10px;
     font-size: 8px;
   }
 
@@ -1709,7 +1627,6 @@
 
   .A_OptionStyleTitle {
     width: 155px;
-    margin-right: 20px;
     font-size: 10px;
   }
 
@@ -1719,13 +1636,11 @@
   }
 
   .A_DescriptorInArticle {
-    margin-top: 8px;
     font-size: 12px;
   }
 
   .A_Counter {
     width: 30px;
-    margin-right: 10px;
     font-size: 12px;
   }
 
@@ -1768,7 +1683,6 @@
   }
 
   .A_CoverText {
-    margin-top: -20px;
     font-size: 138px;
 
     .wide {
@@ -1787,7 +1701,6 @@
   }
 
   .A_StyleCategoryMenuOption {
-    margin-top: 6px;
     line-height: 80%;
     font-size: 8px;
   }
@@ -1806,7 +1719,6 @@
 
   .A_HintText {
     width: 160px;
-    margin-top: -60px;
     padding: 10px;
     font-size: 10px;
   }
@@ -1943,8 +1855,6 @@
   .A_ErrorWoops {
     width: 100%;
     padding-left: 10px;
-    margin-top: 20px;
-    margin-bottom: -20px;
     font-size: 36px;
   }
 

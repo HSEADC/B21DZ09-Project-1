@@ -58,6 +58,10 @@
   .A_TitleDruzhok.topline {
     margin-bottom: -150px;
   }
+
+  .A_CoverText {
+    margin-top: -50px;
+  }
 }
 
 .M_Tag {
@@ -95,6 +99,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .A_AvatarInfluencerName {
+    margin-top: 10px;
+  }
 }
 
 .M_StyleOption {
@@ -106,6 +114,10 @@
     align-items: flex-start;
     padding-bottom: 12px;
     border-bottom: 1px solid var(--black);
+
+    .A_OptionStyleTitle {
+      margin-right: 20px;
+    }
   }
 }
 
@@ -114,6 +126,10 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+
+  .A_DescriptorInArticle {
+    margin-top: 18px;
+  }
 }
 
 .M_Slider {
@@ -137,6 +153,10 @@
       flex-direction: row;
       height: 50px;
       padding: 8px 0;
+
+      .A_Counter {
+        margin-right: 10px;
+      }
     }
   }
 }
@@ -248,6 +268,10 @@
     display: inline-flex;
     gap: 10px;
     flex-wrap: wrap;
+
+    .A_StyleCategoryMenuOption {
+      margin-top: 6px;
+    }
   }
 }
 
@@ -275,6 +299,9 @@
 
 .M_Hint {
   margin-left: 30px;
+  .A_HintText {
+    margin-top: -84px;
+  }
 }
 
 // .M_ToggleSwitch {
@@ -397,6 +424,11 @@
   .W_StaticLine {
     display: none;
   }
+
+  .A_RunningLine,
+  .A_RunningLineTwo {
+    margin-top: -90px;
+  }
 }
 
 .M_InfluencerName {
@@ -475,13 +507,13 @@
     }
   }
 
-  // .M_StyleOption {
-  //   margin-bottom: 12px;
-  //
-  //   .W_StyleOptionRow {
-  //     padding-bottom: 4px;
-  //   }
-  // }
+  .M_StyleOption {
+    .W_StyleOptionRow {
+      .A_OptionStyleTitle {
+        margin-right: 15px;
+      }
+    }
+  }
 
   .M_Title {
     .A_TitleDruzhok.topline {
@@ -496,6 +528,19 @@
   .M_Slider {
     height: 40px;
     margin-top: 12px;
+
+    .W_SliderText {
+      .A_Counter {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .M_RunningLine {
+    .A_RunningLine,
+    .A_RunningLineTwo {
+      margin-top: -70px;
+    }
   }
 
   .M_StyleCategoryMenuBottom {
@@ -566,11 +611,27 @@
 
     .W_StyleOptionRow {
       padding-bottom: 4px;
+
+      .A_OptionStyleTitle {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .M_Hint {
+    .A_HintText {
+      margin-top: -70px;
     }
   }
 
   .M_Slider {
     height: 60px;
+
+    .W_SliderText {
+      .A_Counter {
+        margin-right: 20px;
+      }
+    }
   }
 
   .M_CharecterCard {
@@ -645,6 +706,12 @@
   .M_RunningLine,
   .M_RunningLineTwo {
     width: 100vw;
+
+    .A_RunningLine,
+    .A_RunningLineTwo {
+      width: max-content;
+      margin-top: -60px;
+    }
   }
 
   .M_InfluencerName {
@@ -738,17 +805,39 @@
     }
   }
 
+  .M_Photo {
+    .A_DescriptorInArticle {
+      margin-top: 8px;
+    }
+  }
+
   .M_StyleOption {
     margin-bottom: 12px;
 
     .W_StyleOptionRow {
       padding-bottom: 4px;
+
+      .A_OptionStyleTitle {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .M_Hint {
+    .A_HintText {
+      margin-top: -70px;
     }
   }
 
   .M_Slider {
     height: 60px;
+    .W_SliderText {
+      .A_Counter {
+        margin-right: 6px;
+      }
+    }
   }
+
   .M_CharecterCard {
     height: 286px;
 
@@ -955,6 +1044,16 @@
     .A_TitleDruzhok.topline {
       margin-bottom: -30px;
     }
+
+    .A_CoverText {
+      margin-top: -20px;
+    }
+  }
+
+  .M_Photo {
+    .A_DescriptorInArticle {
+      margin-top: 8px;
+    }
   }
 
   .M_Tag {
@@ -977,12 +1076,27 @@
 
     .W_StyleOptionRow {
       padding-bottom: 4px;
+
+      .A_OptionStyleTitle {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .M_Hint {
+    .A_HintText {
+      margin-top: -60px;
     }
   }
 
   .M_Slider {
     height: 50px;
     margin-top: 12px;
+    .W_SliderText {
+      .A_Counter {
+        margin-right: 10px;
+      }
+    }
   }
 
   .M_CharecterCard {
@@ -1034,6 +1148,12 @@
       align-items: center;
       justify-content: flex-start;
       width: 100%;
+    }
+
+    .A_RunningLine,
+    .A_RunningLineTwo {
+      width: max-content;
+      margin-top: -60px;
     }
   }
 
