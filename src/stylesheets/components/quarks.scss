@@ -27,39 +27,39 @@
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-}
 
-.tg {
-  height: 34px;
-  background-image: url('./images/telegram.svg');
+  &.tg {
+    height: 34px;
+    background-image: url('./images/telegram.svg');
 
-  &.white {
-    background-image: url('./images/tgwhite.svg');
+    &.white {
+      background-image: url('./images/tgwhite.svg');
+    }
   }
-}
 
-.inst {
-  background-image: url('./images/insta.svg');
+  &.inst {
+    background-image: url('./images/insta.svg');
 
-  &.white {
-    background-image: url('./images/instawhite.svg');
+    &.white {
+      background-image: url('./images/instawhite.svg');
+    }
   }
-}
 
-.vk {
-  background-image: url('./images/vk.svg');
-  width: 48px;
+  &.vk {
+    background-image: url('./images/vk.svg');
+    width: 48px;
 
-  &.white {
-    background-image: url('./images/vkwhite.svg');
+    &.white {
+      background-image: url('./images/vkwhite.svg');
+    }
   }
-}
 
-.dzen {
-  background-image: url('./images/dzen.svg');
+  &.dzen {
+    background-image: url('./images/dzen.svg');
 
-  &.white {
-    background-image: url('./images/dzenwhite.svg');
+    &.white {
+      background-image: url('./images/dzenwhite.svg');
+    }
   }
 }
 
@@ -183,14 +183,14 @@
   .Q_SocialMediaIcon {
     width: 30px;
     height: 30px;
-  }
 
-  .vk {
-    width: 48px;
-  }
+    &.vk {
+      width: 48px;
+    }
 
-  .tg {
-    height: 34px;
+    &.tg {
+      height: 34px;
+    }
   }
 
   // .Q_WideLetter {
@@ -240,14 +240,14 @@
   .Q_SocialMediaIcon {
     width: 26px;
     height: 26px;
-  }
 
-  .vk {
-    width: 35px;
-  }
+    &.vk {
+      width: 35px;
+    }
 
-  .tg {
-    height: 28px;
+    &.tg {
+      height: 28px;
+    }
   }
 
   // .Q_WideLetter {
@@ -297,14 +297,14 @@
   .Q_SocialMediaIcon {
     width: 24px;
     height: 24px;
-  }
 
-  .vk {
-    width: 33px;
-  }
+    &.vk {
+      width: 33px;
+    }
 
-  .tg {
-    height: 26px;
+    &.tg {
+      height: 26px;
+    }
   }
 
   // .Q_WideLetter {
@@ -388,14 +388,14 @@
   .Q_SocialMediaIcon {
     width: 30px;
     height: 30px;
-  }
 
-  .vk {
-    width: 48px;
-  }
+    &.vk {
+      width: 48px;
+    }
 
-  .tg {
-    height: 30px;
+    &.tg {
+      height: 30px;
+    }
   }
 
   // .Q_WideLetter {

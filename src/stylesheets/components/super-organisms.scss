@@ -336,6 +336,13 @@
     align-items: flex-start;
   }
 
+  .A_ScrollToTop {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    z-index: 10;
+  }
+
   .O_RunningLine {
     margin-bottom: 10px;
   }
@@ -364,7 +371,7 @@
     &.active {
       position: absolute;
       left: 0;
-      top: 5vh;
+      top: 25px;
       display: grid;
       z-index: 3;
     }

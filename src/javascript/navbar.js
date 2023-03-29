@@ -20,6 +20,8 @@ window.onscroll = function () {
   let currentScrollPos = window.pageYOffset
   if (prevScrollpos > currentScrollPos) {
     document.querySelector('.S_NavBar').style.top = '0'
+  } else if (currentScrollPos < 100) {
+    document.querySelector('.S_NavBar').style.top = '0'
   } else {
     document.querySelector('.S_NavBar').style.top = '-' + navbarHeight + 'px'
   }
