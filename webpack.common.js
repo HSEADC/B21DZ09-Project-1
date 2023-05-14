@@ -17,7 +17,8 @@ module.exports = {
     influencers: './src/javascript/influencers.js',
     antitrends: './src/javascript/antitrends.js',
     mainpage: './src/javascript/mainpage.js',
-    searchbar: './src/javascript/searchbar.jsx'
+    searchbar: './src/javascript/searchbar.jsx',
+    search: './src/javascript/search.js'
   },
   output: {
     filename: '[name].js',
@@ -97,13 +98,13 @@ module.exports = {
       chunks: ['mainpage', 'navbar', 'searchbar']
     }),
 
-    // search
+    // Search
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
       template: './src/search.html',
       filename: './search.html',
-      chunks: ['navbar', 'searchbar']
+      chunks: ['navbar', 'searchbar', 'search']
     }),
 
     // Styleguide

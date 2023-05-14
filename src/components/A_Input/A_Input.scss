@@ -1,7 +1,7 @@
 .A_Input {
   width: 274px;
-  height: 48px;
-  padding: 16px 54px;
+  height: 40px;
+  padding: 14px 54px;
   border: solid 1px var(--black);
   border-radius: 50px;
   font-size: 14px;
@@ -11,5 +11,23 @@
 
   input:focus {
     outline: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .A_Input {
+    width: 150px;
+    height: 24px;
+    padding: 4px 30px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 744px) and (max-width: 1023px) {
+  .A_Input {
+    width: 120px;
+    height: 24px;
+    padding: 4px 28px;
+    font-size: 12px;
   }
 }
