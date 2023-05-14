@@ -1,0 +1,13 @@
+.A_Button {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: solid 1px var(--black);
+  border-radius: 50px;
+  background-color: var(--green);
+  background-image: url('./../../images/basic/Q_SearchIcon-black.svg');
+  background-position: center;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
