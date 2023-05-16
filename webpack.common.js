@@ -16,7 +16,9 @@ module.exports = {
     styles: './src/javascript/styles.js',
     influencers: './src/javascript/influencers.js',
     antitrends: './src/javascript/antitrends.js',
-    mainpage: './src/javascript/mainpage.js'
+    mainpage: './src/javascript/mainpage.js',
+    searchbar: './src/javascript/searchbar.jsx',
+    search: './src/javascript/search.js'
   },
   output: {
     filename: '[name].js',
@@ -93,7 +95,16 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['mainpage', 'navbar']
+      chunks: ['mainpage', 'navbar', 'searchbar']
+    }),
+
+    // Search
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/search.html',
+      filename: './search.html',
+      chunks: ['navbar', 'searchbar', 'search']
     }),
 
     // Styleguide
@@ -120,7 +131,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/landing.html',
       filename: './landing.html',
-      chunks: ['index']
+      chunks: ['index', 'navbar', 'searchbar']
     }),
 
     // Errors

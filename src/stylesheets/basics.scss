@@ -34,6 +34,21 @@ body.styles {
   color: var(--black);
 }
 
+body.landing {
+  background: var(--white);
+  color: var(--black);
+
+  section {
+    margin-bottom: 0px;
+  }
+}
+
+// body.search {
+//   .S_Content {
+//     height: 100vh;
+//   }
+// }
+
 section {
   margin-bottom: 140px;
 }

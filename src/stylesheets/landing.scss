@@ -31,36 +31,17 @@ body.landing {
   h2 {
     font-size: 54px;
     font-family: 'Druk Cyr';
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
   }
 
   .grid {
     display: grid;
-    width: 1564px;
+    width: 1636px;
     grid-template-columns: repeat(24, 1fr);
     column-gap: 20px;
     margin: 0 auto;
     position: relative;
-  }
-
-  .navbar {
-    position: fixed;
-    width: 100%;
-    z-index: 20;
-    background: var(--white);
-    padding-top: 20px;
-    padding-bottom: 15px;
-
-    .logo {
-      grid-column: 1 / 5;
-      height: 33px;
-      width: 100%;
-      background-image: url('./images/newlogo.svg');
-      background-position: top left;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
   }
 
   .image {
@@ -70,32 +51,10 @@ body.landing {
     background-repeat: no-repeat;
   }
 
-  .button {
-    padding: 10px 30px;
-    background: var(--black);
-    color: var(--white);
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-
-    .icon {
-      margin-left: 16px;
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background-image: url('./images/greenarrow.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      transform: rotate(45deg);
-    }
-  }
-
   .letter {
     display: inline-block;
   }
+
   .druk,
   .druzhok {
     text-align: center;
@@ -121,25 +80,28 @@ body.landing {
       display: flex;
       flex-direction: column;
       align-items: center;
+      height: 800px;
       margin-bottom: 200px;
 
       .top {
         position: absolute;
-        z-index: 10;
+        z-index: 8;
 
         .image:first-child {
-          grid-column: 3 / 6;
-          height: 228px;
+          grid-column: 7 / 10;
+          height: 184px;
           position: relative;
-          top: 600px;
+          top: 300px;
           background-image: url('./images/landing/landing1.jpg');
+          background-position: top center;
         }
         .image:nth-child(2) {
-          grid-column: 14 / 18;
-          height: 324px;
+          grid-column: 16 / 19;
+          height: 250px;
           position: relative;
-          top: 350px;
+          top: 550px;
           background-image: url('./images/landing/landing2.jpg');
+          background-position: top right;
         }
       }
 
@@ -151,6 +113,7 @@ body.landing {
         justify-content: space-between;
         height: auto;
         position: relative;
+        user-select: none;
 
         .text-wrapper {
           width: 100%;
@@ -164,11 +127,12 @@ body.landing {
           }
 
           .druzhok {
-            font-size: 282px;
+            font-size: 316px;
+            line-height: 90%;
           }
 
           .druk {
-            font-size: 418px;
+            font-size: 330px;
           }
 
           .druk {
@@ -177,41 +141,36 @@ body.landing {
               font-family: 'Druk Text Wide Cyr';
             }
           }
-          .druzhok {
-            line-height: 85%;
-          }
-          .druzhok:nth-child(3) {
-            padding-left: 376px;
-          }
         }
       }
     }
 
     &.mission {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      height: 100vh;
+      width: 100vw;
       overflow: hidden;
       margin-bottom: 150px;
-      height: 110%;
+
       .image {
-        grid-column: 1 / 19;
         height: 100vh;
-        width: calc(100% + 300px);
-        left: -300px;
+        width: 100vw;
         position: absolute;
         z-index: 1;
-        background-image: url('./images/landing/landing3(1).jpg');
+        background-image: url('./images/landing/mission.jpg');
       }
 
       .sticker {
-        margin-top: 20vh;
-        background: var(--green);
-        grid-column: 14 / 25;
-        width: calc(100% + 300px);
+        position: relative;
+        width: 830px;
         height: auto;
-        padding-right: 300px;
+        padding-right: 80px;
         padding-top: 50px;
         padding-left: 100px;
         padding-bottom: 160px;
-        position: relative;
+        background: var(--green);
         z-index: 5;
 
         h3 {
@@ -222,7 +181,8 @@ body.landing {
           font-family: 'DRUZHOK';
           font-weight: 400;
           font-size: 60px;
-          line-height: 100%;
+          line-height: 106%;
+          text-transform: uppercase;
         }
 
         .bold {
@@ -368,19 +328,21 @@ body.landing {
 
         .druzhok {
           margin-bottom: -40px;
-          font-size: 228px;
+          font-size: 258px;
           padding-left: 30px;
+          user-select: none;
         }
         .druk {
           margin-top: -40px;
-          font-size: 228px;
+          font-size: 258px;
+          user-select: none;
         }
 
         .wrapper {
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
-          align-items: flex-end;
+          align-items: flex-start;
           margin-right: 66px;
           margin-top: 24px;
 
@@ -392,7 +354,7 @@ body.landing {
       }
 
       .card {
-        grid-column: 13 / 21;
+        grid-column: 14 / 25;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -401,37 +363,19 @@ body.landing {
         z-index: 2;
 
         .image {
-          height: 840px;
-          width: 120%;
+          height: 700px;
           background-image: url('./images/landing/landing7.jpg');
+          background-position: top center;
           margin-bottom: 20px;
         }
 
-        .tag-wrapper {
-          margin-top: 10px;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          width: 70%;
+        .W_TagBar {
+          width: 60%;
+        }
 
-          .tag {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 8px 18px;
-            background: var(--green);
-            border-radius: 23px;
-            height: 28px;
-            margin-right: 6px;
-            margin-top: 10px;
-            width: auto;
-
-            p {
-              margin-top: 0;
-              font-size: 12px;
-            }
-          }
+        h3 {
+          font-family: 'Druk Text Cyr';
+          font-size: 40px;
         }
       }
     }
@@ -441,35 +385,22 @@ body.landing {
       flex-direction: column;
       align-items: center;
 
-      .top {
-        position: absolute;
-        z-index: 10;
-
-        .image:first-child {
-          background-image: url('./images/landing/landing10.jpg');
-          height: 150px;
-          position: relative;
-          bottom: 80px;
-          grid-column: 17 / 20;
-        }
-      }
-
       .image:first-child {
         background-image: url('./images/landing/landing8.jpg');
-        height: 343px;
+        height: 328px;
         margin-top: 150px;
-        grid-column: 1 / 5;
+        grid-column: 1 / 4;
       }
       .image:nth-child(2) {
         background-image: url('./images/landing/landing9.jpg');
-        height: 522px;
-        grid-column: 5 / 11;
+        height: 492px;
+        grid-column: 5 / 10;
         position: absolute;
         z-index: -1;
       }
 
       .name {
-        grid-column: 9 / 24;
+        grid-column: 10 / 25;
         display: grid;
         width: 100%;
         grid-template-columns: repeat(15, 1fr);
@@ -479,7 +410,7 @@ body.landing {
           position: absolute;
           top: 0;
           right: 0;
-          padding-right: 66px;
+          // padding-right: 66px;
         }
 
         .text-wrapper {
@@ -492,10 +423,12 @@ body.landing {
             margin-bottom: -40px;
             font-size: 228px;
             padding-left: 30px;
+            user-select: none;
           }
           .druk {
             margin-top: -40px;
             font-size: 228px;
+            user-select: none;
           }
         }
       }
@@ -507,6 +440,10 @@ body.landing {
         top: -180px;
         z-index: -1;
         padding: 140px 66px 70px 66px;
+      }
+
+      .M_ButtonSurvey {
+        grid-column: 22 / 25;
       }
     }
 
@@ -564,7 +501,7 @@ body.landing {
         position: absolute;
         background: var(--black);
         height: 100vh;
-        width: 100%;
+        width: 100vw;
 
         z-index: -1;
       }
@@ -579,7 +516,7 @@ body.landing {
 
       .top {
         position: absolute;
-        z-index: 10;
+        z-index: 8;
         padding-top: 130px;
 
         .image:first-child {
@@ -614,6 +551,7 @@ body.landing {
         flex-direction: column;
 
         .text-wrapper {
+          user-select: none;
           .druzhok {
             font-size: 228px;
             margin-bottom: -40px;
@@ -630,10 +568,11 @@ body.landing {
           }
         }
         .wrapper {
+          padding-left: 345px;
           margin-top: 60px;
           display: flex;
           flex-direction: row;
-          align-items: flex-end;
+          align-items: flex-start;
           justify-content: space-between;
 
           .button {
@@ -672,6 +611,7 @@ body.landing {
         justify-content: space-between;
         position: relative;
         z-index: 5;
+        user-select: none;
 
         .druzhok {
           font-size: 228px;
@@ -688,19 +628,13 @@ body.landing {
       }
 
       .wrapper {
-        grid-column: 17 / 23;
+        grid-column: 17 / 24;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-end;
 
-        .button {
-          margin-top: 40px;
-          background: var(--green);
-          color: var(--black);
-
-          .icon {
-            background-image: url('./images/blackarrow.svg');
-          }
+        p {
+          width: 80%;
         }
       }
 
@@ -723,218 +657,99 @@ body.landing {
           top: 0vh;
         }
       }
+
+      .M_ButtonSurvey {
+        margin-top: 30px;
+      }
     }
+  }
 
-    &.launch {
-      height: 100vh;
-      padding-top: 300px;
-      background: var(--black);
-      .forma {
-        background: var(--green);
-        color: var(--black);
-        grid-column: 3 / 23;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 114px 132px 85px 132px;
+  .W_TagBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 6px;
 
-        .druk {
-          font-family: 'Druk Cyr';
-          font-weight: 800;
-          font-size: 96px;
+    .M_Tag {
+      margin-top: 6px;
+      margin-right: 6px;
+    }
+  }
 
-          .wide {
-            font-family: 'Druk Text Wide Cyr';
-            font-weight: 1000;
-            font-size: 96px;
-          }
-        }
+  .inspo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 0px;
 
-        .line {
-          margin-top: 40px;
-          margin-bottom: 30px;
-          width: 100%;
-          height: 1px;
-          background: var(--black);
-        }
+    background: var(--black);
+    color: var(--white);
 
-        .wrapper {
-          margin-bottom: 30px;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          width: 100%;
-        }
-      }
+    .heading {
+      grid-column: 3 / 7;
+      margin-top: 200px;
 
-      form {
-        display: flex;
-        flex-direction: row;
-
-        width: 100%;
-      }
-
-      input {
-        width: 680px;
-        height: 120px;
-        background: black;
-        border: none;
-        font-family: 'Druk Text Wide Cyr';
-        font-weight: 800;
-        font-size: 14px;
-        padding: 0 25px;
-        color: var(--white);
-
-        &::placeholder {
-          color: var(--white);
-        }
-      }
-
-      button {
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        align-items: center;
-        justify-content: center;
-        width: 354px;
-        height: 120px;
-        border: none;
-        background: var(--white);
-        color: var(--black);
-        transition: 0.3s;
-        cursor: pointer;
-
-        h3 {
-          font-family: 'Druk Text Wide Cyr';
-          font-weight: 800;
-          font-size: 16px;
-          color: var(--black);
-        }
-      }
-
-      button:hover {
-        background: var(--black);
-
-        h3 {
-          color: var(--white);
-        }
+      h3 {
+        margin-bottom: 24px;
       }
     }
 
-    &.footer {
-      background: var(--black);
-      color: var(--gray);
+    .Q_Image {
+      grid-column: 11 / 17;
+      height: 600px;
+      position: absolute;
+    }
 
-      .grid {
-        padding-top: 55px;
-        padding-bottom: 135px;
+    .W_TagBar {
+      position: relative;
+      grid-column: 14 / 25;
+      margin-top: 240px;
+      z-index: 2;
 
-        grid-template-columns: repeat(6, 1fr);
-        column-gap: 20px;
-        width: 1564px;
-
-        h3 {
-          font-family: 'Druk Text Wide Cyr';
-          font-size: 12px;
-          text-transform: none;
-          font-weight: 800;
-          line-height: 140%;
-          margin-bottom: 10px;
-        }
-        .authors {
-          margin-right: 20px;
-        }
-
-        p,
-        h4,
-        a {
-          font-size: 12px;
-          margin-bottom: 10px;
-          color: var(--gray);
-        }
-        .wrapper {
-          p {
-            color: var(--green);
-          }
-        }
-        h4 {
-          text-transform: none;
-          // text-decoration: underline;
-          // text-decoration-color: var(--green);
-          // text-decoration-thickness: 2px;
-          font-family: 'Inter';
-          line-height: 120%;
-          font-weight: 800;
-          cursor: default;
-        }
-
-        .top {
-          grid-column: 1 /7;
-          display: grid;
-          grid-template-columns: repeat(6, 1fr);
-          column-gap: 20px;
-
-          .first {
-            grid-column: 1 / 2;
-          }
-          .second {
-            grid-column: 2 / 3;
-          }
-          .styles {
-            grid-column: 3 / 4;
-          }
-          .influencers {
-            grid-column: 4 / 5;
-          }
-
-          .socialnetworks {
-            grid-column: 6 / 7;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-
-            .icon {
-              display: flex;
-              margin-left: 30px;
-              width: 30px;
-              height: 30px;
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: contain;
-              cursor: pointer;
-            }
-            .telegram {
-              background-image: url('./images/tgwhite.svg');
-            }
-            .instagram {
-              background-image: url('./images/instawhite.svg');
-            }
-            .vk {
-              width: 49px;
-              background-image: url('./images/vkwhite.svg');
-            }
-            .dzen {
-              background-image: url('./images/dzenwhite.svg');
-            }
-          }
-        }
-        .bottom {
-          margin-top: 100px;
-          grid-column: 1 / 7;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: flex-start;
-        }
+      .M_Tag {
+        margin-top: 8px;
+        margin-right: 8px;
       }
+    }
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 0px;
+    background: var(--black);
+    color: var(--white);
+
+    .Q_Image {
+      grid-column: 8 / 12;
+    }
+
+    .wrapper {
+      grid-column: 13 / 24;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 72px;
+      font-weight: 800;
+
+      span {
+        font-family: 'DRUZHOK';
+        text-transform: none;
+        font-weight: 400;
+      }
+    }
+
+    .M_ButtonSurvey {
     }
   }
 }
 
-@media only screen and (min-width: 1250px) and (max-width: 1600px) {
-  body.index {
+@media only screen and (min-width: 1280px) and (max-width: 1679px) {
+  body.landing {
     p,
     li {
       font-size: 16px;
@@ -949,30 +764,8 @@ body.landing {
     }
 
     .grid {
-      width: 1232px;
-      column-gap: 20px;
-    }
-
-    .navbar {
-      padding-top: 20px;
-      padding-bottom: 15px;
-
-      .logo {
-        grid-column: 1 / 5;
-        height: 28px;
-        width: 100%;
-      }
-    }
-
-    .button {
-      padding: 10px 24px;
-      font-size: 14px;
-
-      .icon {
-        margin-left: 10px;
-        width: 32px;
-        height: 32px;
-      }
+      width: 1248px;
+      column-gap: 12px;
     }
 
     section {
@@ -981,30 +774,23 @@ body.landing {
 
         .top {
           .image:first-child {
-            height: 180px;
-            top: 500px;
+            top: 250px;
           }
           .image:nth-child(2) {
-            height: 255px;
-            position: relative;
-            top: 300px;
+            top: 450px;
           }
         }
 
         .name {
-          margin-top: 100px;
+          margin-top: 120px;
 
           .text-wrapper {
             .druzhok {
-              font-size: 222px;
+              font-size: 244px;
             }
 
             .druk {
-              font-size: 330px;
-            }
-
-            .druzhok:nth-child(3) {
-              padding-left: 300px;
+              font-size: 250px;
             }
           }
         }
@@ -1013,10 +799,7 @@ body.landing {
       &.mission {
         margin-bottom: 100px;
         .sticker {
-          grid-column: 12 / 25;
-          margin-top: 20vh;
-          padding-left: 60px;
-          padding-bottom: 100px;
+          width: 700px;
 
           h3 {
             margin-bottom: 100px;
@@ -1026,6 +809,10 @@ body.landing {
             font-size: 46px;
           }
         }
+      }
+
+      &.rectangle {
+        top: -30vh;
       }
 
       &.style {
@@ -1260,7 +1047,7 @@ body.landing {
 }
 
 @media only screen and (min-width: 970px) and (max-width: 1249px) {
-  body.index {
+  body.landing {
     p,
     li {
       font-size: 12px;
@@ -1696,7 +1483,7 @@ body.landing {
 }
 
 @media only screen and (min-width: 720px) and (max-width: 969px) {
-  body.index {
+  body.landing {
     p,
     li {
       font-size: 10px;
@@ -2165,7 +1952,7 @@ body.landing {
 }
 
 @media only screen and (min-width: 300px) and (max-width: 719px) {
-  body.index {
+  body.landing {
     p,
     li {
       font-size: 12px;

@@ -11,7 +11,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     margin-top: 40px;
 
@@ -22,14 +22,14 @@
     .W_NavBarCategories {
       display: flex;
       flex-direction: row;
-      align-items: flex-end;
+      align-items: center;
       justify-content: space-between;
       height: auto;
 
       .C_NavBarCategories {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
         gap: 40px;
         height: 20px;
       }
@@ -147,7 +147,7 @@
 }
 
 .O_StyleCard {
-  width: 100%;
+  width: 348px;
   text-decoration: none;
   color: var(--black);
 
@@ -469,6 +469,8 @@
   }
 
   .O_StyleCard {
+    width: 302px;
+
     .A_StyleName {
       margin-top: 10px;
       // margin-bottom: 10px;
@@ -612,6 +614,8 @@
   }
 
   .O_StyleCard {
+    width: 230px;
+
     .A_StyleName {
       margin-top: 10px;
       // margin-bottom: 10px;
@@ -691,8 +695,10 @@
       grid-column: 1 / 19;
       margin-top: 40px;
 
-      .Q_SearchIcon {
-        margin-left: 20px;
+      .W_NavBarCategories {
+        .C_NavBarCategories {
+          gap: 16px;
+        }
       }
     }
   }
@@ -746,6 +752,8 @@
   }
 
   .O_StyleCard {
+    width: 168px;
+
     .A_StyleName {
       margin-top: 10px;
       // margin-bottom: 10px;
@@ -898,7 +906,8 @@
   }
 
   .O_StyleCard {
-    min-width: 200px;
+    width: 242px;
+    min-width: 242px;
     .A_StyleName {
       margin-top: 10px;
       // margin-bottom: 10px;
