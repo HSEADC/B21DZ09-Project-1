@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 655:
+/***/ 1655:
 /***/ (() => {
 
 var gallery = document.querySelector('.S_Gallery');
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', galleryInit());
 
 /***/ }),
 
-/***/ 794:
+/***/ 7794:
 /***/ (() => {
 
 var scrollContainer = document.querySelector('.O_ScrollAntitrends');
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ 534:
+/***/ 6534:
 /***/ (() => {
 
 var sectionScroll = document.querySelector('.S_Scroll');
@@ -210,11 +210,11 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/* harmony import */ var _antitrendstoggle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(534);
+/* harmony import */ var _antitrendstoggle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6534);
 /* harmony import */ var _antitrendstoggle_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_antitrendstoggle_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _antitrendsgallery_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(655);
+/* harmony import */ var _antitrendsgallery_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1655);
 /* harmony import */ var _antitrendsgallery_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_antitrendsgallery_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(794);
+/* harmony import */ var _antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7794);
 /* harmony import */ var _antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_antitrendsscroll_js__WEBPACK_IMPORTED_MODULE_2__);
 
 

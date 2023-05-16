@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 785:
+/***/ 5785:
 /***/ (() => {
 
 var texts = document.querySelectorAll('p');
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', galleriesInit);
 // EXTERNAL MODULE: ./src/javascript/stylegalleryrail.js
 var stylegalleryrail = __webpack_require__(982);
 // EXTERNAL MODULE: ./src/javascript/articletext.js
-var articletext = __webpack_require__(785);
+var articletext = __webpack_require__(5785);
 ;// CONCATENATED MODULE: ./node_modules/animejs/lib/anime.es.js
 /*
  * anime.js v3.2.1
