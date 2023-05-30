@@ -131,7 +131,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/landing.html',
       filename: './landing.html',
-      chunks: ['index', 'navbar', 'searchbar']
+      chunks: ['navbar', 'searchbar']
     }),
 
     // Errors
