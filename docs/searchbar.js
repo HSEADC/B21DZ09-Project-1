@@ -3758,6 +3758,72 @@ module.exports = Airtable;
 
 /***/ }),
 
+/***/ 4184:
+/***/ ((module, exports) => {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+	var nativeCodeString = '[native code]';
+
+	function classNames() {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg)) {
+				if (arg.length) {
+					var inner = classNames.apply(null, arg);
+					if (inner) {
+						classes.push(inner);
+					}
+				}
+			} else if (argType === 'object') {
+				if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+					classes.push(arg.toString());
+					continue;
+				}
+
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
 /***/ 4448:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -4393,18 +4459,18 @@ var A_Input = /*#__PURE__*/function (_React$Component) {
   _createClass(A_Input, [{
     key: "render",
     value: function render() {
+      var _React$createElement;
+
       var _this$props = this.props,
+          placeholder = _this$props.placeholder,
           value = _this$props.value,
           handleSubmit = _this$props.handleSubmit;
-      return /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement("input", {
+      return /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement("input", (_React$createElement = {
         className: "A_Input",
-        ref: this.input,
-        value: value,
-        onInput: this.handleInput,
-        onKeyDown: function onKeyDown(e) {
-          e.key === 'Enter' && handleSubmit();
-        }
-      }));
+        placeholder: placeholder
+      }, _defineProperty(_React$createElement, "className", "A_Input"), _defineProperty(_React$createElement, "ref", this.input), _defineProperty(_React$createElement, "value", value), _defineProperty(_React$createElement, "onInput", this.handleInput), _defineProperty(_React$createElement, "onKeyDown", function onKeyDown(e) {
+        e.key === 'Enter' && handleSubmit();
+      }), _React$createElement)));
     }
   }]);
 
@@ -4412,8 +4478,13 @@ var A_Input = /*#__PURE__*/function (_React$Component) {
 }(react.Component);
 
 
+// EXTERNAL MODULE: ./node_modules/classnames/index.js
+var classnames = __webpack_require__(4184);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 ;// CONCATENATED MODULE: ./src/components/A_Button/A_Button.jsx
 function A_Button_typeof(obj) { "@babel/helpers - typeof"; return A_Button_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, A_Button_typeof(obj); }
+
+function A_Button_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function A_Button_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -4438,6 +4509,7 @@ function A_Button_getPrototypeOf(o) { A_Button_getPrototypeOf = Object.setProtot
 
 
 
+
 var A_Button = /*#__PURE__*/function (_React$Component) {
   A_Button_inherits(A_Button, _React$Component);
 
@@ -4452,11 +4524,19 @@ var A_Button = /*#__PURE__*/function (_React$Component) {
   A_Button_createClass(A_Button, [{
     key: "render",
     value: function render() {
-      var handleClick = this.props.handleClick;
+      var _this$props = this.props,
+          text = _this$props.text,
+          type = _this$props.type,
+          disabled = _this$props.disabled,
+          handleClick = _this$props.handleClick;
+      var classes = classnames_default()(A_Button_defineProperty({
+        A_Button: true,
+        disabled: disabled
+      }, "".concat(type), true));
       return /*#__PURE__*/react.createElement("div", {
-        className: "A_Button",
+        className: classes,
         onClick: handleClick
-      });
+      }, text);
     }
   }]);
 
@@ -4506,6 +4586,18 @@ var M_SearchForm = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
 
+    M_SearchForm_defineProperty(M_SearchForm_assertThisInitialized(_this), "renderResetButton", function () {
+      var handleSearchInput = _this.props.handleSearchInput;
+      return /*#__PURE__*/react.createElement(A_Button, {
+        text: "X",
+        type: "resetField",
+        disabled: false,
+        handleClick: function handleClick() {
+          return handleSearchInput('');
+        }
+      });
+    });
+
     M_SearchForm_defineProperty(M_SearchForm_assertThisInitialized(_this), "handleInput", function (value) {
       _this.setState({
         value: value
@@ -4527,21 +4619,144 @@ var M_SearchForm = /*#__PURE__*/function (_React$Component) {
   M_SearchForm_createClass(M_SearchForm, [{
     key: "render",
     value: function render() {
-      var value = this.state.value;
-      var handleSearchSubmit = this.props.handleSearchSubmit;
+      var _this$props = this.props,
+          searchInputValue = _this$props.searchInputValue,
+          isSearchButtonDisabled = _this$props.isSearchButtonDisabled,
+          handleSearchInput = _this$props.handleSearchInput,
+          handleSearchSubmit = _this$props.handleSearchSubmit;
       return /*#__PURE__*/react.createElement("div", {
         className: "M_SearchForm"
       }, /*#__PURE__*/react.createElement(A_Input, {
-        value: value,
-        handleSubmit: this.handleSearchSubmit,
-        handleInput: this.handleInput
-      }), /*#__PURE__*/react.createElement(A_Button, {
-        handleClick: this.handleSearchSubmit
+        value: searchInputValue,
+        placeholder: "\u0427\u0442\u043E \u0438\u0449\u0435\u043C?",
+        handleInput: handleSearchInput,
+        handleSubmit: handleSearchSubmit
+      }), searchInputValue != '' && this.renderResetButton(), /*#__PURE__*/react.createElement(A_Button, {
+        type: "primary",
+        disabled: isSearchButtonDisabled,
+        handleClick: handleSearchSubmit
       }));
     }
   }]);
 
   return M_SearchForm;
+}(react.Component);
+
+
+;// CONCATENATED MODULE: ./src/components/A_Text/A_Text.jsx
+function A_Text_typeof(obj) { "@babel/helpers - typeof"; return A_Text_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, A_Text_typeof(obj); }
+
+function A_Text_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function A_Text_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function A_Text_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function A_Text_createClass(Constructor, protoProps, staticProps) { if (protoProps) A_Text_defineProperties(Constructor.prototype, protoProps); if (staticProps) A_Text_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function A_Text_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) A_Text_setPrototypeOf(subClass, superClass); }
+
+function A_Text_setPrototypeOf(o, p) { A_Text_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return A_Text_setPrototypeOf(o, p); }
+
+function A_Text_createSuper(Derived) { var hasNativeReflectConstruct = A_Text_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = A_Text_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = A_Text_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return A_Text_possibleConstructorReturn(this, result); }; }
+
+function A_Text_possibleConstructorReturn(self, call) { if (call && (A_Text_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return A_Text_assertThisInitialized(self); }
+
+function A_Text_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function A_Text_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function A_Text_getPrototypeOf(o) { A_Text_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return A_Text_getPrototypeOf(o); }
+
+
+
+
+
+var A_Text = /*#__PURE__*/function (_React$Component) {
+  A_Text_inherits(A_Text, _React$Component);
+
+  var _super = A_Text_createSuper(A_Text);
+
+  function A_Text() {
+    A_Text_classCallCheck(this, A_Text);
+
+    return _super.apply(this, arguments);
+  }
+
+  A_Text_createClass(A_Text, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          text = _this$props.text,
+          type = _this$props.type;
+      var classes = classnames_default()(A_Text_defineProperty({
+        A_Text: true
+      }, "".concat(type), true));
+      return /*#__PURE__*/react.createElement("div", {
+        className: classes
+      }, text);
+    }
+  }]);
+
+  return A_Text;
+}(react.Component);
+
+
+;// CONCATENATED MODULE: ./src/components/M_PostSuggestion/M_PostSuggestion.jsx
+function M_PostSuggestion_typeof(obj) { "@babel/helpers - typeof"; return M_PostSuggestion_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, M_PostSuggestion_typeof(obj); }
+
+function M_PostSuggestion_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function M_PostSuggestion_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function M_PostSuggestion_createClass(Constructor, protoProps, staticProps) { if (protoProps) M_PostSuggestion_defineProperties(Constructor.prototype, protoProps); if (staticProps) M_PostSuggestion_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function M_PostSuggestion_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) M_PostSuggestion_setPrototypeOf(subClass, superClass); }
+
+function M_PostSuggestion_setPrototypeOf(o, p) { M_PostSuggestion_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return M_PostSuggestion_setPrototypeOf(o, p); }
+
+function M_PostSuggestion_createSuper(Derived) { var hasNativeReflectConstruct = M_PostSuggestion_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = M_PostSuggestion_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = M_PostSuggestion_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return M_PostSuggestion_possibleConstructorReturn(this, result); }; }
+
+function M_PostSuggestion_possibleConstructorReturn(self, call) { if (call && (M_PostSuggestion_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return M_PostSuggestion_assertThisInitialized(self); }
+
+function M_PostSuggestion_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function M_PostSuggestion_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function M_PostSuggestion_getPrototypeOf(o) { M_PostSuggestion_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return M_PostSuggestion_getPrototypeOf(o); }
+
+
+
+
+
+var M_PostSuggestion = /*#__PURE__*/function (_React$Component) {
+  M_PostSuggestion_inherits(M_PostSuggestion, _React$Component);
+
+  var _super = M_PostSuggestion_createSuper(M_PostSuggestion);
+
+  function M_PostSuggestion() {
+    M_PostSuggestion_classCallCheck(this, M_PostSuggestion);
+
+    return _super.apply(this, arguments);
+  }
+
+  M_PostSuggestion_createClass(M_PostSuggestion, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          title = _this$props.title,
+          link = _this$props.link;
+      return /*#__PURE__*/react.createElement("a", {
+        className: "M_PostSuggestion",
+        href: link
+      }, /*#__PURE__*/react.createElement(A_Text, {
+        text: title,
+        type: "h3"
+      }));
+    }
+  }]);
+
+  return M_PostSuggestion;
 }(react.Component);
 
 
@@ -4574,6 +4789,9 @@ function O_SearchBar_defineProperty(obj, key, value) { if (key in obj) { Object.
 
 
 
+ // const addressPart = ':8080/'
+
+var addressPart = '.adc.ac/';
 
 var O_SearchBar = /*#__PURE__*/function (_React$Component) {
   O_SearchBar_inherits(O_SearchBar, _React$Component);
@@ -4587,12 +4805,66 @@ var O_SearchBar = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
 
-    O_SearchBar_defineProperty(O_SearchBar_assertThisInitialized(_this), "handleSearchSubmit", function (value) {
-      console.log('Submit', value);
+    O_SearchBar_defineProperty(O_SearchBar_assertThisInitialized(_this), "getPathFromUrl", function (url) {
+      return url.split(addressPart)[0];
     });
 
+    O_SearchBar_defineProperty(O_SearchBar_assertThisInitialized(_this), "handleSearchInput", function (searchInputValue) {
+      console.log('Input', searchInputValue);
+      var isSearchButtonDisabled = true;
+
+      if (searchInputValue.length >= 3) {
+        isSearchButtonDisabled = false;
+      }
+
+      _this.setState({
+        isSearchButtonDisabled: isSearchButtonDisabled,
+        searchInputValue: searchInputValue
+      });
+    });
+
+    O_SearchBar_defineProperty(O_SearchBar_assertThisInitialized(_this), "handleSearchSubmit", function () {
+      var searchInputValue = _this.state.searchInputValue;
+
+      if (searchInputValue.length >= 3) {
+        var url = _this.getPathFromUrl(window.location.href);
+
+        window.location.href = url + addressPart + 'search.html?request=' + searchInputValue;
+      }
+    });
+
+    O_SearchBar_defineProperty(O_SearchBar_assertThisInitialized(_this), "renderPostSuggestions", function () {
+      var postTeasers = _this.state.postTeasers;
+
+      var searchInputValue = _this.state.searchInputValue.toLowerCase();
+
+      var posts = [];
+      postTeasers.forEach(function (postTeaser) {
+        var nbspRegex = /[\u202F\u00A0]/gm;
+        var punctuationRegex = /[.,\/#!$%\^&\*;:{}=\-_`~()]/gm;
+        var title = postTeaser.title.replaceAll(nbspRegex, ' ').replaceAll(punctuationRegex, '').toLowerCase();
+
+        if (title.includes(searchInputValue)) {
+          var _title = postTeaser.title,
+              link = postTeaser.link,
+              id = postTeaser.id;
+          posts.push( /*#__PURE__*/react.createElement(M_PostSuggestion, {
+            title: _title,
+            link: link,
+            key: id
+          }));
+        }
+      });
+      return /*#__PURE__*/react.createElement("div", {
+        className: "C_PostSuggestions"
+      }, posts);
+    });
+
+    var _searchInputValue = props.searchInputValue;
     _this.state = {
-      postTeasers: []
+      isSearchButtonDisabled: true,
+      postTeasers: [],
+      searchInputValue: _searchInputValue
     };
     return _this;
   }
@@ -4612,16 +4884,20 @@ var O_SearchBar = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log('Post Teasers', this.state.postTeasers);
-      var posts = []; // this.state.postTeasers.forEach((teaser) => {
-      //   posts.push(<div className="A_StyleName">{teaser.title} </div>)
-      // })
-
+      var _this$state = this.state,
+          searchInputValue = _this$state.searchInputValue,
+          isSearchButtonDisabled = _this$state.isSearchButtonDisabled;
       return /*#__PURE__*/react.createElement("div", {
         className: "O_SearchBar"
       }, /*#__PURE__*/react.createElement(M_SearchForm, {
-        initSearch: true
-      }));
+        searchInputValue: searchInputValue,
+        isSearchButtonDisabled: isSearchButtonDisabled,
+        handleSearchInput: this.handleSearchInput,
+        handleSearchSubmit: this.handleSearchSubmit
+      })) // {searchInputValue.length >= 3 &&
+      //   !isSearchButtonDisabled &&
+      //   this.renderPostSuggestions()}
+      ;
     }
   }]);
 
@@ -4632,10 +4908,7 @@ var O_SearchBar = /*#__PURE__*/function (_React$Component) {
 ;// CONCATENATED MODULE: ./src/javascript/searchbar.jsx
 
 
- // getPostTeasers().then((data) => {
-//   const root = createRoot(document.querySelector('.W_Search'))
-//   root.render(<O_SearchBar postTeasers={postTeasers} />)
-// })
+
 
 var root = (0,client/* createRoot */.s)(document.querySelector('.W_Search'));
 root.render( /*#__PURE__*/react.createElement(O_SearchBar, null));
