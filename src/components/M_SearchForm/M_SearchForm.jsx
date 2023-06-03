@@ -13,6 +13,19 @@ export default class M_SearchForm extends React.Component {
     }
   }
 
+  renderResetButton = () => {
+    const { handleSearchInput } = this.props
+
+    return (
+      <A_Button
+        text="X"
+        type="resetField"
+        disabled={false}
+        handleClick={() => handleSearchInput('')}
+      />
+    )
+  }
+
   handleInput = (value) => {
     this.setState({
       value
@@ -26,18 +39,29 @@ export default class M_SearchForm extends React.Component {
   }
 
   render() {
-    const { value } = this.state
-    const { handleSearchSubmit } = this.props
+    const {
+      searchInputValue,
+      isSearchButtonDisabled,
+      handleSearchInput,
+      handleSearchSubmit
+    } = this.props
 
     return (
       <div className="M_SearchForm">
         <A_Input
-          value={value}
-          handleSubmit={this.handleSearchSubmit}
-          handleInput={this.handleInput}
+          value={searchInputValue}
+          placeholder="Что ищем?"
+          handleInput={handleSearchInput}
+          handleSubmit={handleSearchSubmit}
         />
 
-        <A_Button handleClick={this.handleSearchSubmit} />
+        {searchInputValue != '' && this.renderResetButton()}
+
+        <A_Button
+          type="primary"
+          disabled={isSearchButtonDisabled}
+          handleClick={handleSearchSubmit}
+        />
       </div>
     )
   }

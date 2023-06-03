@@ -1,15 +1,19 @@
 .A_Button {
   position: absolute;
+  right: 0;
   width: 40px;
   height: 40px;
-  border: solid 1px var(--black);
-  border-radius: 50px;
-  background-color: var(--green);
+  // border: solid 1px var(--black);
+  // border-radius: 50px;
+  background-color: transparent;
+  text-indent: -10000px;
+  border: none;
   background-image: url('./../../images/basic/Q_SearchIcon-black.svg');
   background-position: center;
   background-size: 24px;
   background-repeat: no-repeat;
   cursor: pointer;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
