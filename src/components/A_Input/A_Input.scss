@@ -1,17 +1,33 @@
 .A_Input {
-  width: 274px;
+  display: inline-block;
+  width: 24px;
   height: 40px;
-  padding: 14px 54px;
-  border: solid 1px var(--black);
-  border-radius: 50px;
-  font-size: 14px;
+  padding: 14px 10px;
+  font-size: 0px;
   font-family: 'Inter';
   color: var(--black);
-  background-color: var(--white);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  transition: width 0.5s ease-out;
+  cursor: pointer;
+  z-index: 2;
+}
 
-  input:focus {
-    outline: none;
-  }
+.A_Input:focus:hover {
+  font-size: 14px;
+  border-bottom: 5px solid var(--green);
+}
+
+.A_Input:focus {
+  width: 230px;
+  font-size: 14px;
+  border-bottom: 5px solid var(--green);
+  cursor: text;
+}
+
+.A_Input:focus ~ .A_Button {
+  z-index: 3;
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {

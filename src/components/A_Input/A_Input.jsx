@@ -14,11 +14,13 @@ export default class A_Input extends React.Component {
   }
 
   render() {
-    const { value, handleSubmit } = this.props
+    const { placeholder, value, handleSubmit } = this.props
 
     return (
       <>
         <input
+          className="A_Input"
+          placeholder={placeholder}
           className="A_Input"
           ref={this.input}
           value={value}
