@@ -398,6 +398,14 @@ module.exports = {
       chunks: ['articles', 'navbar', 'titleimage']
     }),
 
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/influencers/individuals/tailor-swift.html',
+      filename: './influencers/individuals/tailor-swift.html',
+      chunks: ['articles', 'navbar', 'titleimage']
+    }),
+
     //Movie article
     new HtmlWebpackPlugin({
       hash: true,
