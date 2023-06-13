@@ -32,6 +32,11 @@
   }
 }
 
+.W_QuizBlock,
+.S_QuizResults {
+  margin: 0;
+}
+
 .S_Cover {
   position: relative;
   display: grid;
@@ -39,6 +44,13 @@
   grid-template-columns: repeat(18, 1fr);
   column-gap: 20px;
   margin: 0 auto;
+
+  .M_ButtonSurvey {
+    grid-column: 15 / 19;
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
 
   .W_StyleArticleSub {
     grid-column: 1 / 19;
