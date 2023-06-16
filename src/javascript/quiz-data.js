@@ -34,3 +34,5 @@ function getQuizCards() {
       })
   })
 }
+
+export { getQuizCards }
