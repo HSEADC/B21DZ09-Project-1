@@ -18,7 +18,8 @@ module.exports = {
     antitrends: './src/javascript/antitrends.js',
     mainpage: './src/javascript/mainpage.js',
     searchbar: './src/javascript/searchbar.jsx',
-    search: './src/javascript/search.js'
+    search: './src/javascript/search.jsx',
+    quiz: './src/javascript/quiz.jsx'
   },
   output: {
     filename: '[name].js',
@@ -165,7 +166,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/styles.html',
       filename: './styles.html',
-      chunks: ['styles', 'navbar', 'titleimage']
+      chunks: ['styles', 'navbar', 'titleimage', 'quiz']
     }),
 
     //Styles article
@@ -451,8 +452,17 @@ module.exports = {
 
     new HtmlWebpackPartialsPlugin([
       {
-        path: path.join(__dirname, './src/partials/Navbar.html'),
+        path: path.join(__dirname, './src/partials/navbar.html'),
         location: 'Navbar',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/recommendations.html'),
+        location: 'Recommendations',
         template_filename: '*',
         priority: 'replace'
       }
@@ -487,7 +497,7 @@ module.exports = {
 
     new HtmlWebpackPartialsPlugin([
       {
-        path: path.join(__dirname, './src/partials/Footer.html'),
+        path: path.join(__dirname, './src/partials/footer.html'),
         location: 'Footer',
         template_filename: '*',
         priority: 'replace'
