@@ -6,8 +6,8 @@ import { getPostTeasers } from './../../javascript/search-data.js'
 import M_SearchForm from '../M_SearchForm/M_SearchForm.jsx'
 import M_PostSuggestion from '../M_PostSuggestion/M_PostSuggestion.jsx'
 
-// const addressPart = ':8080/'
-const addressPart = '.adc.ac/'
+const addressPart = ':8080/'
+// const addressPart = '.adc.ac/'
 
 export default class O_SearchBar extends React.Component {
   constructor(props) {

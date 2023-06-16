@@ -12,7 +12,8 @@ export default class S_SearchContent extends React.Component {
 
     this.state = {
       postTeasers: [],
-      searchInputValue: searchInputValue
+      searchInputValue: searchInputValue,
+      stroke: false
     }
   }
 
@@ -27,7 +28,7 @@ export default class S_SearchContent extends React.Component {
   }
 
   renderPostTeasers = () => {
-    const { postTeasers } = this.state
+    const { postTeasers, stroke } = this.state
     const searchInputValue = this.state.searchInputValue.toLowerCase()
     const posts = []
 
@@ -50,6 +51,7 @@ export default class S_SearchContent extends React.Component {
             tags={tags}
             link={link}
             key={id}
+            stroke={stroke}
           />
         )
       }
