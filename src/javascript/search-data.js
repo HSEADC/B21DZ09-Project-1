@@ -24,6 +24,7 @@ function getPostTeasers() {
             image: record.fields['Image'],
             title: record.fields['Title'],
             section: record.fields['Section'],
+            category: record.fields['Category'],
             type: record.fields['Type'],
             link: record.fields['Link']
           })
