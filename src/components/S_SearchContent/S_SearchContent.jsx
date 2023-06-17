@@ -1,4 +1,3 @@
-import './S_SearchContent.scss'
 import React from 'react'
 import { getPostTeasers } from '../../javascript/search-data.js'
 
@@ -56,6 +55,26 @@ export default class S_SearchContent extends React.Component {
         )
       }
     })
+
+    if (posts.length == 0) {
+      posts.push(
+        <div className="O_ErrorContent">
+          <div className="A_ErrorWoops">Упс, такой страницы нет</div>
+          <div className="M_ErrorDescription">
+            <div className="A_ErrorText">
+              <p>
+                К сожалению мы не нашли ничего похожего на ваш запрос.
+                Попробуйте снова или вернитесь назад.
+              </p>
+            </div>
+
+            <a onclick="history.back()" className="A_ButtonBack">
+              вернуться назад
+            </a>
+          </div>
+        </div>
+      )
+    }
 
     return posts
   }
