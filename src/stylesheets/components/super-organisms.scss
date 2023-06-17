@@ -467,6 +467,19 @@
   }
 }
 
+.S_SearchContent {
+  .W_StylesRail {
+    grid-column: 1 / 17;
+  }
+
+  .O_ErrorContent {
+    position: relative;
+    top: 5vh;
+    left: 25vw;
+    width: 650px;
+  }
+}
+
 .S_ArticlePreview {
   position: relative;
   display: grid;
@@ -1104,6 +1117,12 @@
     }
   }
 
+  .S_SearchContent {
+    .O_ErrorContent {
+      width: 500px;
+    }
+  }
+
   .S_ArticlePreview {
     width: 960px;
     column-gap: 12px;
@@ -1399,6 +1418,12 @@
           width: 168px;
         }
       }
+    }
+  }
+
+  .S_SearchContent {
+    .O_ErrorContent {
+      width: 500px;
     }
   }
 
@@ -1883,6 +1908,14 @@
       align-items: flex-start;
       flex-wrap: nowrap;
       gap: 20px;
+    }
+  }
+
+  .S_SearchContent {
+    .O_ErrorContent {
+      left: 0;
+      top: 0;
+      width: 100%;
     }
   }
 
