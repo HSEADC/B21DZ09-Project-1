@@ -51,8 +51,6 @@ export default class O_RecomendationsBlock extends React.Component {
       .replaceAll('style', '')
       .replaceAll('.html', '')
 
-    console.log('BEFORE', postTeasers)
-
     postTeasers.forEach((postTeaser) => {
       const {
         title,
