@@ -4,9 +4,6 @@ import { findRecommendation } from '../../javascript/recommendations-search.js'
 
 import O_StyleCard from '../O_StyleCard/O_StyleCard.jsx'
 
-// const addressPart = ':8080/'
-// const addressPart = '.adc.ac/'
-
 export default class O_RecomendationsBlock extends React.Component {
   constructor(props) {
     super(props)
@@ -41,9 +38,10 @@ export default class O_RecomendationsBlock extends React.Component {
     const { pageTags } = this.state
     const posts = []
     const url = window.location.href
-    const pageSection = url.split('/')[3]
+    const pageSection = url.split('/').at(-2)
     const pageName = url
-      .split('/')[4]
+      .split('/')
+      .at(-1)
       .replaceAll('-', ' ')
       .replaceAll('style', '')
       .replaceAll('.html', '')
