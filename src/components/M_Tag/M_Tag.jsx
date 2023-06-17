@@ -3,12 +3,11 @@ import React from 'react'
 
 export default class M_Tag extends React.Component {
   render() {
-    const { text, type, stroke } = this.props
+    const { text, stroke } = this.props
 
     const classes = classnames({
       M_Tag: true,
-      stroke: stroke,
-      [`${type}`]: true
+      stroke: stroke
     })
 
     return <div className={classes}>{text}</div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { getPostTeasers } from '../../javascript/search-data.js'
 import { findRecommendation } from '../../javascript/recommendations-search.js'
+import { sample } from '../../javascript/utilities.js'
 
 import O_StyleCard from '../O_StyleCard/O_StyleCard.jsx'
 
@@ -10,8 +11,8 @@ export default class O_RecomendationsBlock extends React.Component {
 
     this.state = {
       postTeasers: [],
-      pageTags: [],
-      stroke: true
+      pageTags: []
+      // stroke: true
     }
   }
 
@@ -33,6 +34,10 @@ export default class O_RecomendationsBlock extends React.Component {
     return url.split('/')[3]
   }
 
+  handleBackClick = () => {
+    history.back()
+  }
+
   renderRecommendations = () => {
     const { postTeasers } = this.state
     const { pageTags } = this.state
@@ -46,6 +51,8 @@ export default class O_RecomendationsBlock extends React.Component {
       .replaceAll('style', '')
       .replaceAll('.html', '')
 
+    console.log('BEFORE', postTeasers)
+
     postTeasers.forEach((postTeaser) => {
       const {
         title,
@@ -55,9 +62,10 @@ export default class O_RecomendationsBlock extends React.Component {
         tags,
         image,
         link,
-        id,
-        stroke
+        id
+        // stroke
       } = postTeaser
+
       let commonTags = []
 
       for (let i = 0; i < tags.length; i++) {
@@ -71,36 +79,10 @@ export default class O_RecomendationsBlock extends React.Component {
         title.toLowerCase() != pageName &&
         pageSection == section
       ) {
-        if (section == 'movies') {
+        if (section == 'movies' || pageTags == tags || commonTags.length >= 3) {
           posts.push(
             <O_StyleCard
-              stroke={stroke}
-              title={title}
-              image={image}
-              tags={tags}
-              link={link}
-              key={id}
-            />
-          )
-        }
-
-        if (pageTags == tags) {
-          posts.push(
-            <O_StyleCard
-              stroke={stroke}
-              title={title}
-              image={image}
-              tags={tags}
-              link={link}
-              key={id}
-            />
-          )
-        }
-
-        if (commonTags.length >= 3) {
-          posts.push(
-            <O_StyleCard
-              stroke={stroke}
+              stroke={true}
               title={title}
               image={image}
               tags={tags}
@@ -111,6 +93,35 @@ export default class O_RecomendationsBlock extends React.Component {
         }
       }
     })
+
+    if (posts.length < 3 && postTeasers.length > 0) {
+      const postTeaser = sample(postTeasers)
+
+      if (postTeaser) {
+        const {
+          title,
+          section,
+          type,
+          category,
+          tags,
+          image,
+          link,
+          id
+          // stroke
+        } = postTeaser
+
+        posts.push(
+          <O_StyleCard
+            stroke={true}
+            title={title}
+            image={image}
+            tags={tags}
+            link={link}
+            key={id}
+          />
+        )
+      }
+    }
 
     return posts
   }
@@ -123,9 +134,10 @@ export default class O_RecomendationsBlock extends React.Component {
           {' '}
           <div className="C_Styles">{this.renderRecommendations()}</div>
         </div>
-        <a onlick="history.back()" className="A_ButtonBack">
+
+        <div onClick={this.handleBackClick} className="A_ButtonBack">
           назад
-        </a>
+        </div>
       </div>
     )
   }
