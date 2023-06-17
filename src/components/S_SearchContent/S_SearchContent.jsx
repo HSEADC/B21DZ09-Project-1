@@ -11,8 +11,7 @@ export default class S_SearchContent extends React.Component {
 
     this.state = {
       postTeasers: [],
-      searchInputValue: searchInputValue,
-      stroke: false
+      searchInputValue: searchInputValue
     }
   }
 
@@ -24,6 +23,10 @@ export default class S_SearchContent extends React.Component {
         postTeasers: data
       })
     })
+  }
+
+  handleBackClick = () => {
+    history.back()
   }
 
   renderPostTeasers = () => {
@@ -47,12 +50,12 @@ export default class S_SearchContent extends React.Component {
 
         posts.push(
           <O_StyleCard
+            stroke={false}
             title={title}
             image={image}
             tags={tags}
             link={link}
             key={id}
-            stroke={stroke}
           />
         )
       }
@@ -70,9 +73,9 @@ export default class S_SearchContent extends React.Component {
               </p>
             </div>
 
-            <a onclick="history.back()" className="A_ButtonBack">
-              вернуться назад
-            </a>
+            <div onClick={this.handleBackClick} className="A_ButtonBack">
+              назад
+            </div>
           </div>
         </div>
       )

@@ -12,7 +12,6 @@ export default class O_RecomendationsBlock extends React.Component {
     this.state = {
       postTeasers: [],
       pageTags: []
-      // stroke: true
     }
   }
 
@@ -48,7 +47,6 @@ export default class O_RecomendationsBlock extends React.Component {
       .split('/')
       .at(-1)
       .replaceAll('-', ' ')
-      .replaceAll('style', '')
       .replaceAll('.html', '')
 
     postTeasers.forEach((postTeaser) => {
