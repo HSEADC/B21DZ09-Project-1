@@ -40,7 +40,9 @@ export default class S_SearchContent extends React.Component {
         .replaceAll(punctuationRegex, '')
         .toLowerCase()
 
-      if (title.includes(searchInputValue)) {
+      const tags = postTeaser.tags
+
+      if (title.includes(searchInputValue) || tags.includes(searchInputValue)) {
         const { title, tags, image, link, id } = postTeaser
 
         posts.push(
