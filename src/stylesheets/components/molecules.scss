@@ -60,7 +60,7 @@
   }
 
   .A_CoverText {
-    margin-top: -50px;
+    margin-top: 0px;
   }
 }
 
@@ -185,6 +185,7 @@
   font-family: 'Inter';
   font-weight: 500;
   text-decoration: none;
+  cursor: pointer;
 
   &.black {
     background-color: var(--black);
@@ -450,7 +451,7 @@
 .M_Antitrend {
   position: relative;
   display: grid;
-  width: 1630px;
+  width: 1636px;
   grid-template-columns: repeat(18, 1fr);
   column-gap: 20px;
 

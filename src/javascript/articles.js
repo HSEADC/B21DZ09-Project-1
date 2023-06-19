@@ -2,6 +2,8 @@
 import './gallery-slider.js'
 import './stylegalleryrail.js'
 import './articletext.js'
+import './recommendations.jsx'
+import './recommendations-search.js'
 
 import anime from 'animejs/lib/anime.es.js'
 

@@ -1,4 +1,3 @@
-import './S_SearchContent.scss'
 import React from 'react'
 import { getPostTeasers } from '../../javascript/search-data.js'
 
@@ -26,8 +25,12 @@ export default class S_SearchContent extends React.Component {
     })
   }
 
+  handleBackClick = () => {
+    history.back()
+  }
+
   renderPostTeasers = () => {
-    const { postTeasers } = this.state
+    const { postTeasers, stroke } = this.state
     const searchInputValue = this.state.searchInputValue.toLowerCase()
     const posts = []
 
@@ -40,11 +43,14 @@ export default class S_SearchContent extends React.Component {
         .replaceAll(punctuationRegex, '')
         .toLowerCase()
 
-      if (title.includes(searchInputValue)) {
+      const tags = postTeaser.tags
+
+      if (title.includes(searchInputValue) || tags.includes(searchInputValue)) {
         const { title, tags, image, link, id } = postTeaser
 
         posts.push(
           <O_StyleCard
+            stroke={false}
             title={title}
             image={image}
             tags={tags}
@@ -53,9 +59,30 @@ export default class S_SearchContent extends React.Component {
           />
         )
       }
-    })
+        return posts
 
-    return posts
+      if (posts.length == 0) {
+        posts.push(
+          <div className="O_ErrorContent">
+            <div className="A_ErrorWoops">Упс, такой страницы нет</div>
+            <div className="M_ErrorDescription">
+              <div className="A_ErrorText">
+                <p>
+                  К сожалению мы не нашли ничего похожего на ваш запрос.
+                  Попробуйте снова или вернитесь назад.
+                </p>
+              </div>
+
+              <div onClick={this.handleBackClick} className="A_ButtonBack">
+                назад
+              </div>
+            </div>
+          </div>
+        )
+      }
+
+
+    })
   }
 
   render() {
@@ -69,4 +96,3 @@ export default class S_SearchContent extends React.Component {
       </div>
     )
   }
-}

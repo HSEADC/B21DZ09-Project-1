@@ -24,4 +24,4 @@ function getSearchRequest() {
   }
 }
 
-export { generateHash, getSearchRequest }
+export { sample, generateHash, getSearchRequest }
