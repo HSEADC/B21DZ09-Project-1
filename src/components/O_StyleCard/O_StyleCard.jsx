@@ -5,12 +5,12 @@ import A_StyleName from '../A_StyleName/A_StyleName.jsx'
 
 export default class O_StyleCard extends React.Component {
   render() {
-    const { title, tags, image, link } = this.props
+    const { title, tags, image, link, stroke } = this.props
 
     const tagElements = []
 
     tags.forEach((tag, i) => {
-      tagElements.push(<M_Tag type="tag" text={tag} key={i} />)
+      tagElements.push(<M_Tag stroke={stroke} text={tag} key={i} />)
     })
 
     return (

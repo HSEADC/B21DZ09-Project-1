@@ -1,4 +1,3 @@
-import './S_SearchContent.scss'
 import React from 'react'
 import { getPostTeasers } from '../../javascript/search-data.js'
 
@@ -12,7 +11,8 @@ export default class S_SearchContent extends React.Component {
 
     this.state = {
       postTeasers: [],
-      searchInputValue: searchInputValue
+      searchInputValue: searchInputValue,
+      stroke: false
     }
   }
 
@@ -26,8 +26,12 @@ export default class S_SearchContent extends React.Component {
     })
   }
 
+  handleBackClick = () => {
+    history.back()
+  }
+
   renderPostTeasers = () => {
-    const { postTeasers } = this.state
+    const { postTeasers, stroke } = this.state
     const searchInputValue = this.state.searchInputValue.toLowerCase()
     const posts = []
 
@@ -50,10 +54,31 @@ export default class S_SearchContent extends React.Component {
             tags={tags}
             link={link}
             key={id}
+            stroke={stroke}
           />
         )
       }
     })
+
+    if (posts.length == 0) {
+      posts.push(
+        <div className="O_ErrorContent">
+          <div className="A_ErrorWoops">Упс, такой страницы нет</div>
+          <div className="M_ErrorDescription">
+            <div className="A_ErrorText">
+              <p>
+                К сожалению мы не нашли ничего похожего на ваш запрос.
+                Попробуйте снова или вернитесь назад.
+              </p>
+            </div>
+
+            <div onClick={this.handleBackClick} className="A_ButtonBack">
+              вернуться назад
+            </div>
+          </div>
+        </div>
+      )
+    }
 
     return posts
   }
