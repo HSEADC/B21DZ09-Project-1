@@ -792,6 +792,10 @@
     .A_TitleDruzhok.topline {
       margin-bottom: -70px;
     }
+
+    &.stylescatalog {
+      margin-top: 15px;
+    }
   }
 
   .M_Character {
@@ -1021,6 +1025,7 @@
 
     &.stylescatalog {
       justify-content: center;
+      margin-top: 70px;
     }
 
     .A_TitleImage {
