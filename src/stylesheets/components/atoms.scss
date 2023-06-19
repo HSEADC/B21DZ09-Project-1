@@ -255,6 +255,13 @@
   font-weight: 800;
 }
 
+.A_Close {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  background-image: url('./images/basic/Q_CloseWindowCircle.svg');
+}
+
 .A_SlideDescription {
   width: 100%;
   font-size: 20px;

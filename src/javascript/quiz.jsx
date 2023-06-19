@@ -1,4 +1,5 @@
 import React from 'react'
+import './quiz-init.js'
 import { createRoot } from 'react-dom/client'
 // import { getSearchRequest } from './utilities.js'
 
