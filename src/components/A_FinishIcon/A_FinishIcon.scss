@@ -1,0 +1,16 @@
+.A_FinishIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url('../../images/basic/rocket.png');
+  background-size: 32px 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &.disabled {
+    background-color: #c5c5c5;
+  }
+  &.active {
+    background-color: var(--green);
+  }
+}

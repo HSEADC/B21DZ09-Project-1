@@ -35,4 +35,30 @@ function getPostTeasers() {
   })
 }
 
-export { getPostTeasers }
+function getQuizCards() {
+  return new Promise((resolve, reject) => {
+    const content = []
+
+    base('Quiz')
+      .select({ maxRecords: 100 })
+      .firstPage()
+      .then((result) => {
+        result.forEach((record) => {
+          content.push({
+            id: record.id,
+            name: record.fields['Name'],
+            category: record.fields['Category'],
+            place: record.fields['Place'],
+            mood: record.fields['Mood'],
+            character: record.fields['Character'],
+            image: record.fields['Image'],
+            link: record.fields['Link']
+          })
+        })
+
+        resolve(content)
+      })
+  })
+}
+
+export { getPostTeasers, getQuizCards }

@@ -13,7 +13,7 @@ function getQuizCards() {
   return new Promise((resolve, reject) => {
     const content = []
 
-    base('Quiz Cards')
+    base('Quiz')
       .select({ maxRecords: 100 })
       .firstPage()
       .then((result) => {
@@ -25,8 +25,8 @@ function getQuizCards() {
             place: record.fields['Place'],
             mood: record.fields['Mood'],
             character: record.fields['Character'],
-            link: record.fields['Link'],
-            image: record.fields['Image']
+            image: record.fields['Image'],
+            link: record.fields['Link']
           })
         })
 
