@@ -402,8 +402,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/influencers/individuals/tailor-swift.html',
-      filename: './influencers/individuals/tailor-swift.html',
+      template: './src/influencers/individuals/taylor-swift.html',
+      filename: './influencers/individuals/taylor-swift.html',
       chunks: ['articles', 'navbar', 'titleimage']
     }),
 

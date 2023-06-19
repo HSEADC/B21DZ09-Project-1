@@ -59,7 +59,7 @@ export default class S_SearchContent extends React.Component {
           />
         )
       }
-        return posts
+      return posts
 
       if (posts.length == 0) {
         posts.push(
@@ -80,8 +80,6 @@ export default class S_SearchContent extends React.Component {
           </div>
         )
       }
-
-
     })
   }
 
@@ -96,3 +94,4 @@ export default class S_SearchContent extends React.Component {
       </div>
     )
   }
+}
