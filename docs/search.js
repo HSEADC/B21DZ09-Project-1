@@ -4424,6 +4424,7 @@ function getPostTeasers() {
           image: record.fields['Image'],
           title: record.fields['Title'],
           section: record.fields['Section'],
+          category: record.fields['Category'],
           type: record.fields['Type'],
           link: record.fields['Link']
         });
@@ -4500,8 +4501,6 @@ var Q_Image = /*#__PURE__*/function (_React$Component) {
 ;// CONCATENATED MODULE: ./src/components/M_Tag/M_Tag.jsx
 function M_Tag_typeof(obj) { "@babel/helpers - typeof"; return M_Tag_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, M_Tag_typeof(obj); }
 
-function M_Tag_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function M_Tag_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function M_Tag_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -4541,10 +4540,11 @@ var M_Tag = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this$props = this.props,
           text = _this$props.text,
-          type = _this$props.type;
-      var classes = classnames_default()(M_Tag_defineProperty({
-        M_Tag: true
-      }, "".concat(type), true));
+          stroke = _this$props.stroke;
+      var classes = classnames_default()({
+        M_Tag: true,
+        stroke: stroke
+      });
       return /*#__PURE__*/react.createElement("div", {
         className: classes
       }, text);
@@ -4651,11 +4651,12 @@ var O_StyleCard = /*#__PURE__*/function (_React$Component) {
           title = _this$props.title,
           tags = _this$props.tags,
           image = _this$props.image,
-          link = _this$props.link;
+          link = _this$props.link,
+          stroke = _this$props.stroke;
       var tagElements = [];
       tags.forEach(function (tag, i) {
         tagElements.push( /*#__PURE__*/react.createElement(M_Tag, {
-          type: "tag",
+          stroke: stroke,
           text: tag,
           key: i
         }));
@@ -4709,7 +4710,6 @@ function S_SearchContent_defineProperty(obj, key, value) { if (key in obj) { Obj
 
 
 
-
 var S_SearchContent = /*#__PURE__*/function (_React$Component) {
   S_SearchContent_inherits(S_SearchContent, _React$Component);
 
@@ -4722,8 +4722,14 @@ var S_SearchContent = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
 
+    S_SearchContent_defineProperty(S_SearchContent_assertThisInitialized(_this), "handleBackClick", function () {
+      history.back();
+    });
+
     S_SearchContent_defineProperty(S_SearchContent_assertThisInitialized(_this), "renderPostTeasers", function () {
-      var postTeasers = _this.state.postTeasers;
+      var _this$state = _this.state,
+          postTeasers = _this$state.postTeasers,
+          stroke = _this$state.stroke;
 
       var searchInputValue = _this.state.searchInputValue.toLowerCase();
 
@@ -4744,17 +4750,35 @@ var S_SearchContent = /*#__PURE__*/function (_React$Component) {
             image: image,
             tags: tags,
             link: link,
-            key: id
+            key: id,
+            stroke: stroke
           }));
         }
       });
+
+      if (posts.length == 0) {
+        posts.push( /*#__PURE__*/react.createElement("div", {
+          className: "O_ErrorContent"
+        }, /*#__PURE__*/react.createElement("div", {
+          className: "A_ErrorWoops"
+        }, "\u0423\u043F\u0441, \u0442\u0430\u043A\u043E\u0439 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u044B \u043D\u0435\u0442"), /*#__PURE__*/react.createElement("div", {
+          className: "M_ErrorDescription"
+        }, /*#__PURE__*/react.createElement("div", {
+          className: "A_ErrorText"
+        }, /*#__PURE__*/react.createElement("p", null, "\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E \u043C\u044B \u043D\u0435 \u043D\u0430\u0448\u043B\u0438 \u043D\u0438\u0447\u0435\u0433\u043E \u043F\u043E\u0445\u043E\u0436\u0435\u0433\u043E \u043D\u0430 \u0432\u0430\u0448 \u0437\u0430\u043F\u0440\u043E\u0441. \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430 \u0438\u043B\u0438 \u0432\u0435\u0440\u043D\u0438\u0442\u0435\u0441\u044C \u043D\u0430\u0437\u0430\u0434.")), /*#__PURE__*/react.createElement("div", {
+          onClick: _this.handleBackClick,
+          className: "A_ButtonBack"
+        }, "\u0432\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F \u043D\u0430\u0437\u0430\u0434"))));
+      }
+
       return posts;
     });
 
     var _searchInputValue = props.searchInputValue;
     _this.state = {
       postTeasers: [],
-      searchInputValue: _searchInputValue
+      searchInputValue: _searchInputValue,
+      stroke: false
     };
     return _this;
   }
@@ -4788,7 +4812,7 @@ var S_SearchContent = /*#__PURE__*/function (_React$Component) {
 }(react.Component);
 
 
-;// CONCATENATED MODULE: ./src/javascript/search.js
+;// CONCATENATED MODULE: ./src/javascript/search.jsx
 
 
 

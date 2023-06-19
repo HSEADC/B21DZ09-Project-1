@@ -4396,6 +4396,7 @@ function getPostTeasers() {
           image: record.fields['Image'],
           title: record.fields['Title'],
           section: record.fields['Section'],
+          category: record.fields['Category'],
           type: record.fields['Type'],
           link: record.fields['Link']
         });
@@ -4789,9 +4790,8 @@ function O_SearchBar_defineProperty(obj, key, value) { if (key in obj) { Object.
 
 
 
- // const addressPart = ':8080/'
 
-var addressPart = '.adc.ac/';
+var addressPart = ':8080/'; // const addressPart = '.adc.ac/'
 
 var O_SearchBar = /*#__PURE__*/function (_React$Component) {
   O_SearchBar_inherits(O_SearchBar, _React$Component);
