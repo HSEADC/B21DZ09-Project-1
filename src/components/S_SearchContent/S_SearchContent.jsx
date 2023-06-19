@@ -59,29 +59,30 @@ export default class S_SearchContent extends React.Component {
           />
         )
       }
-    })
+        return posts
 
-    if (posts.length == 0) {
-      posts.push(
-        <div className="O_ErrorContent">
-          <div className="A_ErrorWoops">Упс, такой страницы нет</div>
-          <div className="M_ErrorDescription">
-            <div className="A_ErrorText">
-              <p>
-                К сожалению мы не нашли ничего похожего на ваш запрос.
-                Попробуйте снова или вернитесь назад.
-              </p>
-            </div>
+      if (posts.length == 0) {
+        posts.push(
+          <div className="O_ErrorContent">
+            <div className="A_ErrorWoops">Упс, такой страницы нет</div>
+            <div className="M_ErrorDescription">
+              <div className="A_ErrorText">
+                <p>
+                  К сожалению мы не нашли ничего похожего на ваш запрос.
+                  Попробуйте снова или вернитесь назад.
+                </p>
+              </div>
 
-            <div onClick={this.handleBackClick} className="A_ButtonBack">
-              назад
+              <div onClick={this.handleBackClick} className="A_ButtonBack">
+                назад
+              </div>
             </div>
           </div>
-        </div>
-      )
-    }
+        )
+      }
 
-    return posts
+
+    })
   }
 
   render() {
@@ -95,4 +96,3 @@ export default class S_SearchContent extends React.Component {
       </div>
     )
   }
-}
