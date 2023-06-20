@@ -9,6 +9,7 @@ const stage = quiz.querySelectorAll('.A_CircleStage')
 const progressLine = quiz.querySelector('.A_ProgressLine')
 
 let n = 1
+let allActive = []
 let activePlacesFin = []
 let activeMoodsFin = []
 let activeCharacterFin = []
@@ -99,9 +100,6 @@ function quizInit() {
   quizStart()
   tagSelect()
   // let n = 1
-  // let activePlacesFin = []
-  // let activeMoodsFin = []
-  // let activeCharacterFin = []
 
   buttonNext.addEventListener('click', () => {
     if (n < 5) {
@@ -110,66 +108,27 @@ function quizInit() {
 
     //First question
     if (n == 2) {
-      for (let i = 0; i < tags.length; i++) {
-        const tag = tags[i]
-        const tagText = tag.innerHTML
-        if (
-          tag.id == 'place' &&
-          tag.classList.contains('active') &&
-          !activePlacesFin.includes(tag)
-        ) {
-          activePlacesFin.push(tag)
-        }
-      }
       secondQuestionInit()
-      // activePlacesFin.push({ activePlaces })
     }
 
     //Second question
     if (n == 3) {
-      for (let i = 0; i < tags.length; i++) {
-        const tag = tags[i]
-        const tagText = tag.innerHTML
-        if (
-          tag.id == 'mood' &&
-          tag.classList.contains('active') &&
-          !activeMoodsFin.includes(tag)
-        ) {
-          activeMoodsFin.push(tag)
-        }
-      }
       thirdQuestionInit()
-      // activeMoodsFin.push({ activeMoods })
     }
 
     //Third question
     if (n == 4) {
-      for (let i = 0; i < tags.length; i++) {
-        const tag = tags[i]
-        const tagText = tag.innerHTML
-        if (
-          tag.id == 'character' &&
-          tag.classList.contains('active') &&
-          !activeCharacterFin.includes(tag)
-        ) {
-          activeCharacterFin.push(tag)
-        }
-      }
-      // activeCharacterFin.push({ activeCharacter })
-      // End part
-
-      //
-      //
-      // activeMoodsFin.push(activeMoods)
-      // activeCharacterFin.push(activeCharacter)
-
       n = 1
       for (let i = 0; i < tags.length; i++) {
         const tag = tags[i]
+        if (tag.classList.contains('active')) {
+          allActive.push(tag)
+        }
         tag.classList.remove('active')
       }
       firstQuestionInit()
       quiz.classList.add('none')
+      devideTags(activePlacesFin, activeMoodsFin, activeCharacterFin)
     }
   })
 
@@ -200,9 +159,18 @@ function quizInit() {
   //
 }
 
-console.log(activePlacesFin)
-console.log(activeMoodsFin)
-console.log(activeCharacterFin)
+function devideTags(a, b, c) {
+  for (let i = 0; i < allActive.length; i++) {
+    const tag = allActive[i]
+    if (tag.id == 'place') {
+      a.push(tag.innerHTML)
+    } else if (tag.id == 'mood') {
+      b.push(tag.innerHTML)
+    } else if (tag.id == 'character') {
+      c.push(tag.innerHTML)
+    }
+  }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   quizInit()
