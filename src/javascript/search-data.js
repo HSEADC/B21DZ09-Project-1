@@ -7,13 +7,14 @@ Airtable.configure({
   endpointUrl: 'https://api.airtable.com',
   apiKey: token
 })
-const base = Airtable.base('app01KNDrzVa26N5e')
+const base1 = Airtable.base('app01KNDrzVa26N5e')
+const base2 = Airtable.base('appZHHrH4PFKJs8gA')
 
 function getPostTeasers() {
   return new Promise((resolve, reject) => {
     const content = []
 
-    base('Post Teaser')
+    base1('Post Teaser')
       .select({ maxRecords: 100 })
       .firstPage()
       .then((result) => {
@@ -39,7 +40,7 @@ function getQuizCards() {
   return new Promise((resolve, reject) => {
     const content = []
 
-    base('Quiz')
+    base2('Quiz')
       .select({ maxRecords: 100 })
       .firstPage()
       .then((result) => {

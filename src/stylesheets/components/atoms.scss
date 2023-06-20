@@ -93,6 +93,56 @@
   }
 }
 
+.A_ProgressLine {
+  position: absolute;
+  width: 20%;
+  height: 2px;
+  margin: 24px 0 0 40px;
+  z-index: -1;
+  background: var(--green);
+}
+
+.A_CircleStage {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  &.current {
+    background-color: var(--black);
+    border: 5px solid var(--green);
+  }
+  &.active {
+    background-color: var(--green);
+  }
+  &.disabled {
+    background-color: var(--darkgray);
+  }
+}
+
+.A_FinishIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url('./images/basic/rocket.png');
+  background-size: 32px 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &.disabled {
+    background-color: #c5c5c5;
+  }
+  &.active {
+    background-color: var(--green);
+  }
+}
+
+.A_QuizText {
+  font-size: 28px;
+  font-family: 'Druk Wide Cyr';
+  font-weight: 800;
+  text-align: center;
+}
+
 .A_StyleArticleSubText {
   font-size: 14px;
   font-family: 'Druk Text Wide Cyr';

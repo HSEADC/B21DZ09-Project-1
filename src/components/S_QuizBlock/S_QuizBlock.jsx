@@ -7,6 +7,7 @@ import O_ProgressBar from '../O_ProgressBar/O_ProgressBar.jsx'
 import A_QuizText from '../A_QuizText/A_QuizText.jsx'
 import A_ButtonBack from '../A_ButtonBack/A_ButtonBack.jsx'
 import M_ButtonSurvey from '../M_ButtonSurvey/M_ButtonSurvey.jsx'
+import M_SurveyTag from '../M_SurveyTag/M_SurveyTag.jsx'
 
 export default class S_QuizBlock extends React.Component {
   constructor(props) {
@@ -32,32 +33,45 @@ export default class S_QuizBlock extends React.Component {
     quizWrapper.classList.add('none')
   }
 
+  renderPlacesTags = () => {
+    function handleClickActive() {
+      console.log('click')
+      this.classList.toggle('active')
+    }
+
+    const placesTags = [
+      'работа',
+      'учеба',
+      'конференция',
+      'выставка',
+      'бар',
+      'парк',
+      'кино',
+      'ресторан',
+      'праздник',
+      'кофейня',
+      'прогулка'
+    ]
+    const render = []
+
+    placesTags.forEach((placesTag, i) => {
+      render.push(
+        <M_SurveyTag
+          text={placesTag}
+          key={i}
+          id={'place'}
+          onClick={this.handleClickActive}
+        />
+      )
+    })
+
+    return render
+  }
+
   render() {
-    const { quizCards } = this.state
-    const { places, mood, character } = quizCards
-
-    const placesTags = []
-    const moodTags = []
-    const characterTags = []
-    //
-    // places.forEach((place, i) => {
-    //   placesTags.push(
-    //     <M_Tag type={survey} stroke={stroke} text={tag} key={i} />
-    //   )
-    // })
-    //
-    // mood.forEach((mood1, i) => {
-    //   moodTags.push(<M_Tag type={survey} stroke={stroke} text={tag} key={i} />)
-    // })
-    //
-    // character.forEach((character1, i) => {
-    //   characterTags.push(
-    //     <M_Tag type={survey} stroke={stroke} text={tag} key={i} />
-    //   )
-    // })
-
     return (
       <div className="S_QuizBlock">
+        {' '}
         <div className="W_QuizTop">
           <A_Counter text={'1/3'} />
           <O_ProgressBar />
@@ -66,7 +80,7 @@ export default class S_QuizBlock extends React.Component {
           </div>
         </div>
         <A_QuizText text={'Куда вы хотите пойти?'} />
-        <div className="W_TagBar">{placesTags}</div>
+        <div className="W_TagBar">{this.renderPlacesTags()}</div>
         <div className="W_QuizBottom">
           <A_ButtonBack />
           <M_ButtonSurvey type={'black'} text={'далее'} />

@@ -41,6 +41,29 @@
   display: none;
 }
 
+.M_SurveyTag {
+  height: auto;
+  width: auto;
+  padding: 15px 36px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-family: 'Inter';
+  font-weight: 500;
+  background: var(--white);
+  color: var(--black);
+  border: 1px solid #161616;
+  cursor: pointer;
+
+  &.active {
+    background: var(--green);
+    border: 1px solid var(--green);
+  }
+
+  &:hover {
+    background: var(--green);
+  }
+}
+
 .M_Title {
   grid-column: 1 / 19;
   display: flex;

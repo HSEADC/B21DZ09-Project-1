@@ -81,6 +81,72 @@
   }
 }
 
+.O_QuizBlock {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+  padding: 50px;
+  border: 1px solid var(--black);
+  border-radius: 15px;
+  background-color: var(--white);
+
+  .W_QuizTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .W_TagBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 0 50px;
+    gap: 20px 10px;
+  }
+
+  .W_QuizBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  }
+}
+
+.O_ProgressBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 954px;
+
+  .Q_Line {
+    position: absolute;
+    width: 860px;
+    margin: 24px 0 0 40px;
+    background: #c5c5c5;
+    z-index: -2;
+  }
+
+  .W_SurveyStage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    p {
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--darkgray);
+    }
+  }
+}
+
 .O_StyleArticleDescription {
   grid-column: 2 / 7;
   position: relative;
