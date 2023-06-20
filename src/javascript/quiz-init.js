@@ -90,11 +90,11 @@ function thirdQuestionInit() {
   buttonNext.innerHTML = 'завершить <div class="Q_Arrow black"></div>'
 }
 
-function handleNext() {
+function handleClick() {
   let n = 1
-  let activePlaces = []
-  let activeMoods = []
-  let activeCharacter = []
+  let activePlacesFin = []
+  let activeMoodsFin = []
+  let activeCharacterFin = []
 
   buttonNext.addEventListener('click', () => {
     if (n < 5) {
@@ -103,7 +103,7 @@ function handleNext() {
 
     //First question
     if (n == 2) {
-      activePlaces = []
+      let activePlaces = []
       for (let i = 0; i < tags.length; i++) {
         const tag = tags[i]
         const tagText = tag.innerHTML
@@ -116,11 +116,12 @@ function handleNext() {
         }
       }
       secondQuestionInit()
+      activePlacesFin.push({ activePlaces })
     }
 
     //Second question
     if (n == 3) {
-      activeMoods = []
+      let activeMoods = []
       for (let i = 0; i < tags.length; i++) {
         const tag = tags[i]
         const tagText = tag.innerHTML
@@ -133,11 +134,12 @@ function handleNext() {
         }
       }
       thirdQuestionInit()
+      activeMoodsFin.push({ activeMoods })
     }
 
     //Third question
     if (n == 4) {
-      activeCharacter = []
+      let activeCharacter = []
       for (let i = 0; i < tags.length; i++) {
         const tag = tags[i]
         const tagText = tag.innerHTML
@@ -149,7 +151,17 @@ function handleNext() {
           activeCharacter.push(tagText)
         }
       }
+      activeCharacterFin.push({ activeCharacter })
       // End part
+
+      // console.log(activePlaces)
+      // console.log(activeMoods)
+      // console.log(activeCharacter)
+      //
+      //
+      // activeMoodsFin.push(activeMoods)
+      // activeCharacterFin.push(activeCharacter)
+
       n = 1
       for (let i = 0; i < tags.length; i++) {
         const tag = tags[i]
@@ -158,11 +170,11 @@ function handleNext() {
       firstQuestionInit()
       quiz.classList.add('none')
     }
-
-    console.log(activePlaces)
-    console.log(activeMoods)
-    console.log(activeCharacter)
   })
+
+  console.log(activePlacesFin)
+  console.log(activeMoodsFin)
+  console.log(activeCharacterFin)
 
   //Back
   buttonBack.addEventListener('click', () => {
@@ -192,5 +204,5 @@ function handleNext() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  quizInit(), tagSelect(), handleNext()
+  quizInit(), tagSelect(), handleClick()
 })
