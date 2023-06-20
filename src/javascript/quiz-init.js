@@ -15,8 +15,6 @@ function quizInit() {
 }
 
 function tagSelect() {
-  console.log(tags)
-
   for (let i = 0; i < tags.length; i++) {
     const tag = tags[i]
 
@@ -96,10 +94,10 @@ function handleNext() {
   let n = 1
   let activePlaces = []
   let activeMoods = []
+  let activeCharacter = []
 
   buttonNext.addEventListener('click', () => {
-    console.log('click')
-    if (n < 4) {
+    if (n < 5) {
       n++
     }
 
@@ -114,11 +112,9 @@ function handleNext() {
           tag.classList.contains('active') &&
           !activePlaces.includes(tagText)
         ) {
-          console.log(tagText)
           activePlaces.push(tagText)
         }
       }
-      console.log(activePlaces)
       secondQuestionInit()
     }
 
@@ -133,13 +129,39 @@ function handleNext() {
           tag.classList.contains('active') &&
           !activeMoods.includes(tagText)
         ) {
-          console.log(tagText)
           activeMoods.push(tagText)
         }
       }
-      console.log(activeMoods)
       thirdQuestionInit()
     }
+
+    //Third question
+    if (n == 4) {
+      activeCharacter = []
+      for (let i = 0; i < tags.length; i++) {
+        const tag = tags[i]
+        const tagText = tag.innerHTML
+        if (
+          tag.id == 'character' &&
+          tag.classList.contains('active') &&
+          !activeCharacter.includes(tagText)
+        ) {
+          activeCharacter.push(tagText)
+        }
+      }
+      // End part
+      n = 1
+      for (let i = 0; i < tags.length; i++) {
+        const tag = tags[i]
+        tag.classList.remove('active')
+      }
+      firstQuestionInit()
+      quiz.classList.add('none')
+    }
+
+    console.log(activePlaces)
+    console.log(activeMoods)
+    console.log(activeCharacter)
   })
 
   //Back
@@ -150,12 +172,10 @@ function handleNext() {
 
     if (n == 1) {
       firstQuestionInit()
-      console.log(activePlaces)
     }
 
     if (n == 2) {
       secondQuestionInit()
-      console.log(activeMoods)
     }
   })
   //Close
