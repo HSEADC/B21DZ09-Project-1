@@ -1,3 +1,8 @@
+import { getQuizCards } from './search-data.js'
+
+let content
+
+const results = document.querySelector('.S_QuizResults')
 const quizButton = document.querySelector('.S_Cover .M_ButtonSurvey')
 const quiz = document.querySelector('.S_QuizBlock')
 const tags = quiz.querySelectorAll('.M_SurveyTag')
@@ -96,6 +101,87 @@ function thirdQuestionInit() {
   buttonNext.innerHTML = 'завершить <div class="Q_Arrow black"></div>'
 }
 
+function devideTags(a, b, c) {
+  for (let i = 0; i < allActive.length; i++) {
+    const tag = allActive[i]
+    if (tag.id == 'place') {
+      a.push(tag.innerHTML)
+    } else if (tag.id == 'mood') {
+      b.push(tag.innerHTML)
+    } else if (tag.id == 'character') {
+      c.push(tag.innerHTML)
+    }
+  }
+}
+
+function createContentCard(contentItemData) {
+  const contentItem = document.createElement('a')
+  contentItem.classList.add('O_StyleCard')
+  contentItem.href = contentItemData.link
+
+  const contentItemCover = document.createElement('div')
+  contentItemCover.classList.add('A_CardImage')
+  const contentItemCoverQ = document.createElement('div')
+  contentItemCoverQ.classList.add('Q_Image')
+  contentItemCover.appendChild(contentItemCoverQ)
+  const contentItemCoverImg = document.createElement('img')
+  contentItemCoverImg.src = contentItemData.image
+  contentItemCoverQ.appendChild(contentItemCoverImg)
+
+  const contentItemTitle = document.createElement('div')
+  contentItemTitle.classList.add('A_StyleName')
+  contentItemTitle.innerText = contentItemData.name
+
+  const contentItemTags = document.createElement('div')
+  contentItemTags.classList.add('W_TagBar')
+
+  contentItemData.mood.forEach((mood) => {
+    const contentItemTag = document.createElement('div')
+    contentItemTag.classList.add('M_Tag')
+    contentItemTag.innerText = mood
+    contentItemTags.appendChild(contentItemTag)
+  })
+
+  contentItem.appendChild(contentItemCover)
+  contentItem.appendChild(contentItemTitle)
+  contentItem.appendChild(contentItemTags)
+
+  return contentItem
+}
+
+function renderCardsByIds(container, ids) {
+  ids = [...new Set(ids)]
+
+  ids.forEach((id) => {
+    content.forEach((item) => {
+      if (item.id === id && container.childElementCount < 3) {
+        container.appendChild(createContentCard(item))
+      }
+    })
+  })
+}
+
+function renderQuizContent() {
+  const contentItemsContainer = results.querySelector('.C_Styles')
+  contentItemsContainer.innerHTML = ''
+
+  let contentItemIds = []
+
+  content.forEach((contentItem) => {
+    let { place, mood, character } = contentItem
+
+    if (
+      place.some((r) => activePlacesFin.includes(r)) ||
+      mood.some((r) => activeMoodsFin.includes(r)) ||
+      character.some((r) => activeCharacterFin.includes(r))
+    ) {
+      contentItemIds.push(contentItem.id)
+    }
+  })
+
+  renderCardsByIds(contentItemsContainer, contentItemIds)
+}
+
 function quizInit() {
   quizStart()
   tagSelect()
@@ -129,6 +215,7 @@ function quizInit() {
       firstQuestionInit()
       quiz.classList.add('none')
       devideTags(activePlacesFin, activeMoodsFin, activeCharacterFin)
+      renderQuizContent()
     }
   })
 
@@ -159,19 +246,9 @@ function quizInit() {
   //
 }
 
-function devideTags(a, b, c) {
-  for (let i = 0; i < allActive.length; i++) {
-    const tag = allActive[i]
-    if (tag.id == 'place') {
-      a.push(tag.innerHTML)
-    } else if (tag.id == 'mood') {
-      b.push(tag.innerHTML)
-    } else if (tag.id == 'character') {
-      c.push(tag.innerHTML)
-    }
-  }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-  quizInit()
+  getQuizCards().then((data) => {
+    content = data
+    quizInit()
+  })
 })
