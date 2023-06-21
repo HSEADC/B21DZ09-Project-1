@@ -144,7 +144,6 @@
 }
 
 .A_QuizText {
-  height: 62px;
   padding: 0 25%;
   font-size: 28px;
   font-family: 'Druk Wide Cyr';
@@ -323,6 +322,9 @@
   height: 48px;
   cursor: pointer;
   background-image: url('./images/basic/Q_CloseWindowCircle.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .A_SlideDescription {
@@ -766,6 +768,31 @@
     font-size: 12px;
   }
 
+  .A_QuizHead {
+    font-size: 90px;
+  }
+
+  .A_ProgressLine {
+    height: 2px;
+    margin: 24px 0 0 40px;
+  }
+
+  .A_CircleStage {
+    width: 25px;
+    height: 25px;
+  }
+
+  .A_FinishIcon {
+    width: 60px;
+    height: 60px;
+    background-size: 32px 32px;
+  }
+
+  .A_QuizText {
+    padding: 0 25%;
+    font-size: 28px;
+  }
+
   .A_StyleArticleSubText {
     font-size: 14px;
   }
@@ -1031,6 +1058,31 @@
 
   .A_NormTextFooter {
     font-size: 12px;
+  }
+
+  .A_QuizHead {
+    font-size: 60px;
+  }
+
+  .A_ProgressLine {
+    height: 2px;
+    margin: 24px 0 0 40px;
+  }
+
+  .A_CircleStage {
+    width: 25px;
+    height: 25px;
+  }
+
+  .A_FinishIcon {
+    width: 60px;
+    height: 60px;
+    background-size: 32px 32px;
+  }
+
+  .A_QuizText {
+    padding: 0 25%;
+    font-size: 22px;
   }
 
   .A_StyleArticleSubText {
@@ -1321,6 +1373,31 @@
 
   .A_NormTextFooter {
     font-size: 12px;
+  }
+
+  .A_QuizHead {
+    font-size: 45px;
+  }
+
+  .A_ProgressLine {
+    height: 2px;
+    margin: 24px 0 0 40px;
+  }
+
+  .A_CircleStage {
+    width: 25px;
+    height: 25px;
+  }
+
+  .A_FinishIcon {
+    width: 60px;
+    height: 60px;
+    background-size: 32px 32px;
+  }
+
+  .A_QuizText {
+    padding: 0 10%;
+    font-size: 22px;
   }
 
   .A_StyleArticleSubText {
@@ -1624,6 +1701,31 @@
 
   .A_NormTextFooter {
     font-size: 12px;
+  }
+
+  .A_QuizHead {
+    font-size: 45px;
+  }
+
+  .A_ProgressLine {
+    height: 2px;
+    margin: 0px 0 0 20px;
+  }
+
+  .A_CircleStage {
+    width: 24px;
+    height: 24px;
+  }
+
+  .A_FinishIcon {
+    width: 40px;
+    height: 40px;
+    background-size: 24px 24px;
+  }
+
+  .A_QuizText {
+    padding: 0 0%;
+    font-size: 16px;
   }
 
   .A_StyleArticleSubText {

@@ -18,8 +18,7 @@ module.exports = {
     antitrends: './src/javascript/antitrends.js',
     mainpage: './src/javascript/mainpage.js',
     searchbar: './src/javascript/searchbar.jsx',
-    search: './src/javascript/search.jsx',
-    quiz: './src/javascript/quiz.jsx'
+    search: './src/javascript/search.jsx'
   },
   output: {
     filename: '[name].js',
@@ -166,7 +165,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/styles.html',
       filename: './styles.html',
-      chunks: ['styles', 'navbar', 'titleimage', 'quiz']
+      chunks: ['styles', 'navbar', 'titleimage']
     }),
 
     //Styles article
