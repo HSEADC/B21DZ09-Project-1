@@ -53,6 +53,7 @@
   color: var(--black);
   border: 1px solid #161616;
   cursor: pointer;
+  user-select: none;
 
   &.active {
     background: var(--green);
@@ -209,10 +210,20 @@
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
+  user-select: none;
+
+  &.left {
+    padding: 15px 34px 15px 20px;
+  }
 
   &.black {
     background-color: var(--black);
     color: var(--white);
+
+    &.disabled {
+      background-color: var(--darkgray);
+      color: var(--black);
+    }
   }
 
   &.black:hover {

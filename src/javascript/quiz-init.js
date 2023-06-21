@@ -3,6 +3,8 @@ import { getQuizCards } from './search-data.js'
 let content
 
 const results = document.querySelector('.S_QuizResults')
+const buttonAgain = results.querySelector('.M_ButtonSurvey')
+const cover = document.querySelector('.S_Cover')
 const quizButton = document.querySelector('.S_Cover .M_ButtonSurvey')
 const quiz = document.querySelector('.S_QuizBlock')
 const tags = quiz.querySelectorAll('.M_SurveyTag')
@@ -162,6 +164,8 @@ function renderCardsByIds(container, ids) {
 }
 
 function renderQuizContent() {
+  results.classList.remove('none')
+  cover.classList.add('none')
   const contentItemsContainer = results.querySelector('.C_Styles')
   contentItemsContainer.innerHTML = ''
 
@@ -171,9 +175,16 @@ function renderQuizContent() {
     let { place, mood, character } = contentItem
 
     if (
-      place.some((r) => activePlacesFin.includes(r)) ||
-      mood.some((r) => activeMoodsFin.includes(r)) ||
-      character.some((r) => activeCharacterFin.includes(r))
+      (place.some((r) => activePlacesFin.includes(r)) &&
+        mood.some((r) => activeMoodsFin.includes(r)) &&
+        character.some((r) => activeCharacterFin.includes(r)) &&
+        contentItemIds.length < 3) ||
+      (place.some((r) => activePlacesFin.includes(r)) &&
+        mood.some((r) => activeMoodsFin.includes(r)) &&
+        contentItemIds.length < 3) ||
+      (mood.some((r) => activeMoodsFin.includes(r)) &&
+        character.some((r) => activeCharacterFin.includes(r)) &&
+        contentItemIds.length < 3)
     ) {
       contentItemIds.push(contentItem.id)
     }
@@ -233,6 +244,7 @@ function quizInit() {
       secondQuestionInit()
     }
   })
+
   //Close
   buttonClose.addEventListener('click', () => {
     n = 1
@@ -243,7 +255,13 @@ function quizInit() {
     firstQuestionInit()
     quiz.classList.add('none')
   })
-  //
+
+  //Again
+  buttonAgain.addEventListener('click', () => {
+    cover.classList.remove('none')
+    results.classList.add('none')
+    results.querySelector('.C_Styles').innerHTML = ''
+  })
 }
 
 document.addEventListener('DOMContentLoaded', () => {
