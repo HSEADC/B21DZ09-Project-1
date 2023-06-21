@@ -4,12 +4,12 @@ import classnames from 'classnames'
 
 export default class A_Button extends React.Component {
   render() {
-    const { text, type, disabled, handleClick } = this.props
+    const { text, type, disabled, handleClick, white } = this.props
 
     const classes = classnames({
       A_Button: true,
-      disabled: disabled,
-      [`${type}`]: true
+      white: white,
+      disabled: disabled
     })
 
     return (

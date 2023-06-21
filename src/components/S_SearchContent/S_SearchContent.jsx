@@ -17,8 +17,6 @@ export default class S_SearchContent extends React.Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount')
-
     getPostTeasers().then((data) => {
       this.setState({
         postTeasers: data
