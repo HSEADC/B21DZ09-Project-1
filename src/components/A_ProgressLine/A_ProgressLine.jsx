@@ -1,8 +1,8 @@
 import React from 'react'
-import './A_CircleStage.scss'
+import './A_ProgressLine.scss'
 import classnames from 'classnames'
 
-export default class A_CircleStage extends React.Component {
+export default class A_ProgressLine extends React.Component {
   render() {
     const { type } = this.props
 
@@ -11,6 +11,6 @@ export default class A_CircleStage extends React.Component {
       [`${type}`]: true
     })
 
-    return <div className={classes}></div>
+    return <div className="A_ProgressLine"></div>
   }
 }
