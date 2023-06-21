@@ -4816,7 +4816,6 @@ var S_SearchContent = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      console.log('componentDidMount');
       getPostTeasers().then(function (data) {
         _this2.setState({
           postTeasers: data
