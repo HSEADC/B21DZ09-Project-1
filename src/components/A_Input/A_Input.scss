@@ -36,18 +36,57 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
   .A_Input {
-    width: 150px;
     height: 24px;
-    padding: 4px 30px;
+    padding: 4px 12px;
+  }
+
+  .A_Input:focus:hover {
     font-size: 12px;
+    border-bottom: 5px solid var(--green);
+  }
+
+  .A_Input:focus {
+    width: 180px;
+    font-size: 12px;
+    border-bottom: 5px solid var(--green);
   }
 }
 
 @media only screen and (min-width: 744px) and (max-width: 1023px) {
   .A_Input {
-    width: 120px;
     height: 24px;
-    padding: 4px 28px;
+    padding: 4px 12px;
+  }
+
+  .A_Input:focus:hover {
     font-size: 12px;
+    border-bottom: 5px solid var(--green);
+  }
+
+  .A_Input:focus {
+    width: 140px;
+    font-size: 12px;
+    border-bottom: 5px solid var(--green);
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 743px) {
+  .A_Input {
+    width: 40px;
+    height: 40px;
+    margin-left: 60px;
+    padding: 4px 8px;
+  }
+  .A_Input:focus:hover {
+    margin-left: 0px;
+    font-size: 12px;
+    border-bottom: 2px solid var(--green);
+  }
+
+  .A_Input:focus {
+    margin-left: 0px;
+    width: 120px;
+    font-size: 12px;
+    border-bottom: 2px solid var(--green);
   }
 }

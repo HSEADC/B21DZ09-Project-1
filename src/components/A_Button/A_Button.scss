@@ -33,3 +33,10 @@
     background-size: 12px;
   }
 }
+
+@media only screen and (min-width: 360px) and (max-width: 743px) {
+  .A_Button {
+    right: 40px;
+    background-position: top center;
+  }
+}
