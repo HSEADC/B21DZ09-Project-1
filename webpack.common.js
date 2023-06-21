@@ -17,7 +17,6 @@ module.exports = {
     influencers: './src/javascript/influencers.js',
     antitrends: './src/javascript/antitrends.js',
     mainpage: './src/javascript/mainpage.js',
-    searchbar: './src/javascript/searchbar.jsx',
     search: './src/javascript/search.jsx'
   },
   output: {
@@ -95,7 +94,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['mainpage', 'navbar', 'searchbar']
+      chunks: ['mainpage', 'navbar']
     }),
 
     // Search
@@ -104,7 +103,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/search.html',
       filename: './search.html',
-      chunks: ['navbar', 'searchbar', 'search']
+      chunks: ['navbar', 'search']
     }),
 
     // Styleguide
@@ -131,7 +130,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/landing.html',
       filename: './landing.html',
-      chunks: ['navbar', 'searchbar']
+      chunks: ['navbar']
     }),
 
     // Errors

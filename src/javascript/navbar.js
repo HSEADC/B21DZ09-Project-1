@@ -1,4 +1,5 @@
 import '../index.css'
+import './searchbar.jsx'
 
 const menuButton = document.querySelector('.Q_NavBarBurger')
 const closeButton = document.querySelector('.Q_Close')

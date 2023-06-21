@@ -4,5 +4,11 @@ import { getSearchRequest } from './utilities.js'
 
 import O_SearchBar from '../components/O_SearchBar/O_SearchBar.jsx'
 
-const root = createRoot(document.querySelector('.W_Search'))
-root.render(<O_SearchBar />)
+const white = document.querySelector('.W_Search').classList.contains('white')
+
+const searchbars = document.querySelectorAll('.W_Search')
+
+for (var i = 0; i < searchbars.length; i++) {
+  const root = createRoot(searchbars[i])
+  root.render(<O_SearchBar white={white} />)
+}

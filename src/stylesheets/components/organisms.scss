@@ -34,6 +34,12 @@
         height: 20px;
       }
     }
+
+    .W_Search {
+      &.mobile {
+        display: none;
+      }
+    }
   }
 }
 
@@ -1043,6 +1049,18 @@
 
       .W_NavBarCategories {
         display: none;
+      }
+
+      .W_Search {
+        display: none;
+        &.mobile {
+          display: block;
+
+          .A_Button {
+            right: 40px;
+            background-position: top center;
+          }
+        }
       }
     }
   }

@@ -1,5 +1,6 @@
 import React from 'react'
 import './A_Input.scss'
+import classnames from 'classnames'
 
 export default class A_Input extends React.Component {
   constructor(props) {
@@ -14,14 +15,18 @@ export default class A_Input extends React.Component {
   }
 
   render() {
-    const { placeholder, value, handleSubmit } = this.props
+    const { placeholder, value, handleSubmit, white } = this.props
+
+    const classes = classnames({
+      A_Input: true,
+      white: white
+    })
 
     return (
       <>
         <input
-          className="A_Input"
+          className={classes}
           placeholder={placeholder}
-          className="A_Input"
           ref={this.input}
           value={value}
           onInput={this.handleInput}
