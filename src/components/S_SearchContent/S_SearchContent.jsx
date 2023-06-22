@@ -57,26 +57,26 @@ export default class S_SearchContent extends React.Component {
         )
       }
     })
-
-    if (posts.length == 0) {
-      posts.push(
-        <div className="O_ErrorContent">
-          <div className="A_ErrorWoops">Упс, такой страницы нет</div>
-          <div className="M_ErrorDescription">
-            <div className="A_ErrorText">
-              <p>
-                К сожалению мы не нашли ничего похожего на ваш запрос.
-                Попробуйте снова или вернитесь назад.
-              </p>
-            </div>
-
-            <div onClick={this.handleBackClick} className="A_ButtonBack">
-              вернуться назад
-            </div>
-          </div>
-        </div>
-      )
-    }
+    //
+    // if (posts.length == 0) {
+    //   posts.push(
+    //     <div className="O_ErrorContent">
+    //       <div className="A_ErrorWoops">Упс, такой страницы нет</div>
+    //       <div className="M_ErrorDescription">
+    //         <div className="A_ErrorText">
+    //           <p>
+    //             К сожалению мы не нашли ничего похожего на ваш запрос.
+    //             Попробуйте снова или вернитесь назад.
+    //           </p>
+    //         </div>
+    //
+    //         <div onClick={this.handleBackClick} className="A_ButtonBack">
+    //           вернуться назад
+    //         </div>
+    //       </div>
+    //     </div>
+    //   )
+    // }
 
     return posts
   }
