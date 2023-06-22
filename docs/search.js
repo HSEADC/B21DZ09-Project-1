@@ -4782,22 +4782,26 @@ var S_SearchContent = /*#__PURE__*/function (_React$Component) {
             stroke: stroke
           }));
         }
-      });
-
-      if (posts.length == 0) {
-        posts.push( /*#__PURE__*/react.createElement("div", {
-          className: "O_ErrorContent"
-        }, /*#__PURE__*/react.createElement("div", {
-          className: "A_ErrorWoops"
-        }, "\u0423\u043F\u0441, \u0442\u0430\u043A\u043E\u0439 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u044B \u043D\u0435\u0442"), /*#__PURE__*/react.createElement("div", {
-          className: "M_ErrorDescription"
-        }, /*#__PURE__*/react.createElement("div", {
-          className: "A_ErrorText"
-        }, /*#__PURE__*/react.createElement("p", null, "\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E \u043C\u044B \u043D\u0435 \u043D\u0430\u0448\u043B\u0438 \u043D\u0438\u0447\u0435\u0433\u043E \u043F\u043E\u0445\u043E\u0436\u0435\u0433\u043E \u043D\u0430 \u0432\u0430\u0448 \u0437\u0430\u043F\u0440\u043E\u0441. \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430 \u0438\u043B\u0438 \u0432\u0435\u0440\u043D\u0438\u0442\u0435\u0441\u044C \u043D\u0430\u0437\u0430\u0434.")), /*#__PURE__*/react.createElement("div", {
-          onClick: _this.handleBackClick,
-          className: "A_ButtonBack"
-        }, "\u0432\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F \u043D\u0430\u0437\u0430\u0434"))));
-      }
+      }); //
+      // if (posts.length == 0) {
+      //   posts.push(
+      //     <div className="O_ErrorContent">
+      //       <div className="A_ErrorWoops">Упс, такой страницы нет</div>
+      //       <div className="M_ErrorDescription">
+      //         <div className="A_ErrorText">
+      //           <p>
+      //             К сожалению мы не нашли ничего похожего на ваш запрос.
+      //             Попробуйте снова или вернитесь назад.
+      //           </p>
+      //         </div>
+      //
+      //         <div onClick={this.handleBackClick} className="A_ButtonBack">
+      //           вернуться назад
+      //         </div>
+      //       </div>
+      //     </div>
+      //   )
+      // }
 
       return posts;
     });
